@@ -1,0 +1,116 @@
+---
+---
+
+<button
+  id="theme-toggle"
+  class="theme-toggle"
+  aria-label="Cambia tema"
+  type="button"
+>
+  <span class="theme-icon theme-icon-sun">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="20"
+      height="20"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2"></path>
+      <path d="M12 20v2"></path>
+      <path d="m4.93 4.93 1.41 1.41"></path>
+      <path d="m17.66 17.66 1.41 1.41"></path>
+      <path d="M2 12h2"></path>
+      <path d="M20 12h2"></path>
+      <path d="m6.34 17.66-1.41 1.41"></path>
+      <path d="m19.07 4.93-1.41 1.41"></path>
+    </svg>
+  </span>
+  <span class="theme-icon theme-icon-moon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="20"
+      height="20"
+      aria-hidden="true"
+    >
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+    </svg>
+  </span>
+</button>
+
+<script>
+  const button = document.getElementById('theme-toggle');
+
+  if (button) {
+    button.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+
+      const theme = isDark ? 'dark' : 'light';
+      // biome-ignore lint/suspicious/noDocumentCookie: Cookie Store API lacks broad browser support
+      document.cookie = `theme=${theme}; path=/; max-age=31536000; SameSite=Lax`;
+
+      try {
+        localStorage.setItem('theme', theme);
+      } catch {
+        // Ignore storage failures in restricted browsing contexts.
+      }
+
+      button.setAttribute('aria-label', isDark ? 'Passa al tema chiaro' : 'Passa al tema scuro');
+    });
+  }
+</script>
+
+<style>
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--button-radius);
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+
+  .theme-toggle:hover {
+    background: var(--color-bg-secondary);
+    border-color: var(--color-border-secondary);
+  }
+
+  /* Both icons are always rendered so the server output and the hydrated
+     output are identical. The visible icon is chosen by the `.dark` class,
+     which the inline <head> script applies before the first paint. */
+  .theme-icon {
+    display: inline-flex;
+  }
+
+  .theme-icon-sun {
+    display: none;
+  }
+
+  :global(html.dark) .theme-icon-sun {
+    display: inline-flex;
+  }
+
+  :global(html.dark) .theme-icon-moon {
+    display: none;
+  }
+</style>

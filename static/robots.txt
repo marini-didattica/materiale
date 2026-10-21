@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /materiale/public/
+Disallow: /materiale/private/

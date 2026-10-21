@@ -1,0 +1,177 @@
+---
+import type { FileEntry } from '@/types';
+import { buildZipName } from '@/utils/downloads';
+import { formatBytes } from '@/utils/format';
+
+export interface Props {
+  entries: FileEntry[];
+  downloadBaseName: string;
+}
+
+const { entries, downloadBaseName } = Astro.props;
+---
+
+{entries.length === 0 ? (
+  <div class="rounded-xl border border-dashed border-border px-6 py-10 text-center text-text-secondary">
+    <p>Nessun file in questa cartella.</p>
+  </div>
+) : (
+  <div class="overflow-hidden rounded-xl border border-border bg-surface">
+    <ul role="list" class="m-0 list-none divide-y divide-border p-0">
+      {entries.map((entry) => (
+        <li class="group flex items-center gap-1 px-2 transition-colors hover:bg-bg-secondary sm:px-4">
+          <a
+            href={entry.href}
+            target={entry.kind === 'file' ? '_blank' : undefined}
+            rel={entry.kind === 'file' ? 'noopener noreferrer' : undefined}
+            class="flex min-w-0 flex-1 items-center gap-3 py-3 text-text no-underline"
+          >
+            <span
+              class:list={[
+                'flex size-10 shrink-0 items-center justify-center rounded-lg',
+                entry.kind === 'directory'
+                  ? 'bg-accent/10 text-accent'
+                  : 'bg-bg-secondary text-text-secondary',
+              ]}
+              aria-hidden="true"
+            >
+              {entry.kind === 'directory' ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                  <path d="M14 2v6h6" />
+                </svg>
+              )}
+            </span>
+
+            <span class="min-w-0 flex-1">
+              <span
+                class:list={[
+                  'block truncate',
+                  entry.kind === 'directory' ? 'font-semibold' : 'font-medium',
+                  'group-hover:text-accent',
+                ]}
+              >
+                {entry.name}
+              </span>
+              <span class="mt-0.5 block text-xs text-text-secondary">
+                {entry.kind === 'directory'
+                  ? 'Cartella'
+                  : `${entry.extension ? `${entry.extension.toUpperCase()} · ` : ''}${formatBytes(
+                      entry.size ?? 0,
+                    )}`}
+              </span>
+            </span>
+
+            {entry.kind === 'directory' ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="size-4 shrink-0 text-text-secondary transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
+                aria-hidden="true"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="size-4 shrink-0 text-text-secondary transition-colors group-hover:text-accent"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            )}
+          </a>
+
+          {entry.kind === 'directory' && entry.downloadKey ? (
+            <button
+              type="button"
+              data-download-folder={entry.downloadKey}
+              data-zip-name={buildZipName([downloadBaseName, entry.name])}
+              class="inline-flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-md text-text-secondary transition-colors hover:bg-surface hover:text-accent disabled:cursor-wait disabled:opacity-50"
+              aria-label={`Scarica la cartella ${entry.name}`}
+              title={`Scarica la cartella ${entry.name}`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <path d="m7 10 5 5 5-5"></path>
+                <path d="M12 15V3"></path>
+              </svg>
+            </button>
+          ) : entry.kind === 'file' ? (
+            <a
+              href={entry.href}
+              download={entry.name}
+              class="inline-flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-md text-text-secondary no-underline transition-colors hover:bg-surface hover:text-accent"
+              aria-label={`Scarica ${entry.name}`}
+              title={`Scarica ${entry.name}`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <path d="m7 10 5 5 5-5"></path>
+                <path d="M12 15V3"></path>
+              </svg>
+            </a>
+          ) : null}
+        </li>
+      ))}
+    </ul>
+  </div>
+)}

@@ -1,0 +1,76 @@
+---
+import '@/styles/app.css';
+import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2?url';
+import inter700 from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
+import { withBase } from '@/utils/base';
+
+export interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+  /** Override the robots meta tag; omitted by default (public pages are indexable). */
+  robots?: string;
+}
+
+const { title, description = '', lang = 'it', robots } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang} class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {robots && <meta name="robots" content={robots} />}
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <!-- Preload the above-the-fold Inter weights so the `font-display: swap`
+         fallback is replaced before/around the first paint (avoids the FOUT). -->
+    <link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={inter700} as="font" type="font/woff2" crossorigin />
+    <script is:inline>
+      function getStoredTheme() {
+        try {
+          const cookieTheme = document.cookie.match(/(?:^|;\s*)theme=(dark|light)(?:;|$)/)?.[1];
+          return cookieTheme || localStorage.getItem('theme');
+        } catch {
+          return null;
+        }
+      }
+
+      function applyTheme() {
+        const root = document.documentElement;
+        const storedTheme = getStoredTheme();
+        const isDark =
+          storedTheme === 'dark' ||
+          (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        root.classList.toggle('dark', isDark);
+        root.classList.remove('no-js');
+        // Keep the browser's own UI (canvas, scrollbars, form controls) in sync
+        // with the chosen theme before the first paint. Relying on the CSS
+        // `color-scheme: light dark` declaration makes the UA follow the OS
+        // preference instead, which flashes when OS and chosen theme disagree.
+        root.style.colorScheme = isDark ? 'dark' : 'light';
+      }
+
+      applyTheme();
+      if (window.__applyThemeHandler) {
+        document.removeEventListener('astro:after-swap', window.__applyThemeHandler);
+      }
+      window.__applyThemeHandler = applyTheme;
+      document.addEventListener('astro:after-swap', window.__applyThemeHandler);
+    </script>
+    <slot name="head" />
+  </head>
+  <body class="flex min-h-dvh flex-col">
+    <a href="#main" class="skip-link">Salta al contenuto</a>
+    <slot name="header" />
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

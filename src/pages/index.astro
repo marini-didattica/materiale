@@ -1,0 +1,28 @@
+---
+import Card from '@/components/Card.astro';
+import { AREA_URL, PUBLIC_ROOT, SITE_DESCRIPTION, SITE_NAME } from '@/consts';
+import PageLayout from '@/layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Materiale didattico"
+  documentTitle={SITE_NAME}
+  description={SITE_DESCRIPTION}
+  robots="index, follow"
+>
+  <div class="flex flex-wrap gap-6">
+    <Card href={PUBLIC_ROOT} class="min-w-[min(100%,17rem)] grow basis-[17rem]">
+      <h2 class="mb-2 text-xl font-bold">Materiale pubblico</h2>
+      <p class="leading-relaxed text-text-secondary">
+        Dispense, esercizi, cheatsheet e altro materiale pubblicato.
+      </p>
+    </Card>
+
+    <Card href={AREA_URL} class="min-w-[min(100%,17rem)] grow basis-[17rem]">
+      <h2 class="mb-2 text-xl font-bold">Area riservata</h2>
+      <p class="leading-relaxed text-text-secondary">
+        Materiali personali in sola lettura, accessibili con un codice.
+      </p>
+    </Card>
+  </div>
+</PageLayout>

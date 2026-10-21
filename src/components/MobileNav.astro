@@ -1,0 +1,148 @@
+---
+export interface NavLink {
+  href: string;
+  label: string;
+}
+
+export interface Props {
+  links: NavLink[];
+  currentPath: string;
+}
+
+const { links, currentPath } = Astro.props;
+
+function normalizePath(path: string): string {
+  if (path === '/') return '/';
+  return path.endsWith('/') ? path.slice(0, -1) : path;
+}
+
+function isCurrent(href: string): boolean {
+  const path = href.startsWith('http') ? new URL(href).pathname : href;
+  return normalizePath(currentPath) === normalizePath(path);
+}
+---
+
+<button
+  id="mobile-nav-toggle"
+  type="button"
+  class="inline-flex size-11 items-center justify-center rounded-[var(--button-radius)] border border-border text-text transition-colors hover:border-border-secondary hover:bg-bg-secondary md:hidden"
+  aria-label="Apri il menu"
+  aria-expanded="false"
+  aria-controls="mobile-nav-menu"
+>
+  <span class="menu-icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="20"
+      height="20"
+      aria-hidden="true"
+    >
+      <path d="M4 6h16"></path>
+      <path d="M4 12h16"></path>
+      <path d="M4 18h16"></path>
+    </svg>
+  </span>
+  <span class="close-icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      width="20"
+      height="20"
+      aria-hidden="true"
+    >
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </svg>
+  </span>
+</button>
+
+<div
+  id="mobile-nav-menu"
+  class="absolute inset-x-0 top-full hidden border-b border-border bg-bg px-[var(--space-lg)] py-[var(--space-sm)] shadow-(--shadow-lg) md:hidden"
+>
+  <ul class="flex list-none flex-col gap-1 p-0" role="list">
+    {links.map((link) => (
+      <li>
+        <a
+          href={link.href}
+          class:list={[
+            'block rounded-[var(--radius-lg)] px-3 py-2 text-sm font-medium no-underline transition-colors',
+            {
+              'bg-bg-secondary text-text': isCurrent(link.href),
+              'text-text-secondary hover:bg-bg-secondary hover:text-text': !isCurrent(link.href),
+            },
+          ]}
+          aria-current={isCurrent(link.href) ? 'page' : undefined}
+        >
+          {link.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<script>
+  const button = document.getElementById('mobile-nav-toggle');
+  const panel = document.getElementById('mobile-nav-menu');
+
+  if (button instanceof HTMLButtonElement && panel instanceof HTMLElement) {
+    const setOpen = (open: boolean) => {
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+      panel.classList.toggle('hidden', !open);
+    };
+
+    button.addEventListener('click', () => {
+      setOpen(button.getAttribute('aria-expanded') !== 'true');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (button.getAttribute('aria-expanded') !== 'true') return;
+
+      const target = event.target;
+
+      if (target instanceof Node && (button.contains(target) || panel.contains(target))) {
+        return;
+      }
+
+      setOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    });
+
+    panel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+  }
+</script>
+
+<style>
+  .menu-icon {
+    display: inline-flex;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  button[aria-expanded='true'] .menu-icon {
+    display: none;
+  }
+
+  button[aria-expanded='true'] .close-icon {
+    display: inline-flex;
+  }
+</style>

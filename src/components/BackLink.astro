@@ -1,0 +1,30 @@
+---
+export interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a
+  href={href}
+  aria-label="Torna alla cartella superiore"
+  title="Cartella superiore"
+  class="inline-flex size-6 shrink-0 cursor-pointer items-center justify-center text-text-secondary no-underline transition-colors hover:text-accent"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    width="18"
+    height="18"
+    aria-hidden="true"
+  >
+    <path d="m12 19-7-7 7-7"></path>
+    <path d="M19 12H5"></path>
+  </svg>
+</a>
