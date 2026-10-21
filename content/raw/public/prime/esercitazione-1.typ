@@ -1,5 +1,5 @@
 // Compile from the materiale repository root:
-// typst compile --root content content/raw/public/esercitazioni-prime/esercitazione-1.typ
+// typst compile --root content content/raw/public/prime/esercitazione-1.typ
 #import "../../../typst-theme/src/lib.typ": theme
 #import "../../../typst-components/src/lib.typ": cover, quesito, griglia-punteggi, nota, template, esempi, callout, checklist, consegna
 
@@ -25,7 +25,7 @@
     - La prova è divisa in tre parti: *teoria* (20 punti), *scrittura del codice* (60 punti) e *lettura del codice* (30 punti).
     - Rispondi alle domande di teoria in modo *sintetico ma completo*, usando le righe a disposizione.
     - Per la parte di produzione del codice scrivi i programmi in *Python*, uno per esercizio. Sono valutate la correttezza, la gestione dei casi limite e la chiarezza del codice.
-    - Non è consentito consultare appunti, libri o Internet. E' possibile usare il *cheatsheet* scaricabile al link #link("https://marini-didattica.github.io/materiale/raw/public/cheatsheet-prime/python-intro.pdf")[https://marini-didattica.github.io/materiale/raw/public/cheatsheet-prime/python-intro.pdf]
+    - Non è consentito consultare appunti, libri o Internet. E' possibile usare il *cheatsheet* scaricabile al link #link("https://marini-didattica.github.io/materiale/raw/public/prime/python-intro.pdf")[https://marini-didattica.github.io/materiale/raw/public/prime/python-intro.pdf]
   ]
 
   #v(0.65cm)
@@ -48,6 +48,8 @@
   ]
   ],
 )
+
+#griglia-punteggi(titolo: "Riepilogo dei punteggi")
 
 // ============================================================
 //  PARTE 1 — TEORIA
@@ -230,9 +232,3 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
       i = i + 1
   ```
 ]
-
-#pagebreak()
-
-= Riepilogo dei punteggi
-
-#griglia-punteggi()

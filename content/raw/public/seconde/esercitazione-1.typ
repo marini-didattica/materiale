@@ -1,8 +1,8 @@
 // Compile from the materiale repository root:
-// typst compile --root content content/raw/public/esercitazioni-seconde/esercitazione-1.typ
+// typst compile --root content content/raw/public/seconde/esercitazione-1.typ
 #import "../../../typst-theme/src/lib.typ": theme
 #import "../../../typst-components/src/lib.typ": (
-  callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template, testata,
+  badge, callout, checklist, consegna, cover, esempi, esercizio, griglia-punteggi, nota, quesito, template, testata,
 )
 
 #set document(title: "Verifica di informatica — Simulazione 1", author: "Marini Mattia")
@@ -21,15 +21,44 @@
   ),
   student-data: ("nome", "cognome", "classe", "data"),
   body: [
+
+    #callout("Istruzioni per la consegna")[
+      - Va creato *un file per ciascun esercizio*. Il nome deve essere quanto indicato in alto a sinistra intestazione del titolo di ciascun esercizio. Ad esempio, il file di risposta al seguente esercizio deve chiamarsi `esercizio1.py`.
+
+        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
+          #testata("Esercizio", 1, "Esercizio di test")
+        ]
+
+        L'estensione del file deve essere chiaramente `.py` nel caso di esercizi che richiedano di sviluppare codice in python, mentre deve essere `.txt` nel caso di risposte a domande aperte.
+
+      - *Ogni* risposta va messa dentro ad una cartella nominata `cognome-nome`, *tutto minuscolo*. Se avete più nomi o cognomi, metteli tutti, concatenati dal carattere `-` (trattino alto). Ad esempio:
+
+        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
+          #table(
+            columns: (auto, 1fr),
+            inset: (x: 9pt, y: 6pt),
+            align: left,
+            stroke: 0.5pt + luma(215),
+            table.header([*Vostro nome*], [*Nome cartella*]),
+            [Marini Mattia], [`marini-mattia`],
+            [Olaizola Elisa Maitea], [`olaizola-elisa-maitea`],
+          )
+        ]
+
+
+      - Una volta finito la cartella conenente i file va copiata in scrittura. Potere trovare la cartella in `File Explorer (icona cartella) -> Questo Pc -> Scrittura`
+
+
+
+
+
+    ]
+
     #callout("Istruzioni generali")[
       - La prova è divisa in due parti: *produzione del codice* (80 punti) e *lettura del codice* (30 punti).
       - Sono valutati la correttezza, la gestione dei casi limite e la chiarezza del codice.
       - Anche l'utilizzo di vscode e la correttezza nel nominare i file costituiscono parte della valutazione.
       - Non è consentito consultare appunti, libri o Internet.
-    ]
-
-    #callout("Istruzioni")[
-      - Va creato *un file per ciascun esercio*. Il nome del file deve
     ]
 
     #v(0.65cm)
@@ -51,7 +80,8 @@
     ]
   ],
 )
-#testata("E", "prova", 2)
+
+#griglia-punteggi(titolo: "Riepilogo dei punteggi")
 
 // ============================================================
 //  PARTE 1 — PRODUZIONE DEL CODICE
@@ -283,9 +313,3 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
   print(c)
   ```
 ]
-
-#pagebreak()
-
-= Riepilogo dei punteggi
-
-#griglia-punteggi()

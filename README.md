@@ -43,9 +43,9 @@ dal suo codice di accesso.
 
 ```text
 Pubblico
-  content/raw/public/esercitazioni-prime/esercitazione-1.typ
-    -> /materiale/raw/public/esercitazioni-prime/esercitazione-1.pdf
-    -> /materiale/public/esercitazioni-prime/          (browser)
+  content/raw/public/prime/esercitazione-1.typ
+    -> /materiale/raw/public/prime/esercitazione-1.pdf
+    -> /materiale/public/prime/                        (browser)
 
 Riservato
   content/raw/private/1d/angeli-lorenzo/simulazione-1/correzione.typ
@@ -103,8 +103,8 @@ ogni cartella:
 
 ```text
 /materiale/public/                                   (elenco pubblico)
-/materiale/public/esercitazioni-prime/              (elenco cartella)
-/materiale/raw/public/esercitazioni-prime/esercitazione-1.pdf
+/materiale/public/prime/                             (elenco cartella)
+/materiale/raw/public/prime/esercitazione-1.pdf
 /materiale/private/ABCD2345/                        (benvenuto)
 /materiale/private/ABCD2345/simulazione-1/
 /materiale/raw/private/ABCD2345/simulazione-1/correzione.pdf
