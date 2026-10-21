@@ -1,7 +1,9 @@
 // Compile from the materiale repository root:
 // typst compile --root content content/raw/public/esercitazioni-seconde/esercitazione-1.typ
 #import "../../../typst-theme/src/lib.typ": theme
-#import "../../../typst-components/src/lib.typ": cover, quesito, griglia-punteggi, nota, template, esempi, callout, checklist, consegna
+#import "../../../typst-components/src/lib.typ": (
+  callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template, testata,
+)
 
 #set document(title: "Verifica di informatica — Simulazione 1", author: "Marini Mattia")
 #show: doc => theme(doc, footer-text: "Verifica di informatica")
@@ -19,12 +21,15 @@
   ),
   student-data: ("nome", "cognome", "classe", "data"),
   body: [
-    #callout("Istruzioni")[
+    #callout("Istruzioni generali")[
       - La prova è divisa in due parti: *produzione del codice* (80 punti) e *lettura del codice* (30 punti).
-      - Per la produzione scrivi un file separato per ogni esercizio (`es1.py` … `es5.py`), eseguilo e verifica il risultato con gli esempi.
-      - Nella lettura spiega a parole che cosa fa ogni frammento e, se stampa qualcosa, riporta anche l'output; non riscrivere il codice.
       - Sono valutati la correttezza, la gestione dei casi limite e la chiarezza del codice.
+      - Anche l'utilizzo di vscode e la correttezza nel nominare i file costituiscono parte della valutazione.
       - Non è consentito consultare appunti, libri o Internet.
+    ]
+
+    #callout("Istruzioni")[
+      - Va creato *un file per ciascun esercio*. Il nome del file deve
     ]
 
     #v(0.65cm)
@@ -46,6 +51,7 @@
     ]
   ],
 )
+#testata("E", "prova", 2)
 
 // ============================================================
 //  PARTE 1 — PRODUZIONE DEL CODICE
