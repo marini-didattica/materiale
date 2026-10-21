@@ -13,7 +13,6 @@
   subtitle: "Classe 1D · 20 ottobre 2026",
 )
 
-#v(0.7em)
 #text(size: 9.5pt, fill: luma(100), style: "italic")[
   La prova vale 110 punti: i primi 100 determinano il voto in decimi
   (`min(totale, 100) / 10`), i successivi 10 valgono la lode.
@@ -23,13 +22,9 @@
 
 #risposta(none, category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 0)
 
-#v(1em)
 #risposta(none, category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 0)
 
-#v(1em)
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
-
-#v(1em)
 
 = Scrittura del codice (60 punti)
 
@@ -37,25 +32,17 @@
   #raw(read("le-tue-risposte/es1.py"), block: true, lang: "python")
 ]
 
-#v(1em)
 #risposta(none, category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
-
-#v(1em)
 
 = Lettura del codice (30 punti)
 
 #risposta(none, category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 0, diff: 2)
-
-#v(1em)
 
 = Riepilogo dei punteggi
 

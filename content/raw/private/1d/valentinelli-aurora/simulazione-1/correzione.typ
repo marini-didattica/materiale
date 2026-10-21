@@ -13,7 +13,6 @@
   subtitle: "Classe 1D · 20 ottobre 2026",
 )
 
-#v(0.7em)
 #text(size: 9.5pt, fill: luma(100), style: "italic")[
   La prova vale 110 punti: i primi 100 determinano il voto in decimi
   (`min(totale, 100) / 10`), i successivi 10 valgono la lode.
@@ -28,7 +27,6 @@
   "Ok, mancano descrizioni e almeno un'altra componente. Occhio che è LA cpu, non IL cpu.",
 )
 
-#v(1em)
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 6)[
   #raw(read("le-tue-risposte/domanda02.txt"), block: true, lang: "text")
 ]
@@ -36,10 +34,7 @@
   "Bene, manca un accenno alla codifica ASCII e alla base 2. Cerca di essere meno vaga, altrimenti è difficile capire se tu abbia capito o meno!",
 )
 
-#v(1em)
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
-
-#v(1em)
 
 = Scrittura del codice (60 punti)
 
@@ -50,7 +45,6 @@
   "Perfetto: corretto e idiomatico.",
 )
 
-#v(1em)
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 18, diff: 2)[
   #raw(read("le-tue-risposte/esercizio02.py"), block: true, lang: "python")
 ]
@@ -58,15 +52,12 @@
   "Quasi perfetto. L'unica imprecisione è che n viene escluso dal ciclo (i < n): per n = 5 stampa 10 invece di 15.",
 )
 
-#v(1em)
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 5, diff: 3)[
   #raw(read("le-tue-risposte/esercizio03.py"), block: true, lang: "python")
 ]
 #commento(
   "Qui cadi nella trappola del ciclo infinito: manca l'incremento di i, quindi il ciclo while non termina mai. Manca proprio la logica di base",
 )
-
-#v(1em)
 
 = Lettura del codice (30 punti)
 
@@ -77,7 +68,6 @@
   "Bene l'inizio! L'output è 9, 1, 7, 3: prova a riportarli tutti e a spiegare il perché.",
 )
 
-#v(1em)
 #risposta(category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/snippet02.txt"), block: true, lang: "text")
 ]
@@ -85,15 +75,12 @@
   "Perfetto.",
 )
 
-#v(1em)
 #risposta(category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/snippet03.txt"), block: true, lang: "text")
 ]
 #commento(
   "Perfetto. Avrei usato 'stampare' invece di 'vedere', ma è chiaro che hai capito il funzionamento.",
 )
-
-#v(1em)
 
 = Riepilogo dei punteggi
 

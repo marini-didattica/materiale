@@ -23,7 +23,7 @@
   body: [
 
     #callout("Istruzioni per la consegna")[
-      - Va creato *un file per ciascun esercizio*. Il nome deve essere quanto indicato in alto a sinistra intestazione del titolo di ciascun esercizio. Ad esempio, il file di risposta al seguente esercizio deve chiamarsi `esercizio1.py`.
+      - Va creato *un file per ciascun esercizio*. Il nome deve essere quanto indicato in alto a sinistra intestazione del titolo di ciascun esercizio, ma trasformato in modo che sia *tutto minuscolo e senza spazi*. Ad esempio, il file di risposta al seguente esercizio deve chiamarsi `esercizio1.py`.
 
         #box(fill: luma(255), inset: 9pt, radius: 3pt)[
           #testata("Esercizio", 1, "Esercizio di test")
@@ -45,13 +45,7 @@
           )
         ]
 
-
       - Una volta finito la cartella conenente i file va copiata in scrittura. Potere trovare la cartella in `File Explorer (icona cartella) -> Questo Pc -> Scrittura`
-
-
-
-
-
     ]
 
     #callout("Istruzioni generali")[
@@ -61,27 +55,14 @@
       - Non è consentito consultare appunti, libri o Internet.
     ]
 
-    #v(0.65cm)
+    #griglia-punteggi(titolo: "Riepilogo dei punteggi")
 
-    #table(
-      columns: (auto, 1fr, auto),
-      inset: (x: 9pt, y: 6pt),
-      align: (left, left, right),
-      stroke: 0.5pt + luma(215),
-      table.header([*Parte*], [*Contenuto*], [*Punti*]),
-      [1], [Produzione del codice — cinque esercizi], [80],
-      [2], [Lettura del codice — cinque frammenti], [30],
-      table.cell(colspan: 2, align: right)[*Totale*], [*110*],
-    )
-
-    #v(3pt)
     #text(size: 8.5pt, fill: luma(120), style: "italic")[
       Il punteggio delle singole voci è riportato accanto a ciascun esercizio.
     ]
+
   ],
 )
-
-#griglia-punteggi(titolo: "Riepilogo dei punteggi")
 
 // ============================================================
 //  PARTE 1 — PRODUZIONE DEL CODICE
@@ -94,10 +75,10 @@
 Per ciascun esercizio scrivi un file separato (`es1.py` … `es5.py`), eseguilo e verifica il risultato con gli esempi. Il programma deve stampare *soltanto* il risultato richiesto.
 
 #checklist("Prima di consegnare", (
-  [Il programma stampa *solo* il risultato richiesto, senza messaggi in più?],
+  [Il programma esegue senza errori?],
+  [Viene stampato *solo* il risultato richiesto, senza messaggi in più?],
   [Hai provato i casi limite: lista vuota, un solo elemento, valori duplicati, numeri negativi?],
   [I nomi delle variabili sono chiari e il codice è rientrato in modo corretto?],
-  [Ogni esercizio è nel suo file `es1.py` … `es5.py`?],
 ))
 
 E' *fondamentale* che il programma funzioni per qualsiasi input gli venga dato. Gli esercizi che sono strutturati per funzionare solo su input specifici verranno valutati *0 punti*. Ad esempio, se venisse chiesto di stampare tutti i numeri contenuti in una lista, uno ad uno, allora il seguente esercizio varrebbe zero punti:
@@ -112,8 +93,6 @@ print(l[2])
   - Sono vietati `sum()`, `max()`, `min()`, `sorted()`, `reversed()`, `all()`, `any()`, `list.reverse()`, `list.sort()`, `list.count()`, `list.index()`.
   - Sono consentiti `len()`, `append()`, `pop()`, `remove()` e i normali cicli.
 ]
-
-#v(1.5em)
 
 #quesito(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, diff: 1)[
   #consegna[Data la lista `l`, stampa gli elementi uno si e uno no, ad esempio 0, 2, 4, … e così via.]
@@ -135,8 +114,6 @@ print(l[2])
   ))
 ]
 
-#v(1.5em)
-
 #quesito(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, diff: 2)[
   #consegna[Inverti la lista `l` *senza usare una lista ausiliaria*. Alla fine stampa `l`.]
 
@@ -154,8 +131,6 @@ print(l[2])
     ([`l = [7]`], [`[7]`], [Una lista con un solo elemento resta uguale.]),
   ))
 ]
-
-#v(1.5em)
 
 #quesito(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, diff: 2)[
   #consegna[Stabilisci se la lista `l` è *palindroma*: si legge allo stesso modo da sinistra a destra e da destra a sinistra. Stampa `True` oppure `False`.]
@@ -177,8 +152,6 @@ print(l[2])
   ))
 ]
 
-#v(1.5em)
-
 #quesito(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, diff: 3)[
   #consegna[Trova e stampa il secondo valore più grande della lista `l`. La lista contiene almeno due valori distinti.]
 
@@ -198,8 +171,6 @@ print(l[2])
     ([`l = [-3, -1, -7]`], [`-3`], [Il massimo è `-1`, il secondo è `-3`.]),
   ))
 ]
-
-#v(1.5em)
 
 #quesito(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, diff: 3)[
   #consegna[Modifica `l` rimuovendo tutti i numeri negativi. Alla fine stampa `l`. Lo zero va mantenuto.]
@@ -231,8 +202,6 @@ print(l[2])
 
 Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma stampa qualcosa, riporta anche l'output. Non devi riscrivere il codice o eseguirne la traccia; va dimostrato di averne compreso l'intento, descrivendone il funzionamento.
 
-#v(1.5em)
-
 #quesito(category: "S", tag: "Snippet", title: [Primo frammento], points: 6, diff: 2, righe: 3)[
   ```python
   a = [2, 4, 5, 3, 8]
@@ -246,8 +215,6 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
   ```
 ]
 
-#v(1.5em)
-
 #quesito(category: "S", tag: "Snippet", title: [Secondo frammento], points: 6, diff: 2, righe: 3)[
   ```python
   a = [4, 8, 6, 10]
@@ -260,8 +227,6 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
           print(x)
   ```
 ]
-
-#v(1.5em)
 
 #quesito(category: "S", tag: "Snippet", title: [Terzo frammento], points: 6, diff: 1, righe: 3)[
   ```python
@@ -280,8 +245,6 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
   ```
 ]
 
-#v(1.5em)
-
 #quesito(category: "S", tag: "Snippet", title: [Quarto frammento], points: 6, diff: 2, righe: 3)[
   ```python
   a = [4, 9, 1, 7]
@@ -294,8 +257,6 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
   print(b)
   ```
 ]
-
-#v(1.5em)
 
 #quesito(category: "S", tag: "Snippet", title: [Quinto frammento], points: 6, diff: 3, righe: 3)[
   ```python

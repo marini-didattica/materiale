@@ -1,8 +1,9 @@
 // Compile from the materiale repository root:
 // typst compile --root content content/raw/public/prime/esercitazione-1.typ
 #import "../../../typst-theme/src/lib.typ": theme
-#import "../../../typst-components/src/lib.typ": cover, quesito, griglia-punteggi, nota, template, esempi, callout, checklist, consegna
-
+#import "../../../typst-components/src/lib.typ": (
+  callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template, testata,
+)
 
 #set document(title: "Verifica di informatica — Simulazione 1", author: "Marini Mattia")
 #show: doc => theme(doc, footer-text: "Verifica di informatica")
@@ -21,35 +22,47 @@
   ),
   student-data: ("nome", "cognome", "classe", "data"),
   body: [
-  #callout("Istruzioni")[
-    - La prova è divisa in tre parti: *teoria* (20 punti), *scrittura del codice* (60 punti) e *lettura del codice* (30 punti).
-    - Rispondi alle domande di teoria in modo *sintetico ma completo*, usando le righe a disposizione.
-    - Per la parte di produzione del codice scrivi i programmi in *Python*, uno per esercizio. Sono valutate la correttezza, la gestione dei casi limite e la chiarezza del codice.
-    - Non è consentito consultare appunti, libri o Internet. E' possibile usare il *cheatsheet* scaricabile al link #link("https://marini-didattica.github.io/materiale/raw/public/prime/python-intro.pdf")[https://marini-didattica.github.io/materiale/raw/public/prime/python-intro.pdf]
-  ]
 
-  #v(0.65cm)
+    #callout("Istruzioni per la consegna")[
+      - Va creato *un file per ciascun esercizio*. Il nome deve essere quanto indicato in alto a sinistra intestazione del titolo di ciascun esercizio, ma trasformato in modo che sia *tutto minuscolo e senza spazi*. Ad esempio, il file di risposta al seguente esercizio deve chiamarsi `esercizio1.py`.
 
-  #table(
-    columns: (auto, 1fr, auto),
-    inset: (x: 9pt, y: 6pt),
-    align: (left, left, right),
-    stroke: 0.5pt + luma(215),
-    table.header([*Parte*], [*Contenuto*], [*Punti*]),
-    [1], [Teoria — tre domande a risposta aperta], [20],
-    [2], [Scrittura del codice — tre esercizi di programmazione], [60],
-    [3], [Lettura del codice — tre brevi programmi], [30],
-    table.cell(colspan: 2, align: right)[*Totale*], [*110*],
-  )
+        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
+          #testata("Esercizio", 1, "Esercizio di test")
+        ]
 
-  #v(3pt)
-  #text(size: 8.5pt, fill: luma(120), style: "italic")[
-    Il punteggio delle singole voci è riportato accanto a ciascuna domanda e a ciascun esercizio.
-  ]
+        L'estensione del file deve essere chiaramente `.py` nel caso di esercizi che richiedano di sviluppare codice in python, mentre deve essere `.txt` nel caso di risposte a domande aperte.
+
+      - *Ogni* risposta va messa dentro ad una cartella nominata `cognome-nome`, *tutto minuscolo*. Se avete più nomi o cognomi, metteli tutti, concatenati dal carattere `-` (trattino alto). Ad esempio:
+
+        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
+          #table(
+            columns: (auto, 1fr),
+            inset: (x: 9pt, y: 6pt),
+            align: left,
+            stroke: 0.5pt + luma(215),
+            table.header([*Vostro nome*], [*Nome cartella*]),
+            [Marini Mattia], [`marini-mattia`],
+            [Olaizola Elisa Maitea], [`olaizola-elisa-maitea`],
+          )
+        ]
+
+      - Una volta finito la cartella conenente i file va copiata in scrittura. Potere trovare la cartella in `File Explorer (icona cartella) -> Questo Pc -> Scrittura`
+    ]
+
+    #callout("Istruzioni")[
+      - La prova è divisa in tre parti: *teoria* (20 punti), *scrittura del codice* (60 punti) e *lettura del codice* (30 punti).
+      - Rispondi alle domande di teoria in modo *sintetico ma completo*, usando le righe a disposizione.
+      - Per la parte di produzione del codice scrivi i programmi in *Python*, uno per esercizio. Sono valutate la correttezza, la gestione dei casi limite e la chiarezza del codice.
+      - Non è consentito consultare appunti, libri o Internet. E' possibile usare il *cheatsheet* messo su scrittura
+    ]
+
+    #griglia-punteggi(titolo: "Riepilogo dei punteggi")
+
+    #text(size: 8.5pt, fill: luma(120), style: "italic")[
+      Il punteggio delle singole voci è riportato accanto a ciascuna domanda e a ciascun esercizio.
+    ]
   ],
 )
-
-#griglia-punteggi(titolo: "Riepilogo dei punteggi")
 
 // ============================================================
 //  PARTE 1 — TEORIA
@@ -61,21 +74,15 @@
 
 Rispondi in modo breve e preciso, usando le righe sotto ogni domanda.
 
-#v(1.5em)
-
 #quesito(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, righe: 6)[
   Descrivi brevemente quali sono le principali componenti di un personal computer e qual è lo scopo di ciascuna.
 
   #nota[Una o due frasi per componente sono sufficienti. Nomina almeno *cinque* componenti diverse.]
 ]
 
-#v(1.5em)
-
 #quesito(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, righe: 7)[
   Descrivi brevemente come vengono immagazzinati i numeri in un computer. Come si possono salvare caratteri e parole?
 ]
-
-#v(1.5em)
 
 #quesito(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, righe: 5)[
   Che cos'è un'*istruzione* di un processore? Come viene rappresentata? Cosa si intende quando di parla di *instruction set*?
@@ -106,8 +113,6 @@ print(l[1])
 print(l[2])
 ```
 
-#v(1.5em)
-
 #quesito(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, diff: 1)[
   #consegna[Dato un intero `n` maggiore o uguale a `0`, conta i numeri pari fra `0` e `n`, estremi inclusi, e stampa un solo numero: il conteggio trovato.]
 
@@ -130,8 +135,6 @@ print(l[2])
   ))
 ]
 
-#v(1.5em)
-
 #quesito(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, diff: 2)[
   #consegna[Dato un intero `n` maggiore o uguale a `0`, calcola e stampa la somma degli interi da `0` a `n`, estremi inclusi.]
 
@@ -153,8 +156,6 @@ print(l[2])
     ([`n = 100`], [`5050`], [La somma di tutti gli interi da `0` a `100`.]),
   ))
 ]
-
-#v(1.5em)
 
 #quesito(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, diff: 3)[
   #consegna[Date la lista `l` e gli interi `a` e `b`, stampa `True` se *tutti* gli elementi di `l` sono fra `a` e `b`, estremi inclusi, altrimenti `False`. Se `l` è vuota, stampa `True`. Le variabili `l`, `a` e `b` sono già nel template.]
@@ -194,8 +195,6 @@ print(l[2])
 
 Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma stampa qualcosa, riporta anche l'output. Non devi riscrivere il codice o eseguirne la traccia; va dimostrato di averne compreso l'intento che ne sta dietro, descrivendone il funzionamento
 
-#v(1.5em)
-
 #quesito(category: "S", tag: "Snippet", title: [Primo frammento], points: 10, diff: 2, righe: 3)[
   ```python
   v = [3, 7, 1, 9]
@@ -205,8 +204,6 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
       i = i - 1
   ```
 ]
-
-#v(1.5em)
 
 #quesito(category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, diff: 2, righe: 3)[
   Le variabili `a` e `b` contengono due numeri. Cosa succede ai valori delle due variabili durante l'esecuzione del programma?
@@ -219,8 +216,6 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
   print(a, b)
   ```
 ]
-
-#v(1.5em)
 
 #quesito(category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, diff: 2, righe: 4)[
   ```python

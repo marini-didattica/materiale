@@ -13,7 +13,6 @@
   subtitle: "Classe 1D · 20 ottobre 2026",
 )
 
-#v(0.7em)
 #text(size: 9.5pt, fill: luma(100), style: "italic")[
   La prova vale 110 punti: i primi 100 determinano il voto in decimi
   (`min(totale, 100) / 10`), i successivi 10 valgono la lode.
@@ -28,7 +27,6 @@
   "Bene l'elenco! Occhio che il software non è proprio una componente fisica. Mancano le descrizioni",
 )
 
-#v(1em)
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 4)[
   #raw(read("le-tue-risposte/domanda3"), block: true, lang: "text")
 ]
@@ -36,7 +34,6 @@
   "Ok, andrebbe estesa leggermente, altrimenti si fa fatica a capire cosa tu intenda. Andrebbero citate codifica in base 2 e tabelle ASCII",
 )
 
-#v(1em)
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 4)[
   #raw(read("le-tue-risposte/domanda4"), block: true, lang: "text")
 ]
@@ -44,13 +41,10 @@
   "Anche qui andrebbe spiegato meglio. Cosa intendi con 'L'instruction set sono tutte le informazioni'? La rappresentazione è fatta tramite codice binario (stringhe di bit)",
 )
 
-#v(1em)
-
 = Scrittura del codice (60 punti)
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 0, diff: 1)
 
-#v(1em)
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 15, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
@@ -58,24 +52,17 @@
   "Wow! Non mi sarei aspettato che qualcuno riuscisse a ricavare la formula di Gauss. Complimenti per il ragionamento! Non posso darti punteggio pieno però perché ciò che hai scritto non è codice python",
 )
 
-#v(1em)
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)[
   #raw(read("le-tue-risposte/es3.py"), block: true, lang: "python")
 ]
-
-#v(1em)
 
 = Lettura del codice (30 punti)
 
 #risposta(none, category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 0, diff: 2)
-
-#v(1em)
 
 = Riepilogo dei punteggi
 

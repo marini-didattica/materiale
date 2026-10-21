@@ -13,7 +13,6 @@
   subtitle: "Classe 1D · 20 ottobre 2026",
 )
 
-#v(0.7em)
 #text(size: 9.5pt, fill: luma(100), style: "italic")[
   La prova vale 110 punti: i primi 100 determinano il voto in decimi
   (`min(totale, 100) / 10`), i successivi 10 valgono la lode.
@@ -36,7 +35,6 @@
   "Bene, hai citato RAM, disco, CPU e ventole. Prova ad aggiungere una quinta componente e a dire in una frase a cosa serve.",
 )
 
-#v(1em)
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 5)[
   #raw(
     "DOMANDA 2
@@ -49,10 +47,7 @@
   "L'idea del binario c'è, prova a distinguere meglio numeri e caratteri: i numeri si salvano in base 2, i caratteri con una codifica (tipo ASCII).",
 )
 
-#v(1em)
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
-
-#v(1em)
 
 = Scrittura del codice (60 punti)
 
@@ -63,7 +58,6 @@
   "Qui l'idea dei pari c'è, ma il programma stampa i numeri invece di contarli. Inoltre l'incremento di i è fuori dal ciclo: l'applicazione va il loop infinito",
 )
 
-#v(1em)
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 14, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
@@ -71,7 +65,6 @@
   "Hai impostato la somma, ma manca l'incremento di i e la stampa finale. Siccome manca l'incremento, il ciclo va in loop infinito.",
 )
 
-#v(1em)
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 5, diff: 3)[
   #raw(read("le-tue-risposte/es3.py"), block: true, lang: "python")
 ]
@@ -79,19 +72,13 @@
   "Stai provando a confrontare una lista (l) con un intero (1, b). Questo non è valido in python. Manca anche l'idea di base, scorrere la lista e verificare che l'elemento corrente sia nel range.",
 )
 
-#v(1em)
-
 = Lettura del codice (30 punti)
 
 #risposta(none, category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 0, diff: 2)
-
-#v(1em)
 
 = Riepilogo dei punteggi
 

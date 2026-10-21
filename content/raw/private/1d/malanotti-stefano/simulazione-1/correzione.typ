@@ -13,7 +13,6 @@
   subtitle: "Classe 1D · 20 ottobre 2026",
 )
 
-#v(0.7em)
 #text(size: 9.5pt, fill: luma(100), style: "italic")[
   La prova vale 110 punti: i primi 100 determinano il voto in decimi
   (`min(totale, 100) / 10`), i successivi 10 valgono la lode.
@@ -28,7 +27,6 @@
   "Bene, cinque componenti con i loro ruoli. Occhio: è RAM, non CAM.",
 )
 
-#v(1em)
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 7)[
   #raw(read("le-tue-risposte/domanda02.txt"), block: true, lang: "text")
 ]
@@ -36,15 +34,12 @@
   "Buona l'idea di binario, byte e caratteri. Il top sarebbe citare anche codifica in base 2 e tabelle ASCII/Unicode per i caratteri.",
 )
 
-#v(1em)
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 3)[
   #raw(read("le-tue-risposte/domanda03.txt"), block: true, lang: "text")
 ]
 #commento(
   "L'idea di istruzione c'è; prova a definirla come comando in binario e a dire che l'instruction set è l'insieme delle istruzioni che il processore è in grado di eseguire. Ciò che descrivi è una visione più 'ad alto livello' di ciò che avviene. In questa domanda veniva richiesto il concetto di istruzione come stringa binaria letta da un processore",
 )
-
-#v(1em)
 
 = Scrittura del codice (60 punti)
 
@@ -55,25 +50,17 @@
   "Perfetto. Occhio sempre al solito discorso: tendi a trovare soluzioni funzionanti ma più complesse di quanto richiesto!",
 )
 
-#v(1em)
 #risposta(none, category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
-
-#v(1em)
 
 = Lettura del codice (30 punti)
 
 #risposta(none, category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 0, diff: 2)
-
-#v(1em)
 
 = Riepilogo dei punteggi
 

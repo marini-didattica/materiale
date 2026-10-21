@@ -13,7 +13,6 @@
   subtitle: "Classe 1D · 20 ottobre 2026",
 )
 
-#v(0.7em)
 #text(size: 9.5pt, fill: luma(100), style: "italic")[
   La prova vale 110 punti: i primi 100 determinano il voto in decimi
   (`min(totale, 100) / 10`), i successivi 10 valgono la lode.
@@ -28,7 +27,6 @@
   "Bene. Occhio però che non è vero che la GPU 'non è precisa'. La differenza rispetto alla CPU è proprio che i calcoli vengono eseguiti in parallelo, anziché in serie",
 )
 
-#v(1em)
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 6)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
@@ -36,15 +34,12 @@
   "Bene il binario e i byte. Occhio che la per immagazzinare i caratteri si usano le TABELLE ASCII, non linguaggi huski!",
 )
 
-#v(1em)
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 4)[
   #raw(read("le-tue-risposte/domanda3.txt"), block: true, lang: "text")
 ]
 #commento(
   "L'idea di comando c'è; completa dicendo che l'istruzione è in binario e che l'instruction set è l'insieme delle istruzioni della CPU.",
 )
-
-#v(1em)
 
 = Scrittura del codice (60 punti)
 
@@ -55,7 +50,6 @@
   "Ottimo! Sei stato uno dei pochi che non è cascato nel tranello di usare i cicli. La formula funziona; c'è solo il dettaglio che con n dispari stampa 4.0 invece di 4. Sarebbe meglio usare // (che arrotonda per diferro)",
 )
 
-#v(1em)
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 20, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
@@ -63,22 +57,15 @@
   "Perfetto, corretto e idiomatico",
 )
 
-#v(1em)
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
-
-#v(1em)
 
 = Lettura del codice (30 punti)
 
 #risposta(none, category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 0, diff: 2)
 
-#v(1em)
 #risposta(none, category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 0, diff: 2)
-
-#v(1em)
 
 = Riepilogo dei punteggi
 
