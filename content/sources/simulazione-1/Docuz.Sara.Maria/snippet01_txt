@@ -1,0 +1,7 @@
+Nel primo esercizio abbiamo:
+-una lista contenenti dei numeri, in questo caso, v = [3, 7, 1, 9]
+-la variabile i che corrisponde alla lista v - 1 
+
+Cosa stiamo facendo? 
+-dopo i "dati" forniti abbiamo un while che contiene un comando: i e minore uguale a 0, quindi affinché la i e minore uguale a 0 .. allora print (stampa) la lista contenente anche la variabile i. Successivamente in conclusione la variabile i è la i -1.
+Quindi in conclusione qui in questo comando abbiamo fatto scorrere una lista elemento per elemento.

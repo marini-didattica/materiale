@@ -1,0 +1,8 @@
+In un computer tutte le informazioni sono memorizzate in forma binaria, cioè come sequenze di bit (0 e 1); 8 bit formano un byte.
+
+Per rappresentare qualsiasi tipo di dato il computer ha a disposizione sempre e solo sequenze di 0 e 1.
+
+Per rappresentare un numero vengono usate sequenze di 32/64 bit (a seconda dell'architettura), le quali rappresentano la codifica del numero in BASE 2.
+
+Per rappresentare i caratteri o una parola vengono usate sequenze di 8 bit (1 byte). Ciascuna differente sequenza di 8 bit rappresenta un carattere diverso (ad esempio 'a' = 01100001, 'b' = 01100010, 'c' = 01100011, ecc.). La corrispondenza tra sequenze di bit e caratteri è definita in una tabella di codifica (ASCII o Unicode/UTF-8). Una parola non è altro che una sequenza di caratteri messi una dietro l'altro
+

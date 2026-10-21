@@ -1,0 +1,1 @@
+I numeri vengono immagazzinati con sequenze (byte) di codice binario (1-0). I caratteri si salvano con dei linguaggi per esempio l'huski.

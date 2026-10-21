@@ -1,0 +1,3 @@
+L'istruzione di un processore è una serie di comandi in ordine che spiegano al computer cosa deve fare
+Viene rappresentata tramite segni e lettere che creano dei veri e propri codici
+Un' ''Isructon set'' è il codice finale formato da lettere e segni

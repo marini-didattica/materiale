@@ -1,0 +1,5 @@
+1.scheda madre: è il più importante componente del computer;la scheda madre coordina i componenti
+2.disco rigido: Il disco gestisce gli aggiornamenti e le aggiunte al computer
+3.memoria: La memoria gestisce ciò che si lascia in sospeso
+4.GPU: permette di fare i calcoli più velocemente ma non sempre è preciso
+5.CPU: come il GPU anche il CPU permette di fare calcoli; il CPU fa un calcolo alla volta ma è preciso

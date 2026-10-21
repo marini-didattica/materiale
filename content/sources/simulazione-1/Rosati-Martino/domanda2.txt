@@ -1,0 +1,1 @@
+I numeri in un computer vengono immagazzinati tramite i 'byte' che seguono il codice binario

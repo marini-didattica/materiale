@@ -1,0 +1,15 @@
+Parti principali di un computer:
+
+1. CPU (scheda madre): E il cervello del computer,
+tutte le informazioni che vengono elaborate passano da qui.
+
+2.RAM (memoria a lungo termine): E la memoria fissa del computer,
+che conserva tutti i dati e le informazioini immagazzinate anche dopo che il computer è stato spento.
+
+3. ROM (memoria a breve termine): Serve solo quando il computer è acceso,
+perchè a differenza della RAM non conserva le informazioni se il computer viene spento.
+Serve per esempio per "ricordare" delle informazioni temporanee quando devono essere proiettate sullo schermo.
+
+4. SCHEDA VIDEO: E una specie di memoria che viene utilizzata nei video, videogiochi ma anche dall'intelligenza artificiale.
+
+5. HARDWARE: sono le parti fisiche del computer, come la tastiera il mouse, llo schermo ecc.

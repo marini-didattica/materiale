@@ -1,0 +1,1 @@
+L'output di questo programma è 0,2,4,6,8,10. Serve per vedere quali sono i numeri pari compresi tra i e n.

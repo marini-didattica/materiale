@@ -1,0 +1,3 @@
+domanda 8)
+
+stamperà 8 e 8 perché se c = a è uguale a 5 dopo a = b che è 8 quindi diventa tutto 8 poi b=c se c è uguale a A che è diventata 8 tutto diventa 8 all'interno di questa sequenza 
