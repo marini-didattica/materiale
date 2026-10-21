@@ -256,7 +256,7 @@ export async function getPrivateDirectoryPages(): Promise<PrivateDirectoryPage[]
 
     await ensureStagedRoot(
       sourceRoot,
-      `La cartella pubblica per il codice ${code} (${folder}) non esiste.`,
+      `La cartella del materiale per il codice ${code} (${folder}) non esiste.`,
     );
 
     const config: BrowserConfig = {
