@@ -1,0 +1,159 @@
+---
+import BackLink from '@/components/BackLink.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import FileList from '@/components/FileList.astro';
+import type { BreadcrumbItem, DownloadTree, FileEntry } from '@/types';
+
+export interface Props {
+  entries: FileEntry[];
+  crumbs: BreadcrumbItem[];
+  parentHref: string | null;
+  downloadTree: DownloadTree;
+  /** Sanitized base name used for the per-entry ZIP downloads. */
+  zipBaseName: string;
+  /** Full filename of the "Scarica tutto" ZIP. */
+  zipName: string;
+  downloadLabel?: string;
+}
+
+const {
+  entries,
+  crumbs,
+  parentHref,
+  downloadTree,
+  zipBaseName,
+  zipName,
+  downloadLabel = 'Scarica tutto',
+} = Astro.props;
+
+const downloadFiles = downloadTree[''] ?? [];
+const hasAnyDownloads = Object.values(downloadTree).some((files) => files.length > 0);
+---
+
+<div class="mb-6 flex items-center gap-2">
+  {parentHref && <BackLink href={parentHref} />}
+  <Breadcrumbs items={crumbs} />
+</div>
+
+<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+  <p class="text-sm text-text-secondary">
+    {entries.length === 0
+      ? 'Cartella vuota'
+      : `${entries.length} element${entries.length === 1 ? 'o' : 'i'}`}
+  </p>
+  <div class="flex flex-wrap items-center gap-2">
+    {downloadFiles.length > 0 && (
+      <button
+        id="download-folder"
+        type="button"
+        data-download-folder=""
+        data-zip-name={zipName}
+        class="inline-flex cursor-pointer items-center gap-2 rounded-md border border-border px-4 py-2 text-sm font-semibold text-text transition-colors hover:bg-bg-secondary disabled:cursor-wait disabled:opacity-60"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="16"
+          height="16"
+          aria-hidden="true"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <path d="m7 10 5 5 5-5"></path>
+          <path d="M12 15V3"></path>
+        </svg>
+        <span data-download-label>{downloadLabel}</span>
+      </button>
+    )}
+  </div>
+</div>
+
+<FileList entries={entries} downloadBaseName={zipBaseName} />
+
+{hasAnyDownloads && (
+  <script
+    type="application/json"
+    id="download-tree"
+    is:inline
+    set:html={JSON.stringify(downloadTree).replace(/</g, '\\u003c')}
+  ></script>
+)}
+
+<script>
+  import { zipSync } from 'fflate';
+
+  const data = document.getElementById('download-tree');
+
+  if (data instanceof HTMLScriptElement) {
+    const tree = JSON.parse(data.textContent ?? '{}') as Record<
+      string,
+      Array<{ name: string; href: string; size: number }>
+    >;
+
+    const downloadFolder = async (button: HTMLButtonElement) => {
+      const key = button.dataset.downloadFolder ?? '';
+      const files = tree[key] ?? [];
+
+      if (files.length === 0) return;
+
+      const label = button.querySelector<HTMLElement>('[data-download-label]');
+      const originalLabel = label?.textContent ?? '';
+      button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      if (label) label.textContent = 'Preparazione…';
+
+      try {
+        const downloaded = await Promise.all(
+          files.map(async (file) => {
+            const response = await fetch(file.href);
+
+            if (!response.ok) {
+              throw new Error(`Impossibile scaricare ${file.name}`);
+            }
+
+            return [file.name, new Uint8Array(await response.arrayBuffer())] as const;
+          }),
+        );
+
+        const zipData: Record<string, Uint8Array> = {};
+
+        for (const [name, bytes] of downloaded) {
+          zipData[name] = bytes;
+        }
+
+        const zipped = zipSync(zipData, { level: 0 });
+        const blob = new Blob([zipped], { type: 'application/zip' });
+        const url = URL.createObjectURL(blob);
+        const anchor = document.createElement('a');
+
+        anchor.href = url;
+        anchor.download = button.dataset.zipName ?? 'materiale.zip';
+        document.body.append(anchor);
+        anchor.click();
+        anchor.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      } catch (error) {
+        console.error(error);
+        if (label) label.textContent = 'Errore, riprova';
+        setTimeout(() => {
+          if (label) label.textContent = originalLabel;
+        }, 2500);
+      } finally {
+        button.disabled = false;
+        button.removeAttribute('aria-busy');
+
+        if (label && label.textContent === 'Preparazione…') {
+          label.textContent = originalLabel;
+        }
+      }
+    };
+
+    document.querySelectorAll<HTMLButtonElement>('[data-download-folder]').forEach((button) => {
+      button.addEventListener('click', () => downloadFolder(button));
+    });
+  }
+</script>

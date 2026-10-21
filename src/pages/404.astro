@@ -1,0 +1,24 @@
+---
+import Button from '@/components/Button.astro';
+import { AREA_URL, PUBLIC_ROOT } from '@/consts';
+import PageLayout from '@/layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Pagina non trovata"
+  eyebrow="Materiale didattico"
+  description="Il codice o il percorso richiesto non esiste oppure il materiale non è più disponibile."
+  robots="noindex, nofollow"
+>
+  <div class="max-w-xl">
+    <p class="text-text-secondary">
+      Controlla il link e riprova. Se stavi inserendo un codice, verifica di averlo scritto
+      correttamente, senza spazi e con tutti i caratteri. Se il problema continua, chiedi al
+      docente.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <Button href={PUBLIC_ROOT}>Materiale pubblico</Button>
+      <Button href={AREA_URL} variant="secondary">Inserisci un codice</Button>
+    </div>
+  </div>
+</PageLayout>

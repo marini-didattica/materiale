@@ -1,0 +1,77 @@
+---
+import Explorer from '@/components/Explorer.astro';
+import { AREA_URL } from '@/consts';
+import PageLayout from '@/layouts/PageLayout.astro';
+import { getPrivateDirectoryPages } from '@/lib/content-index';
+import { studentFirstName, studentFullName, studentOwnerSlug } from '@/lib/students';
+import type { BreadcrumbItem } from '@/types';
+import { withBase } from '@/utils/base';
+import { buildZipName, toDownloadSegment } from '@/utils/downloads';
+import { encodePath } from '@/utils/paths';
+
+export async function getStaticPaths() {
+  return getPrivateDirectoryPages();
+}
+
+const { entries, dir, student, downloadTree } = Astro.props;
+const code = student.slug;
+const ownerName = studentFullName(student);
+const ownerFirstName = studentFirstName(student);
+const ownerSlug = studentOwnerSlug(student);
+const segments = dir.split('/').filter(Boolean);
+const title = segments.length > 0 ? segments[segments.length - 1] : `Ciao ${ownerFirstName}!`;
+const description =
+  segments.length === 0
+    ? `Materiale di ${ownerName}, assegnato al codice ${code}.`
+    : `Contenuto della cartella ${title}.`;
+
+const crumbs: BreadcrumbItem[] = [
+  { label: 'Materiale riservato', href: AREA_URL },
+  { label: ownerSlug, href: withBase(`/private/${code}/`) },
+  ...segments.map((segment, index) => {
+    const relative = segments.slice(0, index + 1).join('/');
+    return {
+      label: segment,
+      href: withBase(`/private/${code}/${encodePath(relative)}/`),
+    };
+  }),
+];
+
+const parentPath = segments.slice(0, -1).join('/');
+const parentHref =
+  segments.length > 0
+    ? withBase(`/private/${code}/${parentPath ? `${encodePath(parentPath)}/` : ''}`)
+    : null;
+
+const zipBaseName = [ownerSlug, ...segments].map(toDownloadSegment).join('-');
+const zipName = buildZipName([ownerSlug, ...segments]);
+---
+
+<PageLayout
+  title={title}
+  eyebrow={segments.length === 0 ? 'Area riservata' : 'Materiale riservato'}
+  description={description}
+  robots="noindex, nofollow"
+>
+  <Fragment slot="description">
+    {segments.length === 0 ? (
+      <Fragment>
+        Materiale di {ownerName}, assegnato al codice{' '}
+        <code class="rounded-md border border-border bg-bg-secondary px-2 py-0.5 text-xs text-text-secondary">
+          {code}
+        </code>.
+      </Fragment>
+    ) : (
+      description
+    )}
+  </Fragment>
+
+  <Explorer
+    entries={entries}
+    crumbs={crumbs}
+    parentHref={parentHref}
+    downloadTree={downloadTree}
+    zipBaseName={zipBaseName}
+    zipName={zipName}
+  />
+</PageLayout>

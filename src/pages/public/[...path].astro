@@ -1,0 +1,57 @@
+---
+import Explorer from '@/components/Explorer.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
+import { getPublicDirectoryPages } from '@/lib/content-index';
+import type { BreadcrumbItem } from '@/types';
+import { withBase } from '@/utils/base';
+import { buildZipName, toDownloadSegment } from '@/utils/downloads';
+import { encodePath } from '@/utils/paths';
+
+export async function getStaticPaths() {
+  return getPublicDirectoryPages();
+}
+
+const { entries, dir, downloadTree } = Astro.props;
+const segments = dir.split('/').filter(Boolean);
+const title = segments.length > 0 ? segments[segments.length - 1] : 'Materiale pubblico';
+const description =
+  segments.length === 0
+    ? 'Tutti i materiali pubblici: dispense, esercizi, cheatsheet e altro.'
+    : `Contenuto della cartella ${title}.`;
+
+const crumbs: BreadcrumbItem[] = [
+  { label: 'Materiale pubblico', href: withBase('/public/') },
+  ...segments.map((segment, index) => {
+    const relative = segments.slice(0, index + 1).join('/');
+    return {
+      label: segment,
+      href: withBase(`/public/${encodePath(relative)}/`),
+    };
+  }),
+];
+
+const parentPath = segments.slice(0, -1).join('/');
+const parentHref =
+  segments.length > 0
+    ? withBase(`/public/${parentPath ? `${encodePath(parentPath)}/` : ''}`)
+    : null;
+
+const zipBaseName = ['materiale-pubblico', ...segments].map(toDownloadSegment).join('-');
+const zipName = buildZipName(['materiale-pubblico', ...segments]);
+---
+
+<PageLayout
+  title={title}
+  eyebrow="Materiale didattico"
+  description={description}
+  robots="index, follow"
+>
+  <Explorer
+    entries={entries}
+    crumbs={crumbs}
+    parentHref={parentHref}
+    downloadTree={downloadTree}
+    zipBaseName={zipBaseName}
+    zipName={zipName}
+  />
+</PageLayout>
