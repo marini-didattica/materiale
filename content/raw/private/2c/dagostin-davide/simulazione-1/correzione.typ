@@ -24,29 +24,23 @@
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento(
-  "Corretto: selezioni gli indici pari e stampi gli elementi corrispondenti.",
+  "Perfetto: corretto e idiomatico",
 )
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Funziona e stampa la lista invertita, ma usi una lista ausiliaria (L0) e non modifichi L sul posto, come richiesto. Inoltre stampi L0 invece di L.",
-)
+#commento[Funziona e stampa la lista invertita, ma usi una lista ausiliaria (`L0`) e non modifichi L sul posto, come *esplicitamente richiesto dalla consegna*. Inoltre stampi `L0` invece di `L`.],
 
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 16, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento(
-  "Corretto: costruisci l'inversa e confronti elemento per elemento. Va bene anche l'uso della lista ausiliaria, non era vietato.",
-)
+#commento[Corretto: costruisci l'inversa e confronti elemento per elemento. Va bene anche l'uso della lista ausiliaria, non era vietato. Nota che in realtà sarebbe bastato controllare `if L[j] != L1[j]`],
 
-#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 4, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 13, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
-#commento(
-  "Cerchi il massimo correttamente, ma poi usi L.pop(max): pop vuole un indice, non un valore, e comunque rimuovendo il massimo e ricalcolandolo ottieni di nuovo il massimo, non il secondo. Per [1, 2, 3, 4, 5, 5] stampi 5 invece di 4.",
-)
+#commento[Cerchi il massimo correttamente, ma poi usi `L.pop(max)`: `pop` vuole un indice, non un valore, e comunque dovresti assicurarti di rimuovere OGNI valore uguale al massimo. Comunque un'idea piuttosto solida c'è!]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 0, diff: 3)
 

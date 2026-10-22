@@ -20,19 +20,17 @@
 
 = Produzione del codice (80 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 9, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento(
-  "La selezione degli indici pari è corretta, ma stampi una lista ([1, 3, 5]) invece degli elementi uno per uno come negli esempi.",
+  "Corretto e idiomatico. Aggiungere gli elementi alla lista in questo esercizio non è molto utile ma va bene comunque!",
 )
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 8, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il risultato per la lista di esempio è giusto, ma il codice dipende dalla lunghezza 5 (if c > 4): per liste di lunghezza diversa rimuove il numero sbagliato di elementi. L'inversione in place deve funzionare per qualsiasi lunghezza.",
-)
+#commento[Questo codice è estremamente esoterico. Capisco il tuo intento e di base non è sbagliato. Il problema è nel secondo ciclo: innanzitutto `c = c-1` non va bene in ogni caso. Poi devi stare attento al fatto che stai modificando una lista che sta cambiando (ad ogni iterazione rimuovi un elemento). L'`if` non serve visto che stai usando il for, quindi ci esci in automatico quando `c == len(l)`]
 
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 12, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")

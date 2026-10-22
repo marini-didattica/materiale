@@ -20,30 +20,24 @@
 
 = Produzione del codice (80 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 10, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "La logica per gli indici pari è corretta, ma il file è impostato su l = [] e stampa un messaggio extra quando la lista è vuota. Gli esempi richiedono nessun output per la lista vuota e solo gli elementi negli altri casi.",
-)
+#commento[Va bene! Una sottigliezza: la consegna chiedeva di non stampare nulla nel caso in cui vi fosse una lista vuota. Per queste piccole cose però non vi penalizzo, quindi il punteggio è pieno.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 0, diff: 2)
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 0, diff: 2)
 
-#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 3, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 14, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
-#commento(
-  "L'idea di confrontare i valori non porta al secondo massimo: il ciclo interno continua a sovrascrivere s e per [1, 2, 3, 4, 5] stampi 5 invece di 4. Conviene tenere due variabili, massimo e secondo massimo, aggiornate in un solo passaggio.",
-)
+#commento[Ci sei molto vicino. Il secondo ciclo però andrebbe messo fuori dal primo; la logica è la seguente: prima calcoli il massimo globale, poi ricalcoli il massimo, considerando solo gli elementi DIVERSI dal massimo globale. Il secondo massimo trovato è la risposta all'esercizio]
 
-#risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 14, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 18, diff: 3)[
   #raw(read("le-tue-risposte/esercizio5.py"), block: true, lang: "python")
 ]
-#commento(
-  "Filtri correttamente i valori non negativi e mantieni lo zero, ma costruisci l1 e stampi quella: la consegna chiedeva che alla fine l contenesse solo i non negativi.",
-)
+#commento[La logica è corretta. Occhio che la consegna avrebbe chiesto di filtrare `l`. Quindi l alla fine del programma dovrebbe contenere solo i valori positivi, mentre qui contiene ancora tutti i valori che conteneva in origine. Per ora non mi soffermo su questi aspetti "marginali", ma più andremo avanti più diventeranno importanti]
 
 = Lettura del codice (30 punti)
 

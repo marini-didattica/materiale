@@ -24,7 +24,7 @@
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento(
-  "Corretto: selezioni gli indici pari e stampi gli elementi corrispondenti.",
+  "Corretto e idiomatico",
 )
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 2, diff: 2)[
