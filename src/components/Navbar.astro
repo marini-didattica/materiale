@@ -9,10 +9,12 @@ export interface NavLink {
 
 export interface Props {
   siteName: string;
+  /** Destination of the site name; defaults to the material site home. */
+  homeHref?: string;
   links?: NavLink[];
 }
 
-const { siteName, links = [] } = Astro.props;
+const { siteName, homeHref = withBase('/'), links = [] } = Astro.props;
 const currentPath = Astro.url.pathname;
 
 function normalizePath(path: string): string {
@@ -27,9 +29,9 @@ function isCurrent(href: string): boolean {
 ---
 
 <header class="sticky top-0 z-[var(--z-sticky)] h-[var(--nav-height)] border-b border-border bg-[var(--color-surface)] backdrop-blur-[12px]">
-  <nav aria-label="Navigazione principale" class="h-full">
+  <nav aria-label="Main navigation" class="h-full">
     <div class="relative mx-auto flex h-full max-w-[72rem] items-center px-[var(--space-lg)]">
-      <a href={withBase('/')} class="text-lg font-bold text-text no-underline">{siteName}</a>
+      <a href={homeHref} class="text-lg font-bold text-text no-underline">{siteName}</a>
 
       {links.length > 0 && (
         <ul

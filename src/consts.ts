@@ -20,9 +20,21 @@ export const PRIVATE_ROOT = withBase('/private/');
 export const RAW_PUBLIC_ROOT = withBase('/raw/public/');
 export const RAW_PRIVATE_ROOT = withBase('/raw/private/');
 
-/** Navigation links shared by every page. */
+/** Absolute URL of a section on the main didactic site. */
+function mainSitePath(path: string): string {
+  return new URL(path.replace(/^\/+/, ''), MAIN_SITE_URL).href;
+}
+
+/**
+ * Navigation links shared by every page.
+ *
+ * Kept identical to the main site's navbar: the material site is part of the
+ * same site, so every entry points at the canonical page there.
+ */
 export const navLinks = [
-  { href: PUBLIC_ROOT, label: 'Materiale pubblico' },
+  { href: MAIN_SITE_URL, label: 'Home' },
+  { href: mainSitePath('prime/'), label: 'Prime' },
+  { href: mainSitePath('seconde/'), label: 'Seconde' },
+  { href: mainSitePath('olimpiadi/'), label: 'Olimpiadi' },
   { href: AREA_URL, label: 'Area riservata' },
-  { href: MAIN_SITE_URL, label: 'Sito principale' },
 ];
