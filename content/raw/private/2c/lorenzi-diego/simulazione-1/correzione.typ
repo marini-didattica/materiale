@@ -24,14 +24,14 @@
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento(
-  "Corretto: selezioni gli indici pari e stampi gli elementi corrispondenti.",
+  "Perfetto: corretto e idiomatico",
 )
 
-#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 16, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 0, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento(
-  "Perfetto: inversione in place con uno scambio degli estremi, senza lista ausiliaria.",
+  "Perfetto: corretto e idiomatico. 0 punti perché devi farlo tu, non ChatGpt",
 )
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 0, diff: 2)

@@ -20,39 +20,37 @@
 
 = Produzione del codice (80 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 10, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento(
-  "La selezione degli indici pari è corretta, ma stampi una lista invece degli elementi uno per uno.",
+  "Perfetto: corretto e idiomatico.",
 )
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 16, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento(
-  "Corretto: estendi la lista con la sua copia invertita e poi rimuovi la prima metà, ottenendo l'inversione in place.",
+  "Ottimo! Buona l'idea di aggiungere gli elementi alla lista stessa anziché utilizzarne un'altra. Nota che in realtà questa non è una inversione in place in realtà. La vera inversione in place vuole che non venga usata memoria aggiuntiva oltre a quella della lista, mentre qui, dopo il primo ciclo, il programma deve ospitare il doppio della dimensione della lista",
 )
 
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 16, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
 #commento(
-  "Corretto: confronto con la lista invertita e output True/False.",
+  "Perfetto: corretto e idiomatico.",
 )
 
-#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 5, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 14, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai trovato il massimo ma non il secondo: dopo pop(max) continui a confrontare con il massimo e stampi di nuovo il massimo (5 invece di 4). Inoltre pop vuole un indice, non un valore.",
-)
+#commento[Hai trovato il massimo ma non il secondo. La funzione `pop` vuole un indice, non un valore. Inoltre pop rimuove solo *un* valore. Dovresti assicurarti di averli rimossi tutti prima di cercare di nuovo il massimo]
 
 #risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 0, diff: 3)[
   #raw(read("le-tue-risposte/esercizio5.py"), block: true, lang: "python")
 ]
 #commento(
-  "Questo file risolve l'esercizio 4 (secondo più grande), non il 5: manca la rimozione dei negativi.",
+  "Questo file (non) risolve l'esercizio 4",
 )
 
 = Lettura del codice (30 punti)

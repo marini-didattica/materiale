@@ -20,21 +20,19 @@
 
 = Produzione del codice (80 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 4, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 7, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai interpretato la consegna come stampa i valori dispari: qui serve invece stampare gli elementi nelle posizioni alternate (indici 0, 2, 4, ...), indipendentemente dal loro valore.",
-)
+#commento[Hai interpretato la consegna come stampa i valori dispari: qui serve invece stampare gli elementi nelle *posizioni* alternate (indici 0, 2, 4, ...), indipendentemente dal loro valore.]
 
-#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 6, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 4, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento(
   "Stampi gli elementi al contrario uno per uno, ma non inverti la lista in place e non stampi la lista finale.",
 )
 
-#risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 4, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 5, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
 #commento(
@@ -43,7 +41,7 @@
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 0, diff: 3)
 
-#risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 8, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 14, diff: 3)[
   #raw(read("le-tue-risposte/esercizio5.py"), block: true, lang: "python")
 ]
 #commento(

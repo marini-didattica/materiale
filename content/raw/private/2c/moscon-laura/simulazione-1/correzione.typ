@@ -24,7 +24,7 @@
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento(
-  "Corretto: selezioni gli indici pari e stampi gli elementi corrispondenti.",
+  "Perfetto: corretto e idiomatico",
 )
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 3, diff: 2)[
@@ -34,12 +34,10 @@
   "Non stai invertendo la lista: costruisci una lista di indici decrescenti e la stampi. Servono scambi tra gli estremi della lista stessa.",
 )
 
-#risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 8, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 15, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il confronto a due puntatori è impostato bene, ma palindromo viene riassegnato a ogni iterazione: per una lista non palindroma l'ultimo confronto può rimetterlo a True. Esci dal ciclo al primo disallineamento.",
-)
+#commento[Il confronto a due puntatori è impostato bene, ma palindromo viene riassegnato a ogni iterazione: per una lista non palindroma l'ultimo confronto può rimetterlo a True. Dovresti uscire dal ciclo al primo elemento che non rispetta `lista[d]!=lista[s]`.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 0, diff: 3)
 

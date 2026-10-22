@@ -24,10 +24,10 @@
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento(
-  "Corretto: scorri la lista a passi di 2 e stampi gli elementi nelle posizioni pari.",
+  "Perfetto: corretto e idiomatico",
 )
 
-#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 6, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 13, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento(
@@ -37,22 +37,20 @@
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 16, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento(
-  "Corretto: costruisci l'inversa e confronti le due liste.",
-)
+#commento[Perfetto: corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 13, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
 #commento(
-  "Funziona con valori positivi distinti, ma inizializzando i massimi a 0 fallisce con numeri negativi: con [-3, -1, -7] stampi 0 invece di -3.",
+  "Il secondo massimo per la lista di esempio è giusto, ma stampi anche il massimo e il codice non gestisce bene duplicati e valori negativi. Comunque è decisamente un buon punto di partenza",
 )
 
-#risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 14, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 18, diff: 3)[
   #raw(read("le-tue-risposte/esercizio5.py"), block: true, lang: "python")
 ]
 #commento(
-  "Filtri correttamente i non negativi e mantieni lo zero, ma stampi l1 invece di aggiornare l.",
+  "Filtri correttamente i non negativi e mantieni lo zero, ma stampi l1 invece di aggiornare l. Per ora sono un po' largo di manica nelle correzioni ma più andiamo avanti più darò peso a questi dettagli",
 )
 
 = Lettura del codice (30 punti)

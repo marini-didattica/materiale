@@ -20,14 +20,14 @@
 
 = Produzione del codice (80 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 4, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 8, diff: 1)[
   #raw(read("le-tue-risposte/es 1.py"), block: true, lang: "python")
 ]
 #commento(
   "Hai stampato i valori dispari, non gli elementi in posizione alternata (indici 0, 2, 4, ...).",
 )
 
-#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 5, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 4, diff: 2)[
   #raw(read("le-tue-risposte/es 2.py"), block: true, lang: "python")
 ]
 #commento(
@@ -43,7 +43,7 @@
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 0, diff: 3)
 
-#risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 8, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 14, diff: 3)[
   #raw(read("le-tue-risposte/es 5.py"), block: true, lang: "python")
 ]
 #commento(
