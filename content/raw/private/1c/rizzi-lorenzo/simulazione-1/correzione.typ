@@ -42,7 +42,7 @@
 ]
 #commento[La logica di base è giusta, ci sono solo un paio di sviste. Innanzitutto hai dimenticato `print(count)`, quindi stampi erroneamente tutti i numeri, ma questo non è grave. Ciò che invece è grave è l'incremento doppio di `count`, dentro all'`if`: così facendo salti dei numeri.]
 
-#risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 2, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento[Il file è incompleto (`if` senza condizione): il programma non può funzionare. La struttura del ciclo è impostata, ma manca il corpo che accumula la somma.]

@@ -1,0 +1,3 @@
+Durante il codice, le variabili cambiano il loro valore a causa dell' = singolo presente tra i nomi delle varibili.
+in questo caso, le due variabili a, b avranno un valore corrispettivo di: 8, 5
+

@@ -28,10 +28,10 @@
 
 = Scrittura del codice (60 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 4, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 10, diff: 1)[
   #raw(read("le-tue-risposte/esercizio01_py"), block: true, lang: "python")
 ]
-#commento[La struttura del ciclo è corretta, ma la condizione usa `n % 2` invece di `i % 2`: così conti solo se `n` è pari, non i numeri pari. Inoltre il ciclo si ferma a `i < n`, quindi `n` non viene considerato.]
+#commento[Perfetto. Corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 14, diff: 2)[
   #raw(read("le-tue-risposte/esercizio02_py"), block: true, lang: "python")

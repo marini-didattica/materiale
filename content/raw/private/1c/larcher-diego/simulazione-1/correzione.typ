@@ -37,7 +37,7 @@
 
 = Scrittura del codice (60 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 4, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 7, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento[Il programma stampa i numeri invece di contarli e l'incremento di `i` è dentro l'`if`: quando `i` diventa dispari il ciclo non avanza più, causando un loop infinito.]
@@ -58,7 +58,7 @@
 ]
 #commento[Cosa vuol dire? La risposta non descrive lo scambio: `c` conserva il valore di `a`, poi `a` prende `b` e `b` riprende il vecchio `a`. L'output è `8 5`.]
 
-#risposta(category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 4, diff: 2)[
+#risposta(category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 8, diff: 2)[
   #raw(read("le-tue-risposte/snippet3.txt"), block: true, lang: "text")
 ]
 #commento[Penso che tu abbia capito, ma ciò che hai scritto non ha un significato. Cerca di curare la forma. Manca l'output, cioè `0, 2, 4, 6, 8, 10`.]

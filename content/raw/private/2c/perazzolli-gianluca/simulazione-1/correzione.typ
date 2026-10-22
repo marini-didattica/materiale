@@ -25,7 +25,7 @@
 ]
 #commento[Perfetto: corretto e idiomatico]
 
-#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 6, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 13, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento[Stampi gli elementi al contrario, ma non inverti la lista in place e non stampi la lista finale.]
@@ -35,7 +35,7 @@
 ]
 #commento[Perfetto: corretto e idiomatico]
 
-#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 15, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 17, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
 #commento[

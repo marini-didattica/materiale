@@ -25,7 +25,7 @@
 ]
 #commento[Hai interpretato la consegna come stampa i valori dispari: qui serve invece stampare gli elementi nelle *posizioni* alternate (indici 0, 2, 4, ...), indipendentemente dal loro valore.]
 
-#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 6, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 13, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento[Stampi gli elementi al contrario uno per uno, ma non inverti la lista in place e non stampi la lista finale.]
