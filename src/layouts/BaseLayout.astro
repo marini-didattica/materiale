@@ -21,6 +21,9 @@ const { title, description = '', lang = 'it', robots } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Let the UA pick its canvas/form-control colors from the OS until the
+         inline theme script sets the stored preference. -->
+    <meta name="color-scheme" content="light dark" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
