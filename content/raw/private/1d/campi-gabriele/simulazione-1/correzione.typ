@@ -39,7 +39,7 @@
 ]
 #commento[La logica è giusta, però non fa ciò che chiede la consegna. Qui stai contando i numeri pari contenuti in una lista; la consegna chiedeva di contare i numeri pari contenuti fra `0` e `n`!]
 
-#risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 14, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 12, diff: 2)[
   #raw(read("le-tue-risposte/esercizio5.py"), block: true, lang: "python")
 ]
 #commento[Come nell'esercizio precedente, la logica è giusta ma non fa ciò che chiede la consegna. Qui stai sommando i numeri contenuti in una lista; la consegna chiedeva di sommare i numeri fra 0 e n!]

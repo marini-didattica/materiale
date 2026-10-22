@@ -20,7 +20,7 @@
 
 = Teoria (20 punti)
 
-#risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 6, score: 6)[
+#risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 6)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
 #commento[Bene. Occhio però che non è vero che la GPU "non è precisa". La differenza rispetto alla CPU è proprio che i calcoli vengono eseguiti in parallelo, anziché in serie.]

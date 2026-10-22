@@ -37,12 +37,12 @@
 
 = Scrittura del codice (60 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 5, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 8, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento[Il conteggio dei pari c'è, ma il programma stampa anche tutti i numeri e l'incremento doppio dentro l'`if` salta i dispari. Il risultato per `n = 7` è sbagliato: serve un solo incremento e una sola stampa finale.]
 
-#risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 1, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 2, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento[Il file è incompleto (`if` senza condizione): il programma non può funzionare. La struttura del ciclo è impostata, ma manca il corpo che accumula la somma.]

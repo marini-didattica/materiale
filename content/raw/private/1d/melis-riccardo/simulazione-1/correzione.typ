@@ -28,10 +28,10 @@
 
 = Scrittura del codice (60 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 7, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 2, diff: 1)[
   #raw(read("le-tue-risposte/esrcizio1.py"), block: true, lang: "python")
 ]
-#commento[Hai provato a usare `len`, ma `len(7)` non funziona: `len` si usa con liste o stringhe. Se `n` e `x` fossero inizializzate correttamente il programma sarebbe quasi corretto (non conterebbe `n`, ma è una sottigliezza).]
+#commento[`len(7)` non è valido: `len` si usa con liste o stringhe, quindi il programma si ferma subito. Anche correggendo l'inizializzazione, `y = y` non incrementa il contatore: servirebbe `y = y + 1` quando `x` è pari.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 0, diff: 2)
 

@@ -28,7 +28,7 @@
 
 = Scrittura del codice (60 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 7, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 10, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento[Perfetto: corretto e idiomatico.]

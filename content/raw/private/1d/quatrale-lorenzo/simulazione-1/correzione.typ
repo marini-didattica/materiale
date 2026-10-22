@@ -31,7 +31,7 @@
 
 = Scrittura del codice (60 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 8, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 4, diff: 1)[
   #raw(read("le-tue-risposte/Es1.py"), block: true, lang: "python")
 ]
 #commento[L'idea è giusta, ma `n/2` non riconosce i pari: serve `n % 2`. Occhio anche al nome delle variabili: nel testo dell'esercizio chiedevo di contare i numeri pari da `0` a `n`, quindi il ruolo di `x` e `n` qui andrebbe invertito. Occhio anche agli estremi, questo algoritmo non conta `7`, anche se dovrebbe.]

@@ -34,7 +34,7 @@
 
 = Scrittura del codice (60 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 10, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 8, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento[La logica è corretta, ma il ciclo si ferma a `i < n`: per `n = 10` conti 5 pari invece di 6, perché `10` viene escluso. Andrebbe messo `i <= n`.]

@@ -33,7 +33,7 @@
 ]
 #commento[La condizione del `while x == x % 2 == 0` non fa sicuramente ciò che ti aspettavi. Mi raccomando, non bisogna MAI inventarsi sintassi nuova da zero. I programmi sono sempre combinazioni di blocchi di costruzioni che abbiamo visto insieme.]
 
-#risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 1, diff: 2)[
+#risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
 #commento[Mancava davvero poco: bastava incrementare `i` all'interno del ciclo e stampare la somma fuori. La variabile somma andrebbe aggiornata con `somma = somma + i` (nota `i` invece che `1`).]

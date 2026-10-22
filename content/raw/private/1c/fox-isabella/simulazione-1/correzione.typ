@@ -37,7 +37,7 @@
 
 = Scrittura del codice (60 punti)
 
-#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 6, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 4, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
 #commento[Il programma stampa i pari invece di contarli; inoltre `i` e `c` aumentano solo dentro l'`if`, quindi con i dispari il ciclo non termina. Qui sì che il computer "esplode"! Inoltre manca la stampa del conteggio.]

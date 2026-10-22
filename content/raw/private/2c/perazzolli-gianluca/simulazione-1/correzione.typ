@@ -35,7 +35,7 @@
 ]
 #commento[Perfetto: corretto e idiomatico]
 
-#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 17, diff: 3)[
+#risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 15, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
 #commento[
