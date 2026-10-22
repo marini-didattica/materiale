@@ -58,6 +58,23 @@ La pagina di accesso con il codice resta nel sito principale:
 [Area riservata](https://marini-didattica.github.io/area-riservata/). Il modulo
 apre `/materiale/private/<codice>/`.
 
+### Amministrazione
+
+`/materiale/admin/` è un browser riservato al docente che unisce materiale
+pubblico e privato. Mostra la struttura reale delle cartelle (classe e
+studente) senza chiedere alcun codice:
+
+```text
+/materiale/admin/
+/materiale/admin/public/          (albero pubblico)
+/materiale/admin/private/         (classi)
+/materiale/admin/private/1d/      (studenti)
+/materiale/admin/private/1d/angeli-lorenzo/
+```
+
+La pagina non è autenticata e usa `noindex, nofollow`: è solo un comodo
+pannello di esplorazione, non una protezione aggiuntiva.
+
 ## Sviluppo
 
 ```sh

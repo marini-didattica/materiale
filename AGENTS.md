@@ -18,6 +18,10 @@ Typst `0.15.1` must be available in `PATH` for `content:build`.
 When starting the dev server from an agent, use background mode and manage it
 with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
+The site also has an unprotected admin browser at `/materiale/admin/` that
+shows the public and private trees with their real folder names. It is built
+from the same staged content as the public/private browsers.
+
 ## Content rules
 
 - Public files go under `content/raw/public/`; reserved files under

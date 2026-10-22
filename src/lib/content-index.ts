@@ -38,6 +38,18 @@ export interface PrivateDirectoryPage {
   props: PrivateDirectoryPageProps;
 }
 
+export interface AdminDirectoryPageProps {
+  entries: FileEntry[];
+  /** Logical directory path under /admin, e.g. "public/prime". */
+  dir: string;
+  downloadTree: DownloadTree;
+}
+
+export interface AdminDirectoryPage {
+  params: { path?: string };
+  props: AdminDirectoryPageProps;
+}
+
 interface BrowserConfig {
   /** Staged raw directory that is browsed. */
   sourceRoot: string;
@@ -193,6 +205,20 @@ async function ensureStagedRoot(root: string, hint: string) {
   }
 }
 
+async function readStudents(): Promise<Students> {
+  try {
+    return JSON.parse(await fs.readFile(STUDENTS_PATH, 'utf8')) as Students;
+  } catch {
+    throw new Error(
+      'Impossibile leggere content/students.json. Esegui `bun run content:build` prima della build.',
+    );
+  }
+}
+
+function directoryEntry(name: string, href: string): FileEntry {
+  return { name, kind: 'directory', size: null, extension: null, href };
+}
+
 async function buildPages(
   config: BrowserConfig,
 ): Promise<Array<{ dir: string; entries: FileEntry[]; downloadTree: DownloadTree }>> {
@@ -238,16 +264,7 @@ export async function getPublicDirectoryPages(): Promise<PublicDirectoryPage[]> 
  * raw files both live under /private/<code>/.
  */
 export async function getPrivateDirectoryPages(): Promise<PrivateDirectoryPage[]> {
-  let students: Students;
-
-  try {
-    students = JSON.parse(await fs.readFile(STUDENTS_PATH, 'utf8')) as Students;
-  } catch {
-    throw new Error(
-      'Impossibile leggere content/students.json. Esegui `bun run content:build` prima della build.',
-    );
-  }
-
+  const students = await readStudents();
   const pages: PrivateDirectoryPage[] = [];
 
   for (const [folder, student] of Object.entries(students)) {
@@ -271,6 +288,121 @@ export async function getPrivateDirectoryPages(): Promise<PrivateDirectoryPage[]
       pages.push({
         params: { code, path: dir === '' ? undefined : dir },
         props: { entries, dir, student, downloadTree },
+      });
+    }
+  }
+
+  return pages;
+}
+
+/**
+ * Build one page per directory for the admin browser, which merges the public
+ * and reserved trees. Reserved folders are shown with their real
+ * `content/raw/private` path (class/student) instead of the access code, so
+ * every folder can be explored without knowing a code.
+ */
+export async function getAdminDirectoryPages(): Promise<AdminDirectoryPage[]> {
+  await ensureStagedRoot(
+    STAGED_PUBLIC_DIR,
+    'La cartella pubblica non esiste: `static/raw/public`.',
+  );
+  await ensureStagedRoot(
+    STAGED_PRIVATE_DIR,
+    'La cartella riservata non esiste: `static/raw/private`.',
+  );
+
+  const students = await readStudents();
+  const pages: AdminDirectoryPage[] = [];
+
+  pages.push({
+    params: { path: undefined },
+    props: {
+      dir: '',
+      entries: [
+        directoryEntry('Materiale pubblico', withBase('/admin/public/')),
+        directoryEntry('Materiale privato', withBase('/admin/private/')),
+      ],
+      downloadTree: {},
+    },
+  });
+
+  // Public material: the same tree as /public, exposed under /admin/public.
+  const publicConfig: BrowserConfig = {
+    sourceRoot: STAGED_PUBLIC_DIR,
+    pageBase: '/admin/public',
+    fileBase: '/raw/public',
+  };
+
+  for (const { dir, entries, downloadTree } of await buildPages(publicConfig)) {
+    const logicalDir = joinPath('public', dir);
+
+    pages.push({
+      params: { path: logicalDir },
+      props: { dir: logicalDir, entries, downloadTree },
+    });
+  }
+
+  // Reserved material: expose the real folder structure from students.json
+  // (e.g. "1d/angeli-lorenzo") and create a page for every intermediate folder
+  // such as the class directory.
+  const prefixChildren = new Map<string, Set<string>>();
+
+  for (const folder of Object.keys(students)) {
+    const segments = folder.split('/');
+
+    segments.forEach((segment, index) => {
+      const prefix = segments.slice(0, index).join('/');
+      let children = prefixChildren.get(prefix);
+
+      if (!children) {
+        children = new Set();
+        prefixChildren.set(prefix, children);
+      }
+
+      children.add(segment);
+    });
+  }
+
+  if (!prefixChildren.has('')) prefixChildren.set('', new Set());
+
+  const prefixes = [...prefixChildren.keys()].sort((a, b) => collator.compare(a, b));
+
+  for (const prefix of prefixes) {
+    const logicalDir = joinPath('private', prefix);
+    const children = [...(prefixChildren.get(prefix) ?? [])].sort((a, b) =>
+      collator.compare(a, b),
+    );
+    const entries = children.map((child) =>
+      directoryEntry(child, withBase(`/admin/${encodePath(joinPath(logicalDir, child))}/`)),
+    );
+
+    pages.push({
+      params: { path: logicalDir },
+      props: { dir: logicalDir, entries, downloadTree: {} },
+    });
+  }
+
+  for (const [folder, student] of Object.entries(students)) {
+    const code = student.slug;
+    const sourceRoot = path.join(STAGED_PRIVATE_DIR, code);
+
+    await ensureStagedRoot(
+      sourceRoot,
+      `La cartella del materiale per il codice ${code} (${folder}) non esiste.`,
+    );
+
+    const config: BrowserConfig = {
+      sourceRoot,
+      pageBase: `/admin/private/${encodePath(folder)}`,
+      fileBase: `/raw/private/${code}`,
+    };
+
+    for (const { dir, entries, downloadTree } of await buildPages(config)) {
+      const logicalDir = joinPath('private', folder, dir);
+
+      pages.push({
+        params: { path: logicalDir },
+        props: { dir: logicalDir, entries, downloadTree },
       });
     }
   }
