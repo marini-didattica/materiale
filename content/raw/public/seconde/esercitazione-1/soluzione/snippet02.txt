@@ -1,0 +1,14 @@
+Il programma calcola la media degli elementi della lista e poi stampa tutti i valori maggiori della media.
+
+- Il primo ciclo somma tutti gli elementi di a nella variabile b.
+- c = b / len(a) calcola la media.
+- Il secondo ciclo scorre di nuovo la lista e stampa solo gli elementi x tali che x > c.
+
+Con a = [4, 8, 6, 10]:
+- somma = 4 + 8 + 6 + 10 = 28
+- media = 28 / 4 = 7
+- gli elementi maggiori di 7 sono 8 e 10.
+
+Output:
+8
+10

@@ -1,0 +1,10 @@
+Il programma trova la posizione (indice) del valore massimo della lista a e la stampa.
+
+- b parte da 0 e rappresenta l'indice del massimo trovato finora.
+- A ogni iterazione confronta a[i] con a[b]: se a[i] è maggiore, aggiorna b con l'indice i.
+- Alla fine b contiene l'indice del massimo, non il suo valore.
+
+Con a = [4, 9, 1, 7] il massimo è 9 e si trova nella posizione 1.
+
+Output:
+1
