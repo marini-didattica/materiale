@@ -14,8 +14,8 @@
 )
 
 #text(size: 9.5pt, fill: luma(100), style: "italic")[
-  La prova vale 110 punti: i primi 100 determinano il voto in decimi
-  (`min(totale, 100) / 10`), i successivi 10 valgono la lode.
+  La prova vale 110 punti: i primi 100 vengono mappati sul voto in decimi
+  (`3 + min(totale, 100) / 100 * 7`), i successivi 10 valgono la lode.
 ]
 
 = Teoria (20 punti)
