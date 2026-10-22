@@ -50,9 +50,22 @@
 </button>
 
 <script>
-  const button = document.getElementById('theme-toggle');
+  const initialized = new WeakSet();
 
-  if (button) {
+  function initThemeToggle() {
+    const button = document.getElementById('theme-toggle');
+
+    if (!(button instanceof HTMLButtonElement) || initialized.has(button)) return;
+
+    initialized.add(button);
+
+    button.setAttribute(
+      'aria-label',
+      document.documentElement.classList.contains('dark')
+        ? 'Passa al tema chiaro'
+        : 'Passa al tema scuro',
+    );
+
     button.addEventListener('click', () => {
       const isDark = document.documentElement.classList.toggle('dark');
       document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
@@ -70,6 +83,10 @@
       button.setAttribute('aria-label', isDark ? 'Passa al tema chiaro' : 'Passa al tema scuro');
     });
   }
+
+  // Run now for the initial page and again after every ClientRouter swap.
+  initThemeToggle();
+  document.addEventListener('astro:page-load', initThemeToggle);
 </script>
 
 <style>

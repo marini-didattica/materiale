@@ -76,6 +76,7 @@ function isCurrent(href: string): boolean {
       <li>
         <a
           href={link.href}
+          data-astro-reload={link.href.startsWith('http') || undefined}
           class:list={[
             'block rounded-[var(--radius-lg)] px-3 py-2 text-sm font-medium no-underline transition-colors',
             {
@@ -93,11 +94,31 @@ function isCurrent(href: string): boolean {
 </div>
 
 <script>
-  const button = document.getElementById('mobile-nav-toggle');
-  const panel = document.getElementById('mobile-nav-menu');
+  const initialized = new WeakSet();
+  let cleanup = undefined;
 
-  if (button instanceof HTMLButtonElement && panel instanceof HTMLElement) {
-    const setOpen = (open: boolean) => {
+  function initMobileNav() {
+    const button = document.getElementById('mobile-nav-toggle');
+    const panel = document.getElementById('mobile-nav-menu');
+
+    if (
+      !(button instanceof HTMLButtonElement) ||
+      !(panel instanceof HTMLElement) ||
+      initialized.has(button)
+    ) {
+      return;
+    }
+
+    initialized.add(button);
+
+    // The document-level listeners outlive individual pages, so remove the
+    // previous set before wiring the navbar of the newly swapped page.
+    cleanup?.();
+
+    const controller = new AbortController();
+    cleanup = () => controller.abort();
+
+    const setOpen = (open) => {
       button.setAttribute('aria-expanded', String(open));
       button.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
       panel.classList.toggle('hidden', !open);
@@ -107,26 +128,42 @@ function isCurrent(href: string): boolean {
       setOpen(button.getAttribute('aria-expanded') !== 'true');
     });
 
-    document.addEventListener('click', (event) => {
-      if (button.getAttribute('aria-expanded') !== 'true') return;
+    document.addEventListener(
+      'click',
+      (event) => {
+        if (button.getAttribute('aria-expanded') !== 'true') return;
 
-      const target = event.target;
+        const target = event.target;
 
-      if (target instanceof Node && (button.contains(target) || panel.contains(target))) {
-        return;
-      }
+        if (target instanceof Node && (button.contains(target) || panel.contains(target))) {
+          return;
+        }
 
-      setOpen(false);
-    });
+        setOpen(false);
+      },
+      { signal: controller.signal },
+    );
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') setOpen(false);
-    });
+    document.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key === 'Escape') setOpen(false);
+      },
+      { signal: controller.signal },
+    );
 
     panel.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => setOpen(false));
+      link.addEventListener(
+        'click',
+        () => setOpen(false),
+        { signal: controller.signal },
+      );
     });
   }
+
+  // Run now for the initial page and again after every ClientRouter swap.
+  initMobileNav();
+  document.addEventListener('astro:page-load', initMobileNav);
 </script>
 
 <style>

@@ -3,6 +3,7 @@ import '@/styles/app.css';
 import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2?url';
 import inter700 from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
+import { ClientRouter } from 'astro:transitions';
 import { withBase } from '@/utils/base';
 
 export interface Props {
@@ -60,12 +61,26 @@ const { title, description = '', lang = 'it', robots } = Astro.props;
       }
 
       applyTheme();
+
+      // With ClientRouter, the new page is parsed and only then swapped in.
+      // Carry the current theme into the incoming document *before* the swap,
+      // so the new page is never briefly rendered with the server's default
+      // (light) class.
+      document.addEventListener('astro:before-swap', (event) => {
+        const isDark = document.documentElement.classList.contains('dark');
+        const newRoot = event.newDocument.documentElement;
+        newRoot.classList.toggle('dark', isDark);
+        newRoot.classList.remove('no-js');
+        newRoot.style.colorScheme = isDark ? 'dark' : 'light';
+      });
+
       if (window.__applyThemeHandler) {
         document.removeEventListener('astro:after-swap', window.__applyThemeHandler);
       }
       window.__applyThemeHandler = applyTheme;
       document.addEventListener('astro:after-swap', window.__applyThemeHandler);
     </script>
+    <ClientRouter />
     <slot name="head" />
   </head>
   <body class="flex min-h-dvh flex-col">

@@ -86,9 +86,13 @@ const hasAnyDownloads = Object.values(downloadTree).some((files) => files.length
 <script>
   import { zipSync } from 'fflate';
 
-  const data = document.getElementById('download-tree');
+  function initDownloadTree() {
+    const data = document.getElementById('download-tree');
 
-  if (data instanceof HTMLScriptElement) {
+    if (!(data instanceof HTMLScriptElement) || data.dataset.initialized === 'true') return;
+
+    data.dataset.initialized = 'true';
+
     const tree = JSON.parse(data.textContent ?? '{}') as Record<
       string,
       Array<{ name: string; href: string; size: number }>
@@ -156,4 +160,8 @@ const hasAnyDownloads = Object.values(downloadTree).some((files) => files.length
       button.addEventListener('click', () => downloadFolder(button));
     });
   }
+
+  // Run now for the initial page and again after every ClientRouter swap.
+  initDownloadTree();
+  document.addEventListener('astro:page-load', initDownloadTree);
 </script>

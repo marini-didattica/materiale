@@ -16,6 +16,10 @@ export interface Props {
 
 const { siteName, homeHref = withBase('/'), links = [] } = Astro.props;
 const currentPath = Astro.url.pathname;
+// Main-site links are handled by a different Astro deployment. Bypass the
+// client router for them so its runtime never mixes with this site's scripts.
+const isExternalHref = (href: string) => href.startsWith('http');
+const homeIsExternal = isExternalHref(homeHref);
 
 function normalizePath(path: string): string {
   if (path === '/') return '/';
@@ -31,7 +35,13 @@ function isCurrent(href: string): boolean {
 <header class="sticky top-0 z-[var(--z-sticky)] h-[var(--nav-height)] border-b border-border bg-[var(--color-surface)] backdrop-blur-[12px]">
   <nav aria-label="Main navigation" class="h-full">
     <div class="relative mx-auto flex h-full max-w-[72rem] items-center px-[var(--space-lg)]">
-      <a href={homeHref} class="text-lg font-bold text-text no-underline">{siteName}</a>
+      <a
+        href={homeHref}
+        data-astro-reload={homeIsExternal || undefined}
+        class="text-lg font-bold text-text no-underline"
+      >
+        {siteName}
+      </a>
 
       {links.length > 0 && (
         <ul
@@ -42,6 +52,7 @@ function isCurrent(href: string): boolean {
             <li class="pointer-events-auto">
               <a
                 href={link.href}
+                data-astro-reload={isExternalHref(link.href) || undefined}
                 class:list={[
                   'text-sm font-medium text-text-secondary no-underline px-3 py-1.5 rounded-[var(--radius-lg)] transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] hover:text-text hover:bg-bg-secondary hover:shadow-(--shadow-sm)',
                   {

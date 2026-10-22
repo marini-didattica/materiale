@@ -16,7 +16,11 @@ const { items } = Astro.props;
         {index === items.length - 1 ? (
           <span aria-current="page" class="truncate font-medium text-text">{item.label}</span>
         ) : (
-          <a href={item.href} class="rounded-sm text-text-secondary no-underline hover:text-accent">
+          <a
+            href={item.href}
+            data-astro-reload={item.href.startsWith('http') || undefined}
+            class="rounded-sm text-text-secondary no-underline hover:text-accent"
+          >
             {item.label}
           </a>
         )}

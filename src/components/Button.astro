@@ -23,7 +23,13 @@ const classes = cn(
 
 {
   href ? (
-    <a href={href} target={target} rel={rel} class={classes}>
+    <a
+      href={href}
+      target={target}
+      rel={rel}
+      data-astro-reload={href.startsWith('http') || undefined}
+      class={classes}
+    >
       <slot />
     </a>
   ) : (

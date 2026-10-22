@@ -94,6 +94,12 @@
     outline-offset: 2px;
   }
 
+  /* View transitions between pages */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.3s;
+  }
+
   /* Skip link */
   .skip-link {
     position: absolute;
@@ -114,5 +120,10 @@
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
   }
 }
