@@ -1,0 +1,2 @@
+per salvare i numeri il computer utilizza stringhe di codice formate da 1 e 0 che vengono poi lete e trasforate in numeri.
+per salvare lettere e parole utilizza sempre codici formati da 1 e 0, in questo caso però ogno codice corrisponde ad una lettera. a che letera corrisponde un determinato codice é indicato nelle tavole ascii 

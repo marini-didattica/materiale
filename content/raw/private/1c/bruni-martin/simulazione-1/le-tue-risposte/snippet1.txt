@@ -1,0 +1,5 @@
+Questo codice stampa gli elmemnti della lista "v" da destra a sinistra l'output sarà:
+9
+1
+7
+3

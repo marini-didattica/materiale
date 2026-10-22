@@ -1,0 +1,5 @@
+i componenti del computer sono: la gpu, la mente del computer dove arrivano tutti i codici binario;
+il disco rigido, dove vengono salvati i dati, è la memoria a lungo termine del computer
+la cpu, la memoria a breve termine;
+la tastiera che invia le informazioni al computer;
+il processore, esegue i comandi che riceve dalle altre componenti del computer

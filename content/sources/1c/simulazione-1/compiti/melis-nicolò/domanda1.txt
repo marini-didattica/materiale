@@ -1,0 +1,6 @@
+le componenti di un perosnal computer sono:
+
+CPU-->
+Scheda madre-->
+RAM--> è la memoria più veloce e a breve termine
+GPU--> è una memoria più lenta della RAM, e contiene dati più importanti

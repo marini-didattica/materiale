@@ -1,9 +1,0 @@
-Il programma stampa tutti i numeri pari compresi tra 0 e 10, estremi inclusi. La variabile i parte da 0 e il ciclo while continua finché i <= n, quindi arriva fino a 10 compreso. A ogni iterazione il controllo i % 2 == 0 verifica se i è pari: in tal caso il numero viene stampato, altrimenti viene saltato.
-
-Output:
-0
-2
-4
-6
-8
-10

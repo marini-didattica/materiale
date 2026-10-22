@@ -1,0 +1,1 @@
+Questo codice stampa il numero nella posizione che ci dice i che è il numero di cifre che sono in v - 1, e ogni volta che viene stampato (v[i]) i diventa i-1. Tutto ciò si riperte finchè i è minore di 0

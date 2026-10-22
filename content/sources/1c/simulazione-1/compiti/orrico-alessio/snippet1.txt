@@ -1,0 +1,1 @@
+Il codice in questione scrive gli elementi della lista da destra verso sinistra e l'output sarà 9-1-7-3.

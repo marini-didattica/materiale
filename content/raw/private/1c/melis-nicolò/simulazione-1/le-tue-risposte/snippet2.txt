@@ -1,0 +1,1 @@
+il secondo frammento stamperà ERROR perchè le variuanti non corrispondono alle corrispondenze in basso

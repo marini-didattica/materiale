@@ -1,0 +1,6 @@
+Le parti principali sono:
+La gpu ovvero il cervello del computer che comanda su tutte le funzioni.
+La scheda video ovvero la componente che ci da la qualità visiva nel nostro computer; più è potente più ci mostra meglio ad esempio immagini o video. 
+La scheda madre ovvero la componente che collega tutte le altre a sieme.
+Il processore è la parte che da le istruzioni che riceve e le trasmette al computer.
+Il disco rigido ovvero la componente che memorizza tutti gli imput che noi diamo al computer e le tiene strettamente memorizzate anche quando il computer viene spento.

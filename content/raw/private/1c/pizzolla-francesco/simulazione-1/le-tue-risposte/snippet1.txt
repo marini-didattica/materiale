@@ -1,0 +1,2 @@
+il primo frammento d icodice, stampa tutti i valori contenuti nella lista "v" in ordine decrescente. 
+l'output sarà: [9,1,7,3]

@@ -1,0 +1,1 @@
+In un computer i numeri e le parole vengono salvati nella memoria organizzata in milioni di fasce di memorizzazione; per memorizzare viene usato il codice binario ovvero un insieme di 0 e 1 ripetuti in sequenza che significano dei numeri o delle lettere che poi combinati insieme formano parole o numeri.

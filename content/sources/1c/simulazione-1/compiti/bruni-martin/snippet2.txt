@@ -1,0 +1,1 @@
+a e b rimangono dello stesso valore perche sono scritte prima nell'elenco

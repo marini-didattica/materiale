@@ -1,0 +1,2 @@
+In un computer i numeri vengono immagazzinati in maniera ordinata nella memoria Ram, che contiene tenti "spazi" dove si possono salare i numeri (grazie anche alle potenze di 2)
+I caratteri, vengono codificati con il sistema aschii. 

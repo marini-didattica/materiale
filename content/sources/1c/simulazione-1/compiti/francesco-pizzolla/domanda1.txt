@@ -1,0 +1,8 @@
+Un personal computer ha diverse componenti, le principali sono: 
+Cpu --> esegue le istruzioni di codice che vengono fornite per eseguire il sistema;
+Gpu --> genera le grafiche proiettate a schermo;
+Ram --> memoria istantanea, temporanea e ultra veloce che si occupa di tenere in memoria i dati necessari per eseguire i programmi; 
+Hdd --> memoria più lenta rispetto alla memoria Ram, non temporanea, che si occupa di mantenere i dati salvati dall'utente sul computer;
+Scheda madre --> scheda stampata che contiene i circuiti necessari per collegare le componenti del computer e farlo funzionare correttamente. 
+
+queste sono le principali componentoi di un computer. 

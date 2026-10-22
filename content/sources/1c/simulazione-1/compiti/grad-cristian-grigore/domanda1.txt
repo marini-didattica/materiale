@@ -1,0 +1,6 @@
+Le pricipali componenti del computer sono:
+-il processore o CPU è il cervello del computer cioe quello che esegue i ordini e i calcoli
+- la RAM è la memoria corta del computer, esempio come la memoria del robottino
+- hard disk memoria permanente
+- GPU, processore grafico, cioe quello che fa i calcoli grafici
+-scheda madre, elemento che collega tutto

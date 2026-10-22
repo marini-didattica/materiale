@@ -1,0 +1,4 @@
+In queste stringhe di codice, il programma, trova tutti i numeri pari presenti tra la variabile "i" e la variabile "n".
+In questo caso, tra 1 e 10 ci sono i seguenti pari: 0, 2, 4, 6, 8, 10. 
+(il codice stampa anche gli estremi). 
+

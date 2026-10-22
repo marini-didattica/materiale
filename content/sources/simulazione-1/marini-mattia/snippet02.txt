@@ -1,4 +1,0 @@
-Il programma scambia i valori delle variabili a e b. Una variabile temporanea t viene usata per memorizzare il valore di a, così che non vada perso quando a viene sovrascritto con il valore di b. Alla fine del programma a contiene il valore iniziale di b e b contiene il valore iniziale di a.
-
-Output:
-8 5

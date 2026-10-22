@@ -1,0 +1,7 @@
+Le pricipali parti del computer sono:
+il processore, il motore del computer;
+la scheda madre, che è il mcuore pulsante del computer;
+la scheda video cioè la parte che trasmette le nostre informazioni al monitor per farci vedere ciò che facciamo; 
+sistema di raffreddamento e la sua funzione è omonima al nome;
+la scocca, che racchiude al suo interno il computer;
+la gpu

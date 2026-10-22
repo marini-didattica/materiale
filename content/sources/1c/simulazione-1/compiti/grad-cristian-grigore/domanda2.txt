@@ -1,0 +1,1 @@
+i numeri vengono immagazzinati in binario cioe codici fatti solo da 0 e 1 e le parole si salvano con codici binarii 
