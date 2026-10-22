@@ -52,6 +52,7 @@ const zipName = buildZipName([ownerSlug, ...segments]);
   eyebrow={segments.length === 0 ? 'Area riservata' : 'Materiale riservato'}
   description={description}
   robots="noindex, nofollow"
+  stableHeader
 >
   <Fragment slot="description">
     {segments.length === 0 ? (

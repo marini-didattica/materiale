@@ -30,12 +30,12 @@ const downloadFiles = downloadTree[''] ?? [];
 const hasAnyDownloads = Object.values(downloadTree).some((files) => files.length > 0);
 ---
 
-<div class="mb-6 flex items-center gap-2">
+<div class="mb-6 flex min-h-6 items-center gap-2">
   {parentHref && <BackLink href={parentHref} />}
   <Breadcrumbs items={crumbs} />
 </div>
 
-<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+<div class="mb-4 flex min-h-[2.375rem] flex-wrap items-center justify-between gap-3">
   <p class="text-sm text-text-secondary">
     {entries.length === 0
       ? 'Cartella vuota'

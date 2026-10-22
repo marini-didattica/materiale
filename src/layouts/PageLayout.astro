@@ -16,6 +16,11 @@ export interface Props {
   eyebrow?: string;
   /** Override the robots meta tag; private pages pass "noindex, nofollow". */
   robots?: string;
+  /**
+   * Reserve a fixed heading height so folder browser pages line up across
+   * navigations (avoids the content shifting during the view transition).
+   */
+  stableHeader?: boolean;
   /** Extra classes for the content container. */
   class?: string;
 }
@@ -26,6 +31,7 @@ const {
   description,
   eyebrow,
   robots,
+  stableHeader = false,
   class: className,
 } = Astro.props;
 ---
@@ -40,9 +46,21 @@ const {
       {eyebrow && (
         <p class="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">{eyebrow}</p>
       )}
-      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{title}</h1>
+      <h1
+        class:list={[
+          'text-3xl font-extrabold tracking-tight sm:text-4xl',
+          stableHeader && 'line-clamp-2 min-h-[4.5rem] sm:line-clamp-1 sm:min-h-10',
+        ]}
+      >
+        {title}
+      </h1>
       {description && (
-        <p class="mt-3 text-lg text-text-secondary">
+        <p
+          class:list={[
+            'mt-3 text-lg text-text-secondary',
+            stableHeader && 'line-clamp-2 min-h-14 md:line-clamp-1 md:min-h-7',
+          ]}
+        >
           <slot name="description">{description}</slot>
         </p>
       )}

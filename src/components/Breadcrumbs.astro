@@ -8,10 +8,12 @@ export interface Props {
 const { items } = Astro.props;
 ---
 
-<nav aria-label="Percorso">
-  <ol class="flex list-none flex-wrap items-center gap-1 p-0 text-sm text-text-secondary">
+<nav aria-label="Percorso" class="min-w-0">
+  <ol
+    class="flex list-none flex-nowrap items-center gap-1 overflow-x-auto whitespace-nowrap p-0 text-sm text-text-secondary"
+  >
     {items.map((item, index) => (
-      <li class="flex min-w-0 items-center gap-1">
+      <li class="flex shrink-0 items-center gap-1">
         {index > 0 && <span aria-hidden="true">/</span>}
         {index === items.length - 1 ? (
           <span aria-current="page" class="truncate font-medium text-text">{item.label}</span>
