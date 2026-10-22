@@ -31,16 +31,12 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 6, diff: 1)[
   #raw(read("le-tue-risposte/esecitazione1.py"), block: true, lang: "python")
 ]
-#commento(
-  "La logica è giusta, però non fa ciò che chiede la consegna. Qui stai contando i numeri pari contenuti in una lista; la consegna chiedeva di contare i numeri pari contenuti fra 0 e n!",
-)
+#commento[La logica è giusta, però non fa ciò che chiede la consegna. Qui stai contando i numeri pari contenuti in una lista; la consegna chiedeva di contare i numeri pari contenuti fra `0` e `n`!]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 4, diff: 2)[
   #raw(read("le-tue-risposte/esercitazione2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai impostato il ciclo, ma stai stampando i numeri invece della loro somma.",
-)
+#commento[Hai impostato il ciclo, ma stai stampando i numeri invece della loro somma.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
 

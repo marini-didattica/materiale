@@ -23,16 +23,12 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 1.5)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai indicato solo CPU e scheda madre, senza descriverne lo scopo e lasciando la frase incompleta. La consegna chiedeva almeno cinque componenti con una breve spiegazione.",
-)
+#commento[Hai indicato solo CPU e scheda madre, senza descriverne lo scopo e lasciando la frase incompleta. La consegna chiedeva almeno cinque componenti con una breve spiegazione.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 4)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Qui c'è stato un problema di interpretazione di domanda. Mi sarei aspettato qualcosa riguardo codice binario, codifica in base 2 e tabelle ASCII",
-)
+#commento[Qui c'è stato un problema di interpretazione di domanda. Mi sarei aspettato qualcosa riguardo codice binario, codifica in base 2 e tabelle ASCII.]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
 
@@ -41,32 +37,24 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 8, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "L'idea dei pari c'è, ma il programma stampa i numeri invece di contarne quanti sono. Inoltre il ciclo si ferma a i < n, quindi n non viene mai considerato.",
-)
+#commento[L'idea dei pari c'è, ma il programma stampa i numeri invece di contarne quanti sono. Inoltre il ciclo si ferma a `i < n`, quindi `n` non viene mai considerato.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 20, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: somma corretta e n incluso.",
-)
+#commento[Perfetto: somma corretta e n incluso.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 10, diff: 3)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento(
-  "Stai confrontando un intero con una lista (a > l), operazione non valida in Python. Ciò che fai dentro all'if è giusto ma andrebbe applicato ad ogni elemento della lista",
-)
+#commento[Stai confrontando un intero con una lista (`a > l`), operazione non valida in Python. Ciò che fai dentro all'`if` è giusto, ma andrebbe applicato ad ogni elemento della lista.]
 
 = Lettura del codice (30 punti)
 
 #risposta(category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 4, diff: 2)[
   #raw(read("le-tue-risposte/snippet1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai capito che scorre la lista al contrario, ma la condizione è sbagliata: il ciclo continua finché i >= 0, non finché i < 0. Manca inoltre l'output.",
-)
+#commento[Hai capito che scorre la lista al contrario, ma la condizione è sbagliata: il ciclo continua finché `i >= 0`, non finché `i < 0`. Manca inoltre l'output.]
 
 #risposta(none, category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 0, diff: 2)
 

@@ -23,9 +23,7 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 3)[
   #raw(read("le-tue-risposte/Untitled-1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Bene dai! Attento però: RAM e ROM sono invertite. La scheda video è una unità di computazione, non di memoria. La sua caratteristica è che è in grado di eseguire istruzioni IN PARALLELO",
-)
+#commento[Bene dai! Attento però: RAM e ROM sono invertite. La scheda video è un'unità di computazione, non di memoria. La sua caratteristica è che è in grado di eseguire istruzioni *in parallelo*.]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 0)
 
@@ -36,16 +34,12 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 8, diff: 1)[
   #raw(read("le-tue-risposte/Es1.py"), block: true, lang: "python")
 ]
-#commento(
-  "L'idea è giusta, ma n/2 non riconosce i pari: serve n % 2. Occhio anche al nome delle variabili: nel testo dell'esercizio chiedevo di contare i numeri pari da 0 a n, quindi il ruolo di x e n qui andrebbe invertito. Occhio anche agli estremi, questo algoritmo non conta 7, anche se dovrebbe",
-)
+#commento[L'idea è giusta, ma `n/2` non riconosce i pari: serve `n % 2`. Occhio anche al nome delle variabili: nel testo dell'esercizio chiedevo di contare i numeri pari da `0` a `n`, quindi il ruolo di `x` e `n` qui andrebbe invertito. Occhio anche agli estremi, questo algoritmo non conta `7`, anche se dovrebbe.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 5, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai impostato il ciclo, ma manca tutto il resto.",
-)
+#commento[Hai impostato il ciclo, ma manca tutto il resto.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
 

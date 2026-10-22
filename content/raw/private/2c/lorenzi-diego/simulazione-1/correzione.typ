@@ -23,16 +23,12 @@
 #risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: corretto e idiomatico",
-)
+#commento[Perfetto: corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 0, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: corretto e idiomatico. 0 punti perché devi farlo tu, non ChatGpt",
-)
+#commento[Perfetto: corretto e idiomatico. 0 punti perché devi farlo tu, non ChatGPT.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 0, diff: 2)
 
@@ -41,9 +37,7 @@
 #risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 8, diff: 3)[
   #raw(read("le-tue-risposte/esercizio5.py"), block: true, lang: "python")
 ]
-#commento(
-  "Stampi i valori non negativi uno per uno, ma non modifichi lista e non stampi la lista finale.",
-)
+#commento[Stampi i valori non negativi uno per uno, ma non modifichi lista e non stampi la lista finale.]
 
 = Lettura del codice (30 punti)
 

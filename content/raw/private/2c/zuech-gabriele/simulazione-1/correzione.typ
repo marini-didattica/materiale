@@ -28,19 +28,17 @@
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento[L'idea di estendere la lista e rimuovere la prima metà non funziona: rimuovendo elementi durante il ciclo gli indici cambiano e ottieni una lista sbagliata. Meglio scambiare gli estremi, oppure rimuovere sempre e solo il primo elemento nel secondo ciclo (ad esempi con `l.pop(0)`)]
+#commento[L'idea di estendere la lista e rimuovere la prima metà non funziona: rimuovendo elementi durante il ciclo gli indici cambiano e ottieni una lista sbagliata. Meglio scambiare gli estremi, oppure rimuovere sempre e solo il primo elemento nel secondo ciclo (ad esempio con `l.pop(0)`.)]
 
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 16, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento(
-  "Ottimo! Apprezzo in particolar modo che hai usato il metodo che confronta gli estremi, senza invertire la lista. Unica cosa: l'ultimo if è inutile!",
-)
+#commento[Ottimo! Apprezzo in particolar modo che hai usato il metodo che confronta gli estremi, senza invertire la lista. Unica cosa: l'ultimo `if` è inutile!]
 
 #risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 9, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
-#commento[La ricerca del massimo c'è, ma poi rimuovi il valore e stampi o, che non è mai stato aggiornato. Ti sei un po' complicato la vita. Sarebbe stato molto più facile usare un if nel secondo ciclo, così da controllare *solo* i valori *diversi* dal massimo trovato nel primo ciclo]
+#commento[La ricerca del massimo c'è, ma poi rimuovi il valore e stampi `o`, che non è mai stato aggiornato. Ti sei un po' complicato la vita. Sarebbe stato molto più facile usare un `if` nel secondo ciclo, così da controllare *solo* i valori *diversi* dal massimo trovato nel primo ciclo.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 0, diff: 3)
 

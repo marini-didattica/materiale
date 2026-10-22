@@ -31,23 +31,17 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 1, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "La condizione del while x == x % 2 == 0 non fa sicuramente ciò che ti aspettavi. Mi raccomando, non bisogna MAI inventarsi sintassi nuova da zero. I programmi sono sempre combinazioni di blocchi di costruzioni che abbiamo visto insieme",
-)
+#commento[La condizione del `while x == x % 2 == 0` non fa sicuramente ciò che ti aspettavi. Mi raccomando, non bisogna MAI inventarsi sintassi nuova da zero. I programmi sono sempre combinazioni di blocchi di costruzioni che abbiamo visto insieme.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 1, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Mancava davvero poco: bastava incrementare `i` all'interno del ciclo e stampare la somma fuori. La variabile somma andrebbe aggiornata con `somma = somma + i` (nota `i` invece che 1)",
-)
+#commento[Mancava davvero poco: bastava incrementare `i` all'interno del ciclo e stampare la somma fuori. La variabile somma andrebbe aggiornata con `somma = somma + i` (nota `i` invece che `1`).]
 
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai consegnato il codice dello snippet 2 (lo scambio di a e b), non la soluzione dell'esercizio. La consegna chiedeva di verificare che tutti gli elementi della lista fossero nell'intervallo.",
-)
+#commento[Hai consegnato il codice dello snippet 2 (lo scambio di `a` e `b`), non la soluzione dell'esercizio. La consegna chiedeva di verificare che tutti gli elementi della lista fossero nell'intervallo.]
 
 = Lettura del codice (30 punti)
 

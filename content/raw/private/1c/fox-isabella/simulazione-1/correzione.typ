@@ -23,32 +23,24 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 4)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai elencato molte componenti, ma alcune sono confuse: la GPU non è la mente del computer (lo è la CPU) e la CPU non è la memoria a breve termine (lo è la RAM). Tante idee un po' confuse diciamo. Risposta particolarmente simile a quella della tua compagna di banco... Poi ti scongiuro, almeno in verifica,  non scrivermi che il sistema di raffreddamento di un pc serve per evitare esplosioni... ",
-)
+#commento[Hai elencato molte componenti, ma alcune sono confuse: la GPU non è la mente del computer (lo è la CPU) e la CPU non è la memoria a breve termine (lo è la RAM). Tante idee un po' confuse diciamo. Risposta particolarmente simile a quella della tua compagna di banco... Poi ti scongiuro, almeno in verifica, non scrivermi che il sistema di raffreddamento di un PC serve per evitare esplosioni...]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 6)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai spiegato bene la codifica binaria dei file e dei caratteri, ma la domanda riguardava i numeri: manca la rappresentazione in base 2. Si fa un po' di fatica a capire cosa tu stia intendendo, cerca di essere un po' più chiara in generale.",
-)
+#commento[Hai spiegato bene la codifica binaria dei file e dei caratteri, ma la domanda riguardava i numeri: manca la rappresentazione in base 2. Si fa un po' di fatica a capire cosa tu stia intendendo, cerca di essere un po' più chiara in generale.]
 
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 1)[
   #raw(read("le-tue-risposte/domanda3.txt"), block: true, lang: "text")
 ]
-#commento(
-  "La risposta parla delle prestazioni del processore, non di cosa sia un'istruzione né dell'instruction set. Rileggi la domanda.",
-)
+#commento[La risposta parla delle prestazioni del processore, non di cosa sia un'istruzione né dell'instruction set. Rileggi la domanda.]
 
 = Scrittura del codice (60 punti)
 
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 6, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il programma stampa i pari invece di contarli; inoltre i e c aumentano solo dentro l'if, quindi con i dispari il ciclo non termina. Qui si che il computer \"esplode\"! Inoltre manca la stampa del conteggio.",
-)
+#commento[Il programma stampa i pari invece di contarli; inoltre `i` e `c` aumentano solo dentro l'`if`, quindi con i dispari il ciclo non termina. Qui sì che il computer "esplode"! Inoltre manca la stampa del conteggio.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 0, diff: 2)
 

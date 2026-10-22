@@ -23,23 +23,17 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 4)[
   #raw(read("le-tue-risposte/domanda2"), block: true, lang: "text")
 ]
-#commento(
-  "Bene l'elenco! Occhio che il software non è proprio una componente fisica. Mancano le descrizioni",
-)
+#commento[Bene l'elenco! Occhio che il software non è proprio una componente fisica. Mancano le descrizioni.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 4)[
   #raw(read("le-tue-risposte/domanda3"), block: true, lang: "text")
 ]
-#commento(
-  "Ok, andrebbe estesa leggermente, altrimenti si fa fatica a capire cosa tu intenda. Andrebbero citate codifica in base 2 e tabelle ASCII",
-)
+#commento[Ok, andrebbe estesa leggermente, altrimenti si fa fatica a capire cosa tu intenda. Andrebbero citate codifica in base 2 e tabelle ASCII.]
 
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 4)[
   #raw(read("le-tue-risposte/domanda4"), block: true, lang: "text")
 ]
-#commento(
-  "Anche qui andrebbe spiegato meglio. Cosa intendi con 'L'instruction set sono tutte le informazioni'? La rappresentazione è fatta tramite codice binario (stringhe di bit)",
-)
+#commento[Anche qui andrebbe spiegato meglio. Cosa intendi con "L'instruction set sono tutte le informazioni"? La rappresentazione è fatta tramite codice binario (stringhe di bit).]
 
 = Scrittura del codice (60 punti)
 
@@ -48,9 +42,7 @@
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 15, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Wow! Non mi sarei aspettato che qualcuno riuscisse a ricavare la formula di Gauss. Complimenti per il ragionamento! Non posso darti punteggio pieno però perché ciò che hai scritto non è codice python",
-)
+#commento[Wow! Non mi sarei aspettato che qualcuno riuscisse a ricavare la formula di Gauss. Complimenti per il ragionamento! Non posso darti punteggio pieno però perché ciò che hai scritto non è codice Python.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)[
   #raw(read("le-tue-risposte/es3.py"), block: true, lang: "python")

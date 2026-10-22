@@ -23,19 +23,17 @@
 #risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: corretto e idiomatico",
-)
+#commento[Perfetto: corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento[Funziona e stampa la lista invertita, ma usi una lista ausiliaria (`L0`) e non modifichi L sul posto, come *esplicitamente richiesto dalla consegna*. Inoltre stampi `L0` invece di `L`.],
+#commento[Funziona e stampa la lista invertita, ma usi una lista ausiliaria (`L0`) e non modifichi `L` sul posto, come *esplicitamente richiesto dalla consegna*. Inoltre stampi `L0` invece di `L`.],
 
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 16, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento[Corretto: costruisci l'inversa e confronti elemento per elemento. Va bene anche l'uso della lista ausiliaria, non era vietato. Nota che in realtà sarebbe bastato controllare `if L[j] != L1[j]`],
+#commento[Corretto: costruisci l'inversa e confronti elemento per elemento. Va bene anche l'uso della lista ausiliaria, non era vietato. Nota che in realtà sarebbe bastato controllare `if L[j] != L1[j]`.],
 
 #risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 13, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")

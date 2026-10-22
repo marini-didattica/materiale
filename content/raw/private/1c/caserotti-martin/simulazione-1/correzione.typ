@@ -23,18 +23,14 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 5)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai nominato sei componenti con descrizioni sensate, ma mancano CPU, RAM e disco, che sono tra le più importanti. Tra l'altro, mi dimentichi il radiatore!?"
-)
+#commento[Hai nominato sei componenti con descrizioni sensate, ma mancano CPU, RAM e disco, che sono tra le più importanti. Tra l'altro, mi dimentichi il radiatore!?]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 0)
 
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 3)[
   #raw(read("le-tue-risposte/domanda3.txt"), block: true, lang: "text")
 ]
-#commento(
-  "L'idea di istruzione come comando c'è, ma non hai spiegato come viene rappresentata (in binario) e l'instruction set è l'insieme delle istruzioni eseguibili da un processore, non una singola serie di informazioni.",
-)
+#commento[L'idea di istruzione come comando c'è, ma non hai spiegato come viene rappresentata (in binario) e l'instruction set è l'insieme delle istruzioni eseguibili da un processore, non una singola serie di informazioni.]
 
 = Scrittura del codice (60 punti)
 

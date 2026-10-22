@@ -23,9 +23,7 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 6)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Bene, cinque componenti con scopi brevi e corretti. Occhio che la scheda madre non è 'il cervello' del computer, ma si limita a interconnettere i vari componenti",
-)
+#commento[Bene, cinque componenti con scopi brevi e corretti. Occhio che la scheda madre non è 'il cervello' del computer, ma si limita a interconnettere i vari componenti]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 0)
 
@@ -36,16 +34,12 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 8, diff: 1)[
   #raw(read("le-tue-risposte/es1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Bene il conteggio! Però stampi dentro il ciclo: sposta print(conta) fuori e otterrai solo il risultato finale.",
-)
+#commento[Bene il conteggio! Però stampi dentro il ciclo: sposta `print(conta)` fuori e otterrai solo il risultato finale.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Lo scheletro di base è corretto. Ci sono due errori grossi però; i = i + i non incrementa i, la lascia a zero. somma = somma anche, non stai incrementando",
-)
+#commento[Lo scheletro di base è corretto. Ci sono due errori grossi però; `i = i + i` non incrementa `i`, lo lascia a zero; anche `somma = somma` non incrementa nulla.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
 

@@ -23,16 +23,12 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 3)[
   #raw(read("le-tue-risposte/domanda_1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Ok. Occhio che è LA cpu, non IL cpu. Mancano descrizioni e almeno un'altra componente",
-)
+#commento[Ok. Occhio che è LA CPU, non IL CPU. Mancano descrizioni e almeno un'altra componente.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 3)[
   #raw(read("le-tue-risposte/domanda_2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai parlato di memoria e variabili; avresti dovuto collegarti al codice binario e a come si possano rappresentare numeri e caratteri con questo. In particolare mi sarei aspettato un accenno a codifica in base 2 e tabelle ASCII",
-)
+#commento[Hai parlato di memoria e variabili; avresti dovuto collegarti al codice binario e a come si possano rappresentare numeri e caratteri con questo. In particolare mi sarei aspettato un accenno a codifica in base 2 e tabelle ASCII.]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
 

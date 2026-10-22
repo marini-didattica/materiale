@@ -23,16 +23,12 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 3)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Bene l'elenco, ma mancano le descrizioni e la GPU non è una memoria, ma un'unità di calcolo che esegue istruzioni IN PARALLELO",
-)
+#commento[Bene l'elenco, ma mancano le descrizioni e la GPU non è una memoria, ma un'unità di calcolo che esegue istruzioni *in parallelo*.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 1)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Probabilmente stai facendo riferimento alla sintassi di python. Ad ogni modo se non elabori un filo di più è impossibile capire cosa tu intenda",
-)
+#commento[Probabilmente stai facendo riferimento alla sintassi di Python. Ad ogni modo, se non elabori un filo di più è impossibile capire cosa tu intenda.]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
 
@@ -41,9 +37,7 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 0, diff: 1)[
   #raw(read("le-tue-risposte/esecizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il ciclo while somma == n non entra mai (somma vale 0 e n vale 7) e il corpo è vuoto: il programma non fa nulla. Serviva un ciclo su i da 0 a n.",
-)
+#commento[Il ciclo `while somma == n` non entra mai (`somma` vale `0` e `n` vale `7`) e il corpo è vuoto: il programma non fa nulla. Serviva un ciclo su `i` da `0` a `n`.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 0, diff: 2)
 
@@ -54,16 +48,12 @@
 #risposta(category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 1, diff: 2)[
   #raw(read("le-tue-risposte/snippet1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "La risposta non descrive il codice: non si tratta di una media, ma della stampa degli elementi della lista dal fondo all'inizio. Manca l'output.",
-)
+#commento[La risposta non descrive il codice: non si tratta di una media, ma della stampa degli elementi della lista dal fondo all'inizio. Manca l'output.]
 
 #risposta(category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 1, diff: 2)[
   #raw(read("le-tue-risposte/snippet2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Non viene stampato ERROR: le variabili sono definite correttamente e il programma scambia i valori. L'output è 8 5.",
-)
+#commento[Non viene stampato `ERROR`: le variabili sono definite correttamente e il programma scambia i valori. L'output è `8 5`.]
 
 #risposta(none, category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 0, diff: 2)
 

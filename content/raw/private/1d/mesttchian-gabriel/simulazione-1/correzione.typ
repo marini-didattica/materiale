@@ -31,17 +31,12 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 10, diff: 1)[
   #raw(read("le-tue-risposte/es1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il codice funziona alla perfezione, occhio però che ti sei complicato la vita! L'ultimo if
-non serve, e la coppia if/else all'interno del ciclo potrebbe essere modificata con un singolo if",
-)
+#commento[Il codice funziona alla perfezione, occhio però che ti sei complicato la vita! L'ultimo `if` non serve, e la coppia `if`/`else` all'interno del ciclo potrebbe essere modificata con un singolo `if`.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 20, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto, corretto e idiomatico!",
-)
+#commento[Perfetto, corretto e idiomatico!]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
 

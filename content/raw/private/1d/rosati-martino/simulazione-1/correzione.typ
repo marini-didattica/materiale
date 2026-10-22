@@ -23,32 +23,24 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 5)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "La descrizione di memoria e disco è un po' vaga. Occhio che non è vero che la CPU è precisa e la GPU no. La differenza sta nel fatto che la prima esegue le istruzione in maniera sequenziale (una alla volta) mentre la seconda può eseguirne molte in parallelo, ma non è più o meno precisa.",
-)
+#commento[La descrizione di memoria e disco è un po' vaga. Occhio che non è vero che la CPU è precisa e la GPU no. La differenza sta nel fatto che la prima esegue le istruzioni in maniera sequenziale (una alla volta) mentre la seconda può eseguirne molte in parallelo, ma non è più o meno precisa.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 3)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Va bene, però dovresti spiegare come una stringa di bit rappresenta un numero o un carattere. Quindi sarebbe stato opportuno citare codifica in base 2 e tabelle ASCII.",
-)
+#commento[Va bene, però dovresti spiegare come una stringa di bit rappresenta un numero o un carattere. Quindi sarebbe stato opportuno citare codifica in base 2 e tabelle ASCII.]
 
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 3)[
   #raw(read("le-tue-risposte/domanda3.txt"), block: true, lang: "text")
 ]
-#commento(
-  "L'idea di istruzione c'è; prova a dire che è in binario e che l'instruction set è l'insieme delle istruzioni.",
-)
+#commento[L'idea di istruzione c'è; prova a dire che è in binario e che l'instruction set è l'insieme delle istruzioni.]
 
 = Scrittura del codice (60 punti)
 
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 2, diff: 1)[
   #raw(read("le-tue-risposte/es1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai provato a impostare le condizioni, ma usando sintassi che non abbiamo visto, che non fa ciò che ti aspetti. Inoltre l'applicazione deve funzionare per qualsiasi input, non puoi applicare la logica a mano sull'input specifico che vi ho dato",
-)
+#commento[Hai provato a impostare le condizioni, ma usando sintassi che non abbiamo visto, che non fa ciò che ti aspetti. Inoltre l'applicazione deve funzionare per qualsiasi input, non puoi applicare la logica a mano sull'input specifico che vi ho dato.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 0, diff: 2)
 

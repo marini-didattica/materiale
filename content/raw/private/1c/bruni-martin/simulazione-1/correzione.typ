@@ -23,16 +23,12 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 7)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Cinque componenti ben descritte. Piccola imprecisione: si dice LA CPU",
-)
+#commento[Cinque componenti ben descritte. Piccola imprecisione: si dice LA CPU.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 4.5)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai detto correttamente che i numeri sono in binario, ma non hai spiegato come si salvano caratteri e parole (codifica ASCII o Unicode).",
-)
+#commento[Hai detto correttamente che i numeri sono in binario, ma non hai spiegato come si salvano caratteri e parole (codifica ASCII o Unicode).]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
 
@@ -41,39 +37,29 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 10, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: corretto e idiomatico.",
-)
+#commento[Perfetto: corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 20, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: corretto e idiomatico.",
-)
+#commento[Perfetto: corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 1, diff: 3)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento(
-  "La consegna chiedeva di verificare che tutti gli elementi della lista fossero nell'intervallo: stampare len(l) non c'entra. Serve un ciclo, che controlli ogni elemento.",
-)
+#commento[La consegna chiedeva di verificare che tutti gli elementi della lista fossero nell'intervallo: stampare `len(l)` non c'entra. Serve un ciclo, che controlli ogni elemento.]
 
 = Lettura del codice (30 punti)
 
 #risposta(category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/snippet1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Perfetto: ordine inverso e output corretti.",
-)
+#commento[Perfetto: ordine inverso e output corretti.]
 
 #risposta(category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 2, diff: 2)[
   #raw(read("le-tue-risposte/snippet2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Non è vero che i valori restano uguali: con c = a, a = b, b = c le due variabili si scambiano. L'output è 8 5.",
-)
+#commento[Non è vero che i valori restano uguali: con `c = a`, `a = b`, `b = c` le due variabili si scambiano. L'output è `8 5`.]
 
 #risposta(none, category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 0, diff: 2)
 

@@ -23,23 +23,17 @@
 #risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Corretto: selezioni gli indici pari e stampi gli elementi corrispondenti. Occhio che il continue è inutile",
-)
+#commento[Corretto: selezioni gli indici pari e stampi gli elementi corrispondenti. Occhio che il `continue` è inutile.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 2, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il codice non inverte la lista: l[i] == l[i+4] è un confronto, non un'assegnazione, e gli indici sono fissi per una lista di 5 elementi. Alla fine stampi la lista invariata.",
-)
+#commento[Il codice non inverte la lista: `l[i] == l[i+4]` è un confronto, non un'assegnazione, e gli indici sono fissi per una lista di 5 elementi. Alla fine stampi la lista invariata.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 2, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento(
-  "La soluzione è costruita per una lista di 5 elementi: con l = [7] vai in errore già alla prima riga (l[4]). Serve un confronto generico delle coppie simmetriche.",
-)
+#commento[La soluzione è costruita per una lista di 5 elementi: con `l = [7]` vai in errore già alla prima riga (`l[4]`). Serve un confronto generico delle coppie simmetriche.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 0, diff: 3)
 
@@ -50,9 +44,7 @@
 #risposta(category: "S", tag: "Snippet", title: [Primo frammento], points: 6, score: 3, diff: 2)[
   #raw(read("le-tue-risposte/snippet1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai colto il confronto con l'elemento precedente, ma non hai detto cosa fa il programma nel complesso né l'output: controlla se la lista è ordinata in modo non decrescente e stampa True.",
-)
+#commento[Hai colto il confronto con l'elemento precedente, ma non hai detto cosa fa il programma nel complesso né l'output: controlla se la lista è ordinata in modo non decrescente e stampa `True`.]
 
 #risposta(none, category: "S", tag: "Snippet", title: [Secondo frammento], points: 6, score: 0, diff: 2)
 

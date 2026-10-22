@@ -31,46 +31,34 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 10, diff: 1)[
   #raw(read("le-tue-risposte/esercizio01_py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto. Corretto e idiomatico",
-)
+#commento[Perfetto. Corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 14, diff: 2)[
   #raw(read("le-tue-risposte/esercizio02_py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai impostato la somma, ma manca l'incremento di i e la stampa finale. Siccome manca l'incremento, il ciclo va in loop infinito.",
-)
+#commento[Hai impostato la somma, ma manca l'incremento di `i` e la stampa finale. Siccome manca l'incremento, il ciclo va in loop infinito.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 5, diff: 3)[
   #raw(read("le-tue-risposte/esercizio03_py"), block: true, lang: "python")
 ]
-#commento(
-  "L'idea di scorrere la lista c'è; attenzione a len(l) (con le parentesi tonde) e all'incremento di i(hai scritto i = 1 + 1, probabilmente intendevi i = i + 1).",
-)
+#commento[L'idea di scorrere la lista c'è; attenzione a `len(l)` (con le parentesi tonde) e all'incremento di `i` (hai scritto `i = 1 + 1`, probabilmente intendevi `i = i + 1`).]
 
 = Lettura del codice (30 punti)
 
 #risposta(category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 6, diff: 2)[
   #raw(read("le-tue-risposte/snippet01_txt"), block: true, lang: "text")
 ]
-#commento(
-  "Faccio fatica a capire se effettivamente hai capito, dal punto di vista intuitivo, cosa questo programma faccia. Non mi serve una descrizione riga per riga di ciò che accade, l'ultima riga sarebbe bastata. Inoltre manca l'output. Avresti dovuto sottolineare che scorre la lista, stampandola AL CONTRARIO",
-)
+#commento[Faccio fatica a capire se effettivamente hai capito, dal punto di vista intuitivo, cosa questo programma faccia. Non mi serve una descrizione riga per riga di ciò che accade, l'ultima riga sarebbe bastata. Inoltre manca l'output. Avresti dovuto sottolineare che scorre la lista, stampandola *al contrario*.]
 
 #risposta(category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 0, diff: 2)[
   #raw(read("le-tue-risposte/snippet02_txt.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Ha il valore di cosa?? Secondo me avevi capito, ma non posso darti punteggio visto che manca proprio ciò che mi serve!",
-)
+#commento[Ha il valore di cosa?? Secondo me avevi capito, ma non posso darti punteggio visto che manca proprio ciò che mi serve!]
 
 #risposta(category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 8, diff: 2)[
   #raw(read("le-tue-risposte/snippet03_txt"), block: true, lang: "text")
 ]
-#commento(
-  "Bene! Manca l'output e va specificato che stai STAMPANDO, non CONTANDO i numeri pari.",
-)
+#commento[Bene! Manca l'output e va specificato che stai *stampando*, non *contando* i numeri pari.]
 
 = Riepilogo dei punteggi
 

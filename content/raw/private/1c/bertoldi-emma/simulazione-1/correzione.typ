@@ -23,34 +23,26 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 3.5)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai elencato cinque componenti, ma confondi i ruoli: la CPU è il processore, non la memoria a breve termine (che è la RAM), e la GPU non è la mente del computer. Manca proprio la RAM.",
-)
+#commento[Hai elencato cinque componenti, ma confondi i ruoli: la CPU è il processore, non la memoria a breve termine (che è la RAM), e la GPU non è la mente del computer. Manca proprio la RAM.]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 0)
 
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 2.5)[
   #raw(read("le-tue-risposte/domanda3.txt"), block: true, lang: "text")
 ]
-#commento(
-  "L'idea di istruzione come comando c'è, ma manca come viene rappresentata (codice binario) e l'instruction set non è tutto ciò che scriviamo noi: è l'insieme delle istruzioni che un processore sa eseguire.",
-)
+#commento[L'idea di istruzione come comando c'è, ma manca come viene rappresentata (codice binario) e l'instruction set non è tutto ciò che scriviamo noi: è l'insieme delle istruzioni che un processore sa eseguire.]
 
 = Scrittura del codice (60 punti)
 
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 3, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il programma non conta i pari: stampa la stringa i e non ha un vero ciclo, perché while i == n non viene mai eseguito. Riparti da un ciclo while i <= n e incrementa un contatore quando i % 2 == 0.",
-)
+#commento[Il programma non conta i pari: stampa la stringa `i` e non ha un vero ciclo, perché `while i == n` non viene mai eseguito. Riparti da un ciclo `while i <= n` e incrementa un contatore quando `i % 2 == 0`.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 1, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il ciclo while i == 10 non parte mai perché i vale 0; inoltre sum(i) non è valido su un intero. Serve un ciclo che accumuli i valori in una variabile somma e stampi il risultato.",
-)
+#commento[Il ciclo `while i == 10` non parte mai perché `i` vale `0`; inoltre `sum(i)` non è valido su un intero. Serve un ciclo che accumuli i valori in una variabile `somma` e stampi il risultato.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
 

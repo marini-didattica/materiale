@@ -31,9 +31,7 @@ SCHEDA MADRE: \"cervello\" del computer, coordina le operazioni e collega tutti 
     lang: "text",
   )
 ]
-#commento(
-  "Bene. La scheda madre non è proprio il cervello, ma coordina. Di fatto la scheda madre non fa altro che collegare fra di loro i componenti. Il vero cervello è la cpu",
-)
+#commento[Bene. La scheda madre non è proprio il cervello, ma coordina. Di fatto la scheda madre non fa altro che collegare fra di loro i componenti. Il vero cervello è la CPU.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 5)[
   #raw(
@@ -42,9 +40,7 @@ SCHEDA MADRE: \"cervello\" del computer, coordina le operazioni e collega tutti 
     lang: "text",
   )
 ]
-#commento(
-  "L'idea del binario per caratteri e parole c'è. Occhio a come ti esprimi, da ciò che hai scritto si intuisce che hai un'idea di ciò che avviene, ma risulta poco chiaro. I numeri si salvano in base 2, i caratteri con una codifica (tipo ASCII).",
-)
+#commento[L'idea del binario per caratteri e parole c'è. Occhio a come ti esprimi, da ciò che hai scritto si intuisce che hai un'idea di ciò che avviene, ma risulta poco chiaro. I numeri si salvano in base 2, i caratteri con una codifica (tipo ASCII).]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
 
@@ -53,16 +49,12 @@ SCHEDA MADRE: \"cervello\" del computer, coordina le operazioni e collega tutti 
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 10, diff: 1)[
   #raw(read("le-tue-risposte/es1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il codice funziona alla perfezione, occhio però che ti sei complicato la vita! L'ultimo if non serve, e la coppia if/else all'interno del ciclo potrebbe essere modificata con un singolo if",
-)
+#commento[Il codice funziona alla perfezione, occhio però che ti sei complicato la vita! L'ultimo `if` non serve, e la coppia `if`/`else` all'interno del ciclo potrebbe essere modificata con un singolo `if`.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 18, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il codice funziona alla perfezione, ma occhio all'else. Per come l'abbiamo visto noi l'else dovrebbe essere accoppiato ad un if. Sei stato fortunato che l'uso che ne fai qui non influisce sul funzionamento dell'applicazione, ma non andrebbe usato!",
-)
+#commento[Il codice funziona alla perfezione, ma occhio all'`else`. Per come l'abbiamo visto noi l'`else` dovrebbe essere accoppiato ad un `if`. Sei stato fortunato che l'uso che ne fai qui non influisce sul funzionamento dell'applicazione, ma non andrebbe usato!]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
 

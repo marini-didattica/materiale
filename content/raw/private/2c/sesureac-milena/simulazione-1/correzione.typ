@@ -23,16 +23,14 @@
 #risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: corretto e idiomatico",
-)
+#commento[Perfetto: corretto e idiomatico.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 0, diff: 2)
 
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 16, diff: 2)[
   #raw(read("le-tue-risposte/esercizio3.py"), block: true, lang: "python")
 ]
-#commento[Perfetto: corretto e idiomatico. Nota che in realtà ti basterebbe interrompere il controllo non appena trovi un `t` tale per cui `l[t]!=l1[t]`, settando `palindroma` a `False`]
+#commento[Perfetto: corretto e idiomatico. Nota che in realtà ti basterebbe interrompere il controllo non appena trovi un `t` tale per cui `l[t]!=l1[t]`, settando `palindroma` a `False`.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 0, diff: 3)
 

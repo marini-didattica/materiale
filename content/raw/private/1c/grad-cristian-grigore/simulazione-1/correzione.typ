@@ -23,39 +23,29 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 7)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Cinque componenti con scopi chiari. Qualche imprecisione: dire che la ram è la memoria \"corta\" non ha alcun significato, ma si capisce che intendevi \"a corto termine\"; cura l'ortografia.",
-)
+#commento[Cinque componenti con scopi chiari. Qualche imprecisione: dire che la RAM è la memoria "corta" non ha alcun significato, ma si capisce che intendevi "a breve termine"; cura l'ortografia.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 4)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai colto il ruolo del codice binario per numeri e parole, ma manca la distinzione tra rappresentazione in base 2 dei numeri e codifica dei caratteri (ASCII).",
-)
+#commento[Hai colto il ruolo del codice binario per numeri e parole, ma manca la distinzione tra rappresentazione in base 2 dei numeri e codifica dei caratteri (ASCII).]
 
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 4.5)[
   #raw(read("le-tue-risposte/domanda3.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Buona risposta: istruzione in binario e instruction set come insieme condiviso. Manca solo un accenno all'assembly.",
-)
+#commento[Buona risposta: istruzione in binario e instruction set come insieme condiviso. Manca solo un accenno all'assembly.]
 
 = Scrittura del codice (60 punti)
 
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 0, diff: 1)[
   #raw(read("le-tue-risposte/es1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai solo inizializzato le variabili: manca completamente il codice che conta i pari.",
-)
+#commento[Hai solo inizializzato le variabili: manca completamente il codice che conta i pari.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 4, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il ciclo while i <= n non incrementa mai i, quindi va in loop infinito; inoltre print senza parentesi non stampa nulla. Manca l'accumulo della somma.",
-)
+#commento[Il ciclo `while i <= n` non incrementa mai `i`, quindi va in loop infinito; inoltre `print` senza parentesi non stampa nulla. Manca l'accumulo della somma.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
 
@@ -66,16 +56,12 @@
 #risposta(category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/snippe2t.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Perfetto: lo scambio è spiegato correttamente e l'output è 8 5.",
-)
+#commento[Perfetto: lo scambio è spiegato correttamente e l'output è `8 5`.]
 
 #risposta(category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/snippet3.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Bene: hai riconosciuto i pari e riportato l'output. Il ciclo parte da 0, non da 1, e stampa i valori invece di contarli.",
-)
+#commento[Bene: hai riconosciuto i pari e riportato l'output. Il ciclo parte da `0`, non da `1`, e stampa i valori invece di contarli.]
 
 = Riepilogo dei punteggi
 

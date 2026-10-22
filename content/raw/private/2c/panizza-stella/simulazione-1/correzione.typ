@@ -23,16 +23,12 @@
 #risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: corretto e idiomatico",
-)
+#commento[Perfetto: corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 1, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il file non è eseguibile: storto è un intero e non ha append, la condizione len(l) < i non è mai vera e storto.append(l) non inverte nulla.",
-)
+#commento[Il file non è eseguibile: `storto` è un intero e non ha `append`, la condizione `len(l) < i` non è mai vera e `storto.append(l)` non inverte nulla.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 0, diff: 2)
 

@@ -23,25 +23,19 @@
 #risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/es1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Corretto: scorri la lista a passi di 2 e stampi solo gli elementi nelle posizioni pari. Il controllo sulla lista vuota non serve, ma non fa male.",
-)
+#commento[Corretto: scorri la lista a passi di 2 e stampi solo gli elementi nelle posizioni pari. Il controllo sulla lista vuota non serve, ma non fa male.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 0, diff: 2)
 
 #risposta(category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 16, diff: 2)[
   #raw(read("le-tue-risposte/es3.pyt"), block: true, lang: "python")
 ]
-#commento(
-  "Corretto: costruisci la lista invertita e la confronti con l'originale. Attenzione al nome del file: l'estensione deve essere .py, non .pyt.",
-)
+#commento[Corretto: costruisci la lista invertita e la confronti con l'originale. Attenzione al nome del file: l'estensione deve essere `.py`, non `.pyt`.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 3, diff: 3)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
-#commento(
-  "L'idea di cercare il secondo massimo c'è, ma il codice non è eseguibile: max2 = maxmax = i usa una variabile inesistente, if max2 < i < max non ha corpo e print(max2)() non è valido. Inoltre hai chiamato il file es2.py mentre questo è l'esercizio 4.",
-)
+#commento[L'idea di cercare il secondo massimo c'è, ma il codice non è eseguibile: `max2 = maxmax = i` usa una variabile inesistente, `if max2 < i < max` non ha corpo e `print(max2)()` non è valido. Inoltre hai chiamato il file `es2.py` mentre questo è l'esercizio 4.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 0, diff: 3)
 

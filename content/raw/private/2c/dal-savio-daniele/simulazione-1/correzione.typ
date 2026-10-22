@@ -32,12 +32,12 @@
 #risposta(category: "E", tag: "Esercizio", title: [Secondo più grande], points: 18, score: 14, diff: 3)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
-#commento[Ci sei molto vicino. Il secondo ciclo però andrebbe messo fuori dal primo; la logica è la seguente: prima calcoli il massimo globale, poi ricalcoli il massimo, considerando solo gli elementi DIVERSI dal massimo globale. Il secondo massimo trovato è la risposta all'esercizio]
+#commento[Ci sei molto vicino. Il secondo ciclo però andrebbe messo fuori dal primo; la logica è la seguente: prima calcoli il massimo globale, poi ricalcoli il massimo, considerando solo gli elementi DIVERSI dal massimo globale. Il secondo massimo trovato è la risposta all'esercizio.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Rimuovi i negativi], points: 18, score: 18, diff: 3)[
   #raw(read("le-tue-risposte/esercizio5.py"), block: true, lang: "python")
 ]
-#commento[La logica è corretta. Occhio che la consegna avrebbe chiesto di filtrare `l`. Quindi l alla fine del programma dovrebbe contenere solo i valori positivi, mentre qui contiene ancora tutti i valori che conteneva in origine. Per ora non mi soffermo su questi aspetti "marginali", ma più andremo avanti più diventeranno importanti]
+#commento[La logica è corretta. Occhio che la consegna chiedeva di filtrare `l`. Quindi `l` alla fine del programma dovrebbe contenere solo i valori positivi, mentre qui contiene ancora tutti i valori che conteneva in origine. Per ora non mi soffermo su questi aspetti "marginali", ma più andremo avanti più diventeranno importanti.]
 
 = Lettura del codice (30 punti)
 

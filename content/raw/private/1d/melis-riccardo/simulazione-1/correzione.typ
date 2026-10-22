@@ -31,9 +31,7 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 7, diff: 1)[
   #raw(read("le-tue-risposte/esrcizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai provato a usare len, ma len(7) non funziona: len si usa con liste o stringhe. Se n e x fossero inizializzate correttamente il programma sarebbe quasi corretto (non conterebbe n ma è una sottigliezza)",
-)
+#commento[Hai provato a usare `len`, ma `len(7)` non funziona: `len` si usa con liste o stringhe. Se `n` e `x` fossero inizializzate correttamente il programma sarebbe quasi corretto (non conterebbe `n`, ma è una sottigliezza).]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 0, diff: 2)
 

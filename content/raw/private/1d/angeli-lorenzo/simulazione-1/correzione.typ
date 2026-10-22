@@ -31,9 +31,7 @@
     lang: "text",
   )
 ]
-#commento(
-  "Bene, hai citato RAM, disco, CPU e ventole. Prova ad aggiungere una quinta componente e a dire in una frase a cosa serve.",
-)
+#commento[Bene, hai citato RAM, disco, CPU e ventole. Prova ad aggiungere una quinta componente e a dire in una frase a cosa serve.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 5)[
   #raw(
@@ -43,9 +41,7 @@
     lang: "text",
   )
 ]
-#commento(
-  "L'idea del binario c'è, prova a distinguere meglio numeri e caratteri: i numeri si salvano in base 2, i caratteri con una codifica (tipo ASCII).",
-)
+#commento[L'idea del binario c'è, prova a distinguere meglio numeri e caratteri: i numeri si salvano in base 2, i caratteri con una codifica (tipo ASCII).]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
 
@@ -54,23 +50,17 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 4, diff: 1)[
   #raw(read("le-tue-risposte/es1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Qui l'idea dei pari c'è, ma il programma stampa i numeri invece di contarli. Inoltre l'incremento di i è fuori dal ciclo: l'applicazione va il loop infinito",
-)
+#commento[Qui l'idea dei pari c'è, ma il programma stampa i numeri invece di contarli. Inoltre l'incremento di `i` è fuori dal ciclo: l'applicazione va in loop infinito.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 14, diff: 2)[
   #raw(read("le-tue-risposte/es2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Hai impostato la somma, ma manca l'incremento di i e la stampa finale. Siccome manca l'incremento, il ciclo va in loop infinito.",
-)
+#commento[Hai impostato la somma, ma manca l'incremento di `i` e la stampa finale. Siccome manca l'incremento, il ciclo va in loop infinito.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 5, diff: 3)[
   #raw(read("le-tue-risposte/es3.py"), block: true, lang: "python")
 ]
-#commento(
-  "Stai provando a confrontare una lista (l) con un intero (1, b). Questo non è valido in python. Manca anche l'idea di base, scorrere la lista e verificare che l'elemento corrente sia nel range.",
-)
+#commento[Stai provando a confrontare una lista (`l`) con un intero (`1`, `b`). Questo non è valido in Python. Manca anche l'idea di base, scorrere la lista e verificare che l'elemento corrente sia nel range.]
 
 = Lettura del codice (30 punti)
 

@@ -23,16 +23,12 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 3)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Hai elencato quattro componenti, ma senza descriverne lo scopo e con qualche sovrapposizione (CPU e processore sono la stessa cosa). Mancano RAM e GPU.",
-)
+#commento[Hai elencato quattro componenti, ma senza descriverne lo scopo e con qualche sovrapposizione (CPU e processore sono la stessa cosa). Mancano RAM e GPU.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 6)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Bene: l'unica cosa che manca è il riferimento a riferimento alla codifica in base 2 per i numeri e alla tabella ASCII per i caratteri.",
-)
+#commento[Bene: l'unica cosa che manca è il riferimento alla codifica in base 2 per i numeri e alla tabella ASCII per i caratteri.]
 
 #risposta(none, category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 0)
 
@@ -43,9 +39,7 @@
 #risposta(category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 20, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Perfetto: corretto e idiomatico.",
-)
+#commento[Perfetto: corretto e idiomatico.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Tutti dentro l'intervallo], points: 30, score: 0, diff: 3)
 
@@ -54,16 +48,12 @@
 #risposta(category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/snippet.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Perfetto",
-)
+#commento[Perfetto.]
 
 #risposta(category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 8, diff: 2)[
   #raw(read("le-tue-risposte/snippet2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Bene, però avresti dovuto spiegare a parole cosa fa il codice, non solo riportare l'output. \"Il codice inverte il valore delle variabili a e b\" sarebbe stato sufficiente",
-)
+#commento[Bene, però avresti dovuto spiegare a parole cosa fa il codice, non solo riportare l'output. "Il codice inverte il valore delle variabili `a` e `b`" sarebbe stato sufficiente.]
 
 #risposta(none, category: "S", tag: "Snippet", title: [Terzo frammento], points: 10, score: 0, diff: 2)
 

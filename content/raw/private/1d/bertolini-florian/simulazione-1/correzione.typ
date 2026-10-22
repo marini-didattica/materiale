@@ -31,9 +31,7 @@
 #risposta(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 10, score: 0, diff: 1)[
   #raw(read("le-tue-risposte/esercitazione 4.py"), block: true, lang: "python")
 ]
-#commento(
-  "Manca tutta l'implementazione",
-)
+#commento[Manca tutta l'implementazione.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [La somma da 0 a n], points: 20, score: 0, diff: 2)
 

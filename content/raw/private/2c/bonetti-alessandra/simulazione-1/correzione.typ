@@ -23,16 +23,12 @@
 #risposta(category: "E", tag: "Esercizio", title: [Posizioni alternate], points: 12, score: 12, diff: 1)[
   #raw(read("le-tue-risposte/esercizio1.py"), block: true, lang: "python")
 ]
-#commento(
-  "Corretto e idiomatico",
-)
+#commento[Corretto e idiomatico.]
 
 #risposta(category: "E", tag: "Esercizio", title: [Inversione in place], points: 16, score: 2, diff: 2)[
   #raw(read("le-tue-risposte/esercizio2.py"), block: true, lang: "python")
 ]
-#commento(
-  "Il file è incompleto e non eseguibile: for i in range len(l): non è sintassi valida. Mancano il ciclo di scambio e la stampa finale; ricorda che l'inversione deve avvenire in place, senza lista ausiliaria.",
-)
+#commento[Il file è incompleto e non eseguibile: `for i in range len(l):` non è sintassi valida. Mancano il ciclo di scambio e la stampa finale; ricorda che l'inversione deve avvenire in place, senza lista ausiliaria.]
 
 #risposta(none, category: "E", tag: "Esercizio", title: [Palindroma], points: 16, score: 0, diff: 2)
 

@@ -23,23 +23,17 @@
 #risposta(category: "D", tag: "Domanda", title: [Le componenti di un computer], points: 7, score: 4.5)[
   #raw(read("le-tue-risposte/domanda1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Ci sono tante idea e altrettante imprecisioni. La GPU non da qualità visiva; si occupa di elaborare immagini e, più in generale di eseguire istruzioni in parallelo. Inolre non è il cervello del computer: il ruolo di esecuzione spetta alla CPU. Occhio che GPU e scheda video sono la stessa cosa",
-)
+#commento[Ci sono tante idee e altrettante imprecisioni. La GPU non dà qualità visiva; si occupa di elaborare immagini e, più in generale di eseguire istruzioni in parallelo. Inoltre non è il cervello del computer: il ruolo di esecuzione spetta alla CPU. Occhio che GPU e scheda video sono la stessa cosa.]
 
 #risposta(category: "D", tag: "Domanda", title: [Numeri, caratteri e parole], points: 8, score: 6)[
   #raw(read("le-tue-risposte/domanda2.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Buona spiegazione del codice binario e della combinazione di bit per numeri e lettere. Manca un riferimento esplicito alla base 2 e alla tabella ASCII.",
-)
+#commento[Buona spiegazione del codice binario e della combinazione di bit per numeri e lettere. Manca un riferimento esplicito alla base 2 e alla tabella ASCII.]
 
 #risposta(category: "D", tag: "Domanda", title: [Istruzioni e instruction set], points: 5, score: 4.5)[
   #raw(read("le-tue-risposte/domanda3.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Va bene! Sottolinea che i codici sono binari",
-)
+#commento[Va bene! Sottolinea che i codici sono binari.]
 
 = Scrittura del codice (60 punti)
 
@@ -54,9 +48,7 @@
 #risposta(category: "S", tag: "Snippet", title: [Primo frammento], points: 10, score: 10, diff: 2)[
   #raw(read("le-tue-risposte/snippet1.txt"), block: true, lang: "text")
 ]
-#commento(
-  "Corretto: hai colto l'ordine inverso e riportato l'output. Per la precisione l'output è su righe separate, non separato da trattini.",
-)
+#commento[Corretto: hai colto l'ordine inverso e riportato l'output. Per la precisione l'output è su righe separate, non separato da trattini.]
 
 #risposta(none, category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, score: 0, diff: 2)
 
