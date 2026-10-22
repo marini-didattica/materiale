@@ -1,0 +1,1 @@
+il codice serve a confrontare un elemento di una lista con l'elemento precedente della stessa lista

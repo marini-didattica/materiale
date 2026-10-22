@@ -1,0 +1,8 @@
+a = [2, 4, 5, 3, 8] lista di numeri già prediusposta
+b = True la variabile b è true
+i = 1 indice i =1
+while i < len(a): finche i è minore degli elementi della lista a ripeti le azioni dentro questo ciclo
+if a[i] < a[i - 1]: se l'elemento presente è minore di quello passato, la variabile b è falsa
+b = False
+i = i + 1 l'indeci i ad ogni fine ciclo aumenta di 1 
+print(b) stampa la variuabile b
