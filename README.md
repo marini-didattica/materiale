@@ -110,8 +110,8 @@ il codice di accesso.
   nome o cognome, senza spazi.
 - `owner-slug` è opzionale: è la versione abbreviata mostrata nel breadcrumb.
 
-I codici sono 8 caratteri tra `A-Z` e `2-9`, senza `I`, `O`, `0` e `1`. Devono
-restare stabili: cambiarli invalida i link già distribuiti.
+I codici sono 8 caratteri alfanumerici maiuscoli (`A-Z`, `0-9`). Devono restare
+stabili: cambiarli invalida i link già distribuiti.
 
 Il comando `bun run content:build` valida `students.json`, controlla che ogni
 file sotto `content/raw/private/` appartenga a una cartella elencata e copia i
