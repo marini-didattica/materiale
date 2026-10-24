@@ -1,0 +1,16 @@
+Il linguaggio assembly è una rappresentazione simbolica del codice macchina, cioè del linguaggio
+che la CPU è in grado di eseguire direttamente. Invece di scrivere sequenze di 0 e 1, si usano
+sigle brevi e leggibili (dette mnemonici) come MOV, ADD, SUB, JMP, e si indicano i registri e gli
+indirizzi di memoria con dei nomi.
+
+Il rapporto con il codice macchina è di corrispondenza quasi uno a uno: ogni istruzione assembly
+viene tradotta in una singola istruzione macchina da un programma chiamato assembler. Il programma
+scritto in assembly (detto sorgente assembly) non è quindi portabile: dipende dall'instruction set
+del processore per cui è stato scritto, e lo stesso programma va riscritto per un processore con
+un instruction set diverso.
+
+A cosa serve: in passato era il modo normale di programmare; oggi si usa quando serve il massimo
+controllo sull'hardware e la massima efficienza, ad esempio nei driver, nei sistemi embedded, nei
+bootloader e nelle parti più critiche di un sistema operativo. I linguaggi ad alto livello come
+Python vengono tradotti in codice macchina da compilatori o interpreti, che svolgono lo stesso
+lavoro dell'assembler ma partendo da istruzioni molto più astratte.

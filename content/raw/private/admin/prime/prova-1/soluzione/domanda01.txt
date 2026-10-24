@@ -1,0 +1,17 @@
+La differenza principale sta nel modo in cui le due unità eseguono i calcoli.
+
+- La CPU (Central Processing Unit) ha pochi core, ma molto potenti e "general purpose". Esegue le
+  istruzioni in modo SEQUENZIALE: una istruzione dopo l'altra, su pochi dati per volta. Si occupa
+  anche del controllo del flusso (salti, condizioni) e coordina il resto del sistema. È adatta a
+  programmi generici: sistema operativo, gestione di file, calcoli che dipendono l'uno dall'altro.
+
+- La GPU (Graphics Processing Unit) ha migliaia di core piccoli e più semplici. Esegue molti
+  calcoli IN PARALLELO: la stessa operazione viene applicata contemporaneamente a grandi quantità
+  di dati (ad esempio i pixel di un'immagine o i vertici di un modello 3D). È adatta a compiti in
+  cui tante operazioni sono indipendenti fra loro: grafica, video, foto, addestramento di reti
+  neurali.
+
+In sintesi: la CPU privilegia la flessibilità e la velocità di esecuzione di istruzioni diverse in
+sequenza, la GPU privilegia la quantità di operazioni semplici svolte nello stesso momento. Le due
+unità non sono in competizione: lavorano insieme, e nella maggior parte dei computer la GPU è usata
+come acceleratore per i calcoli paralleli.

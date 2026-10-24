@@ -1,0 +1,16 @@
+La tabella ASCII (American Standard Code for Information Interchange) è una tabella di codifica
+che associa ad ogni carattere una sequenza di 8 bit, cioè un numero da 0 a 255 (in origine 7 bit,
+da 0 a 127). In questo modo un carattere non viene memorizzato "disegnato", ma come un numero:
+ad esempio 'A' = 65 = 01000001, 'a' = 97 = 01100001, '0' = 48 = 00110000. Una parola non è altro
+che una sequenza di caratteri uno dietro l'altro, quindi di byte uno dietro l'altro. I caratteri
+non presenti nella tabella originale (lettere accentate, alfabeti diversi dall'inglese) richiedono
+estensioni come Unicode/UTF-8.
+
+Un protocollo è un insieme di regole condivise che stabilisce come devono essere scambiate le
+informazioni: il formato dei dati, la codifica, l'ordine dei messaggi, i tempi e la gestione degli
+errori. È necessario perché una sequenza di bit non ha significato in sé: lo stesso byte 01000001
+può essere il carattere 'A', il numero 65 o parte di un'immagine. Solo se mittente e destinatario
+usano la stessa convenzione i dati vengono interpretati allo stesso modo. Senza protocolli
+condivisi due computer non riuscirebbero a comunicare: la tabella ASCII è essa stessa un esempio
+di convenzione, e lo stesso vale per i protocolli di rete (ad esempio HTTP per il web) o per le
+regole che definiscono come aprire e chiudere un file.

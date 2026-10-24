@@ -1,0 +1,11 @@
+Il programma stampa solo gli elementi positivi della lista l, uno per riga, scartando quelli
+negativi e lo zero.
+
+- i parte da 0 e il ciclo while continua finché i < len(l), quindi scorre tutti gli elementi.
+- A ogni iterazione il controllo l[i] > 0 verifica se l'elemento è strettamente maggiore di zero.
+- Lo 0 non viene stampato perché 0 > 0 è falso: zero non è né positivo né negativo.
+
+Output:
+3
+7
+12

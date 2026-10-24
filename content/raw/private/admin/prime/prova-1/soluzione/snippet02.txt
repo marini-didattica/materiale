@@ -1,0 +1,19 @@
+Il programma verifica che tutti gli elementi della lista l siano compresi fra a e b, estremi
+inclusi, e stampa True se è così, False altrimenti.
+
+- Il blocco if a > b scambia i due estremi usando la variabile temporanea t. Serve perché a e b
+  potrebbero essere scritti in ordine invertito: dopo lo scambio a è sempre il limite inferiore e
+  b quello superiore, quindi l'intervallo è sempre [a, b] = [1, 10].
+- La variabile ok parte da True (si ipotizza che tutti gli elementi vadano bene).
+- Il controllo l[i] < a or l[i] > b mette ok a False appena trova un elemento fuori
+  dall'intervallo. Il ciclo però continua fino alla fine della lista: non c'è un break.
+- Se la lista è vuota, il ciclo non viene eseguito e il programma stampa True (nessun elemento
+  viola la condizione).
+
+Tutti gli elementi (4, 6, 2, 9) stanno fra 1 e 10, quindi l'output è:
+
+Output:
+True
+
+Se la lista fosse stata [4, 12, 2, 9], il 12 sarebbe fuori dall'intervallo: ok diventerebbe False
+e l'output sarebbe False.
