@@ -1,7 +1,7 @@
 // Compile from the materiale repository root:
-// typst compile --root content content/raw/private/admin/seconde/prova-1.typ
-#import "../../../../typst-theme/src/lib.typ": theme
-#import "../../../../typst-components/src/lib.typ": (
+// typst compile --root content content/raw/private/admin/seconde/prova-1/prova-1.typ
+#import "../../../../../typst-theme/src/lib.typ": theme
+#import "../../../../../typst-components/src/lib.typ": (
   callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template, testata,
 )
 
@@ -11,22 +11,24 @@
 #cover(
   top: "LICEO RUSSELL · INFORMATICA · CLASSE SECONDA",
   title: "Verifica di informatica",
-  subtitle: "Liste, cicli e calcolo in Python",
+  subtitle: "Liste, cicli e lettura del codice in Python",
   decoration: auto,
   descriptors: (
     ("Durata", "90 minuti"),
     ("Punteggio", "110 punti"),
     ("Esercizi", "70 punti"),
-    ("Esercizi semplici", "40 punti"),
+    ("Lettura", "40 punti"),
   ),
   student-data: none,
   body: [
 
     #callout("Istruzioni generali ")[
-      - La prova è divisa in due parti: *esercizi* (70 punti) e *esercizi semplici*
+      - La prova è divisa in due parti: *esercizi* (70 punti) e *lettura del codice*
         (40 punti).
-      - Per ciascun esercizio scrivi un programma in *Python*, in un file separato. Sono
+      - Per gli esercizi scrivi un programma in *Python*, in un file separato. Sono
         valutate la correttezza, la gestione dei casi limite e la chiarezza del codice.
+      - Nella parte di lettura spiega a parole che cosa fa ciascun frammento e riporta il suo
+        output, senza riscrivere il codice.
       - Il programma deve stampare *soltanto* il risultato richiesto e non deve chiedere dati
         con `input()`: usa le variabili già presenti nel template.
       - Non è consentito consultare appunti, libri o Internet. È possibile usare il *cheatsheet*
@@ -57,15 +59,17 @@
           ]
         ]
 
-      - Dentro a questa cartella, va creato *un file per ciascun esercizio*. Il nome del file è indicato
-        nella tabella qui sotto: usa `e1.py` … `e5.py` per gli esercizi e `s1.py` … `s5.py` per gli
-        esercizi semplici. L'estensione deve essere `.py`.
+      - Dentro a questa cartella, va creato *un file per ciascun esercizio*. Il nome del file è quello indicato
+        nell'intestazione dell'esercizio, trasformato in modo che sia *tutto minuscolo e senza
+        spazi*: l'estensione deve essere `.py` per gli esercizi di programmazione e `.txt` per le
+        risposte alle domande e agli snippet.
+
 
         #box(fill: luma(255), inset: 9pt, radius: 3pt)[
           #testata("Esercizio", 1, "Esempio esercizio")
           #v(0.5em)
           #text(size: 8.5pt, fill: luma(120), style: "italic")[
-            Ad esempio, per il primo esercizio va creato un file `e1.py`
+            Ad esempio, per questo esercizio va creato un file `esercizio1.py`
           ]
         ]
 
@@ -83,8 +87,8 @@
               align: left,
               stroke: 0.5pt + luma(215),
               table.header([*Parte*], [*File da consegnare*]),
-              [Esercizi], [`e1.py`, `e2.py`, `e3.py`, `e4.py`, `e5.py`],
-              [Esercizi semplici], [`s1.py`, `s2.py`, `s3.py`, `s4.py`, `s5.py`],
+              [Esercizi], [`esercizio1.py`, `esercizio2.py`, `esercizio3.py`, `esercizio4.py`, `esercizio5.py`],
+              [Lettura], [`snippet1.txt`, `snippet2.txt`, `snippet3.txt`, `snippet4.txt`, `snippet5.txt`],
             )
           ]
         ]
@@ -108,15 +112,15 @@
 
 = Esercizi (70 punti)
 
-Per ciascun esercizio scrivi un file separato (`e1.py` … `e5.py`), eseguilo e verifica il
-risultato con gli esempi. Il programma deve stampare *soltanto* il risultato richiesto e non deve
-chiedere dati con `input()`: usa le variabili già presenti nel template.
+Per ciascun esercizio scrivi un file separato (`esercizio1.py` … `esercizio5.py`), eseguilo e
+verifica il risultato con gli esempi. Il programma deve stampare *soltanto* il risultato
+richiesto e non deve chiedere dati con `input()`: usa le variabili già presenti nel template.
 
 #checklist("Prima di consegnare", (
   [Il programma stampa *solo* il risultato richiesto, senza messaggi in più?],
   [Hai provato i casi limite: lista vuota, un solo elemento, valori duplicati, numeri negativi?],
   [I nomi delle variabili sono chiari e il codice è rientrato in modo corretto?],
-  [Ogni esercizio è nel suo file `e1.py` … `e5.py` o `s1.py` … `s5.py`?],
+  [Ogni esercizio è nel suo file `esercizio1.py` … `esercizio5.py` o `snippet1.txt` … `snippet5.txt`?],
 ))
 
 È *fondamentale* che il programma funzioni per qualsiasi input gli venga dato. Gli esercizi
@@ -132,8 +136,8 @@ print(6.0)
   - Sono vietati `sum()`, `max()`, `min()`, `sorted()`, `reversed()`, `all()`, `any()`,
     `list.reverse()`, `list.sort()`, `list.count()` e `list.index()`.
   - Sono consentiti `len()`, `append()`, `pop()`, `remove()` e i normali cicli.
-  - Per l'esercizio *E4* non usare `list.index()`; per *S4* non usare l'operatore `**`; per
-    *S5* non usare `//`, `%` o `divmod()`.
+  - Nell'esercizio *L'elemento è nella lista?* non usare nemmeno l'operatore `in`: la ricerca va
+    fatta con un ciclo.
 ]
 
 #quesito(category: "E", tag: "Esercizio", title: [Media degli elementi], points: 12, diff: 2)[
@@ -269,135 +273,79 @@ print(6.0)
 ]
 
 // ============================================================
-//  PARTE 2 — ESERCIZI SEMPLICI
+//  PARTE 2 — LETTURA DEL CODICE
 // ============================================================
 
-= Esercizi semplici (40 punti)
+#pagebreak()
 
-Per ciascun esercizio scrivi un file separato (`s1.py` … `s5.py`), eseguilo e verifica il
-risultato con gli esempi. Valgono le stesse regole della parte precedente: il programma deve
-funzionare per qualsiasi input e stampare soltanto il risultato richiesto.
+= Lettura del codice (40 punti)
 
-#quesito(category: "S", tag: "Esercizio semplice", title: [Pari in ordine inverso], points: 8, diff: 1)[
-  #consegna[Data la lista `l`, stampa soltanto gli elementi *pari*, partendo dall'ultimo e
-    arrivando al primo. Stampa un elemento per riga. Se non ci sono elementi pari, il programma
-    non deve stampare nulla.]
+Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma stampa qualcosa,
+riporta anche l'output. Non devi riscrivere il codice: va dimostrato di averne compreso
+l'intento, descrivendone il funzionamento.
 
-  #nota[
-    Un numero è pari se `x % 2 == 0`; in Python il controllo funziona anche con i numeri
-    negativi e lo zero è pari. Parti dall'indice `len(l) - 1` e diminuisci `i` fino a `0`.
-  ]
-
-  #template[
-    ```python
-    l = [3, 8, 0, -4, 7, 10]
-
-    # scrivi qui il tuo codice
-    ```
-  ]
-
-  #esempi((
-    ([`l = [3, 8, 0, -4, 7, 10]`], [`10` #linebreak() `-4` #linebreak() `0` #linebreak() `8`], [I pari, dall'ultimo al primo.]),
-    ([`l = [1, 3, 5]`], [nessun output], [Non ci sono elementi pari.]),
-    ([`l = []`], [nessun output], [La lista è vuota.]),
-  ))
+#quesito(category: "S", tag: "Snippet", title: [Pari in ordine inverso], points: 8, diff: 1, righe: 4)[
+  Cosa stampa il programma? Perché il ciclo parte dall'ultimo elemento della lista?
+  ```python
+  l = [3, 8, 0, -4, 7, 10]
+  i = len(l) - 1
+  while i >= 0:
+      if l[i] % 2 == 0:
+          print(l[i])
+      i = i - 1
+  ```
 ]
 
-#quesito(category: "S", tag: "Esercizio semplice", title: [C'è un numero negativo?], points: 8, diff: 1)[
-  #consegna[Data la lista di numeri `l`, stampa `True` se contiene almeno un numero negativo,
-    altrimenti stampa `False`. Se la lista è vuota, stampa `False`.]
-
-  #nota[
-    Un numero è negativo se `x < 0`: lo zero *non* è negativo. Puoi usare una variabile
-    booleana e interrompere il ciclo con `break` appena trovi il primo negativo.
-  ]
-
-  #template[
-    ```python
-    l = [3, -1, 0, 7]
-
-    # scrivi qui il tuo codice
-    ```
-  ]
-
-  #esempi((
-    ([`l = [3, -1, 0, 7]`], [`True`], [`-1` è negativo.]),
-    ([`l = [0, 4, 9]`], [`False`], [Lo zero non è negativo.]),
-    ([`l = []`], [`False`], [La lista è vuota.]),
-  ))
+#quesito(category: "S", tag: "Snippet", title: [C'è un numero negativo?], points: 8, diff: 1, righe: 5)[
+  Cosa stampa il programma? A cosa serve la variabile `trovato`? Perché lo zero non la rende
+  uguale a `True`?
+  ```python
+  l = [3, -1, 0, 7]
+  trovato = False
+  i = 0
+  while i < len(l):
+      if l[i] < 0:
+          trovato = True
+      i = i + 1
+  print(trovato)
+  ```
 ]
 
-#quesito(category: "S", tag: "Esercizio semplice", title: [Scambia due variabili], points: 8, diff: 1)[
-  #consegna[Date le variabili `a` e `b`, scambia il loro contenuto e stampa i due valori sulla
-    stessa riga, separati da uno spazio: prima `a`, poi `b`.]
-
-  #nota[
-    Puoi usare una variabile temporanea oppure l'assegnamento multiplo `a, b = b, a`. Dopo lo
-    scambio `a` deve contenere il valore iniziale di `b` e viceversa.
-  ]
-
-  #template[
-    ```python
-    a = 3
-    b = 8
-
-    # scrivi qui il tuo codice
-    ```
-  ]
-
-  #esempi((
-    ([`a = 3, b = 8`], [`8 3`], [Dopo lo scambio `a` vale `8` e `b` vale `3`.]),
-    ([`a = -2, b = 5`], [`5 -2`], [Funziona anche con numeri negativi.]),
-    ([`a = 7, b = 7`], [`7 7`], [Se i valori sono uguali lo scambio non cambia nulla.]),
-  ))
+#quesito(category: "S", tag: "Snippet", title: [Scambia due variabili], points: 8, diff: 1, righe: 4)[
+  Cosa stampa il programma? Perché è necessaria la variabile `t`?
+  ```python
+  a = 3
+  b = 8
+  t = a
+  a = b
+  b = t
+  print(a, b)
+  ```
 ]
 
-#quesito(category: "S", tag: "Esercizio semplice", title: [Potenza con moltiplicazioni], points: 8, diff: 2)[
-  #consegna[Calcola `a` elevato a `b` e stampa il risultato. `b` è un intero maggiore o
-    uguale a `0`; `a` può essere anche negativo.]
-
-  #nota[
-    Calcola la potenza moltiplicando `a` per sé stesso `b` volte. Parti da `1`: se `b` vale
-    `0`, il ciclo non viene eseguito e il risultato resta `1`. Non usare l'operatore `**`.
-  ]
-
-  #template[
-    ```python
-    a = 3
-    b = 4
-
-    # scrivi qui il tuo codice
-    ```
-  ]
-
-  #esempi((
-    ([`a = 3, b = 4`], [`81`], [`3 * 3 * 3 * 3`.]),
-    ([`a = 2, b = 0`], [`1`], [Qualsiasi numero elevato a `0` vale `1`.]),
-    ([`a = -2, b = 3`], [`-8`], [Il segno negativo resta perché l'esponente è dispari.]),
-  ))
+#quesito(category: "S", tag: "Snippet", title: [Potenza con moltiplicazioni], points: 8, diff: 2, righe: 4)[
+  Cosa stampa il programma? Che cosa stamperebbe se `b` valesse `0`?
+  ```python
+  a = 3
+  b = 4
+  risultato = 1
+  i = 0
+  while i < b:
+      risultato = risultato * a
+      i = i + 1
+  print(risultato)
+  ```
 ]
 
-#quesito(category: "S", tag: "Esercizio semplice", title: [Divisione con sottrazioni], points: 8, diff: 3)[
-  #consegna[Calcola la divisione intera `a // b` e stampa il quoziente. `a` è un intero
-    maggiore o uguale a `0` e `b` è un intero maggiore di `0`.]
-
-  #nota[
-    Conta quante volte puoi sottrarre `b` da `a` senza andare sotto zero. Il numero di
-    sottrazioni effettuate è il quoziente. Non usare `//`, `%` o `divmod()`.
-  ]
-
-  #template[
-    ```python
-    a = 17
-    b = 5
-
-    # scrivi qui il tuo codice
-    ```
-  ]
-
-  #esempi((
-    ([`a = 17, b = 5`], [`3`], [`5` sta tre volte in `17`.]),
-    ([`a = 4, b = 7`], [`0`], [`7` non sta in `4`.]),
-    ([`a = 20, b = 4`], [`5`], [`20 - 4 - 4 - 4 - 4 - 4 = 0`.]),
-  ))
+#quesito(category: "S", tag: "Snippet", title: [Divisione con sottrazioni], points: 8, diff: 3, righe: 5)[
+  Cosa stampa il programma? Quanto vale `a` alla fine del ciclo, e perché?
+  ```python
+  a = 17
+  b = 5
+  quoziente = 0
+  while a >= b:
+      a = a - b
+      quoziente = quoziente + 1
+  print(quoziente)
+  ```
 ]
