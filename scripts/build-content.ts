@@ -18,7 +18,7 @@ const stagedPublicDir = path.join(stagedRawDir, 'public');
 const stagedPrivateDir = path.join(stagedRawDir, 'private');
 
 /** Keep in sync with the main site's access form. */
-const CODE_PATTERN = /^[A-HJ-NP-Z2-9]{8}$/;
+const CODE_PATTERN = /^[A-Z0-9]{8}$/;
 const OWNER_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 /**
