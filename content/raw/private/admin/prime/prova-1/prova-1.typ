@@ -2,7 +2,7 @@
 // typst compile --root content content/raw/private/admin/prime/prova-1/prova-1.typ
 #import "../../../../../typst-theme/src/lib.typ": theme
 #import "../../../../../typst-components/src/lib.typ": (
-  callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template,
+  callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template, testata,
 )
 
 #set document(title: "Verifica di informatica — Prova 1", author: "Marini Mattia")
@@ -20,49 +20,10 @@
     ("Scrittura", "60 punti"),
     ("Lettura", "30 punti"),
   ),
-  student-data: ("nome", "cognome", "classe", "data"),
+  student-data: none,
   body: [
 
-    #callout("Istruzioni per la consegna")[
-      - Va creato *un file per ciascun esercizio*. Il nome del file è quello indicato
-        nell'intestazione dell'esercizio, trasformato in modo che sia *tutto minuscolo e senza
-        spazi*: l'estensione deve essere `.py` per gli esercizi di programmazione e `.txt` per le
-        risposte alle domande e agli snippet.
-
-        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
-          #table(
-            columns: (auto, 1fr),
-            inset: (x: 9pt, y: 6pt),
-            align: left,
-            stroke: 0.5pt + luma(215),
-            table.header([*Parte*], [*File da consegnare*]),
-            [Teoria], [`domanda1.txt`, `domanda2.txt`, `domanda3.txt`],
-            [Scrittura], [`esercizio1.py`, `esercizio2.py`, `esercizio3.py`],
-            [Lettura], [`snippet1.txt`, `snippet2.txt`, `snippet3.txt`],
-          )
-        ]
-
-      - *Ogni* risposta va messa dentro ad una cartella nominata `cognome-nome`, *tutto
-        minuscolo*. Se avete più nomi o più cognomi, metteteli tutti, concatenati dal carattere
-        `-` (trattino). Ad esempio:
-
-        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
-          #table(
-            columns: (auto, 1fr),
-            inset: (x: 9pt, y: 6pt),
-            align: left,
-            stroke: 0.5pt + luma(215),
-            table.header([*Vostro nome*], [*Nome cartella*]),
-            [Marini Mattia], [`marini-mattia`],
-            [Olaizola Elisa Maitea], [`olaizola-elisa-maitea`],
-          )
-        ]
-
-      - Una volta finito, la cartella contenente i file va copiata in scrittura. Potete trovare la
-        cartella in `File Explorer (icona cartella) -> Questo Pc -> Scrittura`.
-    ]
-
-    #callout("Istruzioni")[
+    #callout("Istruzioni generali ")[
       - La prova è divisa in tre parti: *teoria* (20 punti), *scrittura del codice* (60 punti) e
         *lettura del codice* (30 punti).
       - Rispondi alle domande di teoria in modo *sintetico ma completo*, usando le righe a
@@ -74,6 +35,67 @@
       - Non è consentito consultare appunti, libri o Internet. È possibile usare il *cheatsheet*
         messo su scrittura.
     ]
+    #callout("Istruzioni per la consegna")[
+
+      - Aprite il *file explorer* (icona cartella sulla barra degli strumenti in basso) e navigate nella cartella `Questo Pc -> temi_xx`.
+
+      - Creare una nuova cartella, denominata `cognome-nome`, *tutto minuscolo*. Se avete più nomi o più cognomi, metteteli tutti, concatenati dal carattere
+        `-` (trattino). Ad esempio:
+
+        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
+          #block(
+            radius: 3pt,
+            clip: true,
+            stroke: 0.5pt + luma(195),
+          )[
+            #table(
+              columns: (auto, 1fr),
+              inset: (x: 9pt, y: 6pt),
+              align: left,
+              stroke: 0.5pt + luma(215),
+              table.header([*Vostro nome*], [*Nome cartella*]),
+              [Marini Mattia], [`marini-mattia`],
+              [Olaizola Elisa Maitea], [`olaizola-elisa-maitea`],
+            )
+          ]
+        ]
+
+      - Dentro a questa cartella, va creato *un file per ciascun esercizio*. Il nome del file è quello indicato
+        nell'intestazione dell'esercizio, trasformato in modo che sia *tutto minuscolo e senza
+        spazi*: l'estensione deve essere `.py` per gli esercizi di programmazione e `.txt` per le
+        risposte alle domande e agli snippet.
+
+
+        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
+          #testata("Esercizio", 2, "Esempio esercizio")
+          #v(0.5em)
+          #text(size: 8.5pt, fill: luma(120), style: "italic")[
+            Ad esempio, per questo esercizio va creato un file `esercizio1.py`
+          ]
+        ]
+
+        Per questa prova nello specifico mi aspetto che consegniate i seguenti file:
+
+        #box(fill: luma(255), inset: 9pt, radius: 3pt)[
+          #block(
+            radius: 3pt,
+            clip: true,
+            stroke: 0.5pt + luma(195),
+          )[
+            #table(
+              columns: (auto, 1fr),
+              inset: (x: 9pt, y: 6pt),
+              align: left,
+              stroke: 0.5pt + luma(215),
+              table.header([*Parte*], [*File da consegnare*]),
+              [Teoria], [`domanda1.txt`, `domanda2.txt`, `domanda3.txt`],
+              [Scrittura], [`esercizio1.py`, `esercizio2.py`, `esercizio3.py`],
+              [Lettura], [`snippet1.txt`, `snippet2.txt`, `snippet3.txt`],
+            )
+          ]
+        ]
+    ]
+
 
     #griglia-punteggi(titolo: "Riepilogo dei punteggi")
 
@@ -100,7 +122,7 @@ Rispondi in modo breve e preciso, usando le righe sotto ogni domanda.
   due.
 
   #nota[Una o due frasi per ciascuna delle due modalità sono sufficienti. Nomina le parole
-  *sequenziale* e *parallela*.]
+    *sequenziale* e *parallela*.]
 ]
 
 #quesito(category: "D", tag: "Domanda", title: [Caratteri e protocolli], points: 7, righe: 7)[
@@ -108,8 +130,8 @@ Rispondi in modo breve e preciso, usando le righe sotto ogni domanda.
   convenzioni condivise, per lo scambio di informazioni fra computer?
 
   #nota[Spiega come la tabella associ ad ogni carattere una sequenza di bit e fai un esempio.
-  Per i protocolli, accenna al fatto che mittente e destinatario devono interpretare i dati
-  allo stesso modo.]
+    Per i protocolli, accenna al fatto che mittente e destinatario devono interpretare i dati
+    allo stesso modo.]
 ]
 
 #quesito(category: "D", tag: "Domanda", title: [Il linguaggio assembly], points: 6, righe: 5)[
@@ -117,7 +139,7 @@ Rispondi in modo breve e preciso, usando le righe sotto ogni domanda.
   macchina?
 
   #nota[Accenna al fatto che ogni istruzione assembly corrisponde a un'istruzione macchina e
-  che viene tradotto da un programma chiamato *assembler*.]
+    che viene tradotto da un programma chiamato *assembler*.]
 ]
 
 // ============================================================
@@ -150,8 +172,8 @@ print(3)
 
 #quesito(category: "E", tag: "Esercizio", title: [Conta le occorrenze], points: 20, diff: 2)[
   #consegna[Date la lista `l` e il valore `a`, conta quante volte `a` compare in `l` e stampa un
-  solo numero: il numero di occorrenze trovate. Se `a` non compare nella lista, stampa `0`. La
-  lista può essere vuota.]
+    solo numero: il numero di occorrenze trovate. Se `a` non compare nella lista, stampa `0`. La
+    lista può essere vuota.]
 
   #nota[
     Il programma deve funzionare con qualsiasi valore di `a` (anche una stringa) e con qualsiasi
@@ -176,8 +198,8 @@ print(3)
 
 #quesito(category: "E", tag: "Esercizio", title: [Il valore è nella lista?], points: 15, diff: 1)[
   #consegna[Date la lista `l` e il valore `a`, stampa `True` se `a` compare almeno una volta in
-  `l`, altrimenti stampa `False`. Se `l` è vuota, stampa `False`. Il programma non deve
-  modificare la lista.]
+    `l`, altrimenti stampa `False`. Se `l` è vuota, stampa `False`. Il programma non deve
+    modificare la lista.]
 
   #nota[
     Deve essere stampato soltanto un valore booleano (`True` oppure `False`), non un messaggio.
@@ -202,8 +224,8 @@ print(3)
 
 #quesito(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 25, diff: 3)[
   #consegna[Data una lista di interi `l`, conta quanti elementi sono pari e stampa un solo
-  numero: il conteggio trovato. Se la lista è vuota, stampa `0`. La lista può contenere numeri
-  negativi e lo zero.]
+    numero: il conteggio trovato. Se la lista è vuota, stampa `0`. La lista può contenere numeri
+    negativi e lo zero.]
 
   #nota[
     Un numero è pari se `x % 2 == 0`. In Python `-4 % 2` vale `0` e `-3 % 2` vale `1`, quindi lo
