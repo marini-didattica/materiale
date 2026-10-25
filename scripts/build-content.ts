@@ -155,8 +155,8 @@ async function validateStudents(students: Students) {
 
     if (typeof student.slug !== 'string' || !CODE_PATTERN.test(student.slug)) {
       fail(
-        `Lo slug della cartella "${folder}" non è valido: servono 8 caratteri tra A-Z e 2-9, ` +
-          'senza I, O, 0 e 1.',
+        `Lo slug della cartella "${folder}" non è valido: servono 8 caratteri ` +
+          'alfanumerici maiuscoli (A-Z, 0-9).',
       );
     }
 
