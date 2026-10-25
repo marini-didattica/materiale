@@ -284,8 +284,7 @@ Per ciascun frammento di codice spiega a parole che cosa fa e, se il programma s
 riporta anche l'output. Non devi riscrivere il codice: va dimostrato di averne compreso
 l'intento, descrivendone il funzionamento.
 
-#quesito(category: "S", tag: "Snippet", title: [Pari in ordine inverso], points: 8, diff: 1, righe: 4)[
-  Cosa stampa il programma? Perché il ciclo parte dall'ultimo elemento della lista?
+#quesito(category: "S", tag: "Snippet", title: [Snippet 1], points: 8, diff: 1, righe: 4)[
   ```python
   l = [3, 8, 0, -4, 7, 10]
   i = len(l) - 1
@@ -296,23 +295,19 @@ l'intento, descrivendone il funzionamento.
   ```
 ]
 
-#quesito(category: "S", tag: "Snippet", title: [C'è un numero negativo?], points: 8, diff: 1, righe: 5)[
-  Cosa stampa il programma? A cosa serve la variabile `trovato`? Perché lo zero non la rende
-  uguale a `True`?
+#quesito(category: "S", tag: "Snippet", title: [Snippet 2], points: 8, diff: 1, righe: 5)[
   ```python
   l = [3, -1, 0, 7]
-  trovato = False
-  i = 0
-  while i < len(l):
-      if l[i] < 0:
-          trovato = True
-      i = i + 1
-  print(trovato)
+  b = False
+  for x in l:
+      if x < 0:
+          b = True
+  print(b)
   ```
 ]
 
-#quesito(category: "S", tag: "Snippet", title: [Scambia due variabili], points: 8, diff: 1, righe: 4)[
-  Cosa stampa il programma? Perché è necessaria la variabile `t`?
+#quesito(category: "S", tag: "Snippet", title: [Snippet 3], points: 8, diff: 1, righe: 4)[
+  Cosa succede ai valori di `a` e `b`?
   ```python
   a = 3
   b = 8
@@ -323,27 +318,27 @@ l'intento, descrivendone il funzionamento.
   ```
 ]
 
-#quesito(category: "S", tag: "Snippet", title: [Potenza con moltiplicazioni], points: 8, diff: 2, righe: 4)[
+#quesito(category: "S", tag: "Snippet", title: [Snippet 4], points: 8, diff: 2, righe: 4)[
   Cosa stampa il programma? Che cosa stamperebbe se `b` valesse `0`?
   ```python
   a = 3
   b = 4
   risultato = 1
-  i = 0
-  while i < b:
+  for _ in range(b):
       risultato = risultato * a
-      i = i + 1
   print(risultato)
   ```
 ]
 
-#quesito(category: "S", tag: "Snippet", title: [Divisione con sottrazioni], points: 8, diff: 3, righe: 5)[
+#quesito(category: "S", tag: "Snippet", title: [Snippet 5], points: 8, diff: 3, righe: 5)[
   Cosa stampa il programma? Quanto vale `a` alla fine del ciclo, e perché?
   ```python
   a = 17
   b = 5
   quoziente = 0
-  while a >= b:
+  for _ in range(a):
+      if a < b:
+          break
       a = a - b
       quoziente = quoziente + 1
   print(quoziente)
