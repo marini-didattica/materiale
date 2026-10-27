@@ -1,6 +1,6 @@
 La memoria centrale (RAM) e la memoria di massa sono due tipi di memoria con ruoli diversi.
 
-- La RAM (Random Access Memory) è la memoria di lavoro del computer. È VOLATILE: quando il
+- La RAM è la memoria di lavoro del computer. È VOLATILE: quando il
   computer viene spento perde tutti i dati che contiene. Ha una capacità limitata (oggi da alcuni
   GB a qualche decina di GB) ed è molto veloce, perché viene letta e scritta direttamente dalla
   CPU. Contiene il sistema operativo in esecuzione, i programmi aperti e i dati temporanei su cui

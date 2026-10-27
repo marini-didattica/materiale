@@ -1,11 +1,5 @@
 Il programma calcola la potenza a^b, cioè moltiplica il valore di a per se stesso b volte.
 
-- risultato parte da 1, che è l'elemento neutro della moltiplicazione.
-- for i in range(b) esegue il corpo del ciclo esattamente b volte, con i che assume i valori
-  0, 1, 2, ..., b - 1.
-- A ogni iterazione risultato viene moltiplicato per a.
-- Con a = 3 e b = 4 il ciclo esegue 4 moltiplicazioni: 1*3 = 3, 3*3 = 9, 9*3 = 27, 27*3 = 81.
-
 Output:
 81
 

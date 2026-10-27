@@ -1,5 +1,5 @@
-Un bit (binary digit) è la più piccola unità di informazione: può assumere soltanto due valori,
-0 oppure 1. Un byte è un gruppo di 8 bit. Con 8 bit si possono scrivere 2^8 = 256 combinazioni
+Un bit è la più piccola unità di informazione: può assumere soltanto due valori, 0 oppure 1.
+Un byte è un gruppo di 8 bit. Con 8 bit si possono scrivere 2^8 = 256 combinazioni
 diverse (da 00000000 a 11111111), quindi un byte può rappresentare 256 valori distinti: ad
 esempio tutti i numeri da 0 a 255 oppure 256 caratteri diversi.
 

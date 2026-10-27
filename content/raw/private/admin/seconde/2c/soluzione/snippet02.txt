@@ -1,14 +1,6 @@
 Il programma controlla se nella lista l esiste almeno un numero negativo e stampa il risultato
 come valore booleano.
 
-- b parte da False: si ipotizza inizialmente che non ci siano numeri negativi.
-- Il ciclo for i in range(len(l)) fa assumere a i tutti gli indici della lista, da 0 a 3.
-- A ogni iterazione il controllo l[i] < 0 verifica se l'elemento corrente è negativo. Se lo è,
-  b diventa True.
-- Non c'è un break: il ciclo continua comunque fino alla fine della lista. Anche se b è già
-  True, il programma continua a controllare gli elementi rimanenti.
-- Alla fine viene stampato b.
-
 Nella lista [3, -1, 0, 7] è presente il numero -1, quindi b diventa True.
 
 Output:

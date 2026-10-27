@@ -1,23 +1,4 @@
-Il programma calcola il quoziente intero della divisione di a per b usando sottrazioni
-successive, e stampa il numero di sottrazioni effettuate.
-
-- a = 17, b = 5, quoziente = 0.
-- for i in range(a) esegue al massimo 17 iterazioni; questo numero è solo un limite massimo
-  sufficiente, perché a diminuisce a ogni sottrazione.
-- All'inizio di ogni iterazione il controllo if a < b verifica se a è diventato più piccolo di b.
-  Se è così, non si può sottrarre ancora e il break interrompe il ciclo.
-- Altrimenti si esegue a = a - b e si aumenta quoziente di 1.
-
-Traccia delle iterazioni:
-- a = 17: 17 < 5 è falso, quindi a = 12 e quoziente = 1.
-- a = 12: 12 < 5 è falso, quindi a = 7 e quoziente = 2.
-- a = 7: 7 < 5 è falso, quindi a = 2 e quoziente = 3.
-- a = 2: 2 < 5 è vero, quindi il break ferma il ciclo.
+Il programma calcola a // b usando sottrazioni successive.
 
 Output:
 3
-
-Alla fine del ciclo a vale 2: è il resto della divisione. Infatti 17 = 3 * 5 + 2. Il quoziente
-stampato è 3. Il break è indispensabile: senza di esso il ciclo continuerebbe fino a 17
-iterazioni e il risultato sarebbe sbagliato. Se b valesse 0 il programma non terminerebbe mai la
-divisione in modo corretto: a non cambierebbe e il ciclo arriverebbe a stampare 17.

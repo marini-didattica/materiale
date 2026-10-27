@@ -1,6 +1,5 @@
-La tabella ASCII (American Standard Code for Information Interchange) è una tabella di codifica
-che associa ad ogni carattere una sequenza di 8 bit, cioè un numero da 0 a 255 (in origine 7 bit,
-da 0 a 127). In questo modo un carattere non viene memorizzato "disegnato", ma come un numero:
+La tabella ASCII  è una tabella di codifica che associa ad ogni carattere una sequenza di 8 bit, cioè un numero da 0 a 255.
+In questo modo un carattere non viene memorizzato "disegnato", ma come un numero:
 ad esempio 'A' = 65 = 01000001, 'a' = 97 = 01100001, '0' = 48 = 00110000. Una parola non è altro
 che una sequenza di caratteri uno dietro l'altro, quindi di byte uno dietro l'altro. I caratteri
 non presenti nella tabella originale (lettere accentate, alfabeti diversi dall'inglese) richiedono

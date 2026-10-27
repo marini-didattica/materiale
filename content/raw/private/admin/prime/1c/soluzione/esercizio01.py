@@ -10,6 +10,4 @@ while i < len(l):    # scorre tutta la lista fino all'ultimo elemento
 
 print(conteggio)     # stampa soltanto il numero di occorrenze
 
-# Funziona anche con una stringa al posto di un numero:
-# con l = ["a", "b", "a"] e a = "a" stampa 2.
 # Con lista vuota il ciclo non viene mai eseguito e stampa 0.

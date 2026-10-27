@@ -2,11 +2,11 @@ l = [7, -3, 12, 0, 5, -8]
 
 n = len(l)
 if n == 0:
-    print(0)             # lista vuota: non esistono massimo e minimo
+    print("Lista vuota!")     # lista vuota: non esistono massimo e minimo
 else:
     massimo = l[0]       # il primo elemento è il candidato iniziale
     minimo = l[0]
-    i = 1                # riparte dal secondo elemento
+    i = 1                     # riparte dal secondo elemento
     while i < n:
         if l[i] > massimo:
             massimo = l[i]
