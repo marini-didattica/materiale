@@ -1,0 +1,14 @@
+Il programma scambia fra loro i valori delle variabili a e b e poi li stampa.
+
+- All'inizio a vale 3 e b vale 8.
+- t = a copia il valore 3 nella variabile temporanea t, salvandolo.
+- a = b copia il valore 8 in a: adesso a vale 8 e b vale ancora 8.
+- b = t copia il valore salvato in t (cioè 3) dentro b: adesso b vale 3.
+- Alla fine a vale 8 e b vale 3, quindi print(a, b) stampa i due valori separati da uno spazio.
+
+Output:
+8 3
+
+La variabile t è necessaria: senza di essa, eseguendo a = b si perderebbe il vecchio valore di a
+e non sarebbe più possibile recuperarlo. Questo scambio è lo stesso che serve, ad esempio, per
+mettere in ordine crescente due estremi a e b.

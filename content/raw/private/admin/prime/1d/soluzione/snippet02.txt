@@ -1,0 +1,18 @@
+Il programma stampa gli elementi della lista l partendo dall'ultimo e arrivando al primo.
+
+- i viene inizializzato a len(l) - 1, cioè all'indice dell'ultimo elemento (con 4 elementi gli
+  indici validi sono 0, 1, 2, 3).
+- Il ciclo while continua finché i >= 0, quindi viene eseguito per gli indici 3, 2, 1 e 0.
+- A ogni iterazione stampa l[i] e poi diminuisce i di 1, spostandosi verso sinistra.
+- Quando i diventa -1 la condizione i >= 0 è falsa e il ciclo termina.
+
+Gli elementi vengono quindi stampati in ordine inverso: 1, 8, 5, 2, uno per riga.
+
+Output:
+1
+8
+5
+2
+
+Se la lista fosse vuota, i partirebbe da -1 e il ciclo non verrebbe mai eseguito: il programma
+non stamperebbe nulla.

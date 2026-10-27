@@ -1,0 +1,17 @@
+Il programma stampa gli elementi pari della lista l partendo dall'ultimo e arrivando al primo.
+
+- i viene inizializzato a len(l) - 1, cioè all'indice dell'ultimo elemento (la lista ha 6
+  elementi, quindi gli indici vanno da 0 a 5).
+- Il ciclo while continua finché i >= 0: viene eseguito per gli indici 5, 4, 3, 2, 1, 0.
+- Il controllo l[i] % 2 == 0 verifica se il resto della divisione per 2 è zero, cioè se
+  l'elemento è pari.
+- Solo gli elementi pari vengono stampati, uno per riga, in ordine inverso rispetto alla lista.
+- Quando i diventa -1 la condizione i >= 0 è falsa e il ciclo termina.
+
+Gli elementi pari sono 10, -4, 0 e 8 (anche 0 e i numeri negativi pari hanno resto 0 in Python).
+
+Output:
+10
+-4
+0
+8

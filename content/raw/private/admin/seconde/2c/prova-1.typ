@@ -1,5 +1,5 @@
 // Compile from the materiale repository root:
-// typst compile --root content content/raw/private/admin/seconde/prova-1/prova-1.typ
+// typst compile --root content content/raw/private/admin/seconde/2c/prova-1.typ
 #import "../../../../../typst-theme/src/lib.typ": theme
 #import "../../../../../typst-components/src/lib.typ": (
   callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template, testata,
@@ -32,13 +32,13 @@
       - Il programma deve stampare *soltanto* il risultato richiesto e non deve chiedere dati
         con `input()`: usa le variabili già presenti nel template.
       - Non è consentito consultare appunti, libri o Internet. È possibile usare il *cheatsheet*
-        messo a disposizione.
+        messo su lettura.
     ]
     #callout("Istruzioni per la consegna")[
 
-      - Aprite il *file explorer* (icona cartella sulla barra degli strumenti in basso) e navigate nella cartella `Questo Pc -> Scrittura`.
+      - Aprite il *file explorer* (icona cartella sulla barra degli strumenti in basso) e navigate nella cartella `Questo Pc -> temi_xx`.
 
-      - Create una nuova cartella, denominata `cognome-nome`, *tutto minuscolo*. Se avete più nomi o più cognomi, metteteli tutti, concatenati dal carattere
+      - Creare una nuova cartella, denominata `cognome-nome`, *tutto minuscolo*. Se avete più nomi o più cognomi, metteteli tutti, concatenati dal carattere
         `-` (trattino). Ad esempio:
 
         #box(fill: luma(255), inset: 9pt, radius: 3pt)[
@@ -66,7 +66,7 @@
 
 
         #box(fill: luma(255), inset: 9pt, radius: 3pt)[
-          #testata("Esercizio", 1, "Esempio esercizio")
+          #testata("Esercizio", 2, "Esempio esercizio")
           #v(0.5em)
           #text(size: 8.5pt, fill: luma(120), style: "italic")[
             Ad esempio, per questo esercizio va creato un file `esercizio1.py`
@@ -146,8 +146,7 @@ print(6.0)
 
   #nota[
     La media è la somma degli elementi divisa per il numero di elementi. Calcola la somma con
-    un ciclo e usa `len(l)` per il conteggio: non usare `sum()`. Attenzione alla divisione per
-    zero quando la lista è vuota.
+    un ciclo e usa `len(l)` per il conteggio: non usare `sum()`. Attenzione al caso limite della lista vuota.
   ]
 
   #template[
@@ -172,9 +171,7 @@ print(6.0)
 
   #nota[
     Gli estremi possono essere scritti in qualsiasi ordine: `a` può essere maggiore di `b`
-    oppure minore. Prima di controllare, assicurati che `a` sia il limite inferiore e `b` quello
-    superiore: se `a > b`, scambiali usando una variabile temporanea. Non usare `min()` né
-    `max()`.
+    oppure minore. Prima di controllare, assicurati che `a` sia il limite inferiore e `b` quello superiore. Non usare `min()` né `max()`.
   ]
 
   #template[
@@ -200,8 +197,7 @@ print(6.0)
     un solo elemento è considerata ordinata.]
 
   #nota[
-    Confronta ogni elemento con quello che lo precede. Gli elementi uguali consecutivi non
-    rompono l'ordine. Non usare `sorted()`: il controllo va fatto scorrendo la lista.
+    Non usare `sorted()`: il controllo va fatto scorrendo la lista.
   ]
 
   #template[
@@ -220,14 +216,13 @@ print(6.0)
 ]
 
 #quesito(category: "E", tag: "Esercizio", title: [L'elemento è nella lista?], points: 12, diff: 1)[
-  #consegna[Date la lista `l` e il valore `a`, cerca `a` in `l`. Se lo trovi, stampa
-    `Trovato all'indice N`, dove `N` è l'indice della *prima* occorrenza. Se non lo trovi,
-    stampa `Non trovato`. Il valore `a` può essere un numero o una stringa.]
+  #consegna[
+    Date la lista di interi `l` e il valore `a`, cerca `a` in `l`. Se lo trovi, stampa `Trovato all'indice N`, dove `N` è l'indice della *prima* occorrenza (ossia l'indice minore che contiene il valore `a`). 
+  Se non lo trovi, stampa `Non trovato`. Il valore `a` può essere un numero o una stringa.
+]
 
   #nota[
-    Scorri la lista con un indice e confronta ogni elemento con `a`. Appena trovi la prima
-    occorrenza puoi interrompere il ciclo con `break`. Non usare `list.index()` né l'operatore
-    `in`: la ricerca va fatta con un ciclo.
+     Non usare `list.index()` né l'operatore `in`: la ricerca va fatta con un ciclo.
   ]
 
   #template[
@@ -252,7 +247,7 @@ print(6.0)
     un solo elemento sono palindrome.]
 
   #nota[
-    Confronta il primo elemento con l'ultimo, il secondo con il penultimo e così via. Basta
+    Consiglio il seguente approccio: confronta il primo elemento con l'ultimo, il secondo con il penultimo e così via. Basta
     fermarsi al centro della lista: se trovi due elementi diversi puoi concludere subito che la
     lista non è palindroma. Non usare `reversed()` né `list.reverse()`.
   ]
@@ -299,8 +294,8 @@ l'intento, descrivendone il funzionamento.
   ```python
   l = [3, -1, 0, 7]
   b = False
-  for x in l:
-      if x < 0:
+  for i in range(len(l)):
+      if l[i] < 0:
           b = True
   print(b)
   ```
@@ -319,7 +314,6 @@ l'intento, descrivendone il funzionamento.
 ]
 
 #quesito(category: "S", tag: "Snippet", title: [Snippet 4], points: 8, diff: 2, righe: 4)[
-  Cosa stampa il programma? Che cosa stamperebbe se `b` valesse `0`?
   ```python
   a = 3
   b = 4
@@ -336,11 +330,9 @@ l'intento, descrivendone il funzionamento.
   a = 17
   b = 5
   quoziente = 0
-  for _ in range(a):
-      if a < b:
-          break
+  while a >= 0:
       a = a - b
       quoziente = quoziente + 1
-  print(quoziente)
+  print(quoziente - 1)
   ```
 ]

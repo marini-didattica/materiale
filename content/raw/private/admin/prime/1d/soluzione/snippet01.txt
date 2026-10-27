@@ -1,0 +1,14 @@
+Il programma somma soltanto gli elementi dispari della lista l e stampa il totale.
+
+- n = len(l) memorizza il numero di elementi; i parte da 0 e il ciclo while continua finché
+  i < n, quindi scorre tutta la lista.
+- A ogni iterazione il controllo l[i] % 2 == 1 verifica se il resto della divisione per 2 è 1,
+  cioè se l'elemento è dispari.
+- Quando l'elemento è dispari, il suo valore viene aggiunto alla variabile somma; gli elementi
+  pari vengono ignorati.
+- somma parte da 0, che è l'elemento neutro dell'addizione.
+
+Gli elementi dispari sono 7, 9 e 5, quindi la somma è 7 + 9 + 5 = 21.
+
+Output:
+21

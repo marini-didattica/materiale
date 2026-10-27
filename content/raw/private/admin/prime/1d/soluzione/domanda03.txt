@@ -1,0 +1,18 @@
+Un compilatore e un interprete sono programmi che traducono un programma scritto in un linguaggio
+ad alto livello (come C o Python) in istruzioni che il processore è in grado di eseguire.
+
+- Il COMPILATORE traduce tutto il programma in una sola volta, prima dell'esecuzione, e produce
+  un nuovo file eseguibile in codice macchina. Se la traduzione trova un errore, il programma non
+  viene eseguito affatto. Il programma compilato è veloce, perché durante l'esecuzione non deve
+  essere più tradotto, e può funzionare anche senza il compilatore. Un esempio di linguaggio
+  compilato è il C.
+
+- L'INTERPRETE traduce ed esegue il programma un'istruzione per volta, mentre il programma è in
+  esecuzione. Non produce un file eseguibile separato: per eseguire il programma serve sempre
+  l'interprete installato. Gli errori vengono scoperti solo quando si arriva all'istruzione
+  sbagliata. Un esempio di linguaggio interpretato è Python.
+
+In sintesi: il compilatore traduce prima e in blocco, l'interprete traduce ed esegue passo dopo
+passo. I linguaggi compilati sono in genere più veloci, quelli interpretati più flessibili e
+portabili. Alcuni linguaggi moderni usano soluzioni ibride, traducendo il codice in un formato
+intermedio eseguito da una macchina virtuale.

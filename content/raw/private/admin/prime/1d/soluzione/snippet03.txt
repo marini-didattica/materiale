@@ -1,0 +1,23 @@
+Il programma stampa i numeri da 20 in giù, diminuendoli di 3 ogni volta, e alla fine stampa la
+parola "via".
+
+- n parte da 20. La condizione n > 0 viene controllata prima di ogni iterazione.
+- Dentro il ciclo viene stampato il valore corrente di n, poi n viene diminuito di 3.
+- I valori stampati sono 20, 17, 14, 11, 8, 5, 2. Dopo aver stampato 2, n diventa -1: la
+  condizione -1 > 0 è falsa, quindi il ciclo si ferma.
+- Il numero 2 viene stampato perché 2 > 0 è vero; il ciclo non si ferma "a zero", ma al primo
+  valore non positivo.
+- Fuori dal ciclo viene stampato "via" una sola volta.
+
+Output:
+20
+17
+14
+11
+8
+5
+2
+via
+
+Se n partisse già da un valore minore o uguale a zero, il ciclo non verrebbe eseguito e il
+programma stamperebbe soltanto "via".

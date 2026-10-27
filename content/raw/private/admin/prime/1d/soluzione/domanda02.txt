@@ -1,0 +1,14 @@
+Un bit (binary digit) è la più piccola unità di informazione: può assumere soltanto due valori,
+0 oppure 1. Un byte è un gruppo di 8 bit. Con 8 bit si possono scrivere 2^8 = 256 combinazioni
+diverse (da 00000000 a 11111111), quindi un byte può rappresentare 256 valori distinti: ad
+esempio tutti i numeri da 0 a 255 oppure 256 caratteri diversi.
+
+Il computer usa il sistema binario perché la sua parte elettronica è costruita con componenti
+(transistor) che hanno due stati stabili e facilmente distinguibili: acceso/spento, tensione
+alta/tensione bassa. Associare a questi due stati i simboli 1 e 0 è semplice e affidabile. Il
+sistema decimale richiederebbe invece di distinguere dieci livelli diversi di tensione, e sarebbe
+molto più difficile da realizzare senza errori.
+
+Il sistema binario è un sistema posizionale, come quello decimale, ma usa le potenze di 2 invece
+che le potenze di 10. Ad esempio il numero binario 1011 vale:
+1*2^3 + 0*2^2 + 1*2^1 + 1*2^0 = 8 + 0 + 2 + 1 = 11.

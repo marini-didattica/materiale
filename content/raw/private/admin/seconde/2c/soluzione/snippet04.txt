@@ -1,0 +1,15 @@
+Il programma calcola la potenza a^b, cioè moltiplica il valore di a per se stesso b volte.
+
+- risultato parte da 1, che è l'elemento neutro della moltiplicazione.
+- for i in range(b) esegue il corpo del ciclo esattamente b volte, con i che assume i valori
+  0, 1, 2, ..., b - 1.
+- A ogni iterazione risultato viene moltiplicato per a.
+- Con a = 3 e b = 4 il ciclo esegue 4 moltiplicazioni: 1*3 = 3, 3*3 = 9, 9*3 = 27, 27*3 = 81.
+
+Output:
+81
+
+Se b valesse 0, range(0) sarebbe vuoto: il ciclo non verrebbe eseguito e il programma stamperebbe
+1 (infatti a^0 = 1 per ogni a diverso da 0). Se b valesse 1 stamperebbe a. Il programma non
+gestisce gli esponenti negativi: con b < 0 range(b) è vuoto e stampa 1, che non è il risultato
+corretto.

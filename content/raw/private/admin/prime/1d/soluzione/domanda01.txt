@@ -1,0 +1,16 @@
+La memoria centrale (RAM) e la memoria di massa sono due tipi di memoria con ruoli diversi.
+
+- La RAM (Random Access Memory) è la memoria di lavoro del computer. È VOLATILE: quando il
+  computer viene spento perde tutti i dati che contiene. Ha una capacità limitata (oggi da alcuni
+  GB a qualche decina di GB) ed è molto veloce, perché viene letta e scritta direttamente dalla
+  CPU. Contiene il sistema operativo in esecuzione, i programmi aperti e i dati temporanei su cui
+  si sta lavorando.
+
+- La memoria di massa (un disco SSD o un hard disk) è PERMANENTE, cioè non volatile: conserva i
+  dati anche quando il computer è spento. Ha una capacità molto più grande (centinaia di GB o
+  qualche TB) ed è più lenta della RAM. Serve da magazzino: contiene i file, i programmi installati
+  e il sistema operativo quando non sono in uso.
+
+In sintesi: la RAM è veloce ma piccola e temporanea, la memoria di massa è più lenta ma grande e
+conserva i dati nel tempo. Quando si apre un programma, il sistema operativo lo copia dalla
+memoria di massa nella RAM, perché solo dalla RAM la CPU può eseguirlo abbastanza velocemente.

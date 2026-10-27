@@ -1,5 +1,5 @@
 // Compile from the materiale repository root:
-// typst compile --root content content/raw/private/admin/prime/prova-1/prova-1.typ
+// typst compile --root content content/raw/private/admin/prime/1d/prova-1.typ
 #import "../../../../../typst-theme/src/lib.typ": theme
 #import "../../../../../typst-components/src/lib.typ": (
   callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template, testata,
@@ -33,7 +33,7 @@
       - Nella parte di lettura spiega a parole che cosa fa ciascun frammento e riporta il suo
         output, senza riscrivere il codice.
       - Non è consentito consultare appunti, libri o Internet. È possibile usare il *cheatsheet*
-        messo su scrittura.
+        messo su lettura.
     ]
     #callout("Istruzioni per la consegna")[
 
@@ -116,30 +116,20 @@
 
 Rispondi in modo breve e preciso, usando le righe sotto ogni domanda.
 
-#quesito(category: "D", tag: "Domanda", title: [CPU e GPU], points: 7, righe: 6)[
-  Descrivi brevemente la differenza principale fra *CPU* e *GPU*, spiegando le due diverse
-  modalità con cui eseguono i calcoli. Indica anche un ambito in cui è più adatta ciascuna delle
-  due.
+#quesito(category: "D", tag: "Domanda", title: [RAM e memoria di massa], points: 7, righe: 6)[
+  Spiega la differenza principale fra *memoria centrale (RAM)* e *memoria di massa* (ad esempio
+  un disco SSD o un hard disk). Per ciascuna delle due indica che scopo ha e cosa la differenzia dall'altra.
 
-  #nota[Una o due frasi per ciascuna delle due modalità sono sufficienti. Nomina le parole
-    *sequenziale* e *parallela*.]
 ]
 
-#quesito(category: "D", tag: "Domanda", title: [Caratteri e protocolli], points: 7, righe: 7)[
-  Che cos'è la *tabella ASCII*? Perché è necessario stabilire dei *protocolli*, cioè delle
-  convenzioni condivise, per lo scambio di informazioni fra computer?
+#quesito(category: "D", tag: "Domanda", title: [Bit, byte e sistema binario], points: 9, righe: 10)[
+  Che cosa sono un *bit* e un *byte*? Perché il computer usa il *sistema binario* invece del
+  sistema decimale? Quanti valori diversi si possono rappresentare con un byte?
 
-  #nota[Spiega come la tabella associ ad ogni carattere una sequenza di bit e fai un esempio.
-    Per i protocolli, accenna al fatto che mittente e destinatario devono interpretare i dati
-    allo stesso modo.]
 ]
 
-#quesito(category: "D", tag: "Domanda", title: [Il linguaggio assembly], points: 6, righe: 5)[
-  Che cos'è il linguaggio *assembly*? A che cosa serve e in che rapporto sta con il codice
-  macchina?
-
-  #nota[Accenna al fatto che ogni istruzione assembly corrisponde a un'istruzione macchina e
-    che viene tradotto da un programma chiamato *assembler*.]
+#quesito(category: "D", tag: "Domanda", title: [Compilatore e interprete], points: 4, righe: 2)[
+  Che cosa fanno un *compilatore* e un *interprete*? Spiega a parole tue 
 ]
 
 // ============================================================
@@ -151,99 +141,95 @@ Rispondi in modo breve e preciso, usando le righe sotto ogni domanda.
 Per ciascun esercizio scrivi un file separato (`esercizio1.py`, `esercizio2.py`,
 `esercizio3.py`), eseguilo e verifica il risultato con gli esempi. Il programma deve stampare
 *soltanto* il risultato richiesto e non deve chiedere dati con `input()`: usa le variabili già
-presenti nel template.
+presenti nel template. In questa parte si possono usare soltanto i cicli `while`.
 
 #checklist("Prima di consegnare", (
   [Il programma stampa *solo* il risultato richiesto, senza messaggi in più?],
-  [Hai provato i casi limite: lista vuota, valore assente, numeri negativi?],
+  [Hai provato i casi limite: lista vuota, nessun positivo, numeri negativi?],
   [I nomi delle variabili sono chiari e il codice è rientrato in modo corretto?],
   [Ogni esercizio è nel suo file `esercizio1.py`, `esercizio2.py`, `esercizio3.py`?],
 ))
 
 È *fondamentale* che il programma funzioni per qualsiasi input gli venga dato. Gli esercizi
 strutturati per funzionare solo su un input specifico verranno valutati *0 punti*. Ad esempio,
-se venisse chiesto di contare le occorrenze di `a` nella lista `l`, il seguente programma
-varrebbe zero punti:
+se venisse chiesto di sommare i valori positivi della lista `l`, il seguente programma varrebbe
+zero punti:
 ```python
-l = [4, 7, 4, 1, 4]
-a = 4
-print(3)
+l = [5, -2, 8, 0, -7, 3]
+print(16)
 ```
 
-#quesito(category: "E", tag: "Esercizio", title: [Conta le occorrenze], points: 20, diff: 2)[
-  #consegna[Date la lista `l` e il valore `a`, conta quante volte `a` compare in `l` e stampa un
-    solo numero: il numero di occorrenze trovate. Se `a` non compare nella lista, stampa `0`. La
-    lista può essere vuota.]
-
-  #nota[
-    Il programma deve funzionare con qualsiasi valore di `a` (anche una stringa) e con qualsiasi
-    lista, senza modificarla. Non usare `l.count(a)`: il conteggio va fatto scorrendo la lista.
-  ]
+#quesito(category: "E", tag: "Esercizio", title: [Somma dei valori positivi], points: 15, diff: 1)[
+  #consegna[Data la lista di interi `l`, somma soltanto gli elementi *maggiori o uguali a zero* e stampa un
+    solo numero: la somma trovata. Se non ci sono elementi positivi, compresa la lista vuota,
+    stampa `0`. La lista può contenere lo zero e numeri negativi.]
 
   #template[
     ```python
-    l = [4, 7, 4, 1, 4]
-    a = 4
+    l = [5, -2, 8, 0, -7, 3]
 
     # scrivi qui il tuo codice
     ```
   ]
 
   #esempi((
-    ([`l = [], a = 3`], [`0`], [La lista è vuota: non ci sono occorrenze.]),
-    ([`l = [1, 2, 3], a = 5`], [`0`], [`5` non compare nella lista.]),
-    ([`l = [4, 7, 4, 1, 4], a = 4`], [`3`], [`4` compare tre volte.]),
+    ([`l = []`], [`0`], [La lista è vuota: non ci sono valori da sommare.]),
+    ([`l = [-3, 0, -1]`], [`0`], [Non ci sono elementi positivi.]),
+    ([`l = [5, -2, 8, 0, -7, 3]`], [`16`], [I positivi sono `5, 8, 3`, e `5 + 8 + 3 = 16`.]),
   ))
 ]
 
-#quesito(category: "E", tag: "Esercizio", title: [Il valore è nella lista?], points: 15, diff: 1)[
-  #consegna[Date la lista `l` e il valore `a`, stampa `True` se `a` compare almeno una volta in
-    `l`, altrimenti stampa `False`. Se `l` è vuota, stampa `False`. Il programma non deve
+#quesito(category: "E", tag: "Esercizio", title: [Tutti positivi?], points: 20, diff: 2)[
+  #consegna[Data la lista `l`, stampa `True` se *tutti* gli elementi sono *maggiori o uguali a zero*,
+    altrimenti stampa `False`. Se la lista è vuota, stampa `True`. Il programma non deve
     modificare la lista.]
 
   #nota[
     Deve essere stampato soltanto un valore booleano (`True` oppure `False`), non un messaggio.
-    Attenzione: con una lista vuota il risultato è `False`, non `True`.
+    Un solo elemento minore o uguale a zero è sufficiente per rispondere `False`. 
   ]
 
   #template[
     ```python
-    l = [3, 5, 7, 12]
-    a = 7
+    l = [3, 8, 1, 5]
 
     # scrivi qui il tuo codice
     ```
   ]
 
   #esempi((
-    ([`l = [], a = 7`], [`False`], [La lista è vuota, quindi `a` non può esserci.]),
-    ([`l = [3, 5, 7], a = 7`], [`True`], [`7` è l'ultimo elemento della lista.]),
-    ([`l = [3, 5, 7], a = 4`], [`False`], [`4` non compare nella lista.]),
+    ([`l = []`], [`True`], [Non c'è nessun elemento che possa violare la condizione.]),
+    ([`l = [3, 8, 0, 5]`], [`True`], [Sono tutti maggiori o uguali a zero.]),
+    ([`l = [3, -1, 5]`], [`False`], [`-1` non è `>=0`, dunque stampa `False`.]),
   ))
 ]
 
-#quesito(category: "E", tag: "Esercizio", title: [Conta i numeri pari], points: 25, diff: 3)[
-  #consegna[Data una lista di interi `l`, conta quanti elementi sono pari e stampa un solo
-    numero: il conteggio trovato. Se la lista è vuota, stampa `0`. La lista può contenere numeri
-    negativi e lo zero.]
+#quesito(category: "E", tag: "Esercizio", title: [Massimo e minimo], points: 25, diff: 3)[
+  #consegna[Data la lista di interi `l`, trova il valore *massimo* e il valore *minimo* e
+    stampali su due righe: prima il massimo, poi il minimo. Se la lista è vuota, stampa `Lista vuota!`. La lista può contenere numeri negativi.]
 
   #nota[
-    Un numero è pari se `x % 2 == 0`. In Python `-4 % 2` vale `0` e `-3 % 2` vale `1`, quindi lo
-    stesso controllo funziona anche con i numeri negativi. Attenzione: anche `0` è pari.
+    Inizializza massimo e minimo con il primo elemento `l[0]`, non con `0`: se tutti i numeri
+    fossero negativi, `0` sarebbe un valore sbagliato. Parti dall'indice `1` per il ciclo. Non
+    usare `max()` né `min()`.
   ]
 
   #template[
     ```python
-    l = [3, 8, 0, -4, 7, 10]
+    l = [7, -3, 12, 0, 5, -8]
 
     # scrivi qui il tuo codice
     ```
   ]
 
   #esempi((
-    ([`l = []`], [`0`], [La lista è vuota: non ci sono numeri pari.]),
-    ([`l = [1, 3, 5]`], [`0`], [Sono tutti dispari.]),
-    ([`l = [3, 8, 0, -4, 7, 10]`], [`4`], [I pari sono `8, 0, -4, 10`.]),
+    ([`l = []`], [`0`], [La lista è vuota: non esiste né un massimo né un minimo.]),
+    ([`l = [4]`], [`4`
+      #linebreak()
+      `4`], [Con un solo elemento, massimo e minimo coincidono.]),
+    ([`l = [7, -3, 12, 0, 5, -8]`], [`12`
+      #linebreak()
+      `-8`], [Il valore più grande è `12`, il più piccolo è `-8`.]),
   ))
 ]
 
@@ -261,34 +247,25 @@ l'intento, descrivendone il funzionamento.
 
 #quesito(category: "S", tag: "Snippet", title: [Primo frammento], points: 10, diff: 2, righe: 3)[
   ```python
-  l = [3, -1, 0, 7, -5, 12]
+  l = [4, 7, 2, 9, 5]
+  n = len(l)
+  s = 0
   i = 0
-  while i < len(l):
-      if l[i] > 0:
-          print(l[i])
+  while i < n:
+      if l[i] % 2 == 1:
+          s = s + l[i]
       i = i + 1
+  print(s)
   ```
-
 ]
 
 #quesito(category: "S", tag: "Snippet", title: [Secondo frammento], points: 10, diff: 2, righe: 3)[
-  Le variabili `a` e `b` rappresentano gli estremi di un intervallo. Cosa stampa il programma?
-  A cosa serve il blocco `if a > b`?
   ```python
-  l = [4, 6, 2, 9]
-  a = 10
-  b = 1
-  if a > b:
-      t = a
-      a = b
-      b = t
-  i = 0
-  ok = True
-  while i < len(l):
-      if l[i] < a or l[i] > b:
-          ok = False
-      i = i + 1
-  print(ok)
+  l = [2, 5, 8, 1]
+  i = len(l) - 1
+  while i >= 0:
+      print(l[i])
+      i = i - 1
   ```
 ]
 
