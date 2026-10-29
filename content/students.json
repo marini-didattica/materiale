@@ -288,5 +288,10 @@
 		"slug": "MRNMTT03",
 		"owner-first-names": ["Mattia"],
 		"owner-last-names": ["Marini"]
+	},
+	"ripetizioni/luca-redolfi" : {
+		"slug": "RDLLCU00",
+		"owner-first-names": ["Luca"],
+		"owner-last-names": ["Redolfi"]
 	}
 }

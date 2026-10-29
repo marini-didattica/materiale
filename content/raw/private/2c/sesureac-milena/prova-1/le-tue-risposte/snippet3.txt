@@ -1,0 +1,8 @@
+Si crea una variabile temporanea (t) che assume il valore di a,
+poi a assume il valore di b e infine b assume il valore di t.
+Questo si fa perchè altrimenti vime stampato due volte il valere 
+di b (si considera il nuovo valore di a).
+Questo programma serve ad invertire il valore di a con quello di b e
+quello di b con quello di ad
+
+output: 8, 3

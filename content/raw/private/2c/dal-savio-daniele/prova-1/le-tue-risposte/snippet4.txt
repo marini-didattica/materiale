@@ -1,0 +1,1 @@
+l'esercizio va nel ciclo di un b che e 4 quindi i sara solo 4 poi fa il calcolo a che e 3 per risultato che e 1 cosi stampera 3

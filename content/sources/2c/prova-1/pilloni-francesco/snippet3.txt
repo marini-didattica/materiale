@@ -1,0 +1,6 @@
+Il codice inverte i valori di a e b.
+Inizialmente t diventerà il valore assegnato ad a.
+Poi a diventa il valore assegnato a b.
+b diventa il valore assegnato a t, quindi il primo valore di a.
+In questo caso l'output sarà:
+8,3

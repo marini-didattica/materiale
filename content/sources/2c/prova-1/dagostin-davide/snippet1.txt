@@ -1,0 +1,5 @@
+da una lista la scorre dal fondo e fino a che l'indice non è 0 e per ogni numero della lista lo stampa solo se è divisibile per 2(se il resto di una divisone è 0) e poi passa al precedente
+outpot: 10
+        -4
+        0
+        8

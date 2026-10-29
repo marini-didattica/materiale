@@ -1,0 +1,6 @@
+questo codice stampa solo gli elementi pari di una lista in ordine di ritrovamento nella lista
+
+output: 
+8
+-4
+10

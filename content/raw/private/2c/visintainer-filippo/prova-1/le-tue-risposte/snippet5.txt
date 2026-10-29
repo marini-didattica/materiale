@@ -1,0 +1,7 @@
+a=17
+b=5
+quoziente=0
+finche a è maggioreuguale di 0 ripeti il ciclo
+ad ogni ciclo diminuisci di 5 a , e aumenta il quoziente di 1
+stampa il quoziente -1
+3

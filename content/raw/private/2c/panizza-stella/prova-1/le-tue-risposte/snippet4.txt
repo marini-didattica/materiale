@@ -1,0 +1,2 @@
+Il codice stampa il numero a elevato alla potenza di b.
+L'output è: 81.

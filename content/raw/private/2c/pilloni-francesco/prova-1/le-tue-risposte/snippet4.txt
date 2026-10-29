@@ -1,0 +1,7 @@
+il codice stampa il valore a elevato all'esponente b.
+inizialmente risultato = a**0.
+Poi risultato = a, perché moltiplicato per a (1*a=a).
+Poi risultato = a**2, perché a viene moltiplicato per risultato, che è uguale ad a.
+Risultato, che è sempre una potenza di a, viene moltiplicato sempre per a, diventando quindi la potenza di a successiva.
+In questo caso l'output è 3**4, quindi:
+81

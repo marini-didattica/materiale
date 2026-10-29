@@ -1,0 +1,5 @@
+Il programma stampa quante volte il numero b sta nel numero a, senza resto.
+Ogni volta che il ciclo while scorre, al numero a viene sottratto b e quoziente aumenta di uno.
+Quando a diventa negativo, il ciclo si interrompe e viene stampato quoziente-1, perché il ciclo è scorso una volta di troppo.
+In questo caso a alla fine del ciclo varrà -3 e l'output sarà:
+3

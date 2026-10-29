@@ -1,0 +1,4 @@
+Questo programma analizza una lista solo se i ha valore maggiore o uguale a 0.
+la variabile i è data da il numero dei valori di l meno 1.
+Questo programma stampa solo i valori pari.
+Output: 8,0,-4,10

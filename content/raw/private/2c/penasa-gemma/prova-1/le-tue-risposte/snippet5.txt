@@ -1,0 +1,3 @@
+dati due valori uno per a e uno per b viene calcolato a diviso b.
+output=3
+a alla fine del esercizio a vale  -3 perchè 5 non è divisore del valore 17

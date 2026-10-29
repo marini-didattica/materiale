@@ -1,0 +1,3 @@
+In questo programma il valore di a si scambia con quello di b attraverso una variabile t.
+Output:
+8 , 3

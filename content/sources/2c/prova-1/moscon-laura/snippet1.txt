@@ -1,0 +1,5 @@
+Quando l'elemento più a destra della lista
+è positivo o uguale a 0, se è pari viene
+stampato altrimenti si passa al secondo
+più a destra.
+L'output è 10 0 8

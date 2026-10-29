@@ -1,0 +1,7 @@
+Si ha una lista di numeri.
+Si corre la lista al contrario e si stampano tutti i numeri pari.
+output dell'esercizio:
+10
+-4
+0
+8

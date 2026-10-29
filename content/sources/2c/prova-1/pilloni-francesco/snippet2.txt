@@ -1,0 +1,4 @@
+Il codice ci dice se almeno un valore della lista è negativo.
+b è inizialmente falso, ma se anche solo un elemento esaminato nel ciclo for è negativo, diventa True.
+in questo caso l'output sarà:
+True

@@ -1,0 +1,2 @@
+il programma controlla se nel programma è presente un numero negativo e lo riporta con una variabile booleana e stampa il risultato.
+Se è presente il numero negativo la booleana è vera, in caso contrario la condizione è falsa

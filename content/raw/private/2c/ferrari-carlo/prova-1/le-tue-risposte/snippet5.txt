@@ -1,0 +1,5 @@
+Questo programma stampa il quoziente che è = all'output messo sotto.
+Il valore di a alla fine del ciclo sarà -3 perché fino che a è maggioreo uguale a 0 il programma continua, 
+l'ultima volta che viene eseguito il cilo a ha il valore di 2 per poi essere cambiato in -3
+Output:
+3

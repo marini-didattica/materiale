@@ -1,0 +1,3 @@
+i valori di a e b vengono invertiti con delle variabili temporanee.
+a assume il valore di b(8) e b assume il valore di a(3)
+l'output è il valore di a e b (8,3)
