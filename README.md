@@ -18,9 +18,9 @@ content/
 │   ├── public/       # materiale pubblico
 │   └── private/      # materiale riservato, una cartella per studente
 ├── sources/          # sorgenti Typst non pubblicati (es. simulazione-1)
-├── students.json     # cartella privata -> codice e dati dello studente
-├── typst-theme/      # submodule
-└── typst-components/ # submodule
+└── students.json     # cartella privata -> codice e dati dello studente
+typst-theme/          # submodule
+typst-components/     # submodule
 scripts/
 └── build-content.ts  # validazione, staging e compilazione Typst
 static/
@@ -148,8 +148,9 @@ Per pubblicare un sorgente `.typ` senza compilarlo, anteponi `_` al nome:
 `_esempio.typ` diventa `esempio.typ` nel sito. Il prefisso viene rimosso solo
 nell'output, quindi nel repository il file mantiene il nome originale.
 
-La compilazione usa `content/` come root Typst, così i documenti possono
-importare `typst-theme` e `typst-components` con percorsi relativi.
+La compilazione usa la root del repository come root Typst, così i documenti
+possono importare `typst-theme` e `typst-components` con percorsi assoluti
+(`/typst-theme/src/lib.typ`, `/typst-components/src/lib.typ`).
 
 Ogni pagina di cartella include un pulsante **Scarica tutto**; ogni riga di
 cartella o file ha inoltre un'icona di download a destra. Il download viene
@@ -170,8 +171,8 @@ Il sito è raggiungibile su
 
 ## Submodule
 
-Le cartelle `content/typst-theme/` e `content/typst-components/` sono submodule
-Git dei pacchetti Typst condivisi. Dopo il clone:
+Le cartelle `typst-theme/` e `typst-components/` sono submodule Git dei
+pacchetti Typst condivisi. Dopo il clone:
 
 ```sh
 git submodule update --init --recursive

@@ -1,7 +1,7 @@
 // Compile from the materiale repository root:
-// typst compile --root content content/raw/private/ripetizioni/luca-redolfi/greedy.typ
-#import "../../../../typst-theme/src/lib.typ": palette, spazio, theme
-#import "../../../../typst-components/src/lib.typ": (
+// typst compile --root . content/raw/private/ripetizioni/luca-redolfi/greedy.typ
+#import "/typst-theme/src/lib.typ": palette, spazio, theme
+#import "/typst-components/src/lib.typ": (
   callout, checklist, cover, esempi, nota,
 )
 

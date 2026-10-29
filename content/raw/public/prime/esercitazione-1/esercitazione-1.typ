@@ -1,7 +1,7 @@
 // Compile from the materiale repository root:
-// typst compile --root content content/raw/public/prime/esercitazione-1/esercitazione-1.typ
-#import "../../../../typst-theme/src/lib.typ": theme
-#import "../../../../typst-components/src/lib.typ": (
+// typst compile --root . content/raw/public/prime/esercitazione-1/esercitazione-1.typ
+#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": (
   callout, checklist, consegna, cover, esempi, griglia-punteggi, nota, quesito, template, testata,
 )
 

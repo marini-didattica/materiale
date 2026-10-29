@@ -1,8 +1,8 @@
 // Compile from the materiale repository root, writing the PDF outside content/:
-// typst compile --root content content/raw/private/2c/zuech-gabriele/simulazione-1/correzione.typ /tmp/zuech-gabriele.pdf
+// typst compile --root . content/raw/private/2c/zuech-gabriele/simulazione-1/correzione.typ /tmp/zuech-gabriele.pdf
 
-#import "../../../../../typst-theme/src/lib.typ": theme
-#import "../../../../../typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
+#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
 
 #set document(title: "Correzione — Simulazione 1 — Gabriele Zuech", author: "Marini Mattia")
 #show: doc => theme(doc, footer-text: "Correzione — Simulazione 1")

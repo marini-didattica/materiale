@@ -1,8 +1,8 @@
 // Compile from the materiale repository root, writing the PDF outside content/:
-// typst compile --root content content/raw/private/2c/panizza-stella/simulazione-1/correzione.typ /tmp/panizza-stella.pdf
+// typst compile --root . content/raw/private/2c/panizza-stella/simulazione-1/correzione.typ /tmp/panizza-stella.pdf
 
-#import "../../../../../typst-theme/src/lib.typ": theme
-#import "../../../../../typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
+#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
 
 #set document(title: "Correzione — Simulazione 1 — Stella Panizza", author: "Marini Mattia")
 #show: doc => theme(doc, footer-text: "Correzione — Simulazione 1")

@@ -54,12 +54,6 @@ const ALLOWED_EXTENSIONS = new Set([
 
 const IGNORED_NAMES = new Set(['.DS_Store', 'Thumbs.db', '__pycache__']);
 
-/**
- * Tooling directories under content/ that are not published material.
- * They are git submodules with the shared Typst packages.
- */
-const IGNORED_DIRECTORIES = new Set(['typst-theme', 'typst-components']);
-
 function fail(message: string): never {
   throw new Error(`[content] ${message}`);
 }
@@ -258,11 +252,7 @@ async function collectFiles(dir: string): Promise<string[]> {
   const files: string[] = [];
 
   for (const entry of entries) {
-    if (
-      entry.name.startsWith('.') ||
-      IGNORED_DIRECTORIES.has(entry.name) ||
-      IGNORED_NAMES.has(entry.name)
-    ) {
+    if (entry.name.startsWith('.') || IGNORED_NAMES.has(entry.name)) {
       continue;
     }
 
@@ -286,9 +276,9 @@ async function compileTypst(source: string, destination: string) {
   await mkdir(path.dirname(destination), { recursive: true });
 
   try {
-    // Use content/ as the Typst root so documents can import the shared
-    // typst-theme and typst-components submodules with relative paths.
-    await execFileAsync('typst', ['compile', '--root', contentDir, source, destination], {
+    // Use the repository root as the Typst root so documents can import the
+    // shared typst-theme and typst-components submodules with absolute paths.
+    await execFileAsync('typst', ['compile', '--root', root, source, destination], {
       cwd: root,
     });
   } catch (error) {

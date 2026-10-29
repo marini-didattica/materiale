@@ -1,8 +1,8 @@
 // Compile from the materiale repository root, writing the PDF outside content/:
-// typst compile --root content content/raw/private/2c/dal-savio-daniele/prova-1/correzione.typ /tmp/dal-savio-daniele.pdf
+// typst compile --root . content/raw/private/2c/dal-savio-daniele/prova-1/correzione.typ /tmp/dal-savio-daniele.pdf
 
-#import "../../../../../typst-theme/src/lib.typ": theme
-#import "../../../../../typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
+#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
 
 #set document(title: "Correzione — Prova 1 — Daniele Dal Savio", author: "Marini Mattia")
 #show: doc => theme(doc, footer-text: "Correzione — Prova 1")

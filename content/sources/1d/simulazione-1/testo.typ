@@ -1,7 +1,7 @@
 // Compile from the materiale repository root:
-// typst compile --root content content/sources/simulazione-1/testo.typ
-#import "../../typst-theme/src/lib.typ": theme
-#import "../../typst-components/src/lib.typ": cover, quesito, griglia-punteggi, nota, template, esempi, callout, checklist, consegna
+// typst compile --root . content/sources/simulazione-1/testo.typ
+#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": cover, quesito, griglia-punteggi, nota, template, esempi, callout, checklist, consegna
 
 #set document(title: "Verifica di informatica — Simulazione 1", author: "Marini Mattia")
 #show: doc => theme(doc, footer-text: "Verifica di informatica")
