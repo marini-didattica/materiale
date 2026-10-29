@@ -7,4 +7,3 @@ for i in range(len(l)):
         selezione.append(l[i])
 
 print(selezione)
-

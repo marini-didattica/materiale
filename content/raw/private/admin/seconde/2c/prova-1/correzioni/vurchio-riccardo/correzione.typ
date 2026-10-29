@@ -35,10 +35,10 @@
 ]
 #commento[Corretto: confronti ogni elemento con il successivo e segnali il primo calo. Funziona anche con lista vuota e con un solo elemento.]
 
-#risposta(category: "E", tag: "Esercizio", title: [L'elemento è nella lista?], points: 12, score: 7, diff: 1)[
+#risposta(category: "E", tag: "Esercizio", title: [L'elemento è nella lista?], points: 12, score: 10, diff: 1)[
   #raw(read("le-tue-risposte/esercizio4.py"), block: true, lang: "python")
 ]
-#commento[La ricerca della prima occorrenza è corretta, ma stampi letteralmente `Trovato all'indice N` invece del numero trovato, e non gestisci il caso `Non trovato`. Devi stampare `Trovato all'indice`, `indice_trovato` e aggiungere l'`else`.]
+#commento[La ricerca della prima occorrenza è corretta e idiomatica, ma stampi letteralmente `Trovato all'indice N` invece del numero trovato, e non stampa mai `Non trovato`. Devi stampare `Trovato all'indice`, `indice_trovato` e aggiungere l'`else`.]
 
 #risposta(category: "E", tag: "Esercizio", title: [La lista è palindroma?], points: 18, score: 18, diff: 2)[
   #raw(read("le-tue-risposte/esecizio5.py"), block: true, lang: "python")
