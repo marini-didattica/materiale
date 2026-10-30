@@ -1,0 +1,514 @@
+{
+  "name": "2C · Prova 1 · copie sospette",
+  "elements": {
+    "nodes": [
+      {
+        "data": {
+          "id": "battocletti-alessandro",
+          "seat": "fila 1, banco 1"
+        },
+        "style": {
+          "label": "Battocletti\nAlessandro"
+        }
+      },
+      {
+        "data": {
+          "id": "bonetti-alessandra",
+          "seat": "fila 1, banco 2"
+        },
+        "style": {
+          "label": "Bonetti\nAlessandra"
+        }
+      },
+      {
+        "data": {
+          "id": "dagostin-davide",
+          "seat": "fila 1, banco 3"
+        },
+        "style": {
+          "label": "Dagostin\nDavide"
+        }
+      },
+      {
+        "data": {
+          "id": "dal-savio-daniele",
+          "seat": "fila 1, banco 4"
+        },
+        "style": {
+          "label": "Dal Savio\nDaniele"
+        }
+      },
+      {
+        "data": {
+          "id": "ferrari-carlo",
+          "seat": "fila 1, banco 6"
+        },
+        "style": {
+          "label": "Ferrari\nCarlo"
+        }
+      },
+      {
+        "data": {
+          "id": "filippi-renato",
+          "seat": "fila 1, banco 7"
+        },
+        "style": {
+          "label": "Filippi\nRenato"
+        }
+      },
+      {
+        "data": {
+          "id": "lorenzi-diego",
+          "seat": "fila 2, banco 1"
+        },
+        "style": {
+          "label": "Lorenzi\nDiego"
+        }
+      },
+      {
+        "data": {
+          "id": "moscon-laura",
+          "seat": "fila 2, banco 3"
+        },
+        "style": {
+          "label": "Moscon\nLaura"
+        }
+      },
+      {
+        "data": {
+          "id": "panizza-stella",
+          "seat": "fila 2, banco 4"
+        },
+        "style": {
+          "label": "Panizza\nStella"
+        }
+      },
+      {
+        "data": {
+          "id": "penasa-gemma",
+          "seat": "fila 2, banco 6"
+        },
+        "style": {
+          "label": "Penasa\nGemma"
+        }
+      },
+      {
+        "data": {
+          "id": "perazzolli-gianluca",
+          "seat": "fila 2, banco 7"
+        },
+        "style": {
+          "label": "Perazzolli\nGianluca"
+        }
+      },
+      {
+        "data": {
+          "id": "pilloni-francesco",
+          "seat": "fila 3, banco 1"
+        },
+        "style": {
+          "label": "Pilloni\nFrancesco"
+        }
+      },
+      {
+        "data": {
+          "id": "pretti-agata",
+          "seat": "fila 3, banco 2"
+        },
+        "style": {
+          "label": "Pretti\nAgata"
+        }
+      },
+      {
+        "data": {
+          "id": "sesureac-milena",
+          "seat": "fila 3, banco 3"
+        },
+        "style": {
+          "label": "Sesureac\nMilena"
+        }
+      },
+      {
+        "data": {
+          "id": "veronesi-davide",
+          "seat": "fila 3, banco 4"
+        },
+        "style": {
+          "label": "Veronesi\nDavide"
+        }
+      },
+      {
+        "data": {
+          "id": "visintainer-filippo",
+          "seat": "fila 3, banco 6"
+        },
+        "style": {
+          "label": "Visintainer\nFilippo"
+        }
+      },
+      {
+        "data": {
+          "id": "vurchio-riccardo",
+          "seat": "fila 3, banco 7"
+        },
+        "style": {
+          "label": "Vurchio\nRiccardo"
+        }
+      },
+      {
+        "data": {
+          "id": "zambelli-giovanni",
+          "seat": "fila 4, banco 1"
+        },
+        "style": {
+          "label": "Zambelli\nGiovanni"
+        }
+      },
+      {
+        "data": {
+          "id": "zuech-gabriele",
+          "seat": "fila 4, banco 2"
+        },
+        "style": {
+          "label": "Zuech\nGabriele"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "data": {
+          "id": "penasa-gemma--perazzolli-gianluca--e1",
+          "source": "penasa-gemma",
+          "target": "perazzolli-gianluca",
+          "confidence": 0.99,
+          "exercises": {
+            "e1": [
+              "penasa-gemma/le-tue-risposte/esercizio1.py",
+              "perazzolli-gianluca/le-tue-risposte/esercizio1.py"
+            ],
+            "e2": [
+              "penasa-gemma/le-tue-risposte/esercizio2.py",
+              "perazzolli-gianluca/le-tue-risposte/esercizio2.py"
+            ],
+            "e3": [
+              "penasa-gemma/le-tue-risposte/esercizio3.py",
+              "perazzolli-gianluca/le-tue-risposte/esercizio3.py"
+            ],
+            "e5": [
+              "penasa-gemma/le-tue-risposte/esercizio5.py",
+              "perazzolli-gianluca/le-tue-risposte/esercizio5.py"
+            ],
+            "s5": [
+              "penasa-gemma/le-tue-risposte/snippet5.txt",
+              "perazzolli-gianluca/le-tue-risposte/snippet5.txt"
+            ]
+          }
+        },
+        "style": {
+          "label": "e1 e2 e3 e5 s5"
+        }
+      },
+      {
+        "data": {
+          "id": "moscon-laura--panizza-stella--e1",
+          "source": "moscon-laura",
+          "target": "panizza-stella",
+          "confidence": 0.97,
+          "exercises": {
+            "e1": [
+              "moscon-laura/le-tue-risposte/esercizio1.py",
+              "panizza-stella/le-tue-risposte/esercizio1.py"
+            ],
+            "e4": [
+              "moscon-laura/le-tue-risposte/esercizio4.py",
+              "panizza-stella/le-tue-risposte/esercizio4.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e1 e4"
+        }
+      },
+      {
+        "data": {
+          "id": "visintainer-filippo--vurchio-riccardo--e1",
+          "source": "visintainer-filippo",
+          "target": "vurchio-riccardo",
+          "confidence": 0.88,
+          "exercises": {
+            "e1": [
+              "visintainer-filippo/le-tue-risposte/esercizio1.py",
+              "vurchio-riccardo/le-tue-risposte/esercizio1.py"
+            ],
+            "e5": [
+              "visintainer-filippo/le-tue-risposte/esercizio5.py",
+              "vurchio-riccardo/le-tue-risposte/esecizio5.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e1 e5"
+        }
+      },
+      {
+        "data": {
+          "id": "pilloni-francesco--panizza-stella--e4",
+          "source": "pilloni-francesco",
+          "target": "panizza-stella",
+          "confidence": 0.72,
+          "exercises": {
+            "e4": [
+              "pilloni-francesco/le-tue-risposte/esercizio4.py",
+              "panizza-stella/le-tue-risposte/esercizio4.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e4"
+        }
+      },
+      {
+        "data": {
+          "id": "pilloni-francesco--moscon-laura--e4",
+          "source": "pilloni-francesco",
+          "target": "moscon-laura",
+          "confidence": 0.65,
+          "exercises": {
+            "e4": [
+              "pilloni-francesco/le-tue-risposte/esercizio4.py",
+              "moscon-laura/le-tue-risposte/esercizio4.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e4"
+        }
+      },
+      {
+        "data": {
+          "id": "pretti-agata--pilloni-francesco--e4",
+          "source": "pretti-agata",
+          "target": "pilloni-francesco",
+          "confidence": 0.6,
+          "exercises": {
+            "e4": [
+              "pretti-agata/le-tue-risposte/esercizio4.py",
+              "pilloni-francesco/le-tue-risposte/esercizio4.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e4"
+        }
+      },
+      {
+        "data": {
+          "id": "pretti-agata--sesureac-milena--e3",
+          "source": "pretti-agata",
+          "target": "sesureac-milena",
+          "confidence": 0.6,
+          "exercises": {
+            "e3": [
+              "pretti-agata/le-tue-risposte/esercizio3.py",
+              "sesureac-milena/le-tue-risposte/esercizio3.py"
+            ],
+            "e5": [
+              "pretti-agata/le-tue-risposte/esercizio5.py",
+              "sesureac-milena/le-tue-risposte/esercizio5.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e3 e5"
+        }
+      },
+      {
+        "data": {
+          "id": "pretti-agata--panizza-stella--e4",
+          "source": "pretti-agata",
+          "target": "panizza-stella",
+          "confidence": 0.57,
+          "exercises": {
+            "e4": [
+              "pretti-agata/le-tue-risposte/esercizio4.py",
+              "panizza-stella/le-tue-risposte/esercizio4.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e4"
+        }
+      },
+      {
+        "data": {
+          "id": "bonetti-alessandra--lorenzi-diego--e4",
+          "source": "bonetti-alessandra",
+          "target": "lorenzi-diego",
+          "confidence": 0.5,
+          "exercises": {
+            "e4": [
+              "bonetti-alessandra/le-tue-risposte/esercizio4.py",
+              "lorenzi-diego/le-tue-risposte/es4.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e4"
+        }
+      },
+      {
+        "data": {
+          "id": "bonetti-alessandra--battocletti-alessandro--e5",
+          "source": "bonetti-alessandra",
+          "target": "battocletti-alessandro",
+          "confidence": 0.45,
+          "exercises": {
+            "e5": [
+              "bonetti-alessandra/le-tue-risposte/esercizio5.py",
+              "battocletti-alessandro/le-tue-risposte/esercizio5.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e5"
+        }
+      },
+      {
+        "data": {
+          "id": "bonetti-alessandra--pilloni-francesco--e1",
+          "source": "bonetti-alessandra",
+          "target": "pilloni-francesco",
+          "confidence": 0.4,
+          "exercises": {
+            "e1": [
+              "bonetti-alessandra/le-tue-risposte/esercizio1.py",
+              "pilloni-francesco/le-tue-risposte/esercizio1.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e1"
+        }
+      },
+      {
+        "data": {
+          "id": "bonetti-alessandra--zuech-gabriele--e4",
+          "source": "bonetti-alessandra",
+          "target": "zuech-gabriele",
+          "confidence": 0.4,
+          "exercises": {
+            "e4": [
+              "bonetti-alessandra/le-tue-risposte/esercizio4.py",
+              "zuech-gabriele/le-tue-risposte/esercizio4.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e4"
+        }
+      },
+      {
+        "data": {
+          "id": "panizza-stella--perazzolli-gianluca--e5",
+          "source": "panizza-stella",
+          "target": "perazzolli-gianluca",
+          "confidence": 0.4,
+          "exercises": {
+            "e5": [
+              "panizza-stella/le-tue-risposte/esercizio5.py",
+              "perazzolli-gianluca/le-tue-risposte/esercizio5.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e5"
+        }
+      },
+      {
+        "data": {
+          "id": "perazzolli-gianluca--vurchio-riccardo--e2",
+          "source": "perazzolli-gianluca",
+          "target": "vurchio-riccardo",
+          "confidence": 0.4,
+          "exercises": {
+            "e2": [
+              "perazzolli-gianluca/le-tue-risposte/esercizio2.py",
+              "vurchio-riccardo/le-tue-risposte/esercizio2.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e2"
+        }
+      },
+      {
+        "data": {
+          "id": "dagostin-davide--penasa-gemma--e2",
+          "source": "dagostin-davide",
+          "target": "penasa-gemma",
+          "confidence": 0.35,
+          "exercises": {
+            "e2": [
+              "dagostin-davide/le-tue-risposte/esercizio2.py",
+              "penasa-gemma/le-tue-risposte/esercizio2.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e2"
+        }
+      },
+      {
+        "data": {
+          "id": "dagostin-davide--perazzolli-gianluca--e2",
+          "source": "dagostin-davide",
+          "target": "perazzolli-gianluca",
+          "confidence": 0.32,
+          "exercises": {
+            "e2": [
+              "dagostin-davide/le-tue-risposte/esercizio2.py",
+              "perazzolli-gianluca/le-tue-risposte/esercizio2.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e2"
+        }
+      },
+      {
+        "data": {
+          "id": "dal-savio-daniele--pilloni-francesco--e1",
+          "source": "dal-savio-daniele",
+          "target": "pilloni-francesco",
+          "confidence": 0.35,
+          "exercises": {
+            "e1": [
+              "dal-savio-daniele/le-tue-risposte/esercizio1.py",
+              "pilloni-francesco/le-tue-risposte/esercizio1.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e1"
+        }
+      },
+      {
+        "data": {
+          "id": "penasa-gemma--vurchio-riccardo--e2",
+          "source": "penasa-gemma",
+          "target": "vurchio-riccardo",
+          "confidence": 0.3,
+          "exercises": {
+            "e2": [
+              "penasa-gemma/le-tue-risposte/esercizio2.py",
+              "vurchio-riccardo/le-tue-risposte/esercizio2.py"
+            ]
+          }
+        },
+        "style": {
+          "label": "e2"
+        }
+      }
+    ]
+  }
+}

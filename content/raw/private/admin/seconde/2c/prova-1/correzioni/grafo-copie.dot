@@ -1,0 +1,226 @@
+// ============================================================================
+//  GRAFO DELLE COPIE SOSPETTE — 2C, Prova 1
+//  Versione 2: aggiornata con la piantina dei posti in aula.
+// ----------------------------------------------------------------------------
+//  COME LEGGERLO
+//    - I nodi sono disposti come i banchi in aula: cattedra in alto a sinistra,
+//      corridoio centrale vuoto. Ogni nodo = uno studente.
+//    - Arco NON orientato = i due studenti hanno consegnato codice troppo
+//      simile per essere indipendente. La % è la stima di copiatura.
+//    - Etichetta: esercizi coinvolti + probabilità.
+//        e1…e5 = esercizio1.py…esercizio5.py
+//        s1…s5 = snippet1.txt…snippet5.txt (lettura del codice)
+//    - Linea continua = ≥ 65%, tratteggiata = 45–64%.
+//    - Sotto il 45% l'arco non è disegnato: i casi sono elencati in fondo.
+//
+//  PIANTINA (fila 1 = la più vicina alla cattedra)
+//    fila 1:  Battocletti  Bonetti   Dagostin  Dal Savio  |  Ferrari      Filippi
+//    fila 2:  Lorenzi      Mezzena   Moscon    Panizza    |  Penasa       Perazzolli
+//    fila 3:  Pilloni      Pretti    Sesureac  Veronesi   |  Visintainer  Vurchio
+//    fila 4:  Zambelli     Zuech
+//    Mezzena Nicolò non ha consegnato: occupa il posto ma non è un nodo.
+//
+//  METODO (stima, non misura statistica)
+//    Non ho una macchina della verità: ho combinato due indizi.
+//    1. Somiglianza del codice: confronto a token (identificatori, operatori,
+//       numeri) fra i file dello stesso esercizio, 0–1.
+//    2. Vicinanza in aula: moltiplicatore sugli odds di copiatura
+//        banco adiacente      (d = 1)      × 2.6
+//        in diagonale         (d = 1.41)   × 1.8
+//        un banco di distanza (d = 2–2.5)  × 1.1
+//        oltre il corridoio   (d = 3–3.3)  × 0.55
+//        lontano              (d > 3.3)    × 0.3
+//       dove d è la distanza euclidea fra i banchi, corridoio compreso.
+//    Poi ho corretto a mano due distorsioni note:
+//      + segnali rari condivisi (un identificatore o un costrutto vietato usato
+//        solo da quella coppia, es. "vuota=[]", "l[::-1]", "palindromo");
+//      − schemi diffusissimi nella classe (somma/media in e1, flag + break +
+//        stampa dell'indice in e4), che da soli valgono poco.
+//
+//  COSA È CAMBIATO RISPETTO ALLA VERSIONE SENZA PIANTINA
+//    ↑ Penasa/Perazzolli, Moscon/Panizza, Visintainer/Vurchio: banchi
+//      adiacenti, la copia era già quasi certa per il codice e ora lo è
+//      anche per la posizione (97–99%).
+//    ↓ Dagostin (e2) e Panizza/Perazzolli (e5): il codice si somiglia, ma i
+//      posti sono lontani (oltre il corridoio) → sotto la soglia, non disegnati.
+//    + Pretti/Sesureac (e3, e5) e Dal Savio/Panizza (e1): somiglianza media,
+//      ma banchi vicini; prima non li avevo considerati.
+//    + Pretti/Pilloni (e4): adiacenti, stesso scheletro con flag e break.
+//
+//  Render: il layout è già impostato su neato con i banchi fissi (pos="…!").
+//     neato -Tsvg grafo-copie.dot -o grafo-copie.svg
+//     neato -Tpng grafo-copie.dot -o grafo-copie.png
+//  In alternativa: incollare il contenuto su https://edotor.net
+//
+//  Avvertenza: il grafo dice "questi due file si somigliano e i banchi sono
+//  vicini", non chi ha copiato da chi. La direzione non è deducibile dai file.
+//  Consegne vuote o mancanti: battocletti e4, dagostin e4-e5, filippi e5,
+//  molti snippet di lorenzi/battocletti, pretti senza s1/s4/s5, sesureac senza
+//  s4/s5, veronesi e vurchio senza snippet.
+// ============================================================================
+
+graph copie
+{
+    graph [layout=neato,
+           overlap=false,
+           splines=true,
+           bgcolor="white",
+           fontname="Helvetica",
+           fontsize=12,
+           pad=0.3,
+           label=<<b>2C · Prova 1 · copie sospette</b><br/><font point-size="9">posti come in aula · arco continuo ≥ 65% · tratteggiato 45–64% · % = stima di copiatura<br/>rosso = copia probabile · giallo = casi dubbi</font>>,
+           labelloc="t"];
+
+    node  [shape=box,
+           style="rounded,filled",
+           fillcolor="#f4f4f4",
+           color="#bdbdbd",
+           fontcolor="#424242",
+           fontname="Helvetica",
+           fontsize=8.5,
+           margin="0.05,0.03",
+           width=1.35];
+
+    edge  [dir=none,
+           color="#c0392b",
+           fontcolor="#7b241c",
+           fontname="Helvetica",
+           fontsize=8.5,
+           penwidth=1.5];
+
+    // ------------------------------------------------------------------
+    //  BANCHI (pos = colonna,fila ; il corridoio è la colonna 5)
+    // ------------------------------------------------------------------
+
+    // --- fila 1, davanti ------------------------------------------------
+    "battocletti-alessandro" [label="Battocletti\nAlessandro", pos="0,5.4!"];
+    "bonetti-alessandra"     [label="Bonetti\nAlessandra",     pos="3,5.4!"];
+    "dagostin-davide"        [label="Dagostin\nDavide",        pos="6,5.4!"];
+    "dal-savio-daniele"      [label="Dal Savio\nDaniele",      pos="9,5.4!"];
+    "ferrari-carlo"          [label="Ferrari\nCarlo",          pos="15,5.4!"];
+    "filippi-renato"         [label="Filippi\nRenato",         pos="18,5.4!"];
+
+    // --- fila 2 --------------------------------------------------------
+    "lorenzi-diego"          [label="Lorenzi\nDiego",          pos="0,3.6!"];
+    "moscon-laura"           [label="Moscon\nLaura",           pos="6,3.6!", fillcolor="#fde3da", color="#c0392b"];
+    "panizza-stella"         [label="Panizza\nStella",         pos="9,3.6!", fillcolor="#fde3da", color="#c0392b"];
+    "penasa-gemma"           [label="Penasa\nGemma",           pos="15,3.6!", fillcolor="#f8c9ba", color="#a93226", penwidth=2.2];
+    "perazzolli-gianluca"    [label="Perazzolli\nGianluca",    pos="18,3.6!", fillcolor="#f8c9ba", color="#a93226", penwidth=2.2];
+
+    // --- fila 3 --------------------------------------------------------
+    "pilloni-francesco"      [label="Pilloni\nFrancesco",      pos="0,1.8!", fillcolor="#fde3da", color="#c0392b"];
+    "pretti-agata"           [label="Pretti\nAgata",           pos="3,1.8!", fillcolor="#fdf3da", color="#c9a227", fontcolor="#7d6608"];
+    "sesureac-milena"        [label="Sesureac\nMilena",        pos="6,1.8!", fillcolor="#fdf3da", color="#c9a227", fontcolor="#7d6608"];
+    "veronesi-davide"        [label="Veronesi\nDavide",        pos="9,1.8!"];
+    "visintainer-filippo"    [label="Visintainer\nFilippo",    pos="15,1.8!", fillcolor="#fde3da", color="#c0392b"];
+    "vurchio-riccardo"       [label="Vurchio\nRiccardo",       pos="18,1.8!", fillcolor="#fde3da", color="#c0392b"];
+
+    // --- fila 4 --------------------------------------------------------
+    "zambelli-giovanni"      [label="Zambelli\nGiovanni",      pos="0,0!"];
+    "zuech-gabriele"         [label="Zuech\nGabriele",         pos="3,0!"];
+
+    // ------------------------------------------------------------------
+    //  ARCHI — copie quasi certe (≥ 85%)
+    // ------------------------------------------------------------------
+
+    // Penasa / Perazzolli — banchi adiacenti, 5 parti su 6 compatibili:
+    //   e1 96  stessa struttura if len(l)==0 / somma+=i / media=somma/len(l)
+    //   e2 97  codice identico (swap di a e b, flag "compresi", break)
+    //   e3 88  stesso algoritmo n=l[0]; if i>=n: n=i, cambia solo il nome del flag
+    //   e5 65  ricostruzione della lista al contrario + flag "palindromo" (-o)
+    //   s5 60  stessa spiegazione: "a vale -3 perché 5 non è divisore di 17"
+    "penasa-gemma" -- "perazzolli-gianluca"
+        [label="e1 e2 e3 e5 s5\n99%", penwidth=3.2,
+         tooltip="e1 96 · e2 97 · e3 88 · e5 65 · s5 60 — banchi adiacenti"];
+
+    // Moscon / Panizza — banchi adiacenti:
+    //   e1 92  unico uso di "vuota=[]" + lista==vuota per il caso vuoto
+    //          (nessun altro studente) e media calcolata dentro il ciclo
+    //   e4 96  stesso codice, cambia solo il nome della variabile (l / lista)
+    "moscon-laura" -- "panizza-stella"
+        [label="e1 e4\n97%", penwidth=2.8,
+         tooltip="e1 92 · e4 96 — banchi adiacenti"];
+
+    // Visintainer / Vurchio — banchi adiacenti:
+    //   e1 86  riga per riga identico (contatore n / numero, if len(l)>0 ...
+    //          else media=0): cambiano solo i nomi e la lista di prova
+    //   e5 62  unici due della classe a usare la scorciatoia l[::-1], vietata
+    "visintainer-filippo" -- "vurchio-riccardo"
+        [label="e1 e5\n88%", penwidth=2.4,
+         tooltip="e1 86 · e5 62 — banchi adiacenti"];
+
+    // ------------------------------------------------------------------
+    //  ARCHI — probabilità alta (65–84%)
+    // ------------------------------------------------------------------
+
+    // Pilloni / Panizza — non sono vicini (d = 3.2, oltre il corridoio), ma
+    // l'e4 è lo stesso codice riga per riga: flag + break + "Trovato
+    // all'indice". La distanza abbassa la stima, non la annulla.
+    "pilloni-francesco" -- "panizza-stella"
+        [label="e4\n72%", penwidth=2.0,
+         tooltip="e4 72 — codice quasi identico, ma 3.2 posti di distanza"];
+
+    // Pilloni / Moscon — come sopra (d = 2.2), stesso e4.
+    "pilloni-francesco" -- "moscon-laura"
+        [label="e4\n65%", penwidth=1.8,
+         tooltip="e4 65 — stesso schema, 2.2 posti di distanza"];
+
+    // ------------------------------------------------------------------
+    //  ARCHI — da verificare (45–64%)
+    // ------------------------------------------------------------------
+
+    // Pretti / Pilloni — banchi adiacenti. Stesso scheletro dell'e4 (flag,
+    // break, stampa "trovato all'indice"); Pretti usa 0/1 e un else che
+    // riazzera il flag, quindi il testo non è identico.
+    "pretti-agata" -- "pilloni-francesco"
+        [label="e4\n60%", style=dashed, color="#9e9e9e", fontcolor="#757575",
+         tooltip="e4 60 — banchi adiacenti, stesso scheletro"];
+
+    // Pretti / Sesureac — banchi adiacenti. e3 60: entrambi confrontano un
+    // indice invece degli elementi (errore identico, condizioni diverse).
+    // e5 50: usano lo stesso nome "s" per il ciclo e "d = len(l)//2".
+    "pretti-agata" -- "sesureac-milena"
+        [label="e3 e5\n60%", style=dashed, color="#9e9e9e", fontcolor="#757575",
+         tooltip="e3 60 · e5 50 — banchi adiacenti, stessi errori/identificatori"];
+
+    // Pretti / Panizza — due banchi di distanza (d = 2.2). Stesso scheletro
+    // dell'e4, ma il codice di Pretti è più diverso di quello del terzetto
+    // Moscon/Panizza/Pilloni.
+    "pretti-agata" -- "panizza-stella"
+        [label="e4\n57%", style=dashed, color="#9e9e9e", fontcolor="#757575",
+         tooltip="e4 57 — stesso scheletro, 2.2 posti di distanza"];
+
+    // Dal Savio / Panizza — Dal Savio è nel banco davanti a Panizza (d = 1).
+    // e1 55: stessa media calcolata dentro il ciclo e stessa scrittura
+    // media=somma/(len(l)); il codice di Dal Savio è però molto più rotto.
+    "dal-savio-daniele" -- "panizza-stella"
+        [label="e1\n55%", style=dashed, color="#9e9e9e", fontcolor="#757575",
+         tooltip="e1 55 — banchi adiacenti in colonna, somiglianza media"];
+
+    // Bonetti / Lorenzi — in diagonale (d = 1.4). e4 50: entrambi confrontano
+    // con a==l[i] (nessun altro lo scrive in quest'ordine) e stampano dentro
+    // il ciclo; i messaggi però sono diversi ("Trovato" / "numero trovato").
+    "bonetti-alessandra" -- "lorenzi-diego"
+        [label="e4\n50%", style=dashed, color="#9e9e9e", fontcolor="#757575",
+         tooltip="e4 50 — in diagonale, stesso ordine nel confronto"];
+
+    // ------------------------------------------------------------------
+    //  SOTTO LA SOGLIA (non disegnati) — con la stima e il perché
+    //    bonetti / battocletti  e5 45  adiacenti, stesso errore sull'indice
+    //                                  finale, ma la traccia suggerisce il
+    //                                  confronto dal centro
+    //    bonetti / zuech        e4 40  stesso a==l[i], ma Zuech usa quit() e
+    //                                  messaggi diversi
+    //    bonetti / pilloni      e1 40  soluzione standard somma+media
+    //    panizza / pilloni      e1 45  soluzione standard somma+media
+    //    panizza / perazzolli   e5 40  stessa lista rovesciata, ma 3 posti
+    //                                  di distanza (era tratteggiato nella v1)
+    //    perazzolli / vurchio   e2 40  adiacenti in colonna, ma lo schema
+    //                                  flag+intervallo è di 5 studenti
+    //    dagostin / penasa      e2 35  codice simile, posti lontani (era
+    //    dagostin / perazzolli  e2 32  tratteggiato nella v1: la piantina lo
+    //                                  declassa)
+    //    dal-savio / pilloni    e1 35  somiglianza alta ma 3.6 posti
+    //    penasa / vurchio       e2 30  identificatori diversi
+    // ------------------------------------------------------------------
+}
