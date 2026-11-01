@@ -29,7 +29,7 @@
   #v(0.8cm)
   #block[#text(size: 38pt, weight: 700)[Informatica]]
   #v(0.8cm)
-  #block[#text(size: 14pt)[Classe *1C*]]
+  #block[#text(size: 14pt)[Classe *1D*]]
   #v(0.8cm)
   #block[#text(fill: muted)[Liceo Scientifico – Opzione Scienze Applicate]]
 ]
@@ -112,7 +112,7 @@
     - Attività di recupero e consolidamento per gli studenti che incontrano difficoltà.
   ],
 
-  [#text(font: sans, size: 10pt, fill: accent)[*CRITERI DI VALUTAZIONE*]],
+  [#text(font: sans, size: 10pt, fill: accent)[*STRUMENTI E CRITERI DI VALUTAZIONE*]],
   [
     - Verifiche scritte, pratiche e orali.
     - Sviluppo di progetti individuali o di gruppo.

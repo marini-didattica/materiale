@@ -109,7 +109,7 @@
     - Attività di recupero e consolidamento per gli studenti che incontrano difficoltà.
   ],
 
-  [#text(font: sans, size: 10pt, fill: accent)[*CRITERI DI VALUTAZIONE*]],
+  [#text(font: sans, size: 10pt, fill: accent)[*STRUMENTI E CRITERI DI VALUTAZIONE*]],
   [
     - Verifiche scritte, pratiche e orali.
     - Sviluppo di progetti individuali o di gruppo.
