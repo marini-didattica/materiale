@@ -1,3 +1,3 @@
-#import "prova-1.typ": render-exam
+#import "/typst-components/src/exam.typ": render-exam
 
-#render-exam("a")
+#render-exam("/content/raw/private/admin/seconde/2c/prova-1/testo/prova-1.json", "a")

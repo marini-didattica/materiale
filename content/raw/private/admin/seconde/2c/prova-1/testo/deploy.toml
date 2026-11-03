@@ -5,10 +5,6 @@ patterns = [
 ]
 
 [[typst.override]]
-glob = "prova-1.typ"
-action = "ignore"
-
-[[typst.override]]
 glob = "preamble.typ"
 action = "ignore"
 
