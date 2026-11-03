@@ -9,6 +9,7 @@
     "$schema": { "type": "string" },
     "version": { "const": 1 },
     "sets": { "$ref": "#/$defs/setNames" },
+    "preamble-file": { "$ref": "#/$defs/typstPath" },
     "max-points": { "$ref": "#/$defs/pointsOrSetMap" },
     "metadata": { "$ref": "#/$defs/metadata" },
     "categories": {
@@ -31,6 +32,10 @@
     "relativeTypstPath": {
       "type": "string",
       "pattern": "^(?!/)(?!.*\\.\\.)(?!.*\\\\)(.*)\\.typ$"
+    },
+    "typstPath": {
+      "type": "string",
+      "pattern": "^(?!.*\\.\\.)(?!.*\\\\)(.*)\\.typ$"
     },
     "stringSetMap": {
       "type": "object",

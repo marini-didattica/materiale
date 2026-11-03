@@ -5,10 +5,6 @@ patterns = [
 ]
 
 [[typst.override]]
-glob = "preamble.typ"
-action = "ignore"
-
-[[typst.override]]
 glob = "domande/*.typ"
 action = "ignore"
 
