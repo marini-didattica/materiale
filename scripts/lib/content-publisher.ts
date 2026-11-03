@@ -155,7 +155,7 @@ export async function compileTypst(
 
   try {
     // Use the repository root as the Typst root so documents can import the
-    // shared typst-theme and typst-components submodules with absolute paths.
+    // shared typst-components submodule with absolute paths.
     await execFileAsync('typst', ['compile', '--root', rootDir, source, destination], {
       cwd: rootDir,
     });

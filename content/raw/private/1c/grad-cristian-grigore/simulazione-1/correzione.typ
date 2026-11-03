@@ -1,7 +1,7 @@
 // Compile from the materiale repository root, writing the PDF outside content/:
 // typst compile --root . content/raw/private/1c/grad-cristian-grigore/simulazione-1/correzione.typ /tmp/grad-cristian-grigore.pdf
 
-#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": theme
 #import "/typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
 
 #set document(title: "Correzione — Simulazione 1 — Cristian Grigore Grad", author: "Marini Mattia")

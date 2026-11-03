@@ -1,7 +1,7 @@
 // Compile from the materiale repository root, writing the PDF outside content/:
 // typst compile --root . content/raw/private/1c/larcher-diego/simulazione-1/correzione.typ /tmp/larcher-diego.pdf
 
-#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": theme
 #import "/typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
 
 #set document(title: "Correzione — Simulazione 1 — Diego Larcher", author: "Marini Mattia")

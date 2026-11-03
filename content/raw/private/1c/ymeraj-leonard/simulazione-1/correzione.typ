@@ -1,7 +1,7 @@
 // Compile from the materiale repository root, writing the PDF outside content/:
 // typst compile --root . content/raw/private/1c/ymeraj-leonard/simulazione-1/correzione.typ /tmp/ymeraj-leonard.pdf
 
-#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": theme
 #import "/typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
 
 #set document(title: "Correzione — Simulazione 1 — Leonard Ymeraj", author: "Marini Mattia")

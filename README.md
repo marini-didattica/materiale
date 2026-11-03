@@ -19,8 +19,7 @@ content/
 │   └── private/      # materiale riservato, una cartella per studente
 ├── sources/          # sorgenti Typst non pubblicati (es. simulazione-1)
 └── students.json     # cartella privata -> codice e dati dello studente
-typst-theme/          # submodule
-typst-components/     # submodule
+typst-components/     # submodule: tema, componenti e template
 scripts/
 └── build-content.ts  # validazione, staging e compilazione Typst
 static/
@@ -149,8 +148,8 @@ Per pubblicare un sorgente `.typ` senza compilarlo, anteponi `_` al nome:
 nell'output, quindi nel repository il file mantiene il nome originale.
 
 La compilazione usa la root del repository come root Typst, così i documenti
-possono importare `typst-theme` e `typst-components` con percorsi assoluti
-(`/typst-theme/src/lib.typ`, `/typst-components/src/lib.typ`).
+possono importare `typst-components` con percorsi assoluti
+(`/typst-components/src/lib.typ`).
 
 ### Configurazione del deploy
 
@@ -245,8 +244,8 @@ Il sito è raggiungibile su
 
 ## Submodule
 
-Le cartelle `typst-theme/` e `typst-components/` sono submodule Git dei
-pacchetti Typst condivisi. Dopo il clone:
+La cartella `typst-components/` è un submodule Git del pacchetto Typst
+condiviso (tema, componenti e template). Dopo il clone:
 
 ```sh
 git submodule update --init --recursive

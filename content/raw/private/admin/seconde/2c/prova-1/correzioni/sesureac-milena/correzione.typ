@@ -1,7 +1,7 @@
 // Compile from the materiale repository root, writing the PDF outside content/:
 // typst compile --root . content/raw/private/2c/sesureac-milena/prova-1/correzione.typ /tmp/sesureac-milena.pdf
 
-#import "/typst-theme/src/lib.typ": theme
+#import "/typst-components/src/lib.typ": theme
 #import "/typst-components/src/lib.typ": commento, griglia-correzione, intestazione-correzione, risposta
 
 #set document(title: "Correzione — Prova 1 — Milena Sesureac", author: "Marini Mattia")
