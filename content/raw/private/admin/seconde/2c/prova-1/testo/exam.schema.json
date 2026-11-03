@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marini-didattica.github.io/schemas/exam.schema.json",
+  "title": "Exam descriptor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "sets", "metadata", "categories"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "sets": { "$ref": "#/$defs/setNames" },
+    "max-points": { "$ref": "#/$defs/pointsOrSetMap" },
+    "metadata": { "$ref": "#/$defs/metadata" },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/category" }
+    }
+  },
+  "$defs": {
+    "setName": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+    },
+    "setNames": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/setName" }
+    },
+    "relativeTypstPath": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*\\.\\.)(?!.*\\\\)(.*)\\.typ$"
+    },
+    "stringSetMap": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" }
+    },
+    "integerSetMap": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "integer", "minimum": 1 }
+    },
+    "numberSetMap": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "number", "minimum": 0 }
+    },
+    "difficultySetMap": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      }
+    },
+    "stringOrSetMap": {
+      "oneOf": [
+        { "type": "string" },
+        { "$ref": "#/$defs/stringSetMap" }
+      ]
+    },
+    "durationOrSetMap": {
+      "oneOf": [
+        { "type": "integer", "minimum": 1 },
+        { "$ref": "#/$defs/integerSetMap" }
+      ]
+    },
+    "pointsOrSetMap": {
+      "oneOf": [
+        { "type": "number", "minimum": 0 },
+        { "$ref": "#/$defs/numberSetMap" }
+      ]
+    },
+    "difficultyOrSetMap": {
+      "oneOf": [
+        { "type": "integer", "minimum": 1, "maximum": 5 },
+        { "$ref": "#/$defs/difficultySetMap" }
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class", "title", "duration"],
+      "properties": {
+        "class": { "$ref": "#/$defs/stringOrSetMap" },
+        "title": { "$ref": "#/$defs/stringOrSetMap" },
+        "subtitle": { "$ref": "#/$defs/stringOrSetMap" },
+        "top": { "$ref": "#/$defs/stringOrSetMap" },
+        "author": { "$ref": "#/$defs/stringOrSetMap" },
+        "duration": { "$ref": "#/$defs/durationOrSetMap" }
+      }
+    },
+    "category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "tag", "title", "exercises"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+        },
+        "tag": { "$ref": "#/$defs/stringOrSetMap" },
+        "title": { "$ref": "#/$defs/stringOrSetMap" },
+        "intro": { "$ref": "#/$defs/relativeTypstPath" },
+        "sets": { "$ref": "#/$defs/setNames" },
+        "exercises": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/exercise" }
+        }
+      }
+    },
+    "exercise": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "file", "title", "points", "difficulty"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+        },
+        "file": { "$ref": "#/$defs/relativeTypstPath" },
+        "sets": { "$ref": "#/$defs/setNames" },
+        "title": { "$ref": "#/$defs/stringOrSetMap" },
+        "points": { "$ref": "#/$defs/pointsOrSetMap" },
+        "difficulty": { "$ref": "#/$defs/difficultyOrSetMap" }
+      }
+    }
+  }
+}

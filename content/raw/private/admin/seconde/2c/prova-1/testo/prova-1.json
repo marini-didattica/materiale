@@ -1,0 +1,117 @@
+{
+  "$schema": "./exam.schema.json",
+  "version": 1,
+  "sets": ["a", "b"],
+
+  "max-points": { "a": 110, "b": 105 },
+
+  "metadata": {
+    "class": "SECONDA",
+    "title": "Verifica di informatica",
+    "subtitle": {
+      "a": "Liste e cicli",
+      "b": "Liste, cicli e lettura del codice"
+    },
+    "duration": { "a": 90, "b": 85 },
+    "author": "Marini Mattia"
+  },
+
+  "categories": [
+    {
+      "id": "E",
+      "tag": "Esercizio",
+      "title": "Scrittura del codice",
+      "intro": "domande/section-E.typ",
+      "exercises": [
+        {
+          "id": "E1",
+          "file": "domande/E1.typ",
+          "sets": ["a", "b"],
+          "title": "Media degli elementi",
+          "points": { "a": 12, "b": 15 },
+          "difficulty": 2
+        },
+        {
+          "id": "E2",
+          "file": "domande/E2.typ",
+          "sets": ["a", "b"],
+          "title": "Tutti dentro l'intervallo",
+          "points": 16,
+          "difficulty": 3
+        },
+        {
+          "id": "E3",
+          "file": "domande/E3.typ",
+          "sets": ["a", "b"],
+          "title": "La lista è ordinata?",
+          "points": 12,
+          "difficulty": 2
+        },
+        {
+          "id": "E4",
+          "file": "domande/E4.typ",
+          "sets": ["a", "b"],
+          "title": "L'elemento è nella lista?",
+          "points": 12,
+          "difficulty": 1
+        },
+        {
+          "id": "E5",
+          "file": "domande/E5.typ",
+          "sets": ["a", "b"],
+          "title": "La lista è palindroma?",
+          "points": 18,
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "S",
+      "tag": "Snippet",
+      "title": "Lettura del codice",
+      "intro": "domande/section-S.typ",
+      "exercises": [
+        {
+          "id": "S1",
+          "file": "domande/S1.typ",
+          "sets": ["a", "b"],
+          "title": "Snippet 1",
+          "points": 8,
+          "difficulty": 1
+        },
+        {
+          "id": "S2",
+          "file": "domande/S2.typ",
+          "sets": ["a", "b"],
+          "title": "Snippet 2",
+          "points": 8,
+          "difficulty": 1
+        },
+        {
+          "id": "S3",
+          "file": "domande/S3.typ",
+          "sets": ["a", "b"],
+          "title": "Snippet 3",
+          "points": 8,
+          "difficulty": 1
+        },
+        {
+          "id": "S4",
+          "file": "domande/S4.typ",
+          "sets": ["a", "b"],
+          "title": "Snippet 4",
+          "points": 8,
+          "difficulty": 2
+        },
+        {
+          "id": "S5",
+          "file": "domande/S5.typ",
+          "sets": ["a"],
+          "title": "Snippet 5",
+          "points": 8,
+          "difficulty": 3
+        }
+      ]
+    }
+  ]
+}
