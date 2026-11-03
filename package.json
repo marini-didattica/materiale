@@ -11,6 +11,7 @@
     "dev": "bun run content:build && astro dev",
     "build": "bun run content:build && astro build",
     "preview": "astro preview",
+    "test": "bun test",
     "astro": "astro"
   },
   "dependencies": {
@@ -19,6 +20,8 @@
     "astro": "^7.3.6",
     "clsx": "^2.1.1",
     "fflate": "^0.8.3",
+    "ignore": "^7.0.14",
+    "smol-toml": "^1.9.1",
     "tailwind-merge": "^3.7.0",
     "tailwindcss": "^4.3.3"
   },
