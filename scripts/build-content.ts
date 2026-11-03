@@ -1,64 +1,24 @@
-import { execFile } from 'node:child_process';
-import { copyFile, mkdir, readFile, readdir, rm, stat } from 'node:fs/promises';
+import { mkdir, readFile, rm, stat } from 'node:fs/promises';
 import path from 'node:path';
-import { promisify } from 'node:util';
+import { fileURLToPath } from 'node:url';
+import {
+  assertAllTypstRulesUsed,
+  loadDeployConfig,
+  scopesForDir,
+} from './lib/deploy-config';
+import { publishTree, walkFiles } from './lib/content-publisher';
 import { studentOwnerSlug } from '../src/lib/students';
 import type { Students } from '../src/types';
-
-const execFileAsync = promisify(execFile);
-
-const root = process.cwd();
-const contentDir = path.join(root, 'content');
-const rawDir = path.join(contentDir, 'raw');
-const publicSourceDir = path.join(rawDir, 'public');
-const privateSourceDir = path.join(rawDir, 'private');
-const studentsPath = path.join(contentDir, 'students.json');
-const stagedRawDir = path.join(root, 'static', 'raw');
-const stagedPublicDir = path.join(stagedRawDir, 'public');
-const stagedPrivateDir = path.join(stagedRawDir, 'private');
 
 /** Keep in sync with the main site's access form. */
 const CODE_PATTERN = /^[A-Z0-9]{8}$/;
 const OWNER_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
-/**
- * Extensions that are safe to publish as-is.
- *
- * Typst sources are handled separately: every `.typ` file is compiled to PDF
- * during the content build. A `.typ` file whose name starts with `_` is not
- * compiled and is published with the underscore removed instead. Other source
- * files (`.tex`), LaTeX build artifacts and anything that can execute in the
- * browser (`.html`, `.js`) are deliberately excluded.
- */
-const ALLOWED_EXTENSIONS = new Set([
-  '.pdf',
-  '.txt',
-  '.md',
-  '.csv',
-  '.json',
-  '.png',
-  '.jpg',
-  '.jpeg',
-  '.webp',
-  '.gif',
-  '.svg',
-  '.zip',
-  '.py',
-  '.c',
-  '.h',
-  '.cpp',
-  '.hpp',
-  '.java',
-  '.ipynb',
-]);
-
-const IGNORED_NAMES = new Set(['.DS_Store', 'Thumbs.db', '__pycache__']);
-
 function fail(message: string): never {
   throw new Error(`[content] ${message}`);
 }
 
-async function readStudents(): Promise<Students> {
+async function readStudents(studentsPath: string): Promise<Students> {
   let raw: string;
 
   try {
@@ -82,7 +42,7 @@ async function readStudents(): Promise<Students> {
   return parsed as Students;
 }
 
-function assertFolderPath(folder: string) {
+function assertFolderPath(folder: string, privateSourceDir: string) {
   if (!folder || folder === '.' || folder === '..') {
     fail('Ogni voce di students.json deve indicare una cartella non vuota.');
   }
@@ -132,13 +92,13 @@ function validateNameArray(field: string, value: unknown, folder: string) {
   }
 }
 
-async function validateStudents(students: Students) {
+async function validateStudents(students: Students, privateSourceDir: string) {
   const folders = Object.keys(students);
   const slugs = new Set<string>();
   const ownerSlugs = new Set<string>();
 
   for (const [folder, student] of Object.entries(students)) {
-    assertFolderPath(folder);
+    assertFolderPath(folder, privateSourceDir);
 
     if (typeof student !== 'object' || student === null || Array.isArray(student)) {
       fail(
@@ -208,205 +168,99 @@ async function validateStudents(students: Students) {
 }
 
 /**
- * Every published file under raw/private must belong to a student entry point
- * listed in students.json. This catches material added to the wrong folder or a
- * new student folder whose students.json entry was forgotten.
+ * Every deployed file under raw/private must belong to a student entry point
+ * listed in students.json. Files excluded by deploy.toml are not checked.
  */
-async function validateNoUnlistedFiles(students: Students) {
+async function validateNoUnlistedFiles(
+  students: Students,
+  config: Awaited<ReturnType<typeof loadDeployConfig>>,
+  privateSourceDir: string,
+) {
   const folders = Object.keys(students);
+  const scopes = await scopesForDir(config, privateSourceDir);
+  const { files } = await walkFiles(privateSourceDir, config, scopes, {
+    trackTypst: false,
+    skipUnderscoreDirs: true,
+  });
 
-  async function walk(dir: string) {
-    const entries = await readdir(dir, { withFileTypes: true });
+  for (const file of files) {
+    const relative = path
+      .relative(privateSourceDir, file.absolute)
+      .split(path.sep)
+      .join('/');
 
-    for (const entry of entries) {
-      if (entry.name.startsWith('.') || IGNORED_NAMES.has(entry.name)) continue;
-
-      const fullPath = path.join(dir, entry.name);
-      const relative = path.relative(privateSourceDir, fullPath).split(path.sep).join('/');
-
-      if (entry.isDirectory()) {
-        await walk(fullPath);
-        continue;
-      }
-
-      if (!entry.isFile()) continue;
-
-      const listed = folders.some(
-        (folder) => relative === folder || relative.startsWith(`${folder}/`),
-      );
-
-      if (!listed) {
-        fail(
-          `Il file "content/raw/private/${relative}" non appartiene a nessuna cartella ` +
-            'elencata in content/students.json.',
-        );
-      }
-    }
-  }
-
-  await walk(privateSourceDir);
-}
-
-async function collectFiles(dir: string): Promise<string[]> {
-  const entries = await readdir(dir, { withFileTypes: true });
-  const files: string[] = [];
-
-  for (const entry of entries) {
-    if (entry.name.startsWith('.') || IGNORED_NAMES.has(entry.name)) {
-      continue;
-    }
-
-    const fullPath = path.join(dir, entry.name);
-
-    if (entry.isDirectory()) {
-      if (entry.name.startsWith('_')) continue;
-
-      files.push(...(await collectFiles(fullPath)));
-    } else if (entry.isFile()) {
-      // Files starting with `_` are collected: `_name.typ` is a source file
-      // that must be published as `name.typ` after the compilation step.
-      files.push(fullPath);
-    }
-  }
-
-  return files;
-}
-
-async function compileTypst(source: string, destination: string) {
-  await mkdir(path.dirname(destination), { recursive: true });
-
-  try {
-    // Use the repository root as the Typst root so documents can import the
-    // shared typst-theme and typst-components submodules with absolute paths.
-    await execFileAsync('typst', ['compile', '--root', root, source, destination], {
-      cwd: root,
-    });
-  } catch (error) {
-    const failure = error as NodeJS.ErrnoException & {
-      stdout?: string;
-      stderr?: string;
-    };
-
-    if (failure.code === 'ENOENT') {
-      fail(
-        'Typst non è installato: serve il comando `typst` per compilare i sorgenti .typ. ' +
-          'In CI viene installato da typst-community/setup-typst.',
-      );
-    }
-
-    const details = (failure.stderr || failure.stdout || failure.message).trim();
-
-    fail(
-      `Compilazione Typst fallita per ${path.relative(root, source)}` +
-        (details ? `:\n${details}` : '.'),
+    const listed = folders.some(
+      (folder) => relative === folder || relative.startsWith(`${folder}/`),
     );
+
+    if (!listed) {
+      fail(
+        `Il file "content/raw/private/${relative}" non appartiene a nessuna cartella ` +
+          'elencata in content/students.json. Aggiungi la cartella oppure escludilo con deploy.toml.',
+      );
+    }
   }
 }
 
-interface PublishResult {
-  copied: number;
-  compiled: number;
-  published: number;
-  skipped: Set<string>;
+export interface BuildOptions {
+  /** Injectable for tests; defaults to the real `typst compile` command. */
+  compile?: Parameters<typeof publishTree>[4];
 }
 
-/**
- * Copy the publishable files of one source tree to its staged destination,
- * compile Typst sources to PDF, then publish `_name.typ` sources.
- */
-async function publishTree(sourceRoot: string, destinationRoot: string): Promise<PublishResult> {
-  const files = await collectFiles(sourceRoot);
-  const skipped = new Set<string>();
-  const compileJobs: Array<{ source: string; destination: string }> = [];
-  const publishJobs: Array<{ source: string; destination: string }> = [];
+export async function buildContent(
+  rootDir = process.cwd(),
+  options: BuildOptions = {},
+): Promise<void> {
+  const contentDir = path.join(rootDir, 'content');
+  const rawDir = path.join(contentDir, 'raw');
+  const publicSourceDir = path.join(rawDir, 'public');
+  const privateSourceDir = path.join(rawDir, 'private');
+  const studentsPath = path.join(contentDir, 'students.json');
+  const stagedRawDir = path.join(rootDir, 'static', 'raw');
+  const stagedPublicDir = path.join(stagedRawDir, 'public');
+  const stagedPrivateDir = path.join(stagedRawDir, 'private');
+  const config = await loadDeployConfig(rootDir);
 
-  let copied = 0;
-  let compiled = 0;
-  let published = 0;
+  console.log(
+    `[deploy] ${config.rootScope.label}: compilazione predefinita "${config.settings.defaultAction}", ` +
+      `sorgenti \`_\` "${config.settings.underscoreAction}".`,
+  );
 
-  await mkdir(destinationRoot, { recursive: true });
-
-  for (const source of files) {
-    const extension = path.extname(source).toLowerCase();
-    const name = path.basename(source);
-    const relative = path.relative(sourceRoot, source);
-
-    if (extension === '.typ') {
-      if (name.startsWith('_')) {
-        // Escape hatch: `_name.typ` is not compiled and is published as
-        // `name.typ`. Queued for after the compilation pass.
-        publishJobs.push({
-          source,
-          destination: path.join(destinationRoot, path.dirname(relative), name.slice(1)),
-        });
-      } else {
-        compileJobs.push({
-          source,
-          destination: path.join(destinationRoot, `${relative.slice(0, -extension.length)}.pdf`),
-        });
-      }
-
-      continue;
-    }
-
-    if (name.startsWith('_')) {
-      continue;
-    }
-
-    if (!ALLOWED_EXTENSIONS.has(extension)) {
-      skipped.add(extension || '(senza estensione)');
-      continue;
-    }
-
-    const destination = path.join(destinationRoot, relative);
-
-    await mkdir(path.dirname(destination), { recursive: true });
-    await copyFile(source, destination);
-    copied += 1;
-  }
-
-  // Compile only after every existing file has been staged, so a compiled PDF
-  // replaces an existing PDF with the same name.
-  for (const { source, destination } of compileJobs) {
-    await compileTypst(source, destination);
-    compiled += 1;
-  }
-
-  // Publish `_name.typ` only after compiling: when both `name.typ` and
-  // `_name.typ` exist, the output is `name.pdf` plus `name.typ`.
-  for (const { source, destination } of publishJobs) {
-    await mkdir(path.dirname(destination), { recursive: true });
-    await copyFile(source, destination);
-    published += 1;
-  }
-
-  return { copied, compiled, published, skipped };
-}
-
-async function buildContent() {
-  const students = await readStudents();
-  await validateStudents(students);
-  await validateNoUnlistedFiles(students);
+  const students = await readStudents(studentsPath);
+  await validateStudents(students, privateSourceDir);
+  await validateNoUnlistedFiles(students, config, privateSourceDir);
 
   await rm(stagedRawDir, { recursive: true, force: true });
   await mkdir(stagedPublicDir, { recursive: true });
   await mkdir(stagedPrivateDir, { recursive: true });
 
   const skipped = new Set<string>();
-  const publicResult = await publishTree(publicSourceDir, stagedPublicDir);
+  const publicResult = await publishTree(
+    publicSourceDir,
+    stagedPublicDir,
+    config,
+    rootDir,
+    options.compile,
+  );
 
   for (const extension of publicResult.skipped) skipped.add(extension);
 
   console.log(
     `[content] public -> content/raw/public -> static/raw/public ` +
       `(${publicResult.copied} copiati, ${publicResult.compiled} PDF compilati, ` +
-      `${publicResult.published} sorgenti .typ pubblicati)`,
+      `${publicResult.published} sorgenti .typ pubblicati, ${publicResult.ignored} ignorati)`,
   );
 
   for (const [folder, student] of Object.entries(students)) {
     const sourceRoot = path.join(privateSourceDir, folder);
     const destinationRoot = path.join(stagedPrivateDir, student.slug);
-    const result = await publishTree(sourceRoot, destinationRoot);
+    const result = await publishTree(
+      sourceRoot,
+      destinationRoot,
+      config,
+      rootDir,
+      options.compile,
+    );
 
     for (const extension of result.skipped) skipped.add(extension);
 
@@ -414,9 +268,11 @@ async function buildContent() {
       `[content] ${student.slug} -> content/raw/private/${folder} ` +
         `-> static/raw/private/${student.slug} ` +
         `(${result.copied} copiati, ${result.compiled} PDF compilati, ` +
-        `${result.published} sorgenti .typ pubblicati)`,
+        `${result.published} sorgenti .typ pubblicati, ${result.ignored} ignorati)`,
     );
   }
+
+  assertAllTypstRulesUsed(config);
 
   if (skipped.size > 0) {
     console.log(
@@ -428,4 +284,10 @@ async function buildContent() {
   console.log('[content] Contenuto pronto in static/raw/.');
 }
 
-await buildContent();
+const invokedDirectly =
+  process.argv[1] !== undefined &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (invokedDirectly) {
+  await buildContent();
+}
