@@ -1,0 +1,21 @@
+[ignore]
+patterns = [
+  "prova-1.json",
+  "exam.schema.json",
+]
+
+[[typst.override]]
+glob = "prova-1.typ"
+action = "ignore"
+
+[[typst.override]]
+glob = "preamble.typ"
+action = "ignore"
+
+[[typst.override]]
+glob = "domande/*.typ"
+action = "ignore"
+
+[[typst.override]]
+glob = "domande/**/*.typ"
+action = "ignore"
