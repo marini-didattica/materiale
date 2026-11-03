@@ -1,0 +1,42 @@
+# Configurazione di deploy del contenuto.
+#
+# Le regole di questo file valgono per i file sotto content/raw/. Un
+# deploy.toml nella stessa cartella di un documento (o in una cartella
+# superiore) applica le stesse regole solo a quella sottocartella.
+#
+# I pattern seguono la sintassi di .gitignore: l'ultima regola che
+# corrisponde vince, `!pattern` riattiva un file, una barra finale indica
+# una cartella e `**` corrisponde a un numero qualsiasi di cartelle.
+
+version = 1
+
+[typst]
+# Cosa fare con un sorgente .typ quando nessun override corrisponde:
+#   compile -> compila in PDF
+#   publish -> pubblica il sorgente senza compilarlo
+#   ignore  -> non compilare e non pubblicare
+default_action = "compile"
+
+# Convenzione storica per i file che iniziano con `_`:
+#   default -> usa default_action
+#   compile -> compila
+#   publish -> pubblica come `nome.typ` (comportamento attuale)
+#   ignore  -> ignora
+underscore_action = "publish"
+
+# Per ora è supportato solo il formato PDF.
+format = "pdf"
+
+[ignore]
+# Esempi:
+#   "**/*.tex"
+#   "**/__pycache__/"
+#   "public/prime/esercitazione-1/soluzione/"
+patterns = []
+
+# Override Typst, valutati in ordine: vince l'ultima regola che corrisponde.
+# Esempio:
+#
+# [[typst.override]]
+# glob = "private/admin/seconde/2c/prova-1/testo/domande/_*.typ"
+# action = "ignore"

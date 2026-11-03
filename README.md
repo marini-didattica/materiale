@@ -127,9 +127,9 @@ ogni cartella:
 /materiale/raw/private/ABCD2345/simulazione-1/correzione.pdf
 ```
 
-Le estensioni servibili sono elencate in `scripts/build-content.ts`. I sorgenti
-`.tex`, i file temporanei di LaTeX e i file che possono essere eseguiti nel
-browser (`.html`, `.js`) non vengono pubblicati.
+Le estensioni servibili sono elencate in `scripts/lib/content-publisher.ts`. I
+sorgenti `.tex`, i file temporanei di LaTeX e i file che possono essere eseguiti
+nel browser (`.html`, `.js`) non vengono pubblicati.
 
 ### Documenti Typst
 
@@ -151,6 +151,77 @@ nell'output, quindi nel repository il file mantiene il nome originale.
 La compilazione usa la root del repository come root Typst, così i documenti
 possono importare `typst-theme` e `typst-components` con percorsi assoluti
 (`/typst-theme/src/lib.typ`, `/typst-components/src/lib.typ`).
+
+### Configurazione del deploy
+
+Il comportamento di `content:build` è controllato da `content/deploy.toml`.
+Senza quel file valgono i default storici: ogni `.typ` viene compilato, i file
+`_nome.typ` vengono pubblicati come `nome.typ` e gli altri file seguono la
+lista delle estensioni consentite.
+
+```toml
+version = 1
+
+[typst]
+# compile | publish | ignore
+default_action = "compile"
+# default | compile | publish | ignore
+underscore_action = "publish"
+# per ora è supportato solo "pdf"
+format = "pdf"
+
+[ignore]
+patterns = [
+  "**/*.tex",
+  "public/prime/esercitazione-1/soluzione/",
+]
+
+[[typst.override]]
+glob = "private/admin/seconde/2c/prova-1/testo/domande/_*.typ"
+action = "ignore"
+```
+
+I pattern di `[ignore]` seguono la sintassi di `.gitignore` e sono relativi a
+`content/raw/`:
+
+- `*.tmp` corrisponde a qualsiasi profondità, `public/...` è ancorato alla root;
+- `soluzione/` ignora la cartella e tutto il suo contenuto;
+- `**` corrisponde a un numero qualsiasi di cartelle;
+- `!pattern` riattiva un file, se l'ultima regola che lo riguarda è negativa.
+
+Per le regole locali basta mettere un `deploy.toml` nella cartella interessata:
+i suoi pattern sono relativi a quella cartella e valgono per tutta la
+sottocartella. Il file si sposta insieme al materiale, quindi non serve
+aggiornare i percorsi quando una cartella viene rinominata o spostata.
+
+```toml
+# content/raw/public/prime/esercitazione-1/deploy.toml
+[ignore]
+patterns = ["soluzione/"]
+
+[[typst.override]]
+glob = "_*.typ"
+action = "publish"
+```
+
+Un `deploy.toml` locale può contenere solo `[ignore]` e `[[typst.override]]`;
+le impostazioni globali di `[typst]` restano in `content/deploy.toml`. Le
+regole vengono valutate dalla cartella più esterna a quella più interna:
+l'ultima regola che corrisponde vince, quindi una regola locale può sovrascrivere
+quella globale (anche riattivando un file). Un override `[[typst.override]]`
+esplicito vince sempre sulla convenzione `_`.
+
+Le azioni disponibili per un sorgente `.typ` sono:
+
+- `compile`: compila in `<nome>.<format>` e pubblica il risultato;
+- `publish`: pubblica il sorgente `<nome>.typ` senza compilarlo;
+- `ignore`: non compila e non pubblica, ma il file resta in `content/` per gli
+  import degli altri documenti.
+
+Il prefisso `_` è solo un marcatore del sorgente e viene rimosso dal nome
+pubblicato. Un override che non corrisponde a nessun file fa fallire la build;
+lo stesso vale se due sorgenti producono lo stesso file. Il file `deploy.toml`
+non viene mai pubblicato.
 
 Ogni pagina di cartella include un pulsante **Scarica tutto**; ogni riga di
 cartella o file ha inoltre un'icona di download a destra. Il download viene
