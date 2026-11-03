@@ -38,5 +38,5 @@ patterns = []
 # Esempio:
 #
 # [[typst.override]]
-# glob = "private/admin/seconde/2c/prova-1/testo/domande/_*.typ"
+# glob = "**/domande/_*.typ"
 # action = "ignore"

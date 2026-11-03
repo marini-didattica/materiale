@@ -528,7 +528,7 @@ export function assertAllTypstRulesUsed(config: DeployConfig) {
   const unused = config.scopes.flatMap((scope) =>
     scope.typstRules
       .filter((rule) => rule.hits === 0)
-      .map((rule) => `${rule.label} (${scope.label})`),
+      .map((rule) => rule.label),
   );
 
   if (unused.length > 0) {

@@ -177,7 +177,7 @@ patterns = [
 ]
 
 [[typst.override]]
-glob = "private/admin/seconde/2c/prova-1/testo/domande/_*.typ"
+glob = "**/domande/_*.typ"
 action = "ignore"
 ```
 
@@ -188,6 +188,9 @@ I pattern di `[ignore]` seguono la sintassi di `.gitignore` e sono relativi a
 - `soluzione/` ignora la cartella e tutto il suo contenuto;
 - `**` corrisponde a un numero qualsiasi di cartelle;
 - `!pattern` riattiva un file, se l'ultima regola che lo riguarda è negativa.
+  Per riattivare un file dentro una cartella ignorata, ignora i figli
+  (`soluzione/*`) invece della cartella (`soluzione/`), oppure usa un
+  `deploy.toml` locale.
 
 Per le regole locali basta mettere un `deploy.toml` nella cartella interessata:
 i suoi pattern sono relativi a quella cartella e valgono per tutta la
