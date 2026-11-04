@@ -1,0 +1,7 @@
+[[typst.override]]
+glob = "domande/*.typ"
+action = "ignore"
+
+[[typst.override]]
+glob = "domande/**/*.typ"
+action = "ignore"
