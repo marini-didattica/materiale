@@ -1,0 +1,157 @@
+{
+	"$schema": "../../../../misc/exam.schema.json",
+	"version": 1,
+	"sets": [
+		"default",
+		"bes"
+	],
+	"preamble-file": "domande/preamble.typ",
+	"max-points": {
+		"default": 110,
+		"bes": 110
+	},
+	"metadata": {
+		"class": "PRIMA",
+		"title": "Verifica di informatica",
+		"subtitle": "Teoria, scrittura e lettura di codice in Python",
+		"duration": {
+			"default": 80,
+			"bes": 80
+		},
+		"author": "Marini Mattia"
+	},
+	"categories": [
+		{
+			"id": "D",
+			"tag": "Domanda",
+			"title": "Teoria",
+			"intro": "domande/section-D.typ",
+			"exercises": [
+				{
+					"id": "D1",
+					"file": "domande/D1.typ",
+					"answer-file": "domanda1.txt",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "CPU e GPU",
+					"points": 7,
+					"difficulty": 1
+				},
+				{
+					"id": "D2",
+					"file": "domande/D2.typ",
+					"answer-file": "domanda2.txt",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "Caratteri e protocolli",
+					"points": 7,
+					"difficulty": 1
+				},
+				{
+					"id": "D3",
+					"file": "domande/D3.typ",
+					"answer-file": "domanda3.txt",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "Il linguaggio assembly",
+					"points": 6,
+					"difficulty": 1
+				}
+			]
+		},
+		{
+			"id": "E",
+			"tag": "Esercizio",
+			"title": "Scrittura del codice",
+			"intro": "domande/section-E.typ",
+			"exercises": [
+				{
+					"id": "E1",
+					"file": "domande/E1.typ",
+					"answer-file": "esercizio1.py",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "Conta le occorrenze",
+					"points": 15,
+					"difficulty": 1
+				},
+				{
+					"id": "E2",
+					"file": "domande/E2.typ",
+					"answer-file": "esercizio2.py",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "Il valore è nella lista?",
+					"points": 20,
+					"difficulty": 2
+				},
+				{
+					"id": "E3",
+					"file": "domande/E3.typ",
+					"answer-file": "esercizio3.py",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "Conta i numeri pari",
+					"points": 25,
+					"difficulty": 3
+				}
+			]
+		},
+		{
+			"id": "S",
+			"tag": "Snippet",
+			"title": "Lettura del codice",
+			"intro": "domande/section-S.typ",
+			"exercises": [
+				{
+					"id": "S1",
+					"file": "domande/S1.typ",
+					"answer-file": "snippet1.txt",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "Primo frammento",
+					"points": 10,
+					"difficulty": 2
+				},
+				{
+					"id": "S2",
+					"file": "domande/S2.typ",
+					"answer-file": "snippet2.txt",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "Secondo frammento",
+					"points": 10,
+					"difficulty": 2
+				},
+				{
+					"id": "S3",
+					"file": "domande/S3.typ",
+					"answer-file": "snippet3.txt",
+					"sets": [
+						"default",
+						"bes"
+					],
+					"title": "Terzo frammento",
+					"points": 10,
+					"difficulty": 2
+				}
+			]
+		}
+	]
+}
