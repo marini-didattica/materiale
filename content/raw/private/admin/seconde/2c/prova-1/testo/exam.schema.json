@@ -37,6 +37,11 @@
       "type": "string",
       "pattern": "^(?!.*\\.\\.)(?!.*\\\\)(.*)\\.typ$"
     },
+    "answerFile": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!.*\\.\\.)(?!.*\\\\)(.*)$"
+    },
     "stringSetMap": {
       "type": "object",
       "minProperties": 1,
@@ -128,6 +133,7 @@
           "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
         },
         "file": { "$ref": "#/$defs/relativeTypstPath" },
+        "answer-file": { "$ref": "#/$defs/answerFile" },
         "sets": { "$ref": "#/$defs/setNames" },
         "title": { "$ref": "#/$defs/stringOrSetMap" },
         "points": { "$ref": "#/$defs/pointsOrSetMap" },

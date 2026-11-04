@@ -27,6 +27,7 @@
 				{
 					"id": "E1",
 					"file": "domande/E1.typ",
+					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "Media degli elementi",
 					"points": { "a": 12, "b": 20 },
@@ -35,6 +36,7 @@
 				{
 					"id": "E2",
 					"file": "domande/E2.typ",
+					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "Tutti dentro l'intervallo",
 					"points": 16,
@@ -43,6 +45,7 @@
 				{
 					"id": "E3",
 					"file": "domande/E3.typ",
+					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a"],
 					"title": "La lista è ordinata?",
 					"points": 12,
@@ -51,6 +54,7 @@
 				{
 					"id": "E4",
 					"file": "domande/E4.typ",
+					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "L'elemento è nella lista?",
 					"points": { "a": 12, "b": 19 },
@@ -59,6 +63,7 @@
 				{
 					"id": "E5",
 					"file": "domande/E5.typ",
+					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "La lista è palindroma?",
 					"points": 18,
@@ -75,6 +80,7 @@
 				{
 					"id": "S1",
 					"file": "domande/S1.typ",
+					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 1",
 					"points": 8,
@@ -83,6 +89,7 @@
 				{
 					"id": "S2",
 					"file": "domande/S2.typ",
+					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 2",
 					"points": 8,
@@ -91,6 +98,7 @@
 				{
 					"id": "S3",
 					"file": "domande/S3.typ",
+					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 3",
 					"points": 8,
@@ -99,6 +107,7 @@
 				{
 					"id": "S4",
 					"file": "domande/S4.typ",
+					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 4",
 					"points": 8,
@@ -107,6 +116,7 @@
 				{
 					"id": "S5",
 					"file": "domande/S5.typ",
+					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a"],
 					"title": "Snippet 5",
 					"points": 8,
