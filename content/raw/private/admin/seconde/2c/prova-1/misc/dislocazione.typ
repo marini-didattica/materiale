@@ -51,5 +51,5 @@
       none,
     ),
   ),
-  // absent: ("Filippi Renato", "Visintainer Filippo"),
+  absent: ("Mezzena Nicolò",),
 )

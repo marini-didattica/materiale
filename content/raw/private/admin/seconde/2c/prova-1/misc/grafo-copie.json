@@ -1,6 +1,6 @@
 {
   "name": "2C · Prova 1 · copie sospette",
-  "answers-folder": "../risposte/",
+  "test-folder": "..",
 
   "elements": {
     "nodes": [
