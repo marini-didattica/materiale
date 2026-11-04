@@ -5,7 +5,7 @@
 		"default",
 		"bes"
 	],
-	"preamble-file": "domande/preamble.typ",
+	"preamble-file": "parts/preamble.typ",
 	"max-points": {
 		"default": 110,
 		"bes": 110
@@ -25,11 +25,11 @@
 			"id": "D",
 			"tag": "Domanda",
 			"title": "Teoria",
-			"intro": "domande/section-D.typ",
+			"intro": "parts/section-D.typ",
 			"exercises": [
 				{
 					"id": "D1",
-					"file": "domande/D1.typ",
+					"file": "parts/D1.typ",
 					"answer-file": "domanda1.txt",
 					"sets": [
 						"default",
@@ -41,7 +41,7 @@
 				},
 				{
 					"id": "D2",
-					"file": "domande/D2.typ",
+					"file": "parts/D2.typ",
 					"answer-file": "domanda2.txt",
 					"sets": [
 						"default",
@@ -53,7 +53,7 @@
 				},
 				{
 					"id": "D3",
-					"file": "domande/D3.typ",
+					"file": "parts/D3.typ",
 					"answer-file": "domanda3.txt",
 					"sets": [
 						"default",
@@ -69,11 +69,11 @@
 			"id": "E",
 			"tag": "Esercizio",
 			"title": "Scrittura del codice",
-			"intro": "domande/section-E.typ",
+			"intro": "parts/section-E.typ",
 			"exercises": [
 				{
 					"id": "E1",
-					"file": "domande/E1.typ",
+					"file": "parts/E1.typ",
 					"answer-file": "esercizio1.py",
 					"sets": [
 						"default",
@@ -85,7 +85,7 @@
 				},
 				{
 					"id": "E2",
-					"file": "domande/E2.typ",
+					"file": "parts/E2.typ",
 					"answer-file": "esercizio2.py",
 					"sets": [
 						"default",
@@ -97,7 +97,7 @@
 				},
 				{
 					"id": "E3",
-					"file": "domande/E3.typ",
+					"file": "parts/E3.typ",
 					"answer-file": "esercizio3.py",
 					"sets": [
 						"default",
@@ -113,11 +113,11 @@
 			"id": "S",
 			"tag": "Snippet",
 			"title": "Lettura del codice",
-			"intro": "domande/section-S.typ",
+			"intro": "parts/section-S.typ",
 			"exercises": [
 				{
 					"id": "S1",
-					"file": "domande/S1.typ",
+					"file": "parts/S1.typ",
 					"answer-file": "snippet1.txt",
 					"sets": [
 						"default",
@@ -129,7 +129,7 @@
 				},
 				{
 					"id": "S2",
-					"file": "domande/S2.typ",
+					"file": "parts/S2.typ",
 					"answer-file": "snippet2.txt",
 					"sets": [
 						"default",
@@ -141,7 +141,7 @@
 				},
 				{
 					"id": "S3",
-					"file": "domande/S3.typ",
+					"file": "parts/S3.typ",
 					"answer-file": "snippet3.txt",
 					"sets": [
 						"default",

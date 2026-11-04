@@ -1,7 +1,7 @@
 [[typst.override]]
-glob = "domande/*.typ"
+glob = "testo/parts/*.typ"
 action = "ignore"
 
 [[typst.override]]
-glob = "domande/**/*.typ"
+glob = "testo/parts/**/*.typ"
 action = "ignore"

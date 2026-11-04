@@ -2,7 +2,7 @@
 	"$schema": "../../../../misc/exam.schema.json",
 	"version": 1,
 	"sets": ["a", "b"],
-	"preamble-file": "domande/preamble.typ",
+	"preamble-file": "parts/preamble.typ",
 
 	"max-points": { "a": 110, "b": 105 },
 
@@ -22,11 +22,11 @@
 			"id": "E",
 			"tag": "Esercizio",
 			"title": "Scrittura del codice",
-			"intro": "domande/section-E.typ",
+			"intro": "parts/section-E.typ",
 			"exercises": [
 				{
 					"id": "E1",
-					"file": "domande/E1.typ",
+					"file": "parts/E1.typ",
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "Media degli elementi",
@@ -35,7 +35,7 @@
 				},
 				{
 					"id": "E2",
-					"file": "domande/E2.typ",
+					"file": "parts/E2.typ",
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "Tutti dentro l'intervallo",
@@ -44,7 +44,7 @@
 				},
 				{
 					"id": "E3",
-					"file": "domande/E3.typ",
+					"file": "parts/E3.typ",
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a"],
 					"title": "La lista è ordinata?",
@@ -53,7 +53,7 @@
 				},
 				{
 					"id": "E4",
-					"file": "domande/E4.typ",
+					"file": "parts/E4.typ",
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "L'elemento è nella lista?",
@@ -62,7 +62,7 @@
 				},
 				{
 					"id": "E5",
-					"file": "domande/E5.typ",
+					"file": "parts/E5.typ",
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "La lista è palindroma?",
@@ -75,11 +75,11 @@
 			"id": "S",
 			"tag": "Snippet",
 			"title": "Lettura del codice",
-			"intro": "domande/section-S.typ",
+			"intro": "parts/section-S.typ",
 			"exercises": [
 				{
 					"id": "S1",
-					"file": "domande/S1.typ",
+					"file": "parts/S1.typ",
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 1",
@@ -88,7 +88,7 @@
 				},
 				{
 					"id": "S2",
-					"file": "domande/S2.typ",
+					"file": "parts/S2.typ",
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 2",
@@ -97,7 +97,7 @@
 				},
 				{
 					"id": "S3",
-					"file": "domande/S3.typ",
+					"file": "parts/S3.typ",
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 3",
@@ -106,7 +106,7 @@
 				},
 				{
 					"id": "S4",
-					"file": "domande/S4.typ",
+					"file": "parts/S4.typ",
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 4",
@@ -115,7 +115,7 @@
 				},
 				{
 					"id": "S5",
-					"file": "domande/S5.typ",
+					"file": "parts/S5.typ",
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a"],
 					"title": "Snippet 5",
