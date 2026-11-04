@@ -2,7 +2,7 @@
 	"$schema": "../../../../misc/correction.schema.json",
 	"answer-folder": "../risposte/sesureac-milena",
 	"test-json": "../testo/prova-1.json",
-	"set": "a",
+	"set": "b",
 	"student-name": "Milena Sesureac",
 	"class": "2C",
 	"date": "29 ottobre 2026",
@@ -10,7 +10,7 @@
 	"exercises": {
 		"E1": {
 			"answer-file": "esercizio1.py",
-			"score": 12,
+			"score": 14,
 			"comment": "Corretto: sommi gli elementi e calcoli la media. Manca la gestione della lista vuota: con `l = []` la media non viene mai calcolata e il `print(media)` genera un `NameError`."
 		},
 		"E2": {
@@ -18,10 +18,9 @@
 			"score": 5.0,
 			"comment": "Il controllo è sbagliato: `a > i > b` confronta l'*indice* `i` con `a` e `b`, non l'elemento `l[i]`. Con `a = 1` e `b = 10` la condizione è sempre falsa e il programma stampa `True` per ogni elemento. Devi controllare `l[i]` e stampare una sola volta."
 		},
-		"E3": null,
 		"E4": {
 			"answer-file": "esercizio4.py",
-			"score": 8.0,
+			"score": 12.0,
 			"comment": "La ricerca funziona, ma stampi il valore `a` (cioè `8`) invece di `Trovato all'indice N`; inoltre non ti fermi alla prima occorrenza (anche se con questa lista non cambia nulla) e con la lista vuota non stampi `Non trovato`."
 		},
 		"E5": {
@@ -36,15 +35,13 @@
 		},
 		"S2": {
 			"answer-file": "snippet2.txt",
-			"score": 3.0,
+			"score": 5.0,
 			"comment": "Il programma non stampa gli elementi negativi, ma `True`/`False` a seconda che esista almeno un negativo. L'output è `True`."
 		},
 		"S3": {
 			"answer-file": "snippet3.txt",
-			"score": 8,
+			"score": 10,
 			"comment": "Corretto: descrivi bene lo scambio tramite `t` e riporti l'output `8, 3`."
-		},
-		"S4": null,
-		"S5": null
+		}
 	}
 }

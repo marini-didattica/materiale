@@ -4,16 +4,13 @@
 	"sets": ["a", "b"],
 	"preamble-file": "parts/preamble.typ",
 
-	"max-points": { "a": 110, "b": 105 },
+	"max-points": 110,
 
 	"metadata": {
 		"class": "SECONDA",
 		"title": "Verifica di informatica",
-		"subtitle": {
-			"a": "Liste e cicli",
-			"b": "Liste, cicli e lettura del codice"
-		},
-		"duration": { "a": 90, "b": 85 },
+		"subtitle": "Introduzione a Python",
+		"duration": 90,
 		"author": "Marini Mattia"
 	},
 
@@ -30,7 +27,7 @@
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "Media degli elementi",
-					"points": { "a": 12, "b": 20 },
+					"points": { "a": 12, "b": 16 },
 					"difficulty": 2
 				},
 				{
@@ -39,7 +36,7 @@
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "Tutti dentro l'intervallo",
-					"points": 16,
+					"points": { "a": 16, "b": 23 },
 					"difficulty": 3
 				},
 				{
@@ -57,7 +54,7 @@
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "L'elemento è nella lista?",
-					"points": { "a": 12, "b": 19 },
+					"points": { "a": 12, "b": 16 },
 					"difficulty": 1
 				},
 				{
@@ -66,7 +63,7 @@
 					"answer-file": "esercizio{ordinal}.py",
 					"sets": ["a", "b"],
 					"title": "La lista è palindroma?",
-					"points": 18,
+					"points": { "a": 18, "b": 25 },
 					"difficulty": 2
 				}
 			]
@@ -83,7 +80,7 @@
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 1",
-					"points": 8,
+					"points": { "a": 8, "b": 10 },
 					"difficulty": 1
 				},
 				{
@@ -92,7 +89,7 @@
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 2",
-					"points": 8,
+					"points": { "a": 8, "b": 10 },
 					"difficulty": 1
 				},
 				{
@@ -101,16 +98,16 @@
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a", "b"],
 					"title": "Snippet 3",
-					"points": 8,
+					"points": { "a": 8, "b": 10 },
 					"difficulty": 1
 				},
 				{
 					"id": "S4",
 					"file": "parts/S4.typ",
 					"answer-file": "snippet{ordinal}.txt",
-					"sets": ["a", "b"],
+					"sets": ["a"],
 					"title": "Snippet 4",
-					"points": 8,
+					"points": { "a": 8, "b": 10 },
 					"difficulty": 2
 				},
 				{
@@ -119,7 +116,7 @@
 					"answer-file": "snippet{ordinal}.txt",
 					"sets": ["a"],
 					"title": "Snippet 5",
-					"points": 8,
+					"points": { "a": 8, "b": 10 },
 					"difficulty": 3
 				}
 			]
