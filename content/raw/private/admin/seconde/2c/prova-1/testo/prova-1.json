@@ -2,6 +2,7 @@
 	"$schema": "./exam.schema.json",
 	"version": 1,
 	"sets": ["a", "b"],
+	"preamble-file": "preamble.typ",
 
 	"max-points": { "a": 110, "b": 105 },
 

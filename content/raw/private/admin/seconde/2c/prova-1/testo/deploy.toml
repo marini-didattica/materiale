@@ -2,6 +2,7 @@
 patterns = [
   "prova-1.json",
   "exam.schema.json",
+  "preamble.typ",
 ]
 
 [[typst.override]]
