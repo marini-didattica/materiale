@@ -183,31 +183,7 @@
           "source": "penasa-gemma",
           "target": "perazzolli-gianluca",
           "confidence": 0.99,
-          "exercises": {
-            "e1": [
-              "penasa-gemma/le-tue-risposte/esercizio1.py",
-              "perazzolli-gianluca/le-tue-risposte/esercizio1.py"
-            ],
-            "e2": [
-              "penasa-gemma/le-tue-risposte/esercizio2.py",
-              "perazzolli-gianluca/le-tue-risposte/esercizio2.py"
-            ],
-            "e3": [
-              "penasa-gemma/le-tue-risposte/esercizio3.py",
-              "perazzolli-gianluca/le-tue-risposte/esercizio3.py"
-            ],
-            "e5": [
-              "penasa-gemma/le-tue-risposte/esercizio5.py",
-              "perazzolli-gianluca/le-tue-risposte/esercizio5.py"
-            ],
-            "s5": [
-              "penasa-gemma/le-tue-risposte/snippet5.txt",
-              "perazzolli-gianluca/le-tue-risposte/snippet5.txt"
-            ]
-          }
-        },
-        "style": {
-          "label": "e1 e2 e3 e5 s5"
+          "exercises": ["E1", "E2", "E3", "E5", "S5"]
         }
       },
       {
@@ -216,19 +192,7 @@
           "source": "moscon-laura",
           "target": "panizza-stella",
           "confidence": 0.97,
-          "exercises": {
-            "e1": [
-              "moscon-laura/le-tue-risposte/esercizio1.py",
-              "panizza-stella/le-tue-risposte/esercizio1.py"
-            ],
-            "e4": [
-              "moscon-laura/le-tue-risposte/esercizio4.py",
-              "panizza-stella/le-tue-risposte/esercizio4.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e1 e4"
+          "exercises": ["E1", "E4"]
         }
       },
       {
@@ -237,19 +201,7 @@
           "source": "visintainer-filippo",
           "target": "vurchio-riccardo",
           "confidence": 0.88,
-          "exercises": {
-            "e1": [
-              "visintainer-filippo/le-tue-risposte/esercizio1.py",
-              "vurchio-riccardo/le-tue-risposte/esercizio1.py"
-            ],
-            "e5": [
-              "visintainer-filippo/le-tue-risposte/esercizio5.py",
-              "vurchio-riccardo/le-tue-risposte/esecizio5.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e1 e5"
+          "exercises": ["E1", "E5"]
         }
       },
       {
@@ -258,15 +210,7 @@
           "source": "pilloni-francesco",
           "target": "panizza-stella",
           "confidence": 0.72,
-          "exercises": {
-            "e4": [
-              "pilloni-francesco/le-tue-risposte/esercizio4.py",
-              "panizza-stella/le-tue-risposte/esercizio4.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e4"
+          "exercises": ["E4"]
         }
       },
       {
@@ -275,15 +219,7 @@
           "source": "pilloni-francesco",
           "target": "moscon-laura",
           "confidence": 0.65,
-          "exercises": {
-            "e4": [
-              "pilloni-francesco/le-tue-risposte/esercizio4.py",
-              "moscon-laura/le-tue-risposte/esercizio4.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e4"
+          "exercises": ["E4"]
         }
       },
       {
@@ -292,15 +228,7 @@
           "source": "pretti-agata",
           "target": "pilloni-francesco",
           "confidence": 0.6,
-          "exercises": {
-            "e4": [
-              "pretti-agata/le-tue-risposte/esercizio4.py",
-              "pilloni-francesco/le-tue-risposte/esercizio4.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e4"
+          "exercises": ["E4"]
         }
       },
       {
@@ -309,19 +237,7 @@
           "source": "pretti-agata",
           "target": "sesureac-milena",
           "confidence": 0.6,
-          "exercises": {
-            "e3": [
-              "pretti-agata/le-tue-risposte/esercizio3.py",
-              "sesureac-milena/le-tue-risposte/esercizio3.py"
-            ],
-            "e5": [
-              "pretti-agata/le-tue-risposte/esercizio5.py",
-              "sesureac-milena/le-tue-risposte/esercizio5.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e3 e5"
+          "exercises": ["E3", "E5"]
         }
       },
       {
@@ -330,15 +246,7 @@
           "source": "pretti-agata",
           "target": "panizza-stella",
           "confidence": 0.57,
-          "exercises": {
-            "e4": [
-              "pretti-agata/le-tue-risposte/esercizio4.py",
-              "panizza-stella/le-tue-risposte/esercizio4.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e4"
+          "exercises": ["E4"]
         }
       },
       {
@@ -347,15 +255,7 @@
           "source": "bonetti-alessandra",
           "target": "lorenzi-diego",
           "confidence": 0.5,
-          "exercises": {
-            "e4": [
-              "bonetti-alessandra/le-tue-risposte/esercizio4.py",
-              "lorenzi-diego/le-tue-risposte/es4.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e4"
+          "exercises": ["E4"]
         }
       },
       {
@@ -364,15 +264,7 @@
           "source": "bonetti-alessandra",
           "target": "battocletti-alessandro",
           "confidence": 0.45,
-          "exercises": {
-            "e5": [
-              "bonetti-alessandra/le-tue-risposte/esercizio5.py",
-              "battocletti-alessandro/le-tue-risposte/esercizio5.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e5"
+          "exercises": ["E5"]
         }
       },
       {
@@ -381,15 +273,7 @@
           "source": "bonetti-alessandra",
           "target": "pilloni-francesco",
           "confidence": 0.4,
-          "exercises": {
-            "e1": [
-              "bonetti-alessandra/le-tue-risposte/esercizio1.py",
-              "pilloni-francesco/le-tue-risposte/esercizio1.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e1"
+          "exercises": ["E1"]
         }
       },
       {
@@ -398,15 +282,7 @@
           "source": "bonetti-alessandra",
           "target": "zuech-gabriele",
           "confidence": 0.4,
-          "exercises": {
-            "e4": [
-              "bonetti-alessandra/le-tue-risposte/esercizio4.py",
-              "zuech-gabriele/le-tue-risposte/esercizio4.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e4"
+          "exercises": ["E4"]
         }
       },
       {
@@ -415,15 +291,7 @@
           "source": "panizza-stella",
           "target": "perazzolli-gianluca",
           "confidence": 0.4,
-          "exercises": {
-            "e5": [
-              "panizza-stella/le-tue-risposte/esercizio5.py",
-              "perazzolli-gianluca/le-tue-risposte/esercizio5.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e5"
+          "exercises": ["E5"]
         }
       },
       {
@@ -432,15 +300,7 @@
           "source": "perazzolli-gianluca",
           "target": "vurchio-riccardo",
           "confidence": 0.4,
-          "exercises": {
-            "e2": [
-              "perazzolli-gianluca/le-tue-risposte/esercizio2.py",
-              "vurchio-riccardo/le-tue-risposte/esercizio2.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e2"
+          "exercises": ["E2"]
         }
       },
       {
@@ -449,15 +309,7 @@
           "source": "dagostin-davide",
           "target": "penasa-gemma",
           "confidence": 0.35,
-          "exercises": {
-            "e2": [
-              "dagostin-davide/le-tue-risposte/esercizio2.py",
-              "penasa-gemma/le-tue-risposte/esercizio2.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e2"
+          "exercises": ["E2"]
         }
       },
       {
@@ -466,15 +318,7 @@
           "source": "dagostin-davide",
           "target": "perazzolli-gianluca",
           "confidence": 0.32,
-          "exercises": {
-            "e2": [
-              "dagostin-davide/le-tue-risposte/esercizio2.py",
-              "perazzolli-gianluca/le-tue-risposte/esercizio2.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e2"
+          "exercises": ["E2"]
         }
       },
       {
@@ -483,15 +327,7 @@
           "source": "dal-savio-daniele",
           "target": "pilloni-francesco",
           "confidence": 0.35,
-          "exercises": {
-            "e1": [
-              "dal-savio-daniele/le-tue-risposte/esercizio1.py",
-              "pilloni-francesco/le-tue-risposte/esercizio1.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e1"
+          "exercises": ["E1"]
         }
       },
       {
@@ -500,15 +336,7 @@
           "source": "penasa-gemma",
           "target": "vurchio-riccardo",
           "confidence": 0.3,
-          "exercises": {
-            "e2": [
-              "penasa-gemma/le-tue-risposte/esercizio2.py",
-              "vurchio-riccardo/le-tue-risposte/esercizio2.py"
-            ]
-          }
-        },
-        "style": {
-          "label": "e2"
+          "exercises": ["E2"]
         }
       }
     ]
