@@ -11,6 +11,9 @@
     "sets": { "$ref": "#/$defs/setNames" },
     "preamble-file": { "$ref": "#/$defs/typstPath" },
     "max-points": { "$ref": "#/$defs/pointsOrSetMap" },
+    "grade-min": { "type": "number" },
+    "grade-max": { "type": "number" },
+    "laude-threshold": { "type": "number", "exclusiveMinimum": 0 },
     "metadata": { "$ref": "#/$defs/metadata" },
     "categories": {
       "type": "array",

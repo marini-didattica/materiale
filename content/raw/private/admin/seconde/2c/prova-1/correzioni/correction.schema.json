@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marini-didattica.github.io/schemas/correction.schema.json",
+  "title": "Correction descriptor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["answer-folder", "test-json", "set", "exercises"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "answer-folder": { "$ref": "#/$defs/relativePath" },
+    "test-json": { "$ref": "#/$defs/relativePath" },
+    "set": { "type": "string", "minLength": 1 },
+    "import-answers": { "type": "boolean" },
+    "student-name": { "type": "string" },
+    "class": { "type": "string" },
+    "date": { "type": "string" },
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "exercises": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "oneOf": [
+          { "$ref": "#/$defs/answer" },
+          { "type": "null" }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!.*\\\\)(.*)$"
+    },
+    "answer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["answer-file", "score"],
+      "properties": {
+        "answer-file": { "$ref": "#/$defs/answerFile" },
+        "score": { "type": "number", "minimum": 0 },
+        "import-answer": { "type": "boolean" },
+        "import-answers": { "type": "boolean" },
+        "comment": { "type": "string" }
+      }
+    },
+    "answerFile": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!.*\\.\\.)(?!.*\\\\)(.*)$"
+    }
+  }
+}
