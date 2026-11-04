@@ -1,5 +1,5 @@
 {
-	"$schema": "./exam.schema.json",
+	"$schema": "../../../../misc/exam.schema.json",
 	"version": 1,
 	"sets": ["a", "b"],
 	"preamble-file": "domande/preamble.typ",
