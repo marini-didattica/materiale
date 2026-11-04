@@ -1,0 +1,39 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/veronesi-davide",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Davide Veronesi",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "es 1.py",
+			"score": 8.0,
+			"comment": "Hai stampato i valori dispari, non gli elementi in posizione alternata (indici 0, 2, 4, ...)."
+		},
+		"E2": {
+			"answer-file": "es 2.py",
+			"score": 4.0,
+			"comment": "Stampi una sequenza di numeri calcolata dagli indici, non inverti la lista e non stampi la lista finale."
+		},
+		"E3": {
+			"answer-file": "es 3.py",
+			"score": 1.0,
+			"comment": "Il file è incompleto: il ciclo non fa nulla e `s` non viene mai stampato. Mancano il confronto e l'output `True`/`False`."
+		},
+		"E4": null,
+		"E5": {
+			"answer-file": "es 5.py",
+			"score": 14.0,
+			"comment": "Stampi i valori non negativi uno per uno, ma non modifichi `l` e non stampi la lista finale."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

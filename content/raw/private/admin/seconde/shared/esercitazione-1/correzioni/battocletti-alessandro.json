@@ -1,0 +1,35 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/battocletti-alessandro",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Alessandro Battocletti",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "es1.py",
+			"score": 12.0,
+			"comment": "Corretto: scorri la lista a passi di 2 e stampi solo gli elementi nelle posizioni pari. Il controllo sulla lista vuota non serve, ma non fa male."
+		},
+		"E2": null,
+		"E3": {
+			"answer-file": "es3.pyt",
+			"score": 16.0,
+			"comment": "Corretto: costruisci la lista invertita e la confronti con l'originale. Attenzione al nome del file: l'estensione deve essere `.py`, non `.pyt`."
+		},
+		"E4": {
+			"answer-file": "es2.py",
+			"score": 3.0,
+			"comment": "L'idea di cercare il secondo massimo c'è, ma il codice non è eseguibile: `max2 = maxmax = i` usa una variabile inesistente, `if max2 < i < max` non ha corpo e `print(max2)()` non è valido. Inoltre hai chiamato il file `es2.py` mentre questo è l'esercizio 4."
+		},
+		"E5": null,
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

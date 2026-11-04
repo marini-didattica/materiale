@@ -1,0 +1,39 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/filippi-renato",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Renato Filippi",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 8.0,
+			"comment": "Hai interpretato la consegna come stampa i valori dispari: qui serve invece stampare gli elementi nelle *posizioni* alternate (indici 0, 2, 4, ...), indipendentemente dal loro valore."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 13.0,
+			"comment": "Stampi gli elementi al contrario uno per uno, ma non inverti la lista in place e non stampi la lista finale."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 5.0,
+			"comment": "Il doppio ciclo non confronta le coppie simmetriche: per `[1, 2, 3, 2, 1]` stampa `False`. Servono due indici, uno da sinistra e uno da destra, oppure il confronto con la lista invertita."
+		},
+		"E4": null,
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 14.0,
+			"comment": "Stampi i valori non negativi uno per uno, ma non modifichi `l` e non stampi la lista finale."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

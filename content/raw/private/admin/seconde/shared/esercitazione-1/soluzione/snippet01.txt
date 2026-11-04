@@ -1,0 +1,11 @@
+Il programma controlla se la lista a è ordinata in modo non decrescente, cioè se ogni elemento è maggiore o uguale a quello che lo precede.
+
+- b parte da True (ipotesi: lista ordinata).
+- i parte da 1, perché il primo elemento non ha un precedente da confrontare.
+- A ogni iterazione confronta a[i] con a[i - 1]: se a[i] è minore del precedente, la lista non è ordinata e b diventa False.
+- Il ciclo continua comunque fino alla fine della lista, ma b resta False.
+
+Con a = [2, 4, 5, 3, 8] il confronto 3 < 5 porta b a False.
+
+Output:
+False

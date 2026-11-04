@@ -51,5 +51,5 @@
       none,
     ),
   ),
-  absent: ("Battocletti Alessandro",),
+  // absent: ("Filippi Renato", "Visintainer Filippo"),
 )

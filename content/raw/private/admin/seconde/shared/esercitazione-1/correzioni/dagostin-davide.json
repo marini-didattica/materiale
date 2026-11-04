@@ -1,0 +1,39 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/dagostin-davide",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Davide Dagostin",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Perfetto: corretto e idiomatico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 10.0,
+			"comment": "Funziona e stampa la lista invertita, ma usi una lista ausiliaria (`L0`) e non modifichi `L` sul posto, come *esplicitamente richiesto dalla consegna*. Inoltre stampi `L0` invece di `L`."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 16.0,
+			"comment": "Corretto: costruisci l'inversa e confronti elemento per elemento. Va bene anche l'uso della lista ausiliaria, non era vietato. Nota che in realtà sarebbe bastato controllare `if L[j] != L1[j]`."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 13.0,
+			"comment": "Cerchi il massimo correttamente, ma poi usi `L.pop(max)`: `pop` vuole un indice, non un valore, e comunque dovresti assicurarti di rimuovere OGNI valore uguale al massimo. Comunque un'idea piuttosto solida c'è!"
+		},
+		"E5": null,
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

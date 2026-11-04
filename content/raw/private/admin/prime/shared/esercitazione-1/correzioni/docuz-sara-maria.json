@@ -1,0 +1,46 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/docuz-sara-maria",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Sara Maria Docuz",
+	"class": "1D",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"D1": null,
+		"D2": null,
+		"D3": null,
+		"E1": {
+			"answer-file": "esercizio01_py",
+			"score": 10.0,
+			"comment": "Perfetto. Corretto e idiomatico."
+		},
+		"E2": {
+			"answer-file": "esercizio02_py",
+			"score": 14.0,
+			"comment": "Hai impostato la somma, ma manca l'incremento di `i` e la stampa finale. Siccome manca l'incremento, il ciclo va in loop infinito."
+		},
+		"E3": {
+			"answer-file": "esercizio03_py",
+			"score": 5.0,
+			"comment": "L'idea di scorrere la lista c'è; attenzione a `len(l)` (con le parentesi tonde) e all'incremento di `i` (hai scritto `i = 1 + 1`, probabilmente intendevi `i = i + 1`)."
+		},
+		"S1": {
+			"answer-file": "snippet01_txt",
+			"score": 6.0,
+			"comment": "Faccio fatica a capire se effettivamente hai capito, dal punto di vista intuitivo, cosa questo programma faccia. Non mi serve una descrizione riga per riga di ciò che accade, l'ultima riga sarebbe bastata. Inoltre manca l'output. Avresti dovuto sottolineare che scorre la lista, stampandola *al contrario*."
+		},
+		"S2": {
+			"answer-file": "snippet02_txt.txt",
+			"score": 0.0,
+			"comment": "Ha il valore di cosa?? Secondo me avevi capito, ma non posso darti punteggio visto che manca proprio ciò che mi serve!"
+		},
+		"S3": {
+			"answer-file": "snippet03_txt",
+			"score": 8.0,
+			"comment": "Bene! Manca l'output e va specificato che stai *stampando*, non *contando* i numeri pari."
+		}
+	}
+}

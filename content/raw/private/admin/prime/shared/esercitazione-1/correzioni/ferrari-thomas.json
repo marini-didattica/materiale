@@ -1,0 +1,22 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/ferrari-thomas",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Thomas Ferrari",
+	"class": "1C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"D1": null,
+		"D2": null,
+		"D3": null,
+		"E1": null,
+		"E2": null,
+		"E3": null,
+		"S1": null,
+		"S2": null,
+		"S3": null
+	}
+}

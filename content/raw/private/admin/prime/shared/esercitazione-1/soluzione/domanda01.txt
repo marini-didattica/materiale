@@ -1,0 +1,9 @@
+Le principali componenti di un personal computer sono:
+
+- CPU (processore): esegue le istruzioni dei programmi in maniera SEQUENZIALE, svolge i calcoli aritmetici e logici e coordina il funzionamento del sistema.
+- RAM (memoria centrale): memoria veloce e volatile che contiene temporaneamente i dati e i programmi in esecuzione; si svuota quando il computer viene spento.
+- Memoria di massa (SSD o disco rigido): conserva i dati in modo permanente, anche a computer spento. Ogni file viene salvato qui
+- Scheda madre: collega tra loro CPU, RAM, memorie di massa e periferiche e permette loro di comunicare
+- Scheda video (GPU): unità dedicata ad eseguire grande quantità di calcoli IN PARALLELO. Usata principalmente per elaborare immagini e segnali video da inviare al monitor.
+- Alimentatore: trasforma la corrente elettrica proveniente dalla presa nelle tensioni adatte ai vari componenti.
+- Periferiche di input/output (tastiera, mouse, monitor, stampante): permettono all'utente di inserire dati e di ricevere i risultati.

@@ -1,0 +1,25 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/lorenzoni-chris",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Chris Lorenzoni",
+	"class": "1D",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"D1": null,
+		"D2": null,
+		"D3": null,
+		"E1": {
+			"answer-file": "es1.py",
+			"score": 0.0
+		},
+		"E2": null,
+		"E3": null,
+		"S1": null,
+		"S2": null,
+		"S3": null
+	}
+}

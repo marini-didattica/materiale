@@ -1,0 +1,31 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/bonetti-alessandra",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Alessandra Bonetti",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Corretto e idiomatico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 2.0,
+			"comment": "Il file è incompleto e non eseguibile: `for i in range len(l):` non è sintassi valida. Mancano il ciclo di scambio e la stampa finale; ricorda che l'inversione deve avvenire in place, senza lista ausiliaria."
+		},
+		"E3": null,
+		"E4": null,
+		"E5": null,
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

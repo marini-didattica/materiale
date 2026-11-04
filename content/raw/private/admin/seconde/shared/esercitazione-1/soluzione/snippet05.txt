@@ -1,0 +1,13 @@
+Il programma conta quante volte compare il valore massimo della lista a.
+
+- b parte dal primo elemento e contiene il massimo trovato finora.
+- c parte da 1 e conta quante volte il massimo è già stato incontrato (il primo elemento è già una occorrenza).
+- A ogni iterazione:
+  - se a[i] > b, c'è un nuovo massimo: b viene aggiornato e il contatore c riparte da 1;
+  - se a[i] == b, il massimo si ripete e c aumenta di 1.
+- Alla fine stampa c, cioè il numero di occorrenze del massimo.
+
+Con a = [4, 9, 1, 9] il massimo è 9 e compare due volte.
+
+Output:
+2

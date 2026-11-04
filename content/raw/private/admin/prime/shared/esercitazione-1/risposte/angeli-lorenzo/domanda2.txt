@@ -1,0 +1,2 @@
+DOMANDA 2
+    Vengono immagazzinati con una serie di 0 e 1 e i ogni serie di 0 e 1 vuol dire una lettera/parola

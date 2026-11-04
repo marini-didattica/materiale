@@ -1,0 +1,31 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/pretti-agata",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Agata Pretti",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Perfetto: corretto e idiomatico"
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 1.0,
+			"comment": "Il file non è eseguibile: `len(0, -1)` passa due argomenti a `len` e comunque non inverte la lista. Mancano il ciclo di scambio e la stampa."
+		},
+		"E3": null,
+		"E4": null,
+		"E5": null,
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/bertoldi-emma",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Emma Bertoldi",
+	"class": "1C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 3.5,
+			"comment": "Hai elencato cinque componenti, ma confondi i ruoli: la CPU è il processore, non la memoria a breve termine (che è la RAM), e la GPU non è la mente del computer. Manca proprio la RAM."
+		},
+		"D2": null,
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 2.5,
+			"comment": "L'idea di istruzione come comando c'è, ma manca come viene rappresentata (codice binario) e l'instruction set non è tutto ciò che scriviamo noi: è l'insieme delle istruzioni che un processore sa eseguire."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 3.0,
+			"comment": "Il programma non conta i pari: stampa la stringa `i` e non ha un vero ciclo, perché `while i == n` non viene mai eseguito. Riparti da un ciclo `while i <= n` e incrementa un contatore quando `i % 2 == 0`."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 1.0,
+			"comment": "Il ciclo `while i == 10` non parte mai perché `i` vale `0`; inoltre `sum(i)` non è valido su un intero. Serve un ciclo che accumuli i valori in una variabile `somma` e stampi il risultato."
+		},
+		"E3": null,
+		"S1": null,
+		"S2": null,
+		"S3": null
+	}
+}

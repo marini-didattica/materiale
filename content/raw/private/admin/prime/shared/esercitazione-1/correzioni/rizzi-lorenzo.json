@@ -1,0 +1,54 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/rizzi-lorenzo",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Lorenzo Rizzi",
+	"class": "1C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 7.0,
+			"comment": "Ottimo."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 7.5,
+			"comment": "Molto bene: base 2 per i numeri e ASCII per i caratteri. Cura l'ortografia (ASCII, non aschii) e specifica meglio il fatto che ogni stringa di bit corrisponde a un carattere (e che sono proprio le tabelle ASCII a definire questa corrispondenza)."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 5.0,
+			"comment": "Risposta convincente: istruzione tradotta in binario e instruction set come insieme condiviso di istruzioni. Manca solo un accenno esplicito all'assembly."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 8.0,
+			"comment": "La logica di base è giusta, ci sono solo un paio di sviste. Innanzitutto hai dimenticato `print(count)`, quindi stampi erroneamente tutti i numeri, ma questo non è grave. Ciò che invece è grave è l'incremento doppio di `count`, dentro all'`if`: così facendo salti dei numeri."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 10.0,
+			"comment": "Il file è incompleto (`if` senza condizione): il programma non può funzionare. La struttura del ciclo è impostata, ma manca il corpo che accumula la somma."
+		},
+		"E3": null,
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 10.0,
+			"comment": "Si capisce che hai compreso. Occhio solo alla terminologia: quando si parla di ordine decrescente si fa riferimento al valore degli elementi (che appunto cresce o decresce); in questo caso sarebbe stato più appropriato parlare di ordine inverso o \"da destra a sinistra\"."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10.0,
+			"comment": "Perfetto: lo scambio tramite c è spiegato e l'output è corretto."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 10.0,
+			"comment": "Bene: hai riconosciuto i pari e riportato l'output. Piccola imprecisione: il ciclo parte da `i = 0`, non da `1`."
+		}
+	}
+}

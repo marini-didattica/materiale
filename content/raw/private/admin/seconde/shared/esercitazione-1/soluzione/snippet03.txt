@@ -1,0 +1,15 @@
+Il programma trova e stampa il valore massimo e il valore minimo della lista a.
+
+- b e c partono dal primo elemento della lista.
+- A ogni iterazione:
+  - se a[i] > b, b diventa il nuovo massimo;
+  - se a[i] < c, c diventa il nuovo minimo.
+- Alla fine stampa prima b (massimo) e poi c (minimo).
+
+Con a = [4, 9, 1, 7]:
+- massimo = 9
+- minimo = 1
+
+Output:
+9
+1
