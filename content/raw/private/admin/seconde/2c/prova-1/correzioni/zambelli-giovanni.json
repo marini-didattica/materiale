@@ -1,0 +1,62 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/zambelli-giovanni",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Giovanni Zambelli",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 6.0,
+			"comment": "La somma è corretta, ma la media divide per `i`, che dopo il ciclo vale `len(l)-1`: per una lista di 13 elementi dividi per 12. Devi usare `len(l)`. Manca anche la gestione della lista vuota."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 11.0,
+			"comment": "Mi hai fatto l'esercizio al contrario: controlli se esiste almeno un elemento contenuto nel range. In più non hai gestito il caso in cui `b < a`, come esplicitamente richiesto dalla consegna"
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 8.0,
+			"comment": "Il codice è sbagliato per via della prima iterazione, anche se l'idea di base c'è. Il problema è che alla prima iterazione confronti sempre il primo elemento con l'ultimo (l[-1], sintassi valida che non abbiamo però visto) e siccome alla prima iterazione vale sempre che `i == 0`, allora entrerai sempre dentro all'else, impostando `c = False` e uscendo dal ciclo."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 10.0,
+			"comment": "La ricerca è corretta e ti fermi alla prima occorrenza, ma stampi `True 4` invece di `Trovato all'indice 4`. Devi comporre il messaggio richiesto."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 4.0,
+			"comment": "Il confronto è sbagliato: `l[i] == l[i+i]` non confronta gli estremi simmetrici (per `i = 1` confronta `l[1]` con `l[2]`, non con il penultimo). Inoltre il conteggio `c` e il controllo `c == i+1` non funzionano. Usa `l[i]` e `l[len(l)-1-i]`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 8.0,
+			"comment": "Corretto: spieghi il ciclo al contrario e riporti l'output giusto."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 1.0,
+			"comment": "La risposta è sbagliata: il programma non controlla se la lista è tutta negativa o mista, ma se esiste almeno un numero negativo. L'output è `True`, non `False`."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 8.0,
+			"comment": "Corretto: descrivi lo scambio tramite `t` e riporti `8,3`."
+		},
+		"S4": {
+			"answer-file": "snippet4.txt",
+			"score": 8.0,
+			"comment": "Corretto: il programma calcola `a^b = 81`."
+		},
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 5.0,
+			"comment": "Va bene, ma mi sarei aspettato un semplice \"effettua una divisione intera fra `a` e `b`\". La frase “toglie tutti i multipli di b” è imprecisa: sottrae `b` finché `a` non diventa negativo."
+		}
+	}
+}

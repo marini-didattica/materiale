@@ -1,0 +1,50 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/sesureac-milena",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Milena Sesureac",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12,
+			"comment": "Corretto: sommi gli elementi e calcoli la media. Manca la gestione della lista vuota: con `l = []` la media non viene mai calcolata e il `print(media)` genera un `NameError`."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 5.0,
+			"comment": "Il controllo è sbagliato: `a > i > b` confronta l'*indice* `i` con `a` e `b`, non l'elemento `l[i]`. Con `a = 1` e `b = 10` la condizione è sempre falsa e il programma stampa `True` per ogni elemento. Devi controllare `l[i]` e stampare una sola volta."
+		},
+		"E3": null,
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 8.0,
+			"comment": "La ricerca funziona, ma stampi il valore `a` (cioè `8`) invece di `Trovato all'indice N`; inoltre non ti fermi alla prima occorrenza (anche se con questa lista non cambia nulla) e con la lista vuota non stampi `Non trovato`."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 1.0,
+			"comment": "Il codice non verifica se la lista è palindroma: scambia alcuni elementi con il centro e poi controlla `d == 2`, che non significa nulla. Servono due indici che partono dagli estremi e si avvicinano."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 3.0,
+			"comment": "La risposta è sbagliata: il programma non stampa gli elementi in posizione pari, ma gli elementi pari contenuti nella lista in ordine invertito (da destra a sinistra). L'output è `10`, `-4`, `0`, `8`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 3.0,
+			"comment": "Il programma non stampa gli elementi negativi, ma `True`/`False` a seconda che esista almeno un negativo. L'output è `True`."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 8,
+			"comment": "Corretto: descrivi bene lo scambio tramite `t` e riporti l'output `8, 3`."
+		},
+		"S4": null,
+		"S5": null
+	}
+}

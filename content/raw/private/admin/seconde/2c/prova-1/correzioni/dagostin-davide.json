@@ -1,0 +1,54 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/dagostin-davide",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Davide Dagostin",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Corretto: sommi gli elementi e dividi per `len(l)`, gestendo anche la lista vuota. Piccola cosa: nel caso vuoto stampi la stringa `\"0\"` invece del numero `0`; non lo considero un errore, ma la consegna chiedeva di stampare un numero."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 16.0,
+			"comment": "Perfetto: scambi `a` e `b` quando serve, controlli tutti gli elementi e stampi un unico booleano. Funziona anche con la lista vuota."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 6.0,
+			"comment": "L'idea di confrontare elementi consecutivi c'è, ma `for i in l` assegna a `i` i *valori* della lista, non gli indici: `l[i]` e soprattutto `l[i+1]` possono andare fuori range. Inoltre non stampi nulla e con la lista vuota dovresti stampare `True`. Usa `for i in range(1, len(l))` e confronta `l[i]` con `l[i-1]`."
+		},
+		"E4": null,
+		"E5": null,
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 8.0,
+			"comment": "Corretto: hai spiegato il ciclo al contrario e riportato l'output giusto."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 2.0,
+			"comment": "Hai riportato solo l'output, senza spiegare cosa fa il programma. Va bene il risultato, ma manca la descrizione."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 2.0,
+			"comment": "Hai riportato solo l'output, senza spiegare cosa fa il programma. Va bene il risultato, ma manca la descrizione."
+		},
+		"S4": {
+			"answer-file": "snippet4.txt",
+			"score": 2.0,
+			"comment": "Hai riportato solo l'output, senza spiegare cosa fa il programma. Va bene il risultato, ma manca la descrizione."
+		},
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 2.0,
+			"comment": "Hai riportato solo l'output, senza spiegare cosa fa il programma. Va bene il risultato, ma manca la descrizione."
+		}
+	}
+}

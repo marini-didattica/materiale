@@ -1,0 +1,42 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/veronesi-davide",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Davide Veronesi",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio 1.py",
+			"score": 2.0,
+			"comment": "Il programma non calcola la media: somma 1 a `s` per ogni elemento, calcola `len(l)/s` senza usare il risultato e stampa l'indice finale. Servono la somma degli elementi e la divisione per `len(l)`."
+		},
+		"E2": {
+			"answer-file": "esercizio 2.py",
+			"score": 0.0,
+			"comment": "Il codice non controlla gli elementi della lista: confronta `len(l)` con `a` e `b`, e `c == True` è un confronto, non un'assegnazione. Inoltre non stampa nulla. Devi scorrere `l[i]` e stampare un unico `True`/`False`."
+		},
+		"E3": {
+			"answer-file": "esercizio 3.py",
+			"score": 0.0,
+			"comment": "Il codice confronta la *lunghezza* della lista con i suoi elementi (`len(l) < l[i]`), non controlla l'ordine; inoltre `c == True` è un confronto e la stampa è dentro l'`if`. Per la lista di esempio non stampa nulla. Questo codice stampa `True` ogni volta che si incontra un elemento maggiore della lunghezza stessa della lista"
+		},
+		"E4": {
+			"answer-file": "esercizio 4.py",
+			"score": 4.0,
+			"comment": "Il programma non cerca `a` nella lista: confronta `len(l)` con `a` e stampa sempre `Non trovato`; inoltre `n` non viene mai incrementato (`n = +1` assegna 1, in più è fuori dal ciclo), quindi il ciclo è infinito. Devi scorrere gli elementi e confrontare `l[i] == a`."
+		},
+		"E5": {
+			"answer-file": "esercizio 5.py",
+			"score": 0.0,
+			"comment": "Il codice non è eseguibile: `min(len(l))` e `max(len(l))` chiamano `min`/`max` su un intero, e `c == True` è un confronto. Manca il confronto tra le coppie simmetriche."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/penasa-gemma",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Gemma Penasa",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Corretto: sommi gli elementi e calcoli la media, gestendo anche la lista vuota. La media può essere calcolata una sola volta dopo il ciclo, ma funziona."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 16.0,
+			"comment": "Corretto: scambi `a` e `b` quando serve, controlli tutti gli elementi e ti fermi al primo fuori intervallo. Funziona anche con lista vuota."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 10.0,
+			"comment": "Corretto per una lista non vuota: tieni traccia del massimo visto finora e segnali quando un elemento è minore. Con la lista vuota però `l[0]` genera un `IndexError`; la consegna chiede `True` per la lista vuota."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 5.0,
+			"comment": "Il file è incompleto: manca la stampa finale e la ricerca non si ferma alla prima occorrenza. Inoltre hai scritto `ntrovato` nella prima riga e poi `trovato`, probabilmente però è solo un errore di battitura. L'idea è giusta, ma incompleta."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 1.0,
+			"comment": "Il file è incompleto: l'`if` non ha né condizione né corpo, quindi il programma non parte. L'idea di costruire la lista invertita è giusta, ma va completata."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 2.0,
+			"comment": "La spiegazione è confusa e l'output è vuoto. Il programma stampa gli elementi pari partendo dal fondo: `10`, `-4`, `0`, `8`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 7.0,
+			"comment": "Corretto: spieghi il controllo dei negativi e riporti `True`. Occhio alla forma, sarebbe stato meglio \"scorre la lista determinando se questa contiene *almeno un numero negativo*\""
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 7.0,
+			"comment": "Corretto: descrivi lo scambio e riporti `8 3`. Manca un accenno al fatto che `t` serve a non perdere il valore di `a`."
+		},
+		"S4": {
+			"answer-file": "snippet4.txt",
+			"score": 8.0,
+			"comment": "Corretto: il programma calcola `a^b`, quindi `81`."
+		},
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 8.0,
+			"comment": "Corretto."
+		}
+	}
+}

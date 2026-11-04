@@ -1,0 +1,42 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/vurchio-riccardo",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Riccardo Vurchio",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Corretto: sommi gli elementi, conti quanti sono e calcoli la media, gestendo anche la lista vuota."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 14.0,
+			"comment": "Il controllo è corretto per i valori dell'esempio. Manca però lo scambio di `a` e `b` quando `a > b`: con gli estremi invertiti il programma dà il risultato sbagliato."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 12.0,
+			"comment": "Corretto: confronti ogni elemento con il successivo e segnali il primo calo. Funziona anche con lista vuota e con un solo elemento."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 10.0,
+			"comment": "La ricerca della prima occorrenza è corretta e idiomatica, ma stampi letteralmente `Trovato all'indice N` invece del numero trovato, e non stampa mai `Non trovato`. Devi stampare `Trovato all'indice`, `indice_trovato` e aggiungere l'`else`."
+		},
+		"E5": {
+			"answer-file": "esecizio5.py",
+			"score": 18.0,
+			"comment": "Corretto: usi lo slicing `l[::-1]` per confrontare la lista con la sua inversa. Funziona anche con lista vuota e con un solo elemento. Attenzione al nome del file: `esecizio5.py` invece di `esercizio5.py`."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

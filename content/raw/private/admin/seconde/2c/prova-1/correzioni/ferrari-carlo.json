@@ -1,0 +1,62 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/ferrari-carlo",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Carlo Ferrari",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Corretto: sommi e conti gli elementi, poi calcoli la media. Attenzione al caso vuoto: controlli `media == 0` invece di `len(l) == 0`, quindi una lista non vuota con somma zero (ad esempio `[0, 0]`) stampa `\"0\"` invece di `0.0`. Piccolissima sottigliezza."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 16.0,
+			"comment": "Perfetto, corretto e idiomatico. L'`else` che rimette `valori = True` è superfluo ma innocuo."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 12.0,
+			"comment": "Corretto: confronti ogni elemento con il precedente e gestisci anche lista vuota e lista con un solo elemento. L'uso di `a` come “elemento precedente” è chiaro."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 9.0,
+			"comment": "La ricerca della prima occorrenza è corretta. Piccola sottigliezza: il messaggio che stampi non è esattamente quello richiesto dalla consegna: devi stampare `Trovato all'indice N` (con la maiuscola) oppure `Non trovato`; qui stampi `il numero 8 e stato trovato a indice 1`."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 14.0,
+			"comment": "Il programma funziona, ma in modo molto contorto: `a = i-(i+1+i)` equivale sempre a `-i-1`, quindi stai confrontando `l[i]` con `l[-i-1]`. È corretto, ma il blocco iniziale `if l != []` è inutile e la condizione è invertita rispetto all'idea. Semplifica usando direttamente `l[i] != l[len(l)-1-i]`. Inoltre noi non abbiamo visto accesso a lista con indici negativi (che in realtà è valido in python), quindi il fatto che funzioni probabilmente è dovuto in parte alla fortuna."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 5.0,
+			"comment": "Hai capito il funzionamento, ma l'ordine dell'output è sbagliato: il ciclo parte dall'ultimo elemento, quindi stampa `10`, `-4`, `0`, `8`, non `8, 0, -4, 10`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 6.0,
+			"comment": "Corretto: il programma controlla se esiste almeno un negativo e stampa `True`. Cura un po' la forma della spiegazione, perché non si capisce bene se tu abbia effettivamente capito."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 8.0,
+			"comment": "Corretto: descrivi bene lo scambio tramite `t` e riporti l'output."
+		},
+		"S4": {
+			"answer-file": "snippet4.txt",
+			"score": 8.0,
+			"comment": "Corretto: il ciclo moltiplica `risultato` per `a` esattamente `b` volte, quindi calcola `3^4 = 81`."
+		},
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 4.0,
+			"comment": "Corretto: spieghi le sottrazioni successive, il valore finale di `a` (`-3`) e l'output `3`. Mi sarebbe piaciuto vedere un semplice \"il programma esegue una divisione intera\"."
+		}
+	}
+}

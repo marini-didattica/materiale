@@ -1,0 +1,62 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/pilloni-francesco",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Francesco Pilloni",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 10.0,
+			"comment": "Corretto: sommi gli elementi e calcoli la media. Manca la gestione della lista vuota: con `l = []` la divisione per `len(l)` provoca `ZeroDivisionError`."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 13.0,
+			"comment": "Il controllo è corretto per i valori dell'esempio, ma non scambi `a` e `b`: se `a < b` il programma non funziona. Il codice è generico e lo zero è gestito bene."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 12.0,
+			"comment": "Perfetto, corretto e idiomatico."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 12.0,
+			"comment": "Corretto: trovi la prima occorrenza, ti fermi con `break` e stampi il messaggio richiesto."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 18.0,
+			"comment": "Corretto: confronti le coppie simmetriche e ti fermi alla prima differenza. La lista di prova è più lunga, ma il codice è generico e funziona anche con lista vuota e con un solo elemento."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 5.0,
+			"comment": "Hai capito il funzionamento, ma l'ordine dell'output è sbagliato: il ciclo parte dal fondo, quindi stampa `10`, `-4`, `0`, `8`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 8.0,
+			"comment": "Corretto: spieghi il controllo dei negativi e riporti `True`."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 8.0,
+			"comment": "Corretto: descrivi lo scambio tramite `t` e riporti `8, 3`."
+		},
+		"S4": {
+			"answer-file": "snippet4.txt",
+			"score": 8.0,
+			"comment": "Corretto: spieghi passo per passo come `risultato` diventa `a^b` e riporti `81`."
+		},
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 8.0,
+			"comment": "Corretto: spieghi le sottrazioni successive, il valore finale `a = -3` e l'output `3`."
+		}
+	}
+}

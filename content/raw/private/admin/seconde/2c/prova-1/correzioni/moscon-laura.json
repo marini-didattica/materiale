@@ -1,0 +1,62 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/moscon-laura",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Laura Moscon",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Corretto, un po' più contorto del dovuto. Non serve calcolare la media ad ogni iterazione, basterebbe calcolarla alla fine, una volta calcolata la somma."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 10.0,
+			"comment": "L'applicazione è perfetta per `a > b`. Tuttavia nel caso in cui `a < b` le variabili antrebbero invertite, altrimenti il programma non da il risultato corretto. Prima del ciclo, se `a > b`, scambiali."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 12.0,
+			"comment": "Corretto: confronti ogni elemento con il successivo e ti fermi al primo calo. Funziona anche con lista vuota e con un solo elemento. In realtà l'else non è necessario, ma non crea nemmeno problemi"
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 12.0,
+			"comment": "Corretto: trovi la prima occorrenza, ti fermi con `break` e stampi il messaggio richiesto. Brava che hai rispettato al 100% il formato richiesto dal testo"
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 18.0,
+			"comment": "Perfetto, corretto e idiomatico: confronti le coppie simmetriche con due indici e ti fermi alla prima differenza. Funziona anche con lista vuota e con un solo elemento."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 4.0,
+			"comment": "La spiegazione è quasi giusta, ma l'output è incompleto: manca `-4`. Il programma stampa `10`, `-4`, `0`, `8`. Mi sarebbe bastato un \"il programma stampa solo i numeri pari della lista in ordine invertito\""
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 8.0,
+			"comment": "Corretto: spieghi il controllo dei negativi e riporti l'output `True`."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 8.0,
+			"comment": "Corretto: lo scambio è descritto bene e l'output è `8 3`."
+		},
+		"S4": {
+			"answer-file": "snippet4.txt",
+			"score": 8.0,
+			"comment": "Corretto: il programma calcola `a^b` e stampa `81`."
+		},
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 8.0,
+			"comment": "Corretto: spieghi le sottrazioni successive e il valore finale `a = -3`; l'output è `3`."
+		}
+	}
+}

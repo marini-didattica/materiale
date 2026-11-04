@@ -3,38 +3,35 @@
 	"answer-folder": "../risposte/battocletti-alessandro",
 	"test-json": "../testo/prova-1.json",
 	"set": "a",
-
 	"student-name": "Alessandro Battocletti",
 	"class": "2C",
 	"date": "29 ottobre 2026",
-
 	"import-answers": true,
-
 	"exercises": {
 		"E1": {
 			"answer-file": "esercizio1.py",
-			"score": 10,
+			"score": 10.0,
 			"comment": "La somma e la media sono corrette. Però la divisione avviene prima del controllo sulla lista vuota, quindi con `l = []` il programma va in `ZeroDivisionError`: controlla `len(l) == 0` prima di dividere. La variabile `i` inizializzata a 1 non viene usata."
 		},
 		"E2": {
 			"answer-file": "esercizio2.py",
-			"score": 13,
+			"score": 13.0,
 			"comment": "Il controllo dell'intervallo è corretto e gestisce anche il caso di lista vuota. Attenzione però allo scambio: `a, b = a, b` non fa nulla; per scambiare i due estremi devi scrivere `a, b = b, a`, altrimenti con `a > b` il programma dà il risultato sbagliato."
 		},
 		"E3": {
 			"answer-file": "esercizio3.py",
-			"score": 10,
+			"score": 10.0,
 			"comment": "Il controllo con il `while` è corretto per una lista non vuota. Però, se la lista è vuota, dopo aver stampato `True` stampi anche `0`: la consegna chiede solo `True`. Togli quel secondo `if`."
 		},
 		"E4": null,
 		"E5": {
 			"answer-file": "esercizio5.py",
-			"score": 4,
-			"comment": "L'idea del confronto simmetrico c'è, ma il codice non è eseguibile: `l(i)` non fa ciò che pensi e dà errore; avresti dovuto scrivere `l[i]`; inoltre `l[i-1-i]` vale sempre `l[-1]` e non il penultimo, il terzultimo, ecc. L'indice giusto è `len(l) - 1 - i`."
+			"score": 4.0,
+			"comment": "L'idea del confronto simmetrico c'è, ma il codice non è eseguibile: `l(i)` non fa ciò che pensi e da errore; avresti dovuto scrivere `l[i]`; inoltre `l[i-1-i]` vale sempre `l[-1]` e non il penultimo, il terzultimo, ecc. L'indice giusto è `len(l) - 1 - i`."
 		},
 		"S1": {
 			"answer-file": "snippet1.txt",
-			"score": 0,
+			"score": 0.0,
 			"comment": "Hai scritto solo `programma`: non hai spiegato cosa fa il frammento né riportato l'output."
 		},
 		"S2": null,

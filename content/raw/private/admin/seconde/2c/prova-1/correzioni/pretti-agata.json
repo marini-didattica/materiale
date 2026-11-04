@@ -1,0 +1,50 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/pretti-agata",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Agata Pretti",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 0.0,
+			"comment": "Hai solo inizializzato la lista: manca tutto il calcolo della media e la stampa."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 8.0,
+			"comment": "Il controllo dell'intervallo è concettualmente giusto, ma il risultato viene sovrascritto a ogni iterazione (senza `break`), quindi può tornare `True` dopo un elemento fuori intervallo; inoltre stampi `nell'intervallo`/`non nell'intervallo` invece di `True`/`False`, e non gestisci correttamente il caso in cui `a < b`. In quest'ultimo caso andrebbero invertite le variabili. Manca anche la gestione della lista vuota."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 2.0,
+			"comment": "Il confronto è sbagliato: `l[i] <= i-1` confronta un elemento con un indice, non con l'elemento precedente. Inoltre stampi un messaggio per ogni elemento. Devi confrontare `l[i]` con `l[i-1]` e stampare un unico `True`/`False`."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 9.0,
+			"comment": "Corretto. Piccola sottigliezza: il messaggio non rispetta il formato richiesto: `trovato all'indice` è minuscolo e manca la maiuscola in `Non trovato`."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 0.0,
+			"comment": "Il codice non è eseguibile: `d = len(l)//2, -1` crea una tupla (struttura dati che non abbiamo visto) e `len(s)` chiama `len` su un intero. Manca completamente il confronto tra le coppie simmetriche."
+		},
+		"S1": null,
+		"S2": {
+			"answer-file": "snippet2.py",
+			"score": 4.0,
+			"comment": "Hai ricopiato il codice con qualche commento, ma non hai spiegato a parole cosa fa il programma né riportato l'output (`True`). Inoltre il file dovrebbe essere `snippet2.txt`, non `.py`."
+		},
+		"S3": {
+			"answer-file": "snippet3.py",
+			"score": 4.0,
+			"comment": "Hai ricopiato il codice con i commenti, ma non hai spiegato cosa fa il programma né riportato l'output (`8 3`). Inoltre il file dovrebbe essere `snippet3.txt`, non `.py`."
+		},
+		"S4": null,
+		"S5": null
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/panizza-stella",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Stella Panizza",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 11.0,
+			"comment": "Corretto, un po' più contorto del dovuto. Non serve calcolare la media ad ogni iterazione, basterebbe calcolarla alla fine, una volta calcolata la somma."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 11.0,
+			"comment": "L'idea di gestire entrambi gli ordini di `a` e `b` è buona, ma il risultato viene riassegnato a `True` a ogni elemento interno all'intervallo: se prima trovi un elemento fuori e poi uno dentro, il programma torna a `True`. Una volta trovato un elemento fuori devi fermarti (o non rimettere più `True`)."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 7.0,
+			"comment": "Il confronto è impostato male: usi `>` invece di `>=`, quindi due elementi uguali consecutivi fanno risultare la lista non ordinata; inoltre `ordine` viene sovrascritto a ogni iterazione. Per `[1, 2, 2]` il programma stampa `False`, ma la lista è ordinata. Ti conviene partire da `True` e mettere `False` solo quando trovi `l[i] < l[i-1]`, senza più rimetterlo a `True`."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 12.0,
+			"comment": "Corretto: trovi la prima occorrenza, ti fermi con `break` e stampi il messaggio richiesto."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 18.0,
+			"comment": "Corretto: costruisci la lista invertita e la confronti con l'originale. Funziona anche con lista vuota e con un solo elemento."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 5.0,
+			"comment": "L'output è giusto, ma la spiegazione è imprecisa: il programma non cerca i numeri “che divisi per due fanno 0”, ma quelli il cui resto della divisione per due è zero, cioè i pari."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 8.0,
+			"comment": "Corretto: spieghi il controllo dei negativi e riporti l'output `True`."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 8.0,
+			"comment": "Corretto: descrivi lo scambio tramite `t` e riporti l'output `8 3`."
+		},
+		"S4": {
+			"answer-file": "snippet4.txt",
+			"score": 8.0,
+			"comment": "Corretto: il programma calcola `3^4 = 81`."
+		},
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 6.0,
+			"comment": "Corretto. Mi manca solo la spiegazione di quanto vale `a` alla fine del ciclo."
+		}
+	}
+}

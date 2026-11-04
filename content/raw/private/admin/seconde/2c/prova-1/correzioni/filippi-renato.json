@@ -1,0 +1,50 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/filippi-renato",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Renato Filippi",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 9.0,
+			"comment": "La somma è corretta, ma la media usa `i+1` dove `i` è l'indice dell'ultima iterazione: funziona solo perché il `for` termina con `i = len(l)-1`. Con la lista vuota `i` non esiste e il programma va in errore. Usa direttamente `len(l)`."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 10.0,
+			"comment": "Il controllo funziona per l'esempio (con `a = 10` e `b = 1`), ma non gestisci il caso `a < b`: la condizione `a >= l[i] and b <= l[i]` va bene solo se `a` è il limite superiore. Prima di controllare, scambia `a` e `b` se necessario. Inoltre occhio che dentro all'if sovrascrivi il valore False, quindi anche se hai già trovato un valore fuori, poi sovrascrivi il suo valore appena ne trovi un'altro che è incluso nel range. Dovresti interrompere l'iterazione appena trovi un elemento che viola la condizione di inclusione."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 3.0,
+			"comment": "Il ciclo non controlla l'ordine: l'unica iterazione che fa qualcosa è quella con `i == 0`, e confronta `l[0]` con `l[-1]` (l'ultimo elemento, tramite indice negativo, cosa valida ma che noi non abbiamo visto), non con il precedente. Per tutte le restanti iterazioni non viene fatto nulla."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 8.0,
+			"comment": "La ricerca c'è, ma stampi un messaggio per ogni elemento e non ti fermi alla prima occorrenza; inoltre il formato non è quello richiesto. Usa `break` e stampa una sola volta `Trovato all'indice N` oppure `Non trovato`."
+		},
+		"E5": null,
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 5.0,
+			"comment": "La spiegazione del ciclo è corretta, ma non riporti l'output: manca l'elenco `10`, `-4`, `0`, `8`. Mi sarebbe bastato \"il programma stampa i numeri pari della lista in ordine inverso\""
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 5.0,
+			"comment": "Corretto: spieghi che il programma cerca almeno un numero negativo e stampa un booleano. Manca però l'output esplicito (`True`)."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 6.0,
+			"comment": "Corretto: descrivi lo scambio tramite `t`; manca solo l'output esplicito (`8 3`)."
+		},
+		"S4": null,
+		"S5": null
+	}
+}

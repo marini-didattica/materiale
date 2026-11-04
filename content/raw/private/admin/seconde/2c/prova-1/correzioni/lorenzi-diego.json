@@ -1,0 +1,42 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/lorenzi-diego",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Diego Lorenzi",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "es1.py",
+			"score": 3.0,
+			"comment": "Il programma non calcola la media: sommi gli *indici* (`somma = somma + i`) invece degli elementi, e poi dividi per `l[i]`, che è un valore della lista e può anche essere zero. Servono `somma = somma + l[i]` e `media = somma / len(l)`, con il controllo sulla lista vuota."
+		},
+		"E2": {
+			"answer-file": "es2.py",
+			"score": 8.0,
+			"comment": "L'idea è di controllare ogni elemento, ma stampi un `True`/`False` per ogni elemento invece di un unico risultato; inoltre la condizione `a > l[i] and b < l[i]` non gestisce il caso `a < b`, e il caso `l[i] == 0` non c'entra con l'intervallo. Imposta `compresi = True`, aggiornalo e stampa una sola volta."
+		},
+		"E3": {
+			"answer-file": "es3.py",
+			"score": 0.0,
+			"comment": "Il codice non controlla la lista: confronta solo `b < i` con `b = 0` e `i = 1`, quindi stampa sempre `True`. Devi scorrere la lista e confrontare ogni elemento con il precedente."
+		},
+		"E4": {
+			"answer-file": "es4.py",
+			"score": 6.0,
+			"comment": "La ricerca c'è, ma stampi “numero non trovato” per ogni elemento che precede quello cercato e non usi il formato richiesto. Devi fermarti alla prima occorrenza con `break` e stampare `Trovato all'indice N` oppure `Non trovato`."
+		},
+		"E5": {
+			"answer-file": "es5.py",
+			"score": 1.0,
+			"comment": "Il file non è eseguibile: `if l[i], l[j] = l[j], l[i]:` non è sintassi valida. Inoltre il ciclo assegna solo `j` e non confronta nulla. Penso che tu faccia confusione con l'inversione in place, ma anche li lo scambio fra `l[i]` e `l[j]` deve avvenire dentro il ciclo."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

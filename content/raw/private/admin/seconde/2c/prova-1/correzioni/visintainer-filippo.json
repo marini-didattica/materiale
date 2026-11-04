@@ -1,0 +1,62 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/visintainer-filippo",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Filippo Visintainer",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Perfetto, corretto e idiomatico: sommi gli elementi, conti quanti sono e calcoli la media, gestendo anche la lista vuota."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 12.0,
+			"comment": "Il controllo degli elementi è corretto. Manca però lo scambio di `a` e `b` quando `a > b`: con i valori del template (`a = 2`, `b = 14`) funziona, ma con gli estremi invertiti no."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 6.0,
+			"comment": "Penso che si tratti di una svista. Se ti fossi ricordato di aggiornare il valore di max ad ogni iterazione, aggiungendo un break dentro l'if avresti ottenuto un programma funzionante. Così però non funziona affatto, siccome `max` non è nemmeno inizializzato."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 10.0,
+			"comment": "La ricerca della prima occorrenza è corretta, ma manca il caso `Non trovato`: se il valore non c'è, il programma non stampa nulla. Aggiungi l'`else` con `print(\"Non trovato\")`."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 18.0,
+			"comment": "Corretto: usi lo slicing `l[::-1]` per confrontare la lista con la sua inversa. Funziona anche con lista vuota e con un solo elemento."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 6.0,
+			"comment": "La spiegazione è buona, ma l'ordine dell'output è sbagliato: il ciclo parte dal fondo, quindi stampa `10`, `-4`, `0`, `8`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 6.0,
+			"comment": "Corretto però occhio che ho chiesto una spiegazione generale; mi sarebbe bastato che mi dicessi \"il programma stampa True se la lista contiene almeno un numero negativo, False altrimenti\"."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 6.0,
+			"comment": "L'output è giusto (`8 3`), ma la spiegazione è confusa: non è chiaro cosa succede alla variabile `t` e perché serve. Mi sarei aspettato \"il programma scambia i valori delle variabili `a` e `b`, usando `t` come appoggio per non perdere il valore di `a`\""
+		},
+		"S4": {
+			"answer-file": "snippet4.txt",
+			"score": 2.0,
+			"comment": "L'output è sbagliato: il programma moltiplica `risultato` per `a` a ogni iterazione, quindi calcola `3^4 = 81`, non `12`. La descrizione del ciclo è imprecisa."
+		},
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 2.0,
+			"comment": "La spiegazione è corretta, ma anche qui non volevo che spiegaste riga per riga. Mi serviva il concetto generale. In questo caso il programma effettua una divisione intera . Manca anche un accenno al valore finale di `a` (`-3`)."
+		}
+	}
+}

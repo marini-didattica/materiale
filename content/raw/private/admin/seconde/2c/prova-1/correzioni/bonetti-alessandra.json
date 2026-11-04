@@ -1,0 +1,58 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/bonetti-alessandra",
+	"test-json": "../testo/prova-1.json",
+	"set": "a",
+	"student-name": "Alessandra Bonetti",
+	"class": "2C",
+	"date": "29 ottobre 2026",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 10.0,
+			"comment": "La somma e la media sono corrette. Manca però la gestione della lista vuota: con `l = []` la divisione per `len(l)` provoca `ZeroDivisionError`. Inoltre `i += 1` dentro il `for` è inutile, perché `i` viene già gestito da `range`."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 8.0,
+			"comment": "L'idea è giusta, ma il programma stampa un valore per ogni elemento invece di un unico `True`/`False`. Dovresti usare, ad esempio, una variabile `tutti = True`, scorrerla e stampare una sola volta alla fine; inoltre non scambia `a` e `b` quando `a < b`, e con la lista vuota non stampa nulla (dovrebbe stampare `True`)."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 0.0,
+			"comment": "Il file è incompleto: `if l[i]` non ha né condizione né corpo, quindi il programma non parte. Il confronto va fatto tra `l[i]` e `l[i-1]`, aggiornando una variabile `ordinata`."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 5.0,
+			"comment": "La ricerca c'è, ma stampi un messaggio per ogni elemento e non ti fermi alla prima occorrenza: per la lista di esempio otterresti più righe. Devi usare `break` e stampare `Trovato all'indice N` una sola volta, oppure `Non trovato`."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 5.0,
+			"comment": "Il confronto simmetrico è l'idea giusta, ma il codice non è eseguibile: `len[i]` non è valido (le parentesi di `len` sono tonde) e `range(len())` chiama `len` senza argomento. Servono due indici, uno da sinistra e uno da destra, oppure una lista invertita."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 8.0,
+			"comment": "Corretto: il ciclo parte dal fondo e stampa solo gli elementi pari; l'output è `10`, `-4`, `0`, `8`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 4.0,
+			"comment": "Corretto: il programma verifica se esiste almeno un numero negativo e stampa `True`. La spiegazione è un po' imprecisa nella forma, per questo si fa fatica a capire se tu abbia effettivamente capito. Mi sarebbe bastato \"questo frammeto controlla se la lista contiene almeno un numero negativo\"."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 8.0,
+			"comment": "Corretto: lo scambio tramite variabile temporanea è descritto bene e l'output è `8 3`."
+		},
+		"S4": null,
+		"S5": {
+			"answer-file": "snippet5.txt",
+			"score": 3.0,
+			"comment": "L'output è giusto, ma la spiegazione del ciclo non è corretta: `quoziente` non assume il valore di `a - b`, viene incrementato di uno a ogni sottrazione. Il programma conta quante volte `b` sta in `a`, ossia effettua una divisoine intera arrotondata per difetto."
+		}
+	}
+}
