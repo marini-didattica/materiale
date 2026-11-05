@@ -1,13 +1,16 @@
 {
   "name": "2C · Prova 1 · copie sospette",
   "test-folder": "..",
-
   "elements": {
     "nodes": [
       {
         "data": {
           "id": "battocletti-alessandro",
-          "seat": "fila 1, banco 1"
+          "seat": "fila 1, banco 1",
+          "confidence": 0.35,
+          "exercise-notes": {
+            "E5": "Usa `l(i)` (una chiamata) invece di `l[i]` e l'indice `i-1-i`, che non realizza il confronto simmetrico. Il codice non funziona e il ragionamento è diverso da quello del resto della classe."
+          }
         },
         "style": {
           "label": "Battocletti\nAlessandro"
@@ -61,7 +64,11 @@
       {
         "data": {
           "id": "lorenzi-diego",
-          "seat": "fila 2, banco 1"
+          "seat": "fila 2, banco 1",
+          "confidence": 0.45,
+          "exercise-notes": {
+            "E5": "Il corpo del ciclo non usa `i`/`j` per confrontare gli elementi e fuori dal ciclo compare un'assegnazione tupla con sintassi non valida (`if l[i], l[j] = ...`). La soluzione non è eseguibile."
+          }
         },
         "style": {
           "label": "Lorenzi\nDiego"
@@ -88,7 +95,11 @@
       {
         "data": {
           "id": "penasa-gemma",
-          "seat": "fila 2, banco 6"
+          "seat": "fila 2, banco 6",
+          "confidence": 0.5,
+          "exercise-notes": {
+            "E5": "Il ciclo contiene un `if` senza corpo: la soluzione è incompleta e non esegue il confronto palindromo. Lascia inoltre una lista `t` mai usata."
+          }
         },
         "style": {
           "label": "Penasa\nGemma"
@@ -115,7 +126,11 @@
       {
         "data": {
           "id": "pretti-agata",
-          "seat": "fila 3, banco 2"
+          "seat": "fila 3, banco 2",
+          "confidence": 0.3,
+          "exercise-notes": {
+            "S2": "Risponde con un programma completo e commentato invece di spiegare il frammento; usa `for`, `range` e `len`, assenti nelle risposte degli altri studenti."
+          }
         },
         "style": {
           "label": "Pretti\nAgata"
@@ -124,7 +139,11 @@
       {
         "data": {
           "id": "sesureac-milena",
-          "seat": "fila 3, banco 3"
+          "seat": "fila 3, banco 3",
+          "confidence": 0.4,
+          "exercise-notes": {
+            "E2": "Usa `if a>i>b`, confrontando tra loro l'indice `i` e i limiti invece di controllare gli elementi della lista; la soluzione è concettualmente sbagliata e isolata rispetto alla classe."
+          }
         },
         "style": {
           "label": "Sesureac\nMilena"
@@ -133,7 +152,11 @@
       {
         "data": {
           "id": "veronesi-davide",
-          "seat": "fila 3, banco 4"
+          "seat": "fila 3, banco 4",
+          "confidence": 0.5,
+          "exercise-notes": {
+            "E5": "Applica `min(len(l))` e `max(len(l))` a un intero e usa `c==True` invece di un'assegnazione: la soluzione è irrazionale e non verifica la simmetria della lista."
+          }
         },
         "style": {
           "label": "Veronesi\nDavide"
@@ -169,7 +192,13 @@
       {
         "data": {
           "id": "zuech-gabriele",
-          "seat": "fila 4, banco 2"
+          "seat": "fila 4, banco 2",
+          "confidence": 0.6,
+          "exercise-notes": {
+            "E2": "Usa `quit()` per uscire dal programma, una funzione non usata da nessun altro e non trattata in classe; il controllo è corretto ma la scelta è insolita.",
+            "E3": "Usa `quit()` per interrompere il programma e un indice ausiliario `f`; nessun altro studente usa `quit()`.",
+            "E4": "Usa `quit()` per fermarsi alla prima occorrenza; soluzione funzionante ma con un costrutto non usato dal resto della classe."
+          }
         },
         "style": {
           "label": "Zuech\nGabriele"
@@ -183,7 +212,13 @@
           "source": "penasa-gemma",
           "target": "perazzolli-gianluca",
           "confidence": 0.99,
-          "exercises": ["E1", "E2", "E3", "E5", "S5"]
+          "exercises": [
+            "E1",
+            "E2",
+            "E3",
+            "E5",
+            "S5"
+          ]
         }
       },
       {
@@ -192,7 +227,10 @@
           "source": "moscon-laura",
           "target": "panizza-stella",
           "confidence": 0.97,
-          "exercises": ["E1", "E4"]
+          "exercises": [
+            "E1",
+            "E4"
+          ]
         }
       },
       {
@@ -201,7 +239,10 @@
           "source": "visintainer-filippo",
           "target": "vurchio-riccardo",
           "confidence": 0.88,
-          "exercises": ["E1", "E5"]
+          "exercises": [
+            "E1",
+            "E5"
+          ]
         }
       },
       {
@@ -210,7 +251,9 @@
           "source": "pilloni-francesco",
           "target": "panizza-stella",
           "confidence": 0.72,
-          "exercises": ["E4"]
+          "exercises": [
+            "E4"
+          ]
         }
       },
       {
@@ -219,7 +262,9 @@
           "source": "pilloni-francesco",
           "target": "moscon-laura",
           "confidence": 0.65,
-          "exercises": ["E4"]
+          "exercises": [
+            "E4"
+          ]
         }
       },
       {
@@ -228,7 +273,9 @@
           "source": "pretti-agata",
           "target": "pilloni-francesco",
           "confidence": 0.6,
-          "exercises": ["E4"]
+          "exercises": [
+            "E4"
+          ]
         }
       },
       {
@@ -237,7 +284,10 @@
           "source": "pretti-agata",
           "target": "sesureac-milena",
           "confidence": 0.6,
-          "exercises": ["E3", "E5"]
+          "exercises": [
+            "E3",
+            "E5"
+          ]
         }
       },
       {
@@ -246,7 +296,9 @@
           "source": "pretti-agata",
           "target": "panizza-stella",
           "confidence": 0.57,
-          "exercises": ["E4"]
+          "exercises": [
+            "E4"
+          ]
         }
       },
       {
@@ -255,7 +307,9 @@
           "source": "bonetti-alessandra",
           "target": "lorenzi-diego",
           "confidence": 0.5,
-          "exercises": ["E4"]
+          "exercises": [
+            "E4"
+          ]
         }
       },
       {
@@ -264,7 +318,9 @@
           "source": "bonetti-alessandra",
           "target": "battocletti-alessandro",
           "confidence": 0.45,
-          "exercises": ["E5"]
+          "exercises": [
+            "E5"
+          ]
         }
       },
       {
@@ -273,7 +329,9 @@
           "source": "bonetti-alessandra",
           "target": "pilloni-francesco",
           "confidence": 0.4,
-          "exercises": ["E1"]
+          "exercises": [
+            "E1"
+          ]
         }
       },
       {
@@ -282,7 +340,9 @@
           "source": "bonetti-alessandra",
           "target": "zuech-gabriele",
           "confidence": 0.4,
-          "exercises": ["E4"]
+          "exercises": [
+            "E4"
+          ]
         }
       },
       {
@@ -291,7 +351,9 @@
           "source": "panizza-stella",
           "target": "perazzolli-gianluca",
           "confidence": 0.4,
-          "exercises": ["E5"]
+          "exercises": [
+            "E5"
+          ]
         }
       },
       {
@@ -300,7 +362,9 @@
           "source": "perazzolli-gianluca",
           "target": "vurchio-riccardo",
           "confidence": 0.4,
-          "exercises": ["E2"]
+          "exercises": [
+            "E2"
+          ]
         }
       },
       {
@@ -309,7 +373,9 @@
           "source": "dagostin-davide",
           "target": "penasa-gemma",
           "confidence": 0.35,
-          "exercises": ["E2"]
+          "exercises": [
+            "E2"
+          ]
         }
       },
       {
@@ -318,7 +384,9 @@
           "source": "dagostin-davide",
           "target": "perazzolli-gianluca",
           "confidence": 0.32,
-          "exercises": ["E2"]
+          "exercises": [
+            "E2"
+          ]
         }
       },
       {
@@ -327,7 +395,9 @@
           "source": "dal-savio-daniele",
           "target": "pilloni-francesco",
           "confidence": 0.35,
-          "exercises": ["E1"]
+          "exercises": [
+            "E1"
+          ]
         }
       },
       {
@@ -336,7 +406,9 @@
           "source": "penasa-gemma",
           "target": "vurchio-riccardo",
           "confidence": 0.3,
-          "exercises": ["E2"]
+          "exercises": [
+            "E2"
+          ]
         }
       }
     ]

@@ -169,6 +169,8 @@ Nodo:
 
 - `data.id`: slug dello studente, uguale al nome di `correzioni/<studente>.json` e `risposte/<studente>/`.
 - `data.seat`: posto a sedere, ad esempio `"fila 1, banco 1"`, ricavato da `misc/dislocazione.typ`.
+- `data.confidence`: numero facoltativo da `0` a `1`; disegna un contorno tanto più spesso quanto è alto il valore.
+- `data.exercise-notes`: oggetto facoltativo `ID esercizio -> testo`; cliccando il nodo si apre la nota accanto alla risposta dello studente.
 - `style.label`: nome mostrato, ad esempio `"Cognome\nNome"`.
 
 Arco:
