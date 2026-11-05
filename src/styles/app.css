@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @import "./global.css";
 @import "./theme.css";
-@import "@fontsource/inter/latin-400.css";
-@import "@fontsource/inter/latin-600.css";
-@import "@fontsource/inter/latin-700.css";
+
+/*
+  Inter is served by the main deployment at the origin root, the one URL both
+  sites can share. Using the same URL (instead of this deployment's own
+  `/_astro` copy) makes the browser cache survive navigating between the two
+  sites, so the incoming document never paints with a fallback font during the
+  cross-document view transition. `astro.config.mjs` serves the packaged copy
+  at this same path during local development.
+  `font-display: block` keeps the first paint waiting for the (preloaded) font
+  instead of showing the fallback and swapping it a moment later.
+*/
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+}

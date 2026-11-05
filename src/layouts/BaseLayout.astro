@@ -1,8 +1,5 @@
 ---
 import '@/styles/app.css';
-import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
-import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2?url';
-import inter700 from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
 import { ClientRouter } from 'astro:transitions';
 import { withBase } from '@/utils/base';
 
@@ -30,11 +27,17 @@ const { title, description = '', lang = 'it', robots } = Astro.props;
     {description && <meta name="description" content={description} />}
     {robots && <meta name="robots" content={robots} />}
     <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
-    <!-- Preload the above-the-fold Inter weights so the `font-display: swap`
-         fallback is replaced before/around the first paint (avoids the FOUT). -->
-    <link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={inter700} as="font" type="font/woff2" crossorigin />
+    <!-- One variable font covers every weight. This root-relative URL resolves
+         to the main deployment's copy in production (same URL as the main site,
+         so it is already cached across navigations between the two sites) and
+         to the dev-server copy locally. -->
+    <link
+      rel="preload"
+      href="/fonts/inter-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <script is:inline>
       function getStoredTheme() {
         try {

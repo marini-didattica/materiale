@@ -87,6 +87,12 @@ Per compilare i documenti Typst serve il comando `typst` nel `PATH`
 ([installazione](https://github.com/typst/typst#installation)); la CI usa la
 versione `0.15.1`.
 
+Il font Inter è servito dal sito principale su `/fonts/`: è l'unico URL che i
+due deployment condividono, quindi la cache del browser sopravvive alla
+navigazione tra i due siti. In sviluppo `astro.config.mjs` espone la copia di
+`@fontsource-variable/inter` sullo stesso percorso; in produzione il sito
+principale deve essere deployato con `public/fonts/`.
+
 ## Materiale e codici
 
 `content/students.json` descrive ogni area riservata: la chiave è la cartella
