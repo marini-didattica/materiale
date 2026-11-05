@@ -9,7 +9,7 @@
           "seat": "fila 1, banco 1",
           "confidence": 0.35,
           "exercise-notes": {
-            "E5": "Usa `l(i)` (una chiamata) invece di `l[i]` e l'indice `i-1-i`, che non realizza il confronto simmetrico. Il codice non funziona e il ragionamento è diverso da quello del resto della classe."
+            "E5": "Usa `l(i)` (una chiamata) invece di `l[i]` e l'indice `i-1-i`, che vale sempre -1: il confronto simmetrico non avviene e il codice termina con un errore. Nessun altro studente usa questa costruzione."
           }
         },
         "style": {
@@ -247,9 +247,9 @@
       },
       {
         "data": {
-          "id": "pilloni-francesco--panizza-stella--e4",
-          "source": "pilloni-francesco",
-          "target": "panizza-stella",
+          "id": "panizza-stella--pilloni-francesco--e4",
+          "source": "panizza-stella",
+          "target": "pilloni-francesco",
           "confidence": 0.72,
           "exercises": [
             "E4"
@@ -258,9 +258,9 @@
       },
       {
         "data": {
-          "id": "pilloni-francesco--moscon-laura--e4",
-          "source": "pilloni-francesco",
-          "target": "moscon-laura",
+          "id": "moscon-laura--pilloni-francesco--e4",
+          "source": "moscon-laura",
+          "target": "pilloni-francesco",
           "confidence": 0.65,
           "exercises": [
             "E4"
@@ -269,9 +269,9 @@
       },
       {
         "data": {
-          "id": "pretti-agata--pilloni-francesco--e4",
-          "source": "pretti-agata",
-          "target": "pilloni-francesco",
+          "id": "pilloni-francesco--pretti-agata--e4",
+          "source": "pilloni-francesco",
+          "target": "pretti-agata",
           "confidence": 0.6,
           "exercises": [
             "E4"
@@ -280,21 +280,9 @@
       },
       {
         "data": {
-          "id": "pretti-agata--sesureac-milena--e3",
-          "source": "pretti-agata",
-          "target": "sesureac-milena",
-          "confidence": 0.6,
-          "exercises": [
-            "E3",
-            "E5"
-          ]
-        }
-      },
-      {
-        "data": {
-          "id": "pretti-agata--panizza-stella--e4",
-          "source": "pretti-agata",
-          "target": "panizza-stella",
+          "id": "panizza-stella--pretti-agata--e4",
+          "source": "panizza-stella",
+          "target": "pretti-agata",
           "confidence": 0.57,
           "exercises": [
             "E4"
@@ -314,9 +302,9 @@
       },
       {
         "data": {
-          "id": "bonetti-alessandra--battocletti-alessandro--e5",
-          "source": "bonetti-alessandra",
-          "target": "battocletti-alessandro",
+          "id": "battocletti-alessandro--bonetti-alessandra--e5",
+          "source": "battocletti-alessandro",
+          "target": "bonetti-alessandra",
           "confidence": 0.45,
           "exercises": [
             "E5"
@@ -380,23 +368,23 @@
       },
       {
         "data": {
-          "id": "dagostin-davide--perazzolli-gianluca--e2",
-          "source": "dagostin-davide",
-          "target": "perazzolli-gianluca",
-          "confidence": 0.32,
-          "exercises": [
-            "E2"
-          ]
-        }
-      },
-      {
-        "data": {
           "id": "dal-savio-daniele--pilloni-francesco--e1",
           "source": "dal-savio-daniele",
           "target": "pilloni-francesco",
           "confidence": 0.35,
           "exercises": [
             "E1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "dagostin-davide--perazzolli-gianluca--e2",
+          "source": "dagostin-davide",
+          "target": "perazzolli-gianluca",
+          "confidence": 0.32,
+          "exercises": [
+            "E2"
           ]
         }
       },
