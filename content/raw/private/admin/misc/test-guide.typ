@@ -149,6 +149,75 @@ wm exam deploy <exam-dir> --force
 
 Senza `--force` i file già presenti non vengono sovrascritti.
 
+== Grafo delle copie
+
+File facoltativo: `misc/grafo-copie.json`.
+Serve al visualizzatore del checker per mostrare le coppie di risposte sospette.
+
+Campi principali:
+
+#table(
+  columns: (auto, 1fr),
+  [*Campo*], [*Uso*],
+  [`name`], [Titolo mostrato dal visualizzatore.],
+  [`test-folder`], [Cartella della prova, relativa al file del grafo; per `misc/grafo-copie.json` è `".."`.],
+  [`elements.nodes`], [Un nodo per studente che ha svolto la prova.],
+  [`elements.edges`], [Un arco per ogni coppia di risposte sospette.],
+)
+
+Nodo:
+
+- `data.id`: slug dello studente, uguale al nome di `correzioni/<studente>.json` e `risposte/<studente>/`.
+- `data.seat`: posto a sedere, ad esempio `"fila 1, banco 1"`, ricavato da `misc/dislocazione.typ`.
+- `style.label`: nome mostrato, ad esempio `"Cognome\nNome"`.
+
+Arco:
+
+- `data.id`: identificativo unico dell'arco.
+- `data.source` e `data.target`: ID dei due studenti.
+- `data.confidence`: numero da `0` a `1`; più è alto, più la coppia è sospetta.
+- `data.exercises`: ID degli esercizi con risposte troppo simili.
+
+Esempio minimo:
+
+```json
+{
+  "name": "2C · Prova 1 · copie sospette",
+  "test-folder": "..",
+  "elements": {
+    "nodes": [
+      {
+        "data": { "id": "bonetti-alessandra", "seat": "fila 1, banco 2" },
+        "style": { "label": "Bonetti\nAlessandra" }
+      },
+      {
+        "data": { "id": "lorenzi-diego", "seat": "fila 2, banco 1" },
+        "style": { "label": "Lorenzi\nDiego" }
+      }
+    ],
+    "edges": [
+      {
+        "data": {
+          "id": "bonetti-alessandra--lorenzi-diego--e4",
+          "source": "bonetti-alessandra",
+          "target": "lorenzi-diego",
+          "confidence": 0.5,
+          "exercises": ["E4"]
+        }
+      }
+    ]
+  }
+}
+```
+
+Regole:
+
+- Ogni studente presente ha un nodo; gli studenti assenti possono mancare.
+- Creare archi solo per coppie con risposte anomale: nessun arco significa nessun sospetto.
+- `confidence` misura la somiglianza delle risposte, non la distanza fisica.
+- La vicinanza di banco aumenta la probabilità di copiatura: usarla per valutare i casi limite.
+- Gli ID in `exercises` devono esistere nel descrittore e avere una risposta in tutte le correzioni collegate.
+
 == Documenti Typst
 
 Un documento per set contiene solo il caricamento del descrittore:
