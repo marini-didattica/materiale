@@ -1,6 +1,8 @@
 ---
+import Card from '@/components/Card.astro';
 import Explorer from '@/components/Explorer.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
+import { CHECKER_URL } from '@/consts';
 import { getAdminDirectoryPages } from '@/lib/content-index';
 import type { BreadcrumbItem } from '@/types';
 import { withBase } from '@/utils/base';
@@ -56,6 +58,16 @@ const zipName = buildZipName(['amministrazione', ...segments]);
   robots="noindex, nofollow"
   stableHeader
 >
+  {segments.length === 0 && (
+    <Card href={CHECKER_URL} class="mb-8">
+      <h2 class="mb-2 text-xl font-bold">Grafo delle correzioni</h2>
+      <p class="leading-relaxed text-text-secondary">
+        Apri il visualizzatore dei grafi: confronta gli esercizi degli studenti e la loro
+        somiglianza, correzione per correzione.
+      </p>
+    </Card>
+  )}
+
   <Explorer
     entries={entries}
     crumbs={crumbs}

@@ -10,6 +10,9 @@ export const MAIN_SITE_URL = 'https://marini-didattica.github.io/';
 /** Reserved-area access page hosted by the main didactic site. */
 export const AREA_URL = 'https://marini-didattica.github.io/area-riservata/';
 
+/** Cheating-graph viewer, available to teachers from the admin dashboard. */
+export const CHECKER_URL = 'https://marini-didattica.github.io/checker/';
+
 /** Browser root for public material. */
 export const PUBLIC_ROOT = withBase('/public/');
 
