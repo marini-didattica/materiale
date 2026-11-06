@@ -1,0 +1,1 @@
+L'istruzione è ciò che noi comandiamo al computer di fare sotto forma di codici e questi insieme di codici vengono chiamati instruction set.

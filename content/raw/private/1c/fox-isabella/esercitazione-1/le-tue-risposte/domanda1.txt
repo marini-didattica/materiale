@@ -1,0 +1,6 @@
+le componenti di un computer sono: la gpu, la mente del computer. Riceve i segnali in codice binario, li elabora e li trasmette alle altre parti del computer.
+                                   il disco rigido è la memoria a lungo termine de computer dove si salvano i dati più importanti
+                                   la cpu è la memoria a breve termine 
+                                   la tastiera che ha funzione di imput perchè è attraverso di essa che inviamo i dati alla gpu e poi allo shermo
+                                   il processore rende il computer quello che è, lo rende più veloce
+                                   il sistema di raffreddamento serve per evitare che il compèuter si surriscaldi e quindi di esplodere praticamente

@@ -1,0 +1,42 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1d/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Lorenzo Angeli",
+  "class": "1D",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda1.txt",
+      "score": 5.0,
+      "comment": "Bene, hai citato RAM, disco, CPU e ventole. Prova ad aggiungere una quinta componente e a dire in una frase a cosa serve."
+    },
+    "D2": {
+      "answer-file": "domanda2.txt",
+      "score": 5.0,
+      "comment": "L'idea del binario c'è, prova a distinguere meglio numeri e caratteri: i numeri si salvano in base 2, i caratteri con una codifica (tipo ASCII)."
+    },
+    "D3": null,
+    "E1": {
+      "answer-file": "es1.py",
+      "score": 4.0,
+      "comment": "Qui l'idea dei pari c'è, ma il programma stampa i numeri invece di contarli. Inoltre l'incremento di `i` è fuori dal ciclo: l'applicazione va in loop infinito."
+    },
+    "E2": {
+      "answer-file": "es2.py",
+      "score": 14.0,
+      "comment": "Hai impostato la somma, ma manca l'incremento di `i` e la stampa finale. Siccome manca l'incremento, il ciclo va in loop infinito."
+    },
+    "E3": {
+      "answer-file": "es3.py",
+      "score": 5.0,
+      "comment": "Stai provando a confrontare una lista (`l`) con un intero (`1`, `b`). Questo non è valido in Python. Manca anche l'idea di base, scorrere la lista e verificare che l'elemento corrente sia nel range."
+    },
+    "S1": null,
+    "S2": null,
+    "S3": null
+  }
+}

@@ -1,0 +1,6 @@
+I rpincipali componenti sono:
+-il CPU: il processre che permette al pc di funzionare
+-la RAM: è la memoria temporanea che si resetta a ogni spegnimento del computer
+-la GPU: è il componente che gestisce i processi grafici
+-la scheda madre: è il componente ch permette di far lavorare tra loro tutti gli altri componenti 
+-il disco fisso: la memoria fissa del computer che non si resetta anche dopo che il PC è stato spento.

@@ -1,0 +1,34 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1c/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Giulia Inama",
+  "class": "1C",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda1.txt",
+      "score": 4.5,
+      "comment": "Cinque componenti, ma alcune definizioni sono imprecise: la GPU non è la mente del computer (lo è la CPU) e la CPU non è la memoria a breve termine (lo è la RAM). Risposta particolarmente simile a quella della tua compagna di banco..."
+    },
+    "D2": {
+      "answer-file": "domanda2.txt",
+      "score": 7.0,
+      "comment": "Bene, tolgo un punto perché non hai citato la codifica in base 2 per rappresentare i numeri."
+    },
+    "D3": null,
+    "E1": {
+      "answer-file": "esercizio1.py",
+      "score": 10.0,
+      "comment": "La logica è corretta, ma il ciclo si ferma a `i < n`: per `n = 10` conti 5 pari invece di 6, perché `10` viene escluso. Andrebbe messo `i <= n`."
+    },
+    "E2": null,
+    "E3": null,
+    "S1": null,
+    "S2": null,
+    "S3": null
+  }
+}

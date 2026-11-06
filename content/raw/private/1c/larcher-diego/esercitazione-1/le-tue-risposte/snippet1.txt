@@ -1,0 +1,1 @@
+questo codice legge i voti scritti con la variabile v  e stampa un' nnumero che è la quantità di numeri dentro le parentesi

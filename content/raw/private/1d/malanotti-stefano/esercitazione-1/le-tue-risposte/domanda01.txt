@@ -1,0 +1,6 @@
+Le principali componenti di un computer sono:
+1.disco rigido: memoria fissa (viene aggiornata allo spegnimento da CAM).
+2.CPU: processore (che comanda ogni azione, e può farne al massimo una per volta).
+3.scheda grafica: processore (con utilità grafica e capace di più azioni alla volta).
+4.CAM: memoria poco stabile (dura dall'accensione allo spegnimento del computer).
+5.scheda madre: pezzo che tiene insieme CPU e CAM (e aiuta con tutti i vari collegamenti interni).

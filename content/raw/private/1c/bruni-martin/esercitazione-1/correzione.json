@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1c/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Martin Bruni",
+  "class": "1C",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda1.txt",
+      "score": 7.0,
+      "comment": "Cinque componenti ben descritte. Piccola imprecisione: si dice LA CPU."
+    },
+    "D2": {
+      "answer-file": "domanda2.txt",
+      "score": 4.5,
+      "comment": "Hai detto correttamente che i numeri sono in binario, ma non hai spiegato come si salvano caratteri e parole (codifica ASCII o Unicode)."
+    },
+    "D3": null,
+    "E1": {
+      "answer-file": "esercizio1.py",
+      "score": 10.0,
+      "comment": "Perfetto: corretto e idiomatico."
+    },
+    "E2": {
+      "answer-file": "esercizio2.py",
+      "score": 20.0,
+      "comment": "Perfetto: corretto e idiomatico."
+    },
+    "E3": {
+      "answer-file": "esercizio3.py",
+      "score": 1.0,
+      "comment": "La consegna chiedeva di verificare che tutti gli elementi della lista fossero nell'intervallo: stampare `len(l)` non c'entra. Serve un ciclo, che controlli ogni elemento."
+    },
+    "S1": {
+      "answer-file": "snippet1.txt",
+      "score": 10.0,
+      "comment": "Perfetto: ordine inverso e output corretti."
+    },
+    "S2": {
+      "answer-file": "snippet2.txt",
+      "score": 2.0,
+      "comment": "Non è vero che i valori restano uguali: con `c = a`, `a = b`, `b = c` le due variabili si scambiano. L'output è `8 5`."
+    },
+    "S3": null
+  }
+}

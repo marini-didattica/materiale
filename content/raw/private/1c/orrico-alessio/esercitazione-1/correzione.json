@@ -1,0 +1,38 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1c/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Alessio Orrico",
+  "class": "1C",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda1.txt",
+      "score": 4.5,
+      "comment": "Ci sono tante idee e altrettante imprecisioni. La GPU non dà qualità visiva; si occupa di elaborare immagini e, più in generale di eseguire istruzioni in parallelo. Inoltre non è il cervello del computer: il ruolo di esecuzione spetta alla CPU. Occhio che GPU e scheda video sono la stessa cosa."
+    },
+    "D2": {
+      "answer-file": "domanda2.txt",
+      "score": 6.0,
+      "comment": "Buona spiegazione del codice binario e della combinazione di bit per numeri e lettere. Manca un riferimento esplicito alla base 2 e alla tabella ASCII."
+    },
+    "D3": {
+      "answer-file": "domanda3.txt",
+      "score": 4.5,
+      "comment": "Va bene! Sottolinea che i codici sono binari."
+    },
+    "E1": null,
+    "E2": null,
+    "E3": null,
+    "S1": {
+      "answer-file": "snippet1.txt",
+      "score": 10.0,
+      "comment": "Corretto: hai colto l'ordine inverso e riportato l'output. Per la precisione l'output è su righe separate, non separato da trattini."
+    },
+    "S2": null,
+    "S3": null
+  }
+}

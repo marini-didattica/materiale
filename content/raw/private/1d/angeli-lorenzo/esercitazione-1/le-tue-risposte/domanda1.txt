@@ -1,0 +1,5 @@
+Domanda 1
+    RAM: memoria a breve termine del computer e serve per azioni momentanee che non devono essere salvate
+    Disco rigido: memoria a lungo termine del computer 
+    Processore/CPU: esegue tutti i calcoli
+    Ventole:servono per nonfar surriscaldare il computer

@@ -1,0 +1,4 @@
+domanda 2)
+
+Vengono salvati e scritti dei caratteri con il codice binario che è una sequenza di numeri di 0 e 1.
+In base a come sono scritti in sequenza questi numeri corrisponde una lettera o un carattere.

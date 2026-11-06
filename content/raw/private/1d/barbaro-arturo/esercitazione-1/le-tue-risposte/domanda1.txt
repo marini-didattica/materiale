@@ -1,0 +1,6 @@
+GPU:calcola velocemente vari calcoli in parallelo ma non è molto preciso.Serve soprattutto per la grafica.
+CPU: calcola un calcolo alla volta ed è molto precisa
+Scheda madre: unisce tutti i componenti
+Memoria a breve termine: ricorda cose non salvate, ma quandoviene spento il computer le dimentica.
+Disco rigido: ricorda le cose salvate.
+impianto raffredante: raffreda li componenti, soprattutto la GPU 

@@ -1,0 +1,1 @@
+il codice scrive quanti numeri pari ci sono tra lo 0 e la nel

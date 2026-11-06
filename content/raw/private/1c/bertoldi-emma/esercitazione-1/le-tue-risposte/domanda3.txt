@@ -1,0 +1,2 @@
+Un' istruzione è una cosa che noi diciamo di fare al computer ed esso lo legge in ordine come lo scriviamo,dobbiamo scrivere tutti ipassaggi e non saltare o lasciare in sottinteso niente perchè il computer esegue solo quello che diciamo noi.
+L'instruction set è tutto quello che scriviamo noi.

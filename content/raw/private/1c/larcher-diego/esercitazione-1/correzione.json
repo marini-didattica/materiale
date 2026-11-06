@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1c/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Diego Larcher",
+  "class": "1C",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda1.txt",
+      "score": 5.5,
+      "comment": "Cinque componenti con scopi chiari. Occhio però: la memoria da sola è troppo generica, meglio distinguere RAM e disco; inoltre dire che la GPU \"fa girare le immagini\" è un po' troppo vago."
+    },
+    "D2": {
+      "answer-file": "domanda2.txt",
+      "score": 1.5,
+      "comment": "La memoria è dove i dati vengono conservati, ma non spieghi come: servono il codice binario e la codifica dei caratteri. Il comando leggi era una cosa inventata da noi per usarla nel giochino del robottino, ma quella parte lì l'abbiamo conclusa e archiviata quasi due mesi fa..."
+    },
+    "D3": {
+      "answer-file": "domanda3.txt",
+      "score": 1.0,
+      "comment": "Definizione molto confusa: un'istruzione è un'operazione elementare che la CPU esegue, rappresentata in binario. Non hai parlato dell'instruction set. Anche qui, il robot non c'entra."
+    },
+    "E1": {
+      "answer-file": "esercizio1.py",
+      "score": 7.0,
+      "comment": "Il programma stampa i numeri invece di contarli e l'incremento di `i` è dentro l'`if`: quando `i` diventa dispari il ciclo non avanza più, causando un loop infinito."
+    },
+    "E2": null,
+    "E3": null,
+    "S1": {
+      "answer-file": "snippet1.txt",
+      "score": 3.0,
+      "comment": "La descrizione è troppo vaga: il codice stampa gli elementi della lista dal fondo all'inizio. Manca l'output, cioè `9, 1, 7, 3`."
+    },
+    "S2": {
+      "answer-file": "snippet2.txt",
+      "score": 1.0,
+      "comment": "Cosa vuol dire? La risposta non descrive lo scambio: `c` conserva il valore di `a`, poi `a` prende `b` e `b` riprende il vecchio `a`. L'output è `8 5`."
+    },
+    "S3": {
+      "answer-file": "snippet3.txt",
+      "score": 8.0,
+      "comment": "Penso che tu abbia capito, ma ciò che hai scritto non ha un significato. Cerca di curare la forma. Manca l'output, cioè `0, 2, 4, 6, 8, 10`."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1d/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Damian Dalpiaz",
+  "class": "1D",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": null,
+    "D2": null,
+    "D3": null,
+    "E1": {
+      "answer-file": "esecitazione1.py",
+      "score": 6.0,
+      "comment": "La logica è giusta, però non fa ciò che chiede la consegna. Qui stai contando i numeri pari contenuti in una lista; la consegna chiedeva di contare i numeri pari contenuti fra `0` e `n`!"
+    },
+    "E2": {
+      "answer-file": "esercitazione2.py",
+      "score": 4.0,
+      "comment": "Hai impostato il ciclo, ma stai stampando i numeri invece della loro somma."
+    },
+    "E3": null,
+    "S1": null,
+    "S2": null,
+    "S3": null
+  }
+}

@@ -1,0 +1,11 @@
+domanda 7)
+
+
+Perché tu stai dicendo con I = len(v) - 1 che I è nell'ultima casella della lista, poi con While I >= 0 stai dicendo finché I è maggiore o uguale a 0, che è la lunghezza della lista, stampa il numero della lista dove si trova I (print(v[i])) e poi I = I - 1 serve per far scorrere alla I la tua lista.
+così la I legge il numero della lista dove si trova e lo stampa finché I è contenuta nella tua lista.
+
+output
+9
+1
+7
+3

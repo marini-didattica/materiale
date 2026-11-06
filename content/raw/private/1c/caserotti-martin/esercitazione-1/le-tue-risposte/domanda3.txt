@@ -1,0 +1,2 @@
+Un'istruzione è di base un codice che diamo al computer che lui traduce ed esegue di conseguenza.
+L'instruction set è una serie di informazioni che il computer fa eseguendo poi un'azione

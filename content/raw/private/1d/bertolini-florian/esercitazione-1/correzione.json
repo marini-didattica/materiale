@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1d/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Florian Bertolini",
+  "class": "1D",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": null,
+    "D2": null,
+    "D3": null,
+    "E1": {
+      "answer-file": "esercitazione 4.py",
+      "score": 0.0,
+      "comment": "Manca tutta l'implementazione."
+    },
+    "E2": null,
+    "E3": null,
+    "S1": null,
+    "S2": null,
+    "S3": null
+  }
+}

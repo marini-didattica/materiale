@@ -1,0 +1,8 @@
+Sappiamo che:
+-n = 10 
+-i = 0 
+
+Cosa stiamo facendo?
+-con il comando while stiamo eseguendo: affinché la variabile i e minore uguale a n, se la variabile i %( il segno % seve ad indicare il rsto della divisione) 2 è uguale a 0.. stampiamo la variabile i. Infine la variabile i e uguale a se stesso + 1 
+
+Quindi con questo comando stiamo contando i numeri pari che sono tra 0 e 10.

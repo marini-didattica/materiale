@@ -1,0 +1,2 @@
+i dati importanti come per esmpio le foto, password, file in gnerale vengono salvati nell'hard disk (disco rigitdo) sotto forma di datoi in codice binario in un ordine specifico e diverso per ogni file.
+ogni lettera corrisponde a un ordine diverso di 1 e 0 così come il resto dei caratteri

@@ -1,0 +1,1 @@
+un' istruzione di un processore è un' ordine imposto dal utente del computer tramite dei codici e spesso questo comando viene rappresentato da un' robot

@@ -1,0 +1,54 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1c/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Francesco Pizzolla",
+  "class": "1C",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda1.txt",
+      "score": 7.0,
+      "comment": "Ottima risposta: cinque componenti con ruoli ben distinti. Piccola imprecisione: la RAM è la memoria di lavoro temporanea, non la memoria dei dati in generale."
+    },
+    "D2": {
+      "answer-file": "domanda2.txt",
+      "score": 7.5,
+      "comment": "Molto bene: base 2 per i numeri e ASCII per i caratteri. Cura l'ortografia (ASCII, non aschii) e accenna al fatto che ogni carattere ha un codice numerico."
+    },
+    "D3": {
+      "answer-file": "domanda3.txt",
+      "score": 5.0,
+      "comment": "Risposta convincente: istruzione tradotta in binario e instruction set come insieme condiviso di istruzioni. Manca solo un accenno esplicito all'assembly."
+    },
+    "E1": {
+      "answer-file": "esercizio1.py",
+      "score": 8.0,
+      "comment": "Il conteggio dei pari c'è, ma il programma stampa anche tutti i numeri e l'incremento doppio dentro l'`if` salta i dispari. Il risultato per `n = 7` è sbagliato: serve un solo incremento e una sola stampa finale."
+    },
+    "E2": {
+      "answer-file": "esercizio2.py",
+      "score": 10.0,
+      "comment": "Il file è incompleto (`if` senza condizione): il programma non può funzionare. La struttura del ciclo è impostata, ma manca il corpo che accumula la somma."
+    },
+    "E3": null,
+    "S1": {
+      "answer-file": "snippet1.txt",
+      "score": 10.0,
+      "comment": "Hai capito l'ordine inverso e l'output, ma hai scritto ordine decrescente: non è un ordinamento, è la lista letta dal fondo."
+    },
+    "S2": {
+      "answer-file": "snippet2.txt",
+      "score": 10.0,
+      "comment": "Perfetto: lo scambio tramite `c` è spiegato e l'output è corretto."
+    },
+    "S3": {
+      "answer-file": "snippet3.txt",
+      "score": 10.0,
+      "comment": "Bene: hai riconosciuto i pari e riportato l'output. Piccola imprecisione: il ciclo parte da `i = 0`, non da `1`, e stampa i valori, non li conta."
+    }
+  }
+}

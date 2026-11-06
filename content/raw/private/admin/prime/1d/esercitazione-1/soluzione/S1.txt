@@ -1,0 +1,12 @@
+Il programma stampa tutti gli elementi della lista v, in ordine invertito. E' importante notare che tre elementi
+- i parte da len(v)-1
+- i arriva fino a 0 COMPRESO
+- a ogni iterazione i viene diminuito di 1
+
+Questo perchè gli elementi vanno stampati al contrario e gli indici delle liste partono da 0
+
+Output:
+9
+1
+7
+3

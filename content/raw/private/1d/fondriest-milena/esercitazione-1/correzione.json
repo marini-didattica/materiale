@@ -1,0 +1,34 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1d/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Milena Fondriest",
+  "class": "1D",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda1.txt",
+      "score": 6.0,
+      "comment": "Bene, cinque componenti con scopi brevi e corretti. Occhio che la scheda madre non è 'il cervello' del computer, ma si limita a interconnettere i vari componenti"
+    },
+    "D2": null,
+    "D3": null,
+    "E1": {
+      "answer-file": "es1.py",
+      "score": 8.0,
+      "comment": "Bene il conteggio! Però stampi dentro il ciclo: sposta `print(conta)` fuori e otterrai solo il risultato finale."
+    },
+    "E2": {
+      "answer-file": "es2.py",
+      "score": 10.0,
+      "comment": "Lo scheletro di base è corretto. Ci sono due errori grossi però; `i = i + i` non incrementa `i`, lo lascia a zero; anche `somma = somma` non incrementa nulla."
+    },
+    "E3": null,
+    "S1": null,
+    "S2": null,
+    "S3": null
+  }
+}

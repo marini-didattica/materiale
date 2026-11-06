@@ -1,0 +1,42 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/barbaro-arturo",
+	"test-json": "../testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Arturo Barbaro",
+	"class": "1D",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 7.0,
+			"comment": "Bene. Occhio però che non è vero che la GPU \"non è precisa\". La differenza rispetto alla CPU è proprio che i calcoli vengono eseguiti in parallelo, anziché in serie."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 6.0,
+			"comment": "Bene il binario e i byte. Occhio che per immagazzinare i caratteri si usano le TABELLE ASCII, non linguaggi \"huski\"!"
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 4.0,
+			"comment": "L'idea di comando c'è; completa dicendo che l'istruzione è in binario e che l'instruction set è l'insieme delle istruzioni della CPU."
+		},
+		"E1": {
+			"answer-file": "es1.py",
+			"score": 10.0,
+			"comment": "Ottimo! Sei stato uno dei pochi che non è cascato nel tranello di usare i cicli. La formula funziona; c'è solo il dettaglio che con `n` dispari stampa `4.0` invece di `4`. Sarebbe meglio usare `//` (che arrotonda per difetto)."
+		},
+		"E2": {
+			"answer-file": "es2.py",
+			"score": 20.0,
+			"comment": "Perfetto, corretto e idiomatico."
+		},
+		"E3": null,
+		"S1": null,
+		"S2": null,
+		"S3": null
+	}
+}

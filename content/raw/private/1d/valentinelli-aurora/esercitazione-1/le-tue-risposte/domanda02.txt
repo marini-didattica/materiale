@@ -1,0 +1,1 @@
+Vengono salvati grazie al codice binario, un codice composto unicamente da 0 e 1 ripetuti tante volte. A seconda della combinazione abbiamo un numero o una lettera diversi

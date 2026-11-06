@@ -1,0 +1,6 @@
+componenti di computer
+la gpu è la mente del computer dove arrivano tutti i codici binari
+il disco rigido è dove vengono salvati i dati è la memoria a lungo termine del computer
+il processore è quello che fa andare tutto il meccanismo ed esegue i comandi che noi diamo al computer
+la tastiera è dove,schiacciando i tasti, arrivano i dati al computer
+la cpu è la memoria a breve termine

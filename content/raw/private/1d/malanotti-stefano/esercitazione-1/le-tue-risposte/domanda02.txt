@@ -1,0 +1,1 @@
+I numeri vengono salvati nella CAM o nel disco rigido sotto forma di codice di 1 e 0 da 8 cifre o 8 bit che messi insieme formano lettere e numeri e cosi parole. 1 e 0 sono sbalzi di energia: quando c'è ne poca 0, altrimenti 1. Questi codici vengono trascritti grazie a programmi che lo traducono. 

@@ -1,0 +1,1 @@
+I numeri vengono immagazinatati nel computer da una "memoria". Per esempio se a vale 5 lui salva nella memoria di A 5, e così funziona anche per B e C. I valori che tu gli dai li cambia anche se prima aveva un altro valore

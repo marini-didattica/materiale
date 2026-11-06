@@ -1,0 +1,6 @@
+Un istruzione che viene data al computer in  modo perciso e dettagliato con sintassi precisa.
+Un instruction set sono delle sintassi percise con regole e significati precisi per esempio  if, elif, else, print.
+if  primo controllo, obbligatorio;
+elif  controllato solo se i precedenti erano falsi;
+else nessuna condizione, ultima alternativa (può mancare);
+di tutta la catena si esegue un solo blocco.

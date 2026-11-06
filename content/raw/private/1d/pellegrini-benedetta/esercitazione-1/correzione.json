@@ -1,0 +1,36 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1d/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Benedetta Pellegrini",
+  "class": "1D",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda_1.txt",
+      "score": 3.0,
+      "comment": "Ok. Occhio che è LA CPU, non IL CPU. Mancano descrizioni e almeno un'altra componente."
+    },
+    "D2": {
+      "answer-file": "domanda_2.txt",
+      "score": 3.0,
+      "comment": "Hai parlato di memoria e variabili; avresti dovuto collegarti al codice binario e a come si possano rappresentare numeri e caratteri con questo. In particolare mi sarei aspettato un accenno a codifica in base 2 e tabelle ASCII."
+    },
+    "D3": null,
+    "E1": {
+      "answer-file": "esercizio_1.py",
+      "score": 2.0
+    },
+    "E2": {
+      "answer-file": "esercizio_2.py",
+      "score": 2.0
+    },
+    "E3": null,
+    "S1": null,
+    "S2": null,
+    "S3": null
+  }
+}

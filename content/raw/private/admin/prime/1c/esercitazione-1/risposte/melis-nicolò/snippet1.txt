@@ -1,0 +1,1 @@
+il primo frammneto stampa la media  prodotta dqai numeri all interno dell'output di V

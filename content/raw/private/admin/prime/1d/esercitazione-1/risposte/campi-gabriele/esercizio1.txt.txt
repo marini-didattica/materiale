@@ -1,0 +1,11 @@
+domanda 1)
+
+la GPU è la scheda grafica che serve per eseguire più compiti nello stesso momento; per esempio la GPU legge tutti i pixel dl monitor. Serve anche per gli fps su dei videogiochi che sono la velocità i aggiornamento dei pixel quindi grazie alla GPU che aggiorna più velocemente i pixel si fanno più fps e maggiori compiti allo stesso tempo.
+
+la CPU è il processore e serve per coordinare e dire cosa fare agli altri componenti del tuo pc.
+
+le RAM sono lo spazio di memoria temporaneo quindi quello che una volta spento il pc nn si salva, serve di solito per l'IA per questo in questo anno il loro prezzo è aumentato di 3 volte quasi.
+
+Il dissipatore serve per far raffreddare la CPU e la GPU grazie a del rame che prende il calore e poi ad un liquido che contiene il dissipatore si raffreddano questi componenti.
+
+le ventole servono anche loro per raffreddare l'intero pc prendendo aria fresca dall'esterno e buttando fuori il calore che è contenuto all'interno del case in quel momento

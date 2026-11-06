@@ -1,0 +1,1 @@
+Un processore non esegue il codice come lo vediamo noi, quest'ultimo, viene elaborato e trasformato in codice binario (un insieme di 0 e 1), un instruction set è una base di instruzioni prestabilite che servono per "mettere d'accordo" i produttori di processori su come il processore interpreterà il codice. 

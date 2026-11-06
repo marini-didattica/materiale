@@ -1,0 +1,6 @@
+i 5 componenti del computer sono:
+CPU : è il cervello del computer
+scheda video : è il componente che fa girare le immagini
+scheda madre : è il componente che collega tutti gli altri
+scheda audio : è il componente che fa funzionare i suoni del computer
+memoria : è il componente che "immagaizza" i dati del computer 

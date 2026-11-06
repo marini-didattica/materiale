@@ -1,0 +1,1 @@
+I numeri sono immagazzinati attraverso il codice binario che viene scritto attraverso i numeri 0 e 1. Ogni lettrera e ogni numero è composto da un'insiem di 0 e 1.

@@ -1,0 +1,1 @@
+Questo codice stampa la lista v al contrario, quindi stampa 9,1,7,3

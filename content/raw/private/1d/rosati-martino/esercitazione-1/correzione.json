@@ -1,0 +1,38 @@
+{
+  "$schema": "../../../admin/misc/correction.schema.json",
+  "answer-folder": "le-tue-risposte",
+  "test-json": "../../../admin/prime/1d/esercitazione-1/testo/esercitazione-1.json",
+  "set": "default",
+  "student-name": "Martino Rosati",
+  "class": "1D",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1",
+  "import-answers": true,
+  "exercises": {
+    "D1": {
+      "answer-file": "domanda1.txt",
+      "score": 5.0,
+      "comment": "La descrizione di memoria e disco è un po' vaga. Occhio che non è vero che la CPU è precisa e la GPU no. La differenza sta nel fatto che la prima esegue le istruzioni in maniera sequenziale (una alla volta) mentre la seconda può eseguirne molte in parallelo, ma non è più o meno precisa."
+    },
+    "D2": {
+      "answer-file": "domanda2.txt",
+      "score": 3.0,
+      "comment": "Va bene, però dovresti spiegare come una stringa di bit rappresenta un numero o un carattere. Quindi sarebbe stato opportuno citare codifica in base 2 e tabelle ASCII."
+    },
+    "D3": {
+      "answer-file": "domanda3.txt",
+      "score": 3.0,
+      "comment": "L'idea di istruzione c'è; prova a dire che è in binario e che l'instruction set è l'insieme delle istruzioni."
+    },
+    "E1": {
+      "answer-file": "es1.py",
+      "score": 2.0,
+      "comment": "Hai provato a impostare le condizioni, ma usando sintassi che non abbiamo visto, che non fa ciò che ti aspetti. Inoltre l'applicazione deve funzionare per qualsiasi input, non puoi applicare la logica a mano sull'input specifico che vi ho dato."
+    },
+    "E2": null,
+    "E3": null,
+    "S1": null,
+    "S2": null,
+    "S3": null
+  }
+}

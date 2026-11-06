@@ -1,0 +1,6 @@
+Sappiamo che le variabili a e b contengono due numeri.
+Durante l'esecuzione del programma i valori delle due variabili:
+
+- la variabile a alla fine ha il valore di : 
+- la variabile b alla fine ha il valore di : 
+

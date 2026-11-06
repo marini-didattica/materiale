@@ -1,0 +1,1 @@
+è un comando che si da al processore tramite un codice. L'istruction set è un insieme di codice.
