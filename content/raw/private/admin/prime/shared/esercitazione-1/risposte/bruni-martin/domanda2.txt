@@ -1,1 +1,0 @@
-i numeri in un computer vengono immagazzinati come codice binario.

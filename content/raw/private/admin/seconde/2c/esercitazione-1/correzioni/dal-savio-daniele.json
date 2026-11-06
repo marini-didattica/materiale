@@ -1,0 +1,35 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/dal-savio-daniele",
+	"test-json": "../../../shared/esercitazione-1/testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Daniele Dal Savio",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Va bene! Una sottigliezza: la consegna chiedeva di non stampare nulla nel caso in cui vi fosse una lista vuota. Per queste piccole cose però non vi penalizzo, quindi il punteggio è pieno."
+		},
+		"E2": null,
+		"E3": null,
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 14.0,
+			"comment": "Ci sei molto vicino. Il secondo ciclo però andrebbe messo fuori dal primo; la logica è la seguente: prima calcoli il massimo globale, poi ricalcoli il massimo, considerando solo gli elementi DIVERSI dal massimo globale. Il secondo massimo trovato è la risposta all'esercizio."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 18.0,
+			"comment": "La logica è corretta. Occhio che la consegna chiedeva di filtrare `l`. Quindi `l` alla fine del programma dovrebbe contenere solo i valori positivi, mentre qui contiene ancora tutti i valori che conteneva in origine. Per ora non mi soffermo su questi aspetti \"marginali\", ma più andremo avanti più diventeranno importanti."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

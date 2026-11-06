@@ -1,5 +1,0 @@
-1. PROCESSORE: Svolge azioni velocemente ma una solo una dopo l'altra e nn contemporaneamente. Svolge i calcoli e controlla le azioni degli altri componenti
-RAM: memoria temporanea che viene salvata o cancellata sul disco rigido dopo ogni utilizzo
-DISCO RIGIDO: memoria permanente del computer 
-SCHEDA VIDEO: capace di svolgere molte azioni velocemente contemporaneamente, serve per mostrare in tempo reale quello che accade dentro il computer (forma i pixel per lo schermo che vediamo)
-SCHEDA MADRE: "cervello" del computer, coordina le operazioni e collega tutti i componenti.

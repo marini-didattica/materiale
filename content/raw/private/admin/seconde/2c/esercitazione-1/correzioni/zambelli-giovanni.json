@@ -1,0 +1,31 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/zambelli-giovanni",
+	"test-json": "../../../shared/esercitazione-1/testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Giovanni Zambelli",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Perfetto: corretto e idiomatico."
+		},
+		"E2": null,
+		"E3": null,
+		"E4": null,
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 6.0,
+			"comment": "Il filtro è impostato bene, ma la riga `print in [l1]` non è sintassi valida e il programma non parte. Inoltre non modifichi `l`."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

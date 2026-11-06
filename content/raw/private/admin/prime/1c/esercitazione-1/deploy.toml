@@ -1,7 +1,0 @@
-[[typst.override]]
-glob = "testo/parts/*.typ"
-action = "ignore"
-
-[[typst.override]]
-glob = "testo/parts/**/*.typ"
-action = "ignore"

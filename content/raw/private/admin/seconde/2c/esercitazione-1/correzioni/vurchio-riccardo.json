@@ -1,0 +1,43 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/vurchio-riccardo",
+	"test-json": "../../../shared/esercitazione-1/testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Riccardo Vurchio",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Perfetto: corretto e idiomatico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 13.0,
+			"comment": "Stampi gli elementi al contrario, ma non inverti la lista in place e non stampi la lista finale."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 16.0,
+			"comment": "Perfetto: corretto e idiomatico."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 13.0,
+			"comment": "Il secondo massimo per la lista di esempio è giusto, ma stampi anche il massimo e il codice non gestisce bene duplicati e valori negativi. Comunque è decisamente un buon punto di partenza."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 18.0,
+			"comment": "Filtri correttamente i non negativi e mantieni lo zero, ma stampi `l1` invece di aggiornare `l`. Per ora sono un po' largo di manica nelle correzioni ma più andiamo avanti più darò peso a questi dettagli."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

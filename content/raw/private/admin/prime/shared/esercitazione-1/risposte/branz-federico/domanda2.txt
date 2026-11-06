@@ -1,1 +1,0 @@
-2. Vengono immagazzinati in liste e tabelle numerate, dove in base all'ordine che viene dato viene salvato in un determinato punto della lista. Caratteri e parole vengono sostituite con dei codici di moltissimi 1 o 0 (acceso o spento) in base al tipo di lettera e carattere che bisogna salvare.

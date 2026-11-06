@@ -1,0 +1,31 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/sesureac-milena",
+	"test-json": "../../../shared/esercitazione-1/testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Milena Sesureac",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Perfetto: corretto e idiomatico."
+		},
+		"E2": null,
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 16.0,
+			"comment": "Perfetto: corretto e idiomatico. Nota che in realtà ti basterebbe interrompere il controllo non appena trovi un `t` tale per cui `l[t]!=l1[t]`, settando `palindroma` a `False`."
+		},
+		"E4": null,
+		"E5": null,
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}

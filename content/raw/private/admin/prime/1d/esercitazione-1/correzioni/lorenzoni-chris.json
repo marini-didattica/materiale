@@ -1,7 +1,7 @@
 {
 	"$schema": "../../../../misc/correction.schema.json",
 	"answer-folder": "../risposte/lorenzoni-chris",
-	"test-json": "../testo/esercitazione-1.json",
+	"test-json": "../../../shared/esercitazione-1/testo/esercitazione-1.json",
 	"set": "default",
 	"student-name": "Chris Lorenzoni",
 	"class": "1D",

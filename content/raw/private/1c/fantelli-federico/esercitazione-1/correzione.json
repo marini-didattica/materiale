@@ -1,7 +1,7 @@
 {
   "$schema": "../../../admin/misc/correction.schema.json",
   "answer-folder": "le-tue-risposte",
-  "test-json": "../../../admin/prime/1c/esercitazione-1/testo/esercitazione-1.json",
+  "test-json": "../../../admin/prime/shared/esercitazione-1/testo/esercitazione-1.json",
   "set": "default",
   "student-name": "Federico Fantelli",
   "class": "1C",

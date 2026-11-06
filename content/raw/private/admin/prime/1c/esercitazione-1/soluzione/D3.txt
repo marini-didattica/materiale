@@ -1,5 +1,0 @@
-Un'istruzione è un'operazione elementare che il processore sa eseguire: per esempio un'operazione aritmetica o logica oppure il trasferimento di un dato da una parte di memoria all'altra.
-
-Ogni istruzione è rappresentata da una sequenza di 0 ed 1 che la CPU può decodificare ed eseguire direttamente. Il linguaggio assembly è una rappresentazione simbolica del codice macchina, più leggibile per l'uomo: usa sigle come MOV, ADD e JMP al posto dei codici binari e viene tradotto in codice macchina da un programma chiamato assembler.
-
-L'instruction set è l'insieme delle istruzioni che un processore è in grado di comprendere ed eseguire. Un programma compilato per un certo instruction set può essere eseguito solo da processori che lo supportano.

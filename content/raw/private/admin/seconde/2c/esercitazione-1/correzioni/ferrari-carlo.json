@@ -1,0 +1,43 @@
+{
+	"$schema": "../../../../misc/correction.schema.json",
+	"answer-folder": "../risposte/ferrari-carlo",
+	"test-json": "../../../shared/esercitazione-1/testo/esercitazione-1.json",
+	"set": "default",
+	"student-name": "Carlo Ferrari",
+	"class": "2C",
+	"date": "20 ottobre 2026",
+	"title": "Correzione — Simulazione 1",
+	"import-answers": true,
+	"exercises": {
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 12.0,
+			"comment": "Corretto e idiomatico. Aggiungere gli elementi alla lista in questo esercizio non è molto utile ma va bene comunque!"
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 11.0,
+			"comment": "Questo codice è estremamente esoterico. Capisco il tuo intento e di base non è sbagliato. Il problema è nel secondo ciclo: innanzitutto `c = c-1` non va bene in ogni caso. Poi devi stare attento al fatto che stai modificando una lista che sta cambiando (a ogni iterazione rimuovi un elemento). L'`if` non serve visto che stai usando il for, quindi ci esci in automatico quando `c == len(l)`."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 16.0,
+			"comment": "Funziona perfettamente. Anche questo esercizio è scritto in modo un po' più complicato di quanto necessario. Puoi eliminare del tutto la variabile `c`: imposta `a = True` e appena trovi un elemento tale per cui `l[h]!=m[h]` allora sai che sicuramente la lista *non* è palindroma e puoi smettere di iterare (`break`)."
+		},
+		"E4": {
+			"answer-file": "esercizio4.py",
+			"score": 13.0,
+			"comment": "Bene l'idea delle due variabili `m1` e `m2`. Occhio che però\n  - L'inizializzazione non va bene: così se hai numeri negativi non funziona.\n  - Devi stare un po' attento a ciò che avviene quando hai trovato un valore minore del massimo ma maggiore del secondo massimo (va aggiornato il secondo massimo)."
+		},
+		"E5": {
+			"answer-file": "esercizio5.py",
+			"score": 13.0,
+			"comment": "Il filtro è impostato bene, ma il file contiene una riga incompleta (`if l[i]`) e non è eseguibile. Inoltre stampi `l1` invece di modificare e stampare `l` (anche se non penalizzo molto per questo tipo di errori)."
+		},
+		"S1": null,
+		"S2": null,
+		"S3": null,
+		"S4": null,
+		"S5": null
+	}
+}
