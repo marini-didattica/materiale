@@ -1,10 +1,11 @@
 // Direct Typst entry point for the statistics PDF.
 // For the CLI wrapper, which skips students without a correction file, run:
-//   typst-components/bin/typst-stats <test-folder> <students>
+//   typst-components/bin/typst-stats <testo-folder> <correzioni-folder> <students>
 #import "/typst-components/src/lib.typ": render-stats
 
 #render-stats(
-  path(".."),
+  path("../testo"),
+  path("../correzioni"),
   (
     "battocletti-alessandro",
     "bonetti-alessandra",

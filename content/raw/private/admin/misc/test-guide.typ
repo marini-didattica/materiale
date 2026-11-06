@@ -28,6 +28,27 @@ content/raw/private/admin/<classe>/<gruppo>/<prova>/
 └── deploy.toml               # regole locali di pubblicazione
 ```
 
+== Prove condivise
+
+Una prova può essere condivisa fra più classi. In quel caso il testo e le
+soluzioni stanno in `<track>/shared/<prova>/`, mentre ogni classe conserva la
+propria cartella con correzioni, risposte e statistiche:
+
+```text
+content/raw/private/admin/<track>/shared/<prova>/
+├── testo/
+└── soluzione/
+
+content/raw/private/admin/<track>/<classe>/<prova>/
+├── correzioni/
+├── risposte/
+└── misc/
+    └── stats.typ
+```
+
+Nei descrittori di correzione `test-json` punta alla prova condivisa, ad
+esempio `../../../shared/<prova>/testo/<prova>.json`.
+
 == File principali
 
 #table(
@@ -104,6 +125,9 @@ L'output è:
 
 Esempio: `esercizio{ordinal}.py` diventa `a/esercizio1.py`, `b/esercizio1.py`, e così via.
 Il comando legge `<exam-dir>/testo/*.json` e `<exam-dir>/soluzione/`.
+Per una prova condivisa, se `<exam-dir>/testo/` non esiste, ricava il
+descrittore dal `test-json` della prima correzione e usa `soluzione/` della
+prova condivisa.
 Se manca anche una sola soluzione, termina con errore senza scrivere nulla.
 
 == Correzioni
@@ -148,6 +172,35 @@ wm exam deploy <exam-dir> --force
 ```
 
 Senza `--force` i file già presenti non vengono sovrascritti.
+
+== Statistiche
+
+Le statistiche di classe stanno in `misc/stats.typ` della cartella della
+classe e ricevono separatamente la cartella `testo/` e la cartella
+`correzioni/`:
+
+```typst
+#import "/typst-components/src/lib.typ": render-stats
+
+#render-stats(
+  path("../../../shared/<prova>/testo"),
+  path("../correzioni"),
+  ("<studente>",),
+)
+```
+
+Per una prova locale usare `path("../testo")` come primo argomento. Il
+descrittore viene cercato in `<testo>/<prova>.json`; `exam-file:` permette di
+indicarne un altro.
+
+Da terminale:
+
+```sh
+wm exam stats <testo-folder> <correzioni-folder>
+```
+
+L'output predefinito è `misc/stats.pdf` della cartella della classe; il comando
+accetta anche `--students` e `--out`.
 
 == Grafo delle copie
 
@@ -255,5 +308,7 @@ action = "ignore"
 - [ ] Ogni esercizio ha un file `soluzione/<EX_ID>.<ext>`.
 - [ ] L'estensione della soluzione coincide con `answer-file`.
 - [ ] Ogni studente ha `correzioni/<studente>.json` e `risposte/<studente>/`.
+- [ ] `misc/stats.typ` punta alla cartella `testo/` e alla cartella `correzioni/` corrette.
 - [ ] `wm exam generate-solutions` termina senza errori.
+- [ ] `wm exam stats` termina senza errori.
 - [ ] `bun run content:build` termina senza errori.
