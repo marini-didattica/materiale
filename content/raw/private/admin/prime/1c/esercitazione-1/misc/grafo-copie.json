@@ -1,0 +1,239 @@
+{
+  "name": "1C · Esercitazione 1 · copie sospette",
+  "test-folder": "..",
+  "elements": {
+    "nodes": [
+      {
+        "data": {
+          "id": "bertoldi-emma"
+        },
+        "style": {
+          "label": "Bertoldi\nEmma"
+        }
+      },
+      {
+        "data": {
+          "id": "bottea-sofia"
+        },
+        "style": {
+          "label": "Bottea\nSofia"
+        }
+      },
+      {
+        "data": {
+          "id": "bruni-martin"
+        },
+        "style": {
+          "label": "Bruni\nMartin"
+        }
+      },
+      {
+        "data": {
+          "id": "caserotti-martin"
+        },
+        "style": {
+          "label": "Caserotti\nMartin"
+        }
+      },
+      {
+        "data": {
+          "id": "fantelli-federico"
+        },
+        "style": {
+          "label": "Fantelli\nFederico"
+        }
+      },
+      {
+        "data": {
+          "id": "ferrari-thomas"
+        },
+        "style": {
+          "label": "Ferrari\nThomas"
+        }
+      },
+      {
+        "data": {
+          "id": "fox-isabella"
+        },
+        "style": {
+          "label": "Fox\nIsabella"
+        }
+      },
+      {
+        "data": {
+          "id": "grad-cristian-grigore",
+          "confidence": 0.45,
+          "exercise-notes": {
+            "D3": "Risposta ampia e rifinita, identica parola per parola a quelle di Fantelli, Pizzolla e Rizzi. Stona con il resto del compito dello studente: D1 è un elenco essenziale e E1/E2 sono ridotti a poche righe (E2 contiene solo `print` senza argomenti), quindi il testo di D3 non sembra coerente con il suo modo di lavorare."
+          }
+        },
+        "style": {
+          "label": "Grad\nCristian Grigore"
+        }
+      },
+      {
+        "data": {
+          "id": "inama-giulia"
+        },
+        "style": {
+          "label": "Inama\nGiulia"
+        }
+      },
+      {
+        "data": {
+          "id": "larcher-diego"
+        },
+        "style": {
+          "label": "Larcher\nDiego"
+        }
+      },
+      {
+        "data": {
+          "id": "melis-nicolò"
+        },
+        "style": {
+          "label": "Melis\nNicolò"
+        }
+      },
+      {
+        "data": {
+          "id": "orrico-alessio"
+        },
+        "style": {
+          "label": "Orrico\nAlessio"
+        }
+      },
+      {
+        "data": {
+          "id": "pizzolla-francesco"
+        },
+        "style": {
+          "label": "Pizzolla\nFrancesco"
+        }
+      },
+      {
+        "data": {
+          "id": "rizzi-lorenzo"
+        },
+        "style": {
+          "label": "Rizzi\nLorenzo"
+        }
+      },
+      {
+        "data": {
+          "id": "telini-greta"
+        },
+        "style": {
+          "label": "Telini\nGreta"
+        }
+      },
+      {
+        "data": {
+          "id": "valentini-luca"
+        },
+        "style": {
+          "label": "Valentini\nLuca"
+        }
+      },
+      {
+        "data": {
+          "id": "ymeraj-leonard"
+        },
+        "style": {
+          "label": "Ymeraj\nLeonard"
+        }
+      },
+      {
+        "data": {
+          "id": "zaninetti-sara"
+        },
+        "style": {
+          "label": "Zaninetti\nSara"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "data": {
+          "id": "fantelli-federico--pizzolla-francesco--d1",
+          "source": "fantelli-federico",
+          "target": "pizzolla-francesco",
+          "confidence": 0.99,
+          "exercises": ["D1", "D2", "D3", "E1", "E2", "S1", "S2", "S3"]
+        }
+      },
+      {
+        "data": {
+          "id": "fantelli-federico--rizzi-lorenzo--d1",
+          "source": "fantelli-federico",
+          "target": "rizzi-lorenzo",
+          "confidence": 0.99,
+          "exercises": ["D1", "D2", "D3", "E1", "E2", "S1", "S2", "S3"]
+        }
+      },
+      {
+        "data": {
+          "id": "pizzolla-francesco--rizzi-lorenzo--d1",
+          "source": "pizzolla-francesco",
+          "target": "rizzi-lorenzo",
+          "confidence": 0.99,
+          "exercises": ["D1", "D2", "D3", "E1", "E2", "S1", "S2", "S3"]
+        }
+      },
+      {
+        "data": {
+          "id": "fantelli-federico--grad-cristian-grigore--d3",
+          "source": "fantelli-federico",
+          "target": "grad-cristian-grigore",
+          "confidence": 0.9,
+          "exercises": ["D3", "S2", "S3"]
+        }
+      },
+      {
+        "data": {
+          "id": "grad-cristian-grigore--pizzolla-francesco--d3",
+          "source": "grad-cristian-grigore",
+          "target": "pizzolla-francesco",
+          "confidence": 0.9,
+          "exercises": ["D3", "S2", "S3"]
+        }
+      },
+      {
+        "data": {
+          "id": "grad-cristian-grigore--rizzi-lorenzo--d3",
+          "source": "grad-cristian-grigore",
+          "target": "rizzi-lorenzo",
+          "confidence": 0.9,
+          "exercises": ["D3", "S2", "S3"]
+        }
+      },
+      {
+        "data": {
+          "id": "bertoldi-emma--inama-giulia--d1",
+          "source": "bertoldi-emma",
+          "target": "inama-giulia",
+          "confidence": 0.78,
+          "exercises": ["D1"]
+        }
+      },
+      {
+        "data": {
+          "id": "bertoldi-emma--fox-isabella--d1",
+          "source": "bertoldi-emma",
+          "target": "fox-isabella",
+          "confidence": 0.65,
+          "exercises": ["D1"]
+        }
+      },
+      {
+        "data": {
+          "id": "fox-isabella--inama-giulia--d1",
+          "source": "fox-isabella",
+          "target": "inama-giulia",
+          "confidence": 0.65,
+          "exercises": ["D1"]
+        }
+      }
+    ]
+  }
+}

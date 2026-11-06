@@ -1,0 +1,367 @@
+{
+  "name": "2C · Esercitazione 1 · copie sospette",
+  "test-folder": "..",
+  "elements": {
+    "nodes": [
+      {
+        "data": {
+          "id": "battocletti-alessandro",
+          "seat": "fila 1, banco 1"
+        },
+        "style": {
+          "label": "Battocletti\nAlessandro"
+        }
+      },
+      {
+        "data": {
+          "id": "bonetti-alessandra",
+          "seat": "fila 1, banco 2"
+        },
+        "style": {
+          "label": "Bonetti\nAlessandra"
+        }
+      },
+      {
+        "data": {
+          "id": "dagostin-davide",
+          "seat": "fila 1, banco 3"
+        },
+        "style": {
+          "label": "Dagostin\nDavide"
+        }
+      },
+      {
+        "data": {
+          "id": "dal-savio-daniele",
+          "seat": "fila 1, banco 4"
+        },
+        "style": {
+          "label": "Dal Savio\nDaniele"
+        }
+      },
+      {
+        "data": {
+          "id": "ferrari-carlo",
+          "seat": "fila 1, banco 6"
+        },
+        "style": {
+          "label": "Ferrari\nCarlo"
+        }
+      },
+      {
+        "data": {
+          "id": "filippi-renato",
+          "seat": "fila 1, banco 7"
+        },
+        "style": {
+          "label": "Filippi\nRenato"
+        }
+      },
+      {
+        "data": {
+          "id": "lorenzi-diego",
+          "seat": "fila 2, banco 1",
+          "confidence": 0.6,
+          "exercise-notes": {
+            "E2": "Soluzione in-place con variabile temporanea, corretta e molto più levigata delle altre risposte; il correttore assegna 0 punti sospettando che non sia stata scritta dallo studente («devi farlo tu, non ChatGPT»)."
+          }
+        },
+        "style": {
+          "label": "Lorenzi\nDiego"
+        }
+      },
+      {
+        "data": {
+          "id": "mezzena-nicolò",
+          "seat": "fila 2, banco 2"
+        },
+        "style": {
+          "label": "Mezzena\nNicolò"
+        }
+      },
+      {
+        "data": {
+          "id": "moscon-laura",
+          "seat": "fila 2, banco 3"
+        },
+        "style": {
+          "label": "Moscon\nLaura"
+        }
+      },
+      {
+        "data": {
+          "id": "panizza-stella",
+          "seat": "fila 2, banco 4"
+        },
+        "style": {
+          "label": "Panizza\nStella"
+        }
+      },
+      {
+        "data": {
+          "id": "perazzolli-gianluca",
+          "seat": "fila 2, banco 7"
+        },
+        "style": {
+          "label": "Perazzolli\nGianluca"
+        }
+      },
+      {
+        "data": {
+          "id": "pilloni-francesco",
+          "seat": "fila 3, banco 1",
+          "confidence": 0.4,
+          "exercise-notes": {
+            "E5": "Il file `esercizio5.py` consegnato per E5 contiene una soluzione del secondo massimo (esercizio 4), non il filtro dei negativi: per E5 non c'è una risposta valida."
+          }
+        },
+        "style": {
+          "label": "Pilloni\nFrancesco"
+        }
+      },
+      {
+        "data": {
+          "id": "pretti-agata",
+          "seat": "fila 3, banco 2"
+        },
+        "style": {
+          "label": "Pretti\nAgata"
+        }
+      },
+      {
+        "data": {
+          "id": "sesureac-milena",
+          "seat": "fila 3, banco 3"
+        },
+        "style": {
+          "label": "Sesureac\nMilena"
+        }
+      },
+      {
+        "data": {
+          "id": "veronesi-davide",
+          "seat": "fila 3, banco 4"
+        },
+        "style": {
+          "label": "Veronesi\nDavide"
+        }
+      },
+      {
+        "data": {
+          "id": "visintainer-filippo",
+          "seat": "fila 3, banco 6"
+        },
+        "style": {
+          "label": "Visintainer\nFilippo"
+        }
+      },
+      {
+        "data": {
+          "id": "vurchio-riccardo",
+          "seat": "fila 3, banco 7"
+        },
+        "style": {
+          "label": "Vurchio\nRiccardo"
+        }
+      },
+      {
+        "data": {
+          "id": "zambelli-giovanni",
+          "seat": "fila 4, banco 1"
+        },
+        "style": {
+          "label": "Zambelli\nGiovanni"
+        }
+      },
+      {
+        "data": {
+          "id": "zuech-gabriele",
+          "seat": "fila 4, banco 2"
+        },
+        "style": {
+          "label": "Zuech\nGabriele"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "data": {
+          "id": "perazzolli-gianluca--vurchio-riccardo--e1",
+          "source": "perazzolli-gianluca",
+          "target": "vurchio-riccardo",
+          "confidence": 0.98,
+          "exercises": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "battocletti-alessandro--perazzolli-gianluca--e1",
+          "source": "battocletti-alessandro",
+          "target": "perazzolli-gianluca",
+          "confidence": 0.95,
+          "exercises": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "dagostin-davide--pilloni-francesco--e3",
+          "source": "dagostin-davide",
+          "target": "pilloni-francesco",
+          "confidence": 0.93,
+          "exercises": [
+            "E3"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "battocletti-alessandro--vurchio-riccardo--e1",
+          "source": "battocletti-alessandro",
+          "target": "vurchio-riccardo",
+          "confidence": 0.92,
+          "exercises": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "pilloni-francesco--sesureac-milena--e3",
+          "source": "pilloni-francesco",
+          "target": "sesureac-milena",
+          "confidence": 0.92,
+          "exercises": [
+            "E3"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "dagostin-davide--sesureac-milena--e3",
+          "source": "dagostin-davide",
+          "target": "sesureac-milena",
+          "confidence": 0.9,
+          "exercises": [
+            "E3"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "filippi-renato--veronesi-davide--e5",
+          "source": "filippi-renato",
+          "target": "veronesi-davide",
+          "confidence": 0.8,
+          "exercises": [
+            "E5"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "visintainer-filippo--vurchio-riccardo--e1",
+          "source": "visintainer-filippo",
+          "target": "vurchio-riccardo",
+          "confidence": 0.73,
+          "exercises": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "perazzolli-gianluca--visintainer-filippo--e1",
+          "source": "perazzolli-gianluca",
+          "target": "visintainer-filippo",
+          "confidence": 0.72,
+          "exercises": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "pilloni-francesco--zuech-gabriele--e2",
+          "source": "pilloni-francesco",
+          "target": "zuech-gabriele",
+          "confidence": 0.7,
+          "exercises": [
+            "E2"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "filippi-renato--lorenzi-diego--e5",
+          "source": "filippi-renato",
+          "target": "lorenzi-diego",
+          "confidence": 0.68,
+          "exercises": [
+            "E5"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "lorenzi-diego--veronesi-davide--e5",
+          "source": "lorenzi-diego",
+          "target": "veronesi-davide",
+          "confidence": 0.68,
+          "exercises": [
+            "E5"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "ferrari-carlo--zuech-gabriele--e2",
+          "source": "ferrari-carlo",
+          "target": "zuech-gabriele",
+          "confidence": 0.6,
+          "exercises": [
+            "E2"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "battocletti-alessandro--visintainer-filippo--e1",
+          "source": "battocletti-alessandro",
+          "target": "visintainer-filippo",
+          "confidence": 0.58,
+          "exercises": [
+            "E1",
+            "E3"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "ferrari-carlo--pilloni-francesco--e2",
+          "source": "ferrari-carlo",
+          "target": "pilloni-francesco",
+          "confidence": 0.55,
+          "exercises": [
+            "E2"
+          ]
+        }
+      }
+    ]
+  }
+}

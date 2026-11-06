@@ -1,0 +1,224 @@
+{
+  "name": "1D · Esercitazione 1 · copie sospette",
+  "test-folder": "..",
+  "elements": {
+    "nodes": [
+      {
+        "data": {
+          "id": "angeli-lorenzo"
+        },
+        "style": {
+          "label": "Angeli\nLorenzo"
+        }
+      },
+      {
+        "data": {
+          "id": "barbaro-arturo"
+        },
+        "style": {
+          "label": "Barbaro\nArturo"
+        }
+      },
+      {
+        "data": {
+          "id": "bertolini-florian"
+        },
+        "style": {
+          "label": "Bertolini\nFlorian"
+        }
+      },
+      {
+        "data": {
+          "id": "branz-federico"
+        },
+        "style": {
+          "label": "Branz\nFederico"
+        }
+      },
+      {
+        "data": {
+          "id": "campi-gabriele"
+        },
+        "style": {
+          "label": "Campi\nGabriele"
+        }
+      },
+      {
+        "data": {
+          "id": "dalpiaz-damian"
+        },
+        "style": {
+          "label": "Dalpiaz\nDamian"
+        }
+      },
+      {
+        "data": {
+          "id": "docuz-sara-maria"
+        },
+        "style": {
+          "label": "Docuz\nSara Maria"
+        }
+      },
+      {
+        "data": {
+          "id": "fondriest-milena"
+        },
+        "style": {
+          "label": "Fondriest\nMilena"
+        }
+      },
+      {
+        "data": {
+          "id": "laccona-alessandro-massimo"
+        },
+        "style": {
+          "label": "Laccona\nAlessandro Massimo"
+        }
+      },
+      {
+        "data": {
+          "id": "lorenzoni-chris"
+        },
+        "style": {
+          "label": "Lorenzoni\nChris"
+        }
+      },
+      {
+        "data": {
+          "id": "malanotti-stefano"
+        },
+        "style": {
+          "label": "Malanotti\nStefano"
+        }
+      },
+      {
+        "data": {
+          "id": "melis-riccardo",
+          "confidence": 0.45,
+          "exercise-notes": {
+            "E1": "Chiama `len(7)` e `len(0)`: applica `len()` a numeri interi, quindi il programma termina con `TypeError` e non può essere eseguito. Nessun altro studente applica `len()` a un valore numerico."
+          }
+        },
+        "style": {
+          "label": "Melis\nRiccardo"
+        }
+      },
+      {
+        "data": {
+          "id": "mesttchian-gabriel"
+        },
+        "style": {
+          "label": "Mesttchian\nGabriel"
+        }
+      },
+      {
+        "data": {
+          "id": "midjaiti-elif"
+        },
+        "style": {
+          "label": "Midjaiti\nElif"
+        }
+      },
+      {
+        "data": {
+          "id": "pellegrini-benedetta"
+        },
+        "style": {
+          "label": "Pellegrini\nBenedetta"
+        }
+      },
+      {
+        "data": {
+          "id": "quatrale-lorenzo"
+        },
+        "style": {
+          "label": "Quatrale\nLorenzo"
+        }
+      },
+      {
+        "data": {
+          "id": "rosati-martino"
+        },
+        "style": {
+          "label": "Rosati\nMartino"
+        }
+      },
+      {
+        "data": {
+          "id": "valentinelli-aurora"
+        },
+        "style": {
+          "label": "Valentinelli\nAurora"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "data": {
+          "id": "branz-federico--mesttchian-gabriel--e1",
+          "source": "branz-federico",
+          "target": "mesttchian-gabriel",
+          "confidence": 0.93,
+          "exercises": [
+            "E1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "barbaro-arturo--branz-federico--e2",
+          "source": "barbaro-arturo",
+          "target": "branz-federico",
+          "confidence": 0.84,
+          "exercises": [
+            "E2"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "malanotti-stefano--melis-riccardo--e1",
+          "source": "malanotti-stefano",
+          "target": "melis-riccardo",
+          "confidence": 0.7,
+          "exercises": [
+            "E1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "angeli-lorenzo--docuz-sara-maria--e2",
+          "source": "angeli-lorenzo",
+          "target": "docuz-sara-maria",
+          "confidence": 0.62,
+          "exercises": [
+            "E2"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "campi-gabriele--dalpiaz-damian--e1",
+          "source": "campi-gabriele",
+          "target": "dalpiaz-damian",
+          "confidence": 0.55,
+          "exercises": [
+            "E1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "pellegrini-benedetta--valentinelli-aurora--d1",
+          "source": "pellegrini-benedetta",
+          "target": "valentinelli-aurora",
+          "confidence": 0.5,
+          "exercises": [
+            "D1"
+          ]
+        }
+      }
+    ]
+  }
+}
