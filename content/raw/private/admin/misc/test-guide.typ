@@ -18,8 +18,9 @@ content/raw/private/admin/<classe>/<gruppo>/<prova>/
 ├── soluzione/
 │   ├── <EX_ID>.py            # soluzione Python
 │   └── <EX_ID>.txt           # soluzione testuale
+├── manifest.json             # percorso della prova e default delle correzioni
 ├── correzioni/
-│   └── <studente>.json       # descrittore della correzione
+│   └── <studente>.json       # punteggi e commenti dello studente
 ├── risposte/
 │   └── <studente>/
 │       ├── esercizio1.py
@@ -40,14 +41,15 @@ content/raw/private/admin/<track>/shared/<prova>/
 └── soluzione/
 
 content/raw/private/admin/<track>/<classe>/<prova>/
+├── manifest.json            # test-json punta alla prova condivisa
 ├── correzioni/
 ├── risposte/
 └── misc/
     └── stats.typ
 ```
 
-Nei descrittori di correzione `test-json` punta alla prova condivisa, ad
-esempio `../../../shared/<prova>/testo/<prova>.json`.
+Il `manifest.json` della classe contiene il percorso della prova condivisa, ad
+esempio `"test-json": "../../shared/<prova>/testo/<prova>.json"`.
 
 == File principali
 
@@ -58,7 +60,8 @@ esempio `../../../shared/<prova>/testo/<prova>.json`.
   [`testo/<prova>.typ`], [Documento Typst che chiama `render-exam` per un set.],
   [`testo/parts/*.typ`], [Frammenti importati dal descrittore o dal documento: non vanno pubblicati da soli.],
   [`soluzione/<EX_ID>.<ext>`], [Sorgente della soluzione di ogni esercizio, uno per ID.],
-  [`correzioni/<studente>.json`], [Punteggi, commenti e collegamento alle risposte dello studente.],
+  [`manifest.json`], [Percorso della prova, cartella delle risposte e default delle correzioni.],
+  [`correzioni/<studente>.json`], [Punteggi e commenti dello studente; i dati comuni vengono dal manifest.],
   [`risposte/<studente>/`], [File consegnati dallo studente, con i nomi indicati da `answer-file`.],
   [`deploy.toml`], [Override locali, ad esempio per ignorare `testo/parts/`.],
 )
@@ -124,25 +127,45 @@ L'output è:
 ```
 
 Esempio: `esercizio{ordinal}.py` diventa `a/esercizio1.py`, `b/esercizio1.py`, e così via.
-Il comando legge `<exam-dir>/testo/*.json` e `<exam-dir>/soluzione/`.
-Per una prova condivisa, se `<exam-dir>/testo/` non esiste, ricava il
-descrittore dal `test-json` della prima correzione e usa `soluzione/` della
-prova condivisa.
+Il comando legge `manifest.json`, il descrittore indicato da `test-json` e la
+cartella `soluzione/` della prova. Per una prova condivisa il manifest della
+classe punta direttamente a `shared/<prova>/testo/<prova>.json`, quindi
+`soluzione/` viene presa dalla prova condivisa.
 Se manca anche una sola soluzione, termina con errore senza scrivere nulla.
+
+== Manifest della prova
+
+Ogni cartella di classe contiene un `manifest.json` accanto a `testo/`,
+`correzioni/` e `risposte/`:
+
+```json
+{
+  "$schema": "../../../misc/manifest.schema.json",
+  "version": 1,
+  "test-json": "../../shared/<prova>/testo/<prova>.json",
+  "answer-folder": "risposte",
+  "date": "20 ottobre 2026",
+  "title": "Correzione — Simulazione 1"
+}
+```
+
+`test-json` e `answer-folder` sono relativi al manifest. `date` è il default
+per le correzioni; `title`, `subtitle` e `import-answers` sono facoltativi e
+possono essere sovrascritti da una singola correzione.
 
 == Correzioni
 
-Ogni studente ha un file `correzioni/<studente>.json`.
-I campi principali sono:
+Ogni studente della classe ha un file `correzioni/<studente>.json`.
+Nome visualizzato e classe vengono ricavati dal nome del file, dal percorso e
+da `content/students.json`. I campi principali sono:
 
 #table(
   columns: (auto, 1fr),
   [*Campo*], [*Significato*],
-  [`test-json`], [Percorso del descrittore della prova.],
-  [`answer-folder`], [Cartella con le risposte dello studente.],
   [`set`], [Set svolto dallo studente.],
-  [`student-name`], [Nome completo, facoltativo.],
-  [`class`], [Classe, facoltativa.],
+  [`date`], [Data, solo se diversa dal manifest.],
+  [`title`], [Titolo, solo se diverso dal manifest o dal descrittore della prova.],
+  [`subtitle`], [Sottotitolo, facoltativo.],
   [`import-answers`], [Se `true`, importa il contenuto delle risposte nella correzione.],
   [`exercises`], [Mappa `ID -> { "answer-file", "score", "comment" }`.],
 )
@@ -151,10 +174,7 @@ Esempio minimo:
 
 ```json
 {
-  "answer-folder": "../risposte/mario-rossi",
-  "test-json": "../testo/prova-1.json",
   "set": "a",
-  "import-answers": true,
   "exercises": {
     "E1": {
       "answer-file": "esercizio1.py",
@@ -165,42 +185,49 @@ Esempio minimo:
 }
 ```
 
-Per pubblicare correzioni e risposte nelle cartelle private degli studenti:
+Uno studente assente ha solo:
+
+```json
+{ "absent": true }
+```
+
+Ogni studente della classe deve avere un file, anche quando è assente: le
+statistiche usano il roster per elencare tutti gli studenti.
+
+Per pubblicare le risposte e lo stub della correzione nelle cartelle private
+degli studenti:
 
 ```sh
 wm exam deploy <exam-dir> --force
 ```
 
-Senza `--force` i file già presenti non vengono sovrascritti.
+Lo stub `correzione.typ` punta direttamente al descrittore in
+`admin/.../correzioni/`; non viene più copiato `correzione.json`. Senza
+`--force` i file di risposta già presenti non vengono sovrascritti.
 
 == Statistiche
 
-Le statistiche di classe stanno in `misc/stats.typ` della cartella della
-classe e ricevono separatamente la cartella `testo/` e la cartella
-`correzioni/`:
+Le statistiche di classe stanno in `misc/stats.typ` e ricevono solo la cartella
+delle correzioni:
 
 ```typst
 #import "/typst-components/src/lib.typ": render-stats
 
-#render-stats(
-  path("../../../shared/<prova>/testo"),
-  path("../correzioni"),
-  ("<studente>",),
-)
+#render-stats(path("../correzioni"))
 ```
 
-Per una prova locale usare `path("../testo")` come primo argomento. Il
-descrittore viene cercato in `<testo>/<prova>.json`; `exam-file:` permette di
-indicarne un altro.
+Il componente legge `manifest.json`, il roster della classe e tutti i file in
+`correzioni/`. Ogni set ha una sezione separata e le statistiche sono calcolate
+solo sugli studenti di quel set.
 
 Da terminale:
 
 ```sh
-wm exam stats <testo-folder> <correzioni-folder>
+wm exam stats <correzioni-folder>
 ```
 
 L'output predefinito è `misc/stats.pdf` della cartella della classe; il comando
-accetta anche `--students` e `--out`.
+accetta anche `--out`.
 
 == Grafo delle copie
 
@@ -303,12 +330,13 @@ action = "ignore"
 
 == Checklist
 
+- [ ] `manifest.json` esiste e `test-json` / `answer-folder` risolvono.
 - [ ] `sets` nel descrittore corrisponde ai documenti `<prova>-<set>.typ`.
 - [ ] Ogni esercizio ha `id`, `file`, `title`, `points` e `difficulty`.
 - [ ] Ogni esercizio ha un file `soluzione/<EX_ID>.<ext>`.
 - [ ] L'estensione della soluzione coincide con `answer-file`.
-- [ ] Ogni studente ha `correzioni/<studente>.json` e `risposte/<studente>/`.
-- [ ] `misc/stats.typ` punta alla cartella `testo/` e alla cartella `correzioni/` corrette.
+- [ ] Ogni studente della classe ha `correzioni/<studente>.json`; gli assenti hanno `{"absent": true}`.
+- [ ] `misc/stats.typ` contiene solo `#render-stats(path("../correzioni"))`.
 - [ ] `wm exam generate-solutions` termina senza errori.
 - [ ] `wm exam stats` termina senza errori.
 - [ ] `bun run content:build` termina senza errori.

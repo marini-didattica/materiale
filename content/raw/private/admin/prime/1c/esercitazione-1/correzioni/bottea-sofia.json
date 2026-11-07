@@ -1,13 +1,5 @@
 {
-	"$schema": "../../../../misc/correction.schema.json",
-	"answer-folder": "../risposte/bottea-sofia",
-	"test-json": "../../../shared/esercitazione-1/testo/esercitazione-1.json",
 	"set": "default",
-	"student-name": "Sofia Bottea",
-	"class": "1C",
-	"date": "20 ottobre 2026",
-	"title": "Correzione — Simulazione 1",
-	"import-answers": true,
 	"exercises": {
 		"D1": {
 			"answer-file": "domanda1.txt",

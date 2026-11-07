@@ -1,12 +1,5 @@
 {
-	"$schema": "../../../../misc/correction.schema.json",
-	"answer-folder": "../risposte/dagostin-davide",
-	"test-json": "../testo/prova-1.json",
 	"set": "a",
-	"student-name": "Davide Dagostin",
-	"class": "2C",
-	"date": "29 ottobre 2026",
-	"import-answers": true,
 	"exercises": {
 		"E1": {
 			"answer-file": "esercizio1.py",

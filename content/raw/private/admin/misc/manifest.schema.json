@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marini-didattica.github.io/schemas/manifest.schema.json",
+  "title": "Exam manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "test-json", "date"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "test-json": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!.*\\\\)(.*)$"
+    },
+    "answer-folder": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!.*\\\\)(.*)$"
+    },
+    "date": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "subtitle": { "type": "string" },
+    "import-answers": { "type": "boolean" }
+  }
+}

@@ -1,13 +1,5 @@
 {
-	"$schema": "../../../../misc/correction.schema.json",
-	"answer-folder": "../risposte/zuech-gabriele",
-	"test-json": "../../../shared/esercitazione-1/testo/esercitazione-1.json",
 	"set": "default",
-	"student-name": "Gabriele Zuech",
-	"class": "2C",
-	"date": "20 ottobre 2026",
-	"title": "Correzione — Simulazione 1",
-	"import-answers": true,
 	"exercises": {
 		"E1": {
 			"answer-file": "esercizio1.py",
