@@ -1,3 +1,0 @@
-Questo programma va a moltiplicare il risultato per a per b volte.
-Output :
-81 

@@ -1,2 +1,0 @@
-determinati il valore di a e di b viene calcolato a elevato alla b
-output= 81

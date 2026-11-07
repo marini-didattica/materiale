@@ -1,3 +1,0 @@
-Questo programma analizza il se il valore di L con indice i è minore di 0.
-Output:
-True

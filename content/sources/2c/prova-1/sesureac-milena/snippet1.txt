@@ -1,3 +1,0 @@
-stampa solo i numeri della lista in posizione pari
-
-output: 3, 0, 7

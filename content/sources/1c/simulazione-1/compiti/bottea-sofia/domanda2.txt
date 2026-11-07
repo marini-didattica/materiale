@@ -1,1 +1,0 @@
-I numeri vengono immagazzinati in delle variabili e se c'è bisogno di mettere degli spazi si mette _

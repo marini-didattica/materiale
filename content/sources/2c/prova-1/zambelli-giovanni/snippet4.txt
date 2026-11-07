@@ -1,3 +1,0 @@
-viene elevato a alla 
-potenza che dice b.
-output=81

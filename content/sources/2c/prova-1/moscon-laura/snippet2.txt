@@ -1,4 +1,0 @@
-Controlla se nella lista c'è un elemento
-negativo, e se c'è allora stampa true,
-altrimanti false.
-L'output è True
