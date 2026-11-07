@@ -5,7 +5,8 @@
     "nodes": [
       {
         "data": {
-          "id": "angeli-lorenzo"
+          "id": "angeli-lorenzo",
+          "seat": "fila 1, banco 1"
         },
         "style": {
           "label": "Angeli\nLorenzo"
@@ -13,7 +14,8 @@
       },
       {
         "data": {
-          "id": "barbaro-arturo"
+          "id": "barbaro-arturo",
+          "seat": "fila 1, banco 2"
         },
         "style": {
           "label": "Barbaro\nArturo"
@@ -21,7 +23,8 @@
       },
       {
         "data": {
-          "id": "bertolini-florian"
+          "id": "bertolini-florian",
+          "seat": "fila 1, banco 3"
         },
         "style": {
           "label": "Bertolini\nFlorian"
@@ -29,7 +32,8 @@
       },
       {
         "data": {
-          "id": "branz-federico"
+          "id": "branz-federico",
+          "seat": "fila 1, banco 4"
         },
         "style": {
           "label": "Branz\nFederico"
@@ -37,7 +41,8 @@
       },
       {
         "data": {
-          "id": "campi-gabriele"
+          "id": "campi-gabriele",
+          "seat": "fila 1, banco 6"
         },
         "style": {
           "label": "Campi\nGabriele"
@@ -45,7 +50,8 @@
       },
       {
         "data": {
-          "id": "dalpiaz-damian"
+          "id": "dalpiaz-damian",
+          "seat": "fila 1, banco 7"
         },
         "style": {
           "label": "Dalpiaz\nDamian"
@@ -53,7 +59,8 @@
       },
       {
         "data": {
-          "id": "docuz-sara-maria"
+          "id": "docuz-sara-maria",
+          "seat": "fila 2, banco 1"
         },
         "style": {
           "label": "Docuz\nSara Maria"
@@ -61,7 +68,8 @@
       },
       {
         "data": {
-          "id": "fondriest-milena"
+          "id": "fondriest-milena",
+          "seat": "fila 2, banco 2"
         },
         "style": {
           "label": "Fondriest\nMilena"
@@ -69,7 +77,8 @@
       },
       {
         "data": {
-          "id": "laccona-alessandro-massimo"
+          "id": "laccona-alessandro-massimo",
+          "seat": "fila 2, banco 3"
         },
         "style": {
           "label": "Laccona\nAlessandro Massimo"
@@ -77,7 +86,8 @@
       },
       {
         "data": {
-          "id": "lorenzoni-chris"
+          "id": "lorenzoni-chris",
+          "seat": "fila 2, banco 4"
         },
         "style": {
           "label": "Lorenzoni\nChris"
@@ -85,7 +95,8 @@
       },
       {
         "data": {
-          "id": "malanotti-stefano"
+          "id": "malanotti-stefano",
+          "seat": "fila 2, banco 6"
         },
         "style": {
           "label": "Malanotti\nStefano"
@@ -94,6 +105,7 @@
       {
         "data": {
           "id": "melis-riccardo",
+          "seat": "fila 2, banco 7",
           "confidence": 0.45,
           "exercise-notes": {
             "E1": "Chiama `len(7)` e `len(0)`: applica `len()` a numeri interi, quindi il programma termina con `TypeError` e non può essere eseguito. Nessun altro studente applica `len()` a un valore numerico."
@@ -105,7 +117,8 @@
       },
       {
         "data": {
-          "id": "mesttchian-gabriel"
+          "id": "mesttchian-gabriel",
+          "seat": "fila 3, banco 1"
         },
         "style": {
           "label": "Mesttchian\nGabriel"
@@ -113,7 +126,8 @@
       },
       {
         "data": {
-          "id": "midjaiti-elif"
+          "id": "midjaiti-elif",
+          "seat": "fila 3, banco 2"
         },
         "style": {
           "label": "Midjaiti\nElif"
@@ -121,7 +135,8 @@
       },
       {
         "data": {
-          "id": "pellegrini-benedetta"
+          "id": "pellegrini-benedetta",
+          "seat": "fila 3, banco 3"
         },
         "style": {
           "label": "Pellegrini\nBenedetta"
@@ -129,7 +144,8 @@
       },
       {
         "data": {
-          "id": "quatrale-lorenzo"
+          "id": "quatrale-lorenzo",
+          "seat": "fila 3, banco 6"
         },
         "style": {
           "label": "Quatrale\nLorenzo"
@@ -137,7 +153,8 @@
       },
       {
         "data": {
-          "id": "rosati-martino"
+          "id": "rosati-martino",
+          "seat": "fila 3, banco 7"
         },
         "style": {
           "label": "Rosati\nMartino"
@@ -145,7 +162,8 @@
       },
       {
         "data": {
-          "id": "valentinelli-aurora"
+          "id": "valentinelli-aurora",
+          "seat": "fila 4, banco 1"
         },
         "style": {
           "label": "Valentinelli\nAurora"
@@ -169,7 +187,7 @@
           "id": "barbaro-arturo--branz-federico--e2",
           "source": "barbaro-arturo",
           "target": "branz-federico",
-          "confidence": 0.84,
+          "confidence": 0.86,
           "exercises": [
             "E2"
           ]
@@ -180,7 +198,7 @@
           "id": "malanotti-stefano--melis-riccardo--e1",
           "source": "malanotti-stefano",
           "target": "melis-riccardo",
-          "confidence": 0.7,
+          "confidence": 0.75,
           "exercises": [
             "E1"
           ]
@@ -191,7 +209,7 @@
           "id": "angeli-lorenzo--docuz-sara-maria--e2",
           "source": "angeli-lorenzo",
           "target": "docuz-sara-maria",
-          "confidence": 0.62,
+          "confidence": 0.67,
           "exercises": [
             "E2"
           ]
@@ -202,7 +220,7 @@
           "id": "campi-gabriele--dalpiaz-damian--e1",
           "source": "campi-gabriele",
           "target": "dalpiaz-damian",
-          "confidence": 0.55,
+          "confidence": 0.6,
           "exercises": [
             "E1"
           ]
@@ -213,7 +231,7 @@
           "id": "pellegrini-benedetta--valentinelli-aurora--d1",
           "source": "pellegrini-benedetta",
           "target": "valentinelli-aurora",
-          "confidence": 0.5,
+          "confidence": 0.52,
           "exercises": [
             "D1"
           ]
