@@ -1,3 +1,3 @@
 #import "/typst-components/src/correction.typ": render-correction
 
-#render-correction(path("correzione.json"))
+#render-correction("/content/raw/private/admin/prime/1d/esercitazione-1/correzioni/dalpiaz-damian.json")
