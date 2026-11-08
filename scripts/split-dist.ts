@@ -41,6 +41,7 @@ async function main(): Promise<void> {
 
   // The public deployment keeps only public and student material.
   await rm(path.join(PUBLIC_DIST, 'admin'), { recursive: true, force: true });
+  await rm(path.join(PUBLIC_DIST, 'login'), { recursive: true, force: true });
   await rm(path.join(PUBLIC_DIST, '_worker.js'), { force: true });
   await rm(path.join(PUBLIC_DIST, 'functions'), { recursive: true, force: true });
 
@@ -56,7 +57,7 @@ async function main(): Promise<void> {
     `[split] dist-public pronto (senza /admin, ${staffSlugs.length} cartelle staff rimosse).`,
   );
   console.log(
-    `[split] dist-admin pronto (slug staff: ${staffSlugs.join(', ') || 'nessuno'}, Basic Auth attivo).`,
+    `[split] dist-admin pronto (slug staff: ${staffSlugs.join(', ') || 'nessuno'}, login protetto).`,
   );
 }
 

@@ -24,10 +24,10 @@ The site also has an admin browser at `/admin/` that shows the public and
 private trees with their real folder names. The admin pages and the staff
 folder (the `"staff": true` entry in `content/students.json`) are staged into
 `dist-admin/`, deployed only to the `marini-didattica-admin` Cloudflare Pages
-project, and protected in full by HTTP Basic Auth (`deploy/admin/_worker.js`,
-`ADMIN_USER`/`ADMIN_PASS` environment variables). The public deployment
-(`dist-public/`) must never contain `/admin`, staff raw files, or the admin
-worker.
+project, and protected in full by a login page with a signed HttpOnly session
+cookie (`deploy/admin/_worker.js`, `ADMIN_USER`/`ADMIN_PASS` environment
+variables). The public deployment must never contain `/admin`, staff raw files,
+the login page, or the admin worker.
 
 Pages use Astro's `ClientRouter`, so client scripts run once: re-bind them on
 `astro:page-load`. Links that leave this deployment (the main site) must use

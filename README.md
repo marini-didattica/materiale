@@ -11,7 +11,7 @@ Document custom domain
 
 ```text
 https://marini-didattica-materiale.pages.dev/   # pubblico e studenti
-https://marini-didattica-admin.pages.dev/       # docente, Basic Auth
+https://marini-didattica-admin.pages.dev/       # docente, login
 ```
 
 I nomi dei progetti sono provvisori finché non viene collegato un dominio
@@ -81,15 +81,15 @@ chiedere alcun codice:
 
 Le pagine di amministrazione e i file della cartella staff (`"staff": true` in
 `content/students.json`) vengono costruiti in `dist-admin/`, pubblicati solo sul
-progetto `marini-didattica-admin` e protetti interamente da HTTP Basic Auth
-tramite `deploy/admin/_worker.js`. La build pubblica (`dist-public/`) non
-contiene né `/admin`, né i file staff, né il worker.
+progetto `marini-didattica-admin` e protetti da una pagina di login Astro
+(`/login/`) e da una sessione firmata HttpOnly, gestita da
+`deploy/admin/_worker.js`. La build pubblica (`dist-public/`) non contiene né
+`/admin`, né i file staff, né il worker, né la pagina di login.
 
 Le credenziali non stanno nel repository: sono le variabili del progetto Pages
-`ADMIN_USER` e `ADMIN_PASS` (secret). Se mancano, il worker risponde `503`;
-senza credenziali corrette risponde `401` con `WWW-Authenticate`. Questo vale
-per `marini-didattica-admin.pages.dev`, per il custom domain e per ogni
-deployment del progetto.
+`ADMIN_USER` e `ADMIN_PASS` (secret). Se mancano, il worker risponde `503`.
+Dopo il login la sessione dura 12 ore; il pulsante **Esci** la cancella. HTTP
+Basic resta accettato per script e `curl`.
 
 ## Sviluppo
 
@@ -289,6 +289,6 @@ del precedente repository `riservato`.
 
 Il materiale del docente (cartella `admin` in `students.json`, marcata
 `"staff": true`) è invece pubblicato solo sul progetto `marini-didattica-admin`
-e protetto interamente da HTTP Basic Auth. Il repository `materiale` deve
-restare **privato**: i codici e i sorgenti riservati sono nel repository, non
-solo nel sito.
+e protetto da una pagina di login con sessione firmata. Il repository
+`materiale` deve restare **privato**: i codici e i sorgenti riservati sono nel
+repository, non solo nel sito.
