@@ -256,7 +256,7 @@ Ogni push su `main` avvia `.github/workflows/deploy.yml`, che:
 
 Servono i secret di repository `CLOUDFLARE_API_TOKEN` e
 `CLOUDFLARE_ACCOUNT_ID`. Il progetto admin deve avere Access attivo su tutto
-l'hostname; vedi `../CLOUDFLARE.md`.
+l'hostname; vedi `../workspace-meta/CLOUDFLARE.md`.
 
 ## Submodule
 
