@@ -8,7 +8,7 @@ Il sito è deployato su Cloudflare Pages, in due progetti:
 
 ```text
 https://marini-didattica-materiale.pages.dev/   # pubblico e studenti
-https://marini-didattica-admin.pages.dev/       # docente, protetto da Access
+https://marini-didattica-admin.pages.dev/       # docente, Basic Auth
 ```
 
 I nomi dei progetti sono provvisori finché non viene collegato un dominio
@@ -78,8 +78,15 @@ chiedere alcun codice:
 
 Le pagine di amministrazione e i file della cartella staff (`"staff": true` in
 `content/students.json`) vengono costruiti in `dist-admin/`, pubblicati solo sul
-progetto `marini-didattica-admin` e protetti interamente da Cloudflare Access.
-La build pubblica (`dist-public/`) non contiene né `/admin` né i file staff.
+progetto `marini-didattica-admin` e protetti interamente da HTTP Basic Auth
+tramite `deploy/admin/_worker.js`. La build pubblica (`dist-public/`) non
+contiene né `/admin`, né i file staff, né il worker.
+
+Le credenziali non stanno nel repository: sono le variabili del progetto Pages
+`ADMIN_USER` e `ADMIN_PASS` (secret). Se mancano, il worker risponde `503`;
+senza credenziali corrette risponde `401` con `WWW-Authenticate`. Questo vale
+per `marini-didattica-admin.pages.dev`, per il custom domain e per ogni
+deployment del progetto.
 
 ## Sviluppo
 
@@ -255,8 +262,10 @@ Ogni push su `main` avvia `.github/workflows/deploy.yml`, che:
    `dist-admin/` sul progetto `marini-didattica-admin`.
 
 Servono i secret di repository `CLOUDFLARE_API_TOKEN` e
-`CLOUDFLARE_ACCOUNT_ID`. Il progetto admin deve avere Access attivo su tutto
-l'hostname; vedi `../workspace-meta/CLOUDFLARE.md`.
+`CLOUDFLARE_ACCOUNT_ID`. Il progetto admin deve avere le variabili
+`ADMIN_USER` e `ADMIN_PASS` (quest'ultima come secret); senza, il worker
+risponde `503` e non serve alcun contenuto. Imposta `DEPLOY_ADMIN=true` solo
+quando le credenziali sono configurate. Vedi `../workspace-meta/CLOUDFLARE.md`.
 
 ## Submodule
 
@@ -277,6 +286,6 @@ del precedente repository `riservato`.
 
 Il materiale del docente (cartella `admin` in `students.json`, marcata
 `"staff": true`) è invece pubblicato solo sul progetto `marini-didattica-admin`
-e protetto interamente da Cloudflare Access. Il repository `materiale` deve
+e protetto interamente da HTTP Basic Auth. Il repository `materiale` deve
 restare **privato**: i codici e i sorgenti riservati sono nel repository, non
 solo nel sito.

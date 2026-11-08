@@ -1,4 +1,4 @@
-import { access, cp, readFile, rm, writeFile } from 'node:fs/promises';
+import { access, cp, readFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Students } from '../src/types';
@@ -9,8 +9,9 @@ import type { Students } from '../src/types';
  *   dist-public/  public browser, student browsers, public/private raw files
  *   dist-admin/   everything above plus the admin browser and staff files
  *
- * The admin deployment is protected in full by Cloudflare Access. The public
- * deployment must never contain `/admin` or a staff slug's raw tree.
+ * The admin deployment additionally gets `_worker.js`, which enforces HTTP
+ * Basic authentication for the whole hostname. The public deployment must
+ * never contain `/admin`, a staff slug's raw tree, or the admin worker.
  */
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -18,6 +19,7 @@ const DIST = path.join(ROOT, 'dist');
 const PUBLIC_DIST = path.join(ROOT, 'dist-public');
 const ADMIN_DIST = path.join(ROOT, 'dist-admin');
 const STUDENTS_PATH = path.join(ROOT, 'content', 'students.json');
+const ADMIN_WORKER = path.join(ROOT, 'deploy', 'admin', '_worker.js');
 
 async function main(): Promise<void> {
   try {
@@ -39,20 +41,22 @@ async function main(): Promise<void> {
 
   // The public deployment keeps only public and student material.
   await rm(path.join(PUBLIC_DIST, 'admin'), { recursive: true, force: true });
+  await rm(path.join(PUBLIC_DIST, '_worker.js'), { force: true });
+  await rm(path.join(PUBLIC_DIST, 'functions'), { recursive: true, force: true });
 
   for (const slug of staffSlugs) {
     await rm(path.join(PUBLIC_DIST, 'private', slug), { recursive: true, force: true });
     await rm(path.join(PUBLIC_DIST, 'raw', 'private', slug), { recursive: true, force: true });
   }
 
-  // The admin host is fully protected; its root should land on the browser.
-  await writeFile(path.join(ADMIN_DIST, '_redirects'), '/ /admin/ 302\n', 'utf8');
+  // Advanced-mode Pages worker: protects the whole admin deployment.
+  await cp(ADMIN_WORKER, path.join(ADMIN_DIST, '_worker.js'));
 
   console.log(
     `[split] dist-public pronto (senza /admin, ${staffSlugs.length} cartelle staff rimosse).`,
   );
   console.log(
-    `[split] dist-admin pronto (slug staff: ${staffSlugs.join(', ') || 'nessuno'}).`,
+    `[split] dist-admin pronto (slug staff: ${staffSlugs.join(', ') || 'nessuno'}, Basic Auth attivo).`,
   );
 }
 
