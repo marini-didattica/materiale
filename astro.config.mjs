@@ -36,8 +36,8 @@ function devSharedFont() {
 // https://astro.build/config
 export default defineConfig({
   // Deployed as a Cloudflare Pages project at
-  // https://marini-didattica-materiale.pages.dev/
-  site: 'https://marini-didattica-materiale.pages.dev',
+  // https://materiale.didattica.mattia-marini.com/
+  site: 'https://materiale.didattica.mattia-marini.com',
   base: '/',
   trailingSlash: 'always',
   // Inline the (small) stylesheet into every page. Firefox can paint the HTML

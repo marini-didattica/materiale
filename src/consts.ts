@@ -11,13 +11,13 @@ export const SITE_DESCRIPTION =
  * `.github/workflows/deploy.yml`. If a `*.pages.dev` name is already taken,
  * change it there and update these constants to match.
  */
-export const MAIN_SITE_URL = 'https://marini-didattica-site.pages.dev/';
+export const MAIN_SITE_URL = 'https://didattica.mattia-marini.com/';
 
 /** Reserved-area access page hosted by the main didactic site. */
-export const AREA_URL = 'https://marini-didattica-site.pages.dev/area-riservata/';
+export const AREA_URL = 'https://didattica.mattia-marini.com/area-riservata/';
 
 /** Cheating-graph viewer, available to teachers from the admin dashboard. */
-export const CHECKER_URL = 'https://marini-didattica-checker.pages.dev/';
+export const CHECKER_URL = 'https://checker.didattica.mattia-marini.com/';
 
 /** Browser root for public material. */
 export const PUBLIC_ROOT = withBase('/public/');

@@ -6,17 +6,14 @@ una parte riservata.
 
 Il sito è deployato su Cloudflare Pages, in due progetti:
 
-# Todo
-Document custom domain
-
 ```text
-https://marini-didattica-materiale.pages.dev/   # pubblico e studenti
-https://marini-didattica-admin.pages.dev/       # docente, login
+https://materiale.didattica.mattia-marini.com/   # pubblico e studenti
+https://admin.didattica.mattia-marini.com/       # docente, login
 ```
 
-I nomi dei progetti sono provvisori finché non viene collegato un dominio
-personalizzato: si possono cambiare nel dashboard Cloudflare e in
-`.github/workflows/deploy.yml`, aggiornando `src/consts.ts`.
+Gli hostname `*.pages.dev` restano disponibili come fallback. I nomi dei
+progetti sono configurati nel dashboard Cloudflare e in
+`.github/workflows/deploy.yml`; gli URL pubblici sono in `src/consts.ts`.
 
 ## Struttura
 
@@ -62,7 +59,7 @@ Riservato
 ```
 
 La pagina di accesso con il codice resta nel sito principale:
-[Area riservata](https://marini-didattica-site.pages.dev/area-riservata/). Il
+[Area riservata](https://didattica.mattia-marini.com/area-riservata/). Il
 modulo apre `/private/<codice>/` sul progetto `marini-didattica-materiale`.
 
 ### Amministrazione
