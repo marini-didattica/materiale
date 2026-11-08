@@ -6,6 +6,9 @@ una parte riservata.
 
 Il sito è deployato su Cloudflare Pages, in due progetti:
 
+# Todo
+Document custom domain
+
 ```text
 https://marini-didattica-materiale.pages.dev/   # pubblico e studenti
 https://marini-didattica-admin.pages.dev/       # docente, Basic Auth
