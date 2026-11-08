@@ -4,14 +4,20 @@ export const SITE_NAME = 'Marini didattica';
 export const SITE_DESCRIPTION =
   'Materiale didattico pubblico e riservato: dispense, esercizi, verifiche e correzioni.';
 
-/** Public landing page of the main didactic site. */
-export const MAIN_SITE_URL = 'https://marini-didattica.github.io/';
+/**
+ * Cloudflare Pages hostnames.
+ *
+ * The project names are configured in the Cloudflare dashboard and in
+ * `.github/workflows/deploy.yml`. If a `*.pages.dev` name is already taken,
+ * change it there and update these constants to match.
+ */
+export const MAIN_SITE_URL = 'https://marini-didattica-site.pages.dev/';
 
 /** Reserved-area access page hosted by the main didactic site. */
-export const AREA_URL = 'https://marini-didattica.github.io/area-riservata/';
+export const AREA_URL = 'https://marini-didattica-site.pages.dev/area-riservata/';
 
 /** Cheating-graph viewer, available to teachers from the admin dashboard. */
-export const CHECKER_URL = 'https://marini-didattica.github.io/checker/';
+export const CHECKER_URL = 'https://marini-didattica-checker.pages.dev/';
 
 /** Browser root for public material. */
 export const PUBLIC_ROOT = withBase('/public/');
@@ -31,8 +37,8 @@ function mainSitePath(path: string): string {
 /**
  * Navigation links shared by every page.
  *
- * Kept identical to the main site's navbar: the material site is part of the
- * same site, so every entry points at the canonical page there.
+ * The material site lives on its own Cloudflare Pages hostname; every entry
+ * points at the canonical page on the main site.
  */
 export const navLinks = [
   { href: MAIN_SITE_URL, label: 'Home' },

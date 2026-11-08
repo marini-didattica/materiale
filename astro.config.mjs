@@ -10,11 +10,10 @@ const sharedFontFile = new URL(
 );
 
 /**
- * Inter is served by the main deployment from `/fonts/`, the only URL both
- * sites can share. During local development that path is outside this
- * deployment's base, so Astro's dev server would 404 it. Serve the packaged
- * copy at the same origin path instead. Production builds skip this plugin and
- * load the main deployment's file.
+ * Inter is served from `/fonts/` by this deployment (the file lives in
+ * `static/fonts/`). During local development the plugin below serves the
+ * packaged copy at the same path, so the font is always available even if
+ * `static/fonts/` has not been populated.
  */
 function devSharedFont() {
   return {
@@ -36,10 +35,10 @@ function devSharedFont() {
 
 // https://astro.build/config
 export default defineConfig({
-  // Deployed as a GitHub Pages project site at
-  // https://marini-didattica.github.io/materiale/
-  site: 'https://marini-didattica.github.io',
-  base: '/materiale',
+  // Deployed as a Cloudflare Pages project at
+  // https://marini-didattica-materiale.pages.dev/
+  site: 'https://marini-didattica-materiale.pages.dev',
+  base: '/',
   trailingSlash: 'always',
   // Inline the (small) stylesheet into every page. Firefox can paint the HTML
   // before an external stylesheet finishes loading, which shows the raw,

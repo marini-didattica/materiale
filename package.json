@@ -10,6 +10,7 @@
     "content:build": "bun scripts/build-content.ts",
     "dev": "bun run content:build && astro dev",
     "build": "bun run content:build && astro build",
+    "build:deploy": "bun run build && bun scripts/split-dist.ts",
     "preview": "astro preview",
     "test": "bun test",
     "astro": "astro"

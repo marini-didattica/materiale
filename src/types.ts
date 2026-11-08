@@ -40,6 +40,12 @@ export interface StudentRecord {
   'owner-last-names': string[];
   /** Optional lowercase display slug used in the breadcrumb (defaults to all names). */
   'owner-slug'?: string;
+  /**
+   * Staff-only material. It is staged like any other private folder, but it is
+   * excluded from the public build and deployed only to the access-protected
+   * admin project.
+   */
+  staff?: boolean;
 }
 
 export type Students = Record<string, StudentRecord>;

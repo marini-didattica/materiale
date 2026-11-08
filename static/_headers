@@ -1,0 +1,16 @@
+# Cloudflare Pages headers.
+#
+# The private/student material is intentionally public (the access code in the
+# URL is the bearer token), but it must not be indexed. The admin pages and
+# staff files are protected by Cloudflare Access on their own deployment; these
+# headers are defence in depth.
+
+/private/*
+  X-Robots-Tag: noindex, nofollow
+
+/raw/private/*
+  X-Robots-Tag: noindex, nofollow
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store

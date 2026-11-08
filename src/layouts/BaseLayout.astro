@@ -27,10 +27,9 @@ const { title, description = '', lang = 'it', robots } = Astro.props;
     {description && <meta name="description" content={description} />}
     {robots && <meta name="robots" content={robots} />}
     <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
-    <!-- One variable font covers every weight. This root-relative URL resolves
-         to the main deployment's copy in production (same URL as the main site,
-         so it is already cached across navigations between the two sites) and
-         to the dev-server copy locally. -->
+    <!-- One variable font covers every weight. The file is served by this
+         deployment from /fonts/, so the material site stays self-contained now
+         that it lives on its own Cloudflare Pages hostname. -->
     <link
       rel="preload"
       href="/fonts/inter-latin-wght-normal.woff2"

@@ -268,6 +268,10 @@ export async function getPrivateDirectoryPages(): Promise<PrivateDirectoryPage[]
   const pages: PrivateDirectoryPage[] = [];
 
   for (const [folder, student] of Object.entries(students)) {
+    // Staff folders are teacher-only: they must not get a public /private/<code>
+    // page. The admin build still exposes them under /admin/private.
+    if (student.staff) continue;
+
     const code = student.slug;
     const sourceRoot = path.join(STAGED_PRIVATE_DIR, code);
 

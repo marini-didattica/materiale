@@ -4,11 +4,16 @@ Sito unico per il materiale didattico di **Marini didattica**: ospita i file
 statici e li espone con un browser navigabile, diviso in una parte pubblica e
 una parte riservata.
 
-Il sito è deployato come GitHub Pages project site:
+Il sito è deployato su Cloudflare Pages, in due progetti:
 
 ```text
-https://marini-didattica.github.io/materiale/
+https://marini-didattica-materiale.pages.dev/   # pubblico e studenti
+https://marini-didattica-admin.pages.dev/       # docente, protetto da Access
 ```
+
+I nomi dei progetti sono provvisori finché non viene collegato un dominio
+personalizzato: si possono cambiare nel dashboard Cloudflare e in
+`.github/workflows/deploy.yml`, aggiornando `src/consts.ts`.
 
 ## Struttura
 
@@ -43,55 +48,57 @@ dal suo codice di accesso.
 ```text
 Pubblico
   content/raw/public/prime/esercitazione-1.typ
-    -> /materiale/raw/public/prime/esercitazione-1.pdf
-    -> /materiale/public/prime/                        (browser)
+    -> /raw/public/prime/esercitazione-1.pdf
+    -> /public/prime/                                  (browser)
 
 Riservato
   content/raw/private/1d/angeli-lorenzo/simulazione-1/correzione.typ
-    -> /materiale/raw/private/ABCD2345/simulazione-1/correzione.pdf
-    -> /materiale/private/ABCD2345/simulazione-1/      (browser)
-    -> /materiale/private/ABCD2345/                    (pagina di benvenuto)
+    -> /raw/private/ABCD2345/simulazione-1/correzione.pdf
+    -> /private/ABCD2345/simulazione-1/                (browser)
+    -> /private/ABCD2345/                              (pagina di benvenuto)
 ```
 
 La pagina di accesso con il codice resta nel sito principale:
-[Area riservata](https://marini-didattica.github.io/area-riservata/). Il modulo
-apre `/materiale/private/<codice>/`.
+[Area riservata](https://marini-didattica-site.pages.dev/area-riservata/). Il
+modulo apre `/private/<codice>/` sul progetto `marini-didattica-materiale`.
 
 ### Amministrazione
 
-`/materiale/admin/` è un browser riservato al docente che unisce materiale
-pubblico e privato. Mostra la struttura reale delle cartelle (classe e
-studente) senza chiedere alcun codice:
+`/admin/` è un browser riservato al docente che unisce materiale pubblico e
+privato. Mostra la struttura reale delle cartelle (classe e studente) senza
+chiedere alcun codice:
 
 ```text
-/materiale/admin/
-/materiale/admin/public/          (albero pubblico)
-/materiale/admin/private/         (classi)
-/materiale/admin/private/1d/      (studenti)
-/materiale/admin/private/1d/angeli-lorenzo/
+/admin/
+/admin/public/          (albero pubblico)
+/admin/private/         (classi)
+/admin/private/1d/      (studenti)
+/admin/private/1d/angeli-lorenzo/
 ```
 
-La pagina non è autenticata e usa `noindex, nofollow`: è solo un comodo
-pannello di esplorazione, non una protezione aggiuntiva.
+Le pagine di amministrazione e i file della cartella staff (`"staff": true` in
+`content/students.json`) vengono costruiti in `dist-admin/`, pubblicati solo sul
+progetto `marini-didattica-admin` e protetti interamente da Cloudflare Access.
+La build pubblica (`dist-public/`) non contiene né `/admin` né i file staff.
 
 ## Sviluppo
 
 ```sh
 bun install
-bun run dev      # http://localhost:4321/materiale/
-bun run build    # genera dist/
-bun run preview  # anteprima della build
+bun run dev            # http://localhost:4321/
+bun run build          # genera dist/
+bun run build:deploy   # genera dist-public/ e dist-admin/
+bun run preview        # anteprima della build
 ```
 
 Per compilare i documenti Typst serve il comando `typst` nel `PATH`
 ([installazione](https://github.com/typst/typst#installation)); la CI usa la
 versione `0.15.1`.
 
-Il font Inter è servito dal sito principale su `/fonts/`: è l'unico URL che i
-due deployment condividono, quindi la cache del browser sopravvive alla
-navigazione tra i due siti. In sviluppo `astro.config.mjs` espone la copia di
-`@fontsource-variable/inter` sullo stesso percorso; in produzione il sito
-principale deve essere deployato con `public/fonts/`.
+Il font Inter è servito da questo deployment su `/fonts/` (il file è in
+`static/fonts/`), quindi il sito non dipende più da quello principale. In
+sviluppo `astro.config.mjs` espone una copia di `@fontsource-variable/inter`
+sullo stesso percorso come fallback.
 
 ## Materiale e codici
 
@@ -124,12 +131,12 @@ file pubblicabili in `static/raw/`. La build di Astro genera poi una pagina per
 ogni cartella:
 
 ```text
-/materiale/public/                                   (elenco pubblico)
-/materiale/public/prime/                             (elenco cartella)
-/materiale/raw/public/prime/esercitazione-1.pdf
-/materiale/private/ABCD2345/                        (benvenuto)
-/materiale/private/ABCD2345/simulazione-1/
-/materiale/raw/private/ABCD2345/simulazione-1/correzione.pdf
+/public/                                   (elenco pubblico)
+/public/prime/                             (elenco cartella)
+/raw/public/prime/esercitazione-1.pdf
+/private/ABCD2345/                        (benvenuto)
+/private/ABCD2345/simulazione-1/
+/raw/private/ABCD2345/simulazione-1/correzione.pdf
 ```
 
 Le estensioni servibili sono elencate in `scripts/lib/content-publisher.ts`. I
@@ -242,11 +249,14 @@ Ogni push su `main` avvia `.github/workflows/deploy.yml`, che:
 
 1. installa le dipendenze con Bun;
 2. installa Typst;
-3. esegue `bun run build` (validazione, staging, compilazione Typst, build Astro);
-4. pubblica `dist/` su GitHub Pages.
+3. esegue `bun run build:deploy` (validazione, staging, compilazione Typst,
+   build Astro e split in `dist-public/` e `dist-admin/`);
+4. pubblica `dist-public/` sul progetto `marini-didattica-materiale` e
+   `dist-admin/` sul progetto `marini-didattica-admin`.
 
-Il sito è raggiungibile su
-[marini-didattica.github.io/materiale](https://marini-didattica.github.io/materiale/).
+Servono i secret di repository `CLOUDFLARE_API_TOKEN` e
+`CLOUDFLARE_ACCOUNT_ID`. Il progetto admin deve avere Access attivo su tutto
+l'hostname; vedi `../CLOUDFLARE.md`.
 
 ## Submodule
 
@@ -261,6 +271,12 @@ git submodule update --remote --merge
 
 ## Privacy
 
-La parte riservata non è autenticata: i codici sono difficili da indovinare, ma
-il repository è pubblico e i file sono raggiungibili da chi conosce l'URL. È lo
-stesso modello del precedente repository `riservato`.
+La parte riservata per gli studenti non è autenticata: i codici sono difficili
+da indovinare, ma chi conosce l'URL può aprire il materiale. È lo stesso modello
+del precedente repository `riservato`.
+
+Il materiale del docente (cartella `admin` in `students.json`, marcata
+`"staff": true`) è invece pubblicato solo sul progetto `marini-didattica-admin`
+e protetto interamente da Cloudflare Access. Il repository `materiale` deve
+restare **privato**: i codici e i sorgenti riservati sono nel repository, non
+solo nel sito.

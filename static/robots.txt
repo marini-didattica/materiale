@@ -1,4 +1,5 @@
 User-agent: *
-Allow: /materiale/public/
-Disallow: /materiale/private/
-Disallow: /materiale/admin/
+Allow: /
+Disallow: /private/
+Disallow: /raw/private/
+Disallow: /admin/
