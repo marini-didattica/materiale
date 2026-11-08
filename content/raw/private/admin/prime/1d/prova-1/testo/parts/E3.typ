@@ -1,4 +1,4 @@
-#import "/typst-components/src/lib.typ": callout, checklist, consegna, esempi, griglia-punteggi, nota, quesito, template, testata, righe-risposta
+#import "/typst-components/src/lib.typ": consegna, esempi, nota, template
 
 #consegna[Data la lista di interi `l`, trova il valore *massimo* e il valore *minimo* e
   stampali su due righe: prima il massimo, poi il minimo. Se la lista è vuota, stampa `Lista vuota!`. La lista può contenere numeri negativi.]
@@ -19,10 +19,18 @@
 
 #esempi((
   ([`l = []`], [`0`], [La lista è vuota: non esiste né un massimo né un minimo.]),
-  ([`l = [4]`], [`4`
-    #linebreak()
-    `4`], [Con un solo elemento, massimo e minimo coincidono.]),
-  ([`l = [7, -3, 12, 0, 5, -8]`], [`12`
-    #linebreak()
-    `-8`], [Il valore più grande è `12`, il più piccolo è `-8`.]),
+  (
+    [`l = [4]`],
+    [`4`
+      #linebreak()
+      `4`],
+    [Con un solo elemento, massimo e minimo coincidono.],
+  ),
+  (
+    [`l = [7, -3, 12, 0, 5, -8]`],
+    [`12`
+      #linebreak()
+      `-8`],
+    [Il valore più grande è `12`, il più piccolo è `-8`.],
+  ),
 ))

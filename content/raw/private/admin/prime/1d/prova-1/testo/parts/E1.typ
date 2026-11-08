@@ -1,4 +1,4 @@
-#import "/typst-components/src/lib.typ": callout, checklist, consegna, esempi, griglia-punteggi, nota, quesito, template, testata, righe-risposta
+#import "/typst-components/src/lib.typ": consegna, esempi, template
 
 #consegna[Data la lista di interi `l`, somma soltanto gli elementi *maggiori o uguali a zero* e stampa un
   solo numero: la somma trovata. Se non ci sono elementi positivi, compresa la lista vuota,

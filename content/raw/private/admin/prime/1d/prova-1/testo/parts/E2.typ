@@ -1,4 +1,4 @@
-#import "/typst-components/src/lib.typ": callout, checklist, consegna, esempi, griglia-punteggi, nota, quesito, template, testata, righe-risposta
+#import "/typst-components/src/lib.typ": consegna, esempi, template, nota
 
 #consegna[Data la lista `l`, stampa `True` se *tutti* gli elementi sono *maggiori o uguali a zero*,
   altrimenti stampa `False`. Se la lista è vuota, stampa `True`. Il programma non deve

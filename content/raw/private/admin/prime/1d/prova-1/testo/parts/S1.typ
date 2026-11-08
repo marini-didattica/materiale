@@ -1,4 +1,4 @@
-#import "/typst-components/src/lib.typ": callout, checklist, consegna, esempi, griglia-punteggi, nota, quesito, template, testata, righe-risposta
+#import "/typst-components/src/lib.typ": righe-risposta
 
 ```python
 l = [4, 7, 2, 9, 5]
