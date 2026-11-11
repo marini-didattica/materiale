@@ -1,9 +1,12 @@
 {
 	"$schema": "../../../../misc/exam.schema.json",
 	"version": 1,
-	"sets": ["default"],
+	"sets": [
+		"default"
+	],
 	"preamble-file": "parts/preamble.typ",
 	"max-points": 110,
+	"laude-threshold": 100,
 	"metadata": {
 		"class": "PRIMA",
 		"title": "Verifica di informatica",
@@ -23,7 +26,7 @@
 					"file": "parts/D1.typ",
 					"answer-file": "domanda1.txt",
 					"title": "CPU e GPU",
-					"points": 7,
+					"points": 10,
 					"difficulty": 1
 				},
 				{
@@ -31,15 +34,7 @@
 					"file": "parts/D2.typ",
 					"answer-file": "domanda2.txt",
 					"title": "Caratteri e protocolli",
-					"points": 7,
-					"difficulty": 1
-				},
-				{
-					"id": "D3",
-					"file": "parts/D3.typ",
-					"answer-file": "domanda3.txt",
-					"title": "Il linguaggio assembly",
-					"points": 6,
+					"points": 10,
 					"difficulty": 1
 				}
 			]
@@ -55,7 +50,7 @@
 					"file": "parts/E1.typ",
 					"answer-file": "esercizio1.py",
 					"title": "Conta le occorrenze",
-					"points": 15,
+					"points": 25,
 					"difficulty": 1
 				},
 				{
@@ -63,16 +58,8 @@
 					"file": "parts/E2.typ",
 					"answer-file": "esercizio2.py",
 					"title": "Il valore è nella lista?",
-					"points": 20,
+					"points": 35,
 					"difficulty": 2
-				},
-				{
-					"id": "E3",
-					"file": "parts/E3.typ",
-					"answer-file": "esercizio3.py",
-					"title": "Conta i numeri pari",
-					"points": 25,
-					"difficulty": 3
 				}
 			]
 		},
@@ -87,15 +74,7 @@
 					"file": "parts/S1.typ",
 					"answer-file": "snippet1.txt",
 					"title": "Primo frammento",
-					"points": 10,
-					"difficulty": 2
-				},
-				{
-					"id": "S2",
-					"file": "parts/S2.typ",
-					"answer-file": "snippet2.txt",
-					"title": "Secondo frammento",
-					"points": 10,
+					"points": 15,
 					"difficulty": 2
 				},
 				{
@@ -103,7 +82,7 @@
 					"file": "parts/S3.typ",
 					"answer-file": "snippet3.txt",
 					"title": "Terzo frammento",
-					"points": 10,
+					"points": 15,
 					"difficulty": 2
 				}
 			]
