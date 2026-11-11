@@ -1,9 +1,7 @@
 {
 	"$schema": "../../../../misc/exam.schema.json",
 	"version": 1,
-	"sets": [
-		"default"
-	],
+	"sets": ["default"],
 	"preamble-file": "parts/preamble.typ",
 	"max-points": 110,
 	"laude-threshold": 100,
@@ -24,7 +22,7 @@
 				{
 					"id": "D1",
 					"file": "parts/D1.typ",
-					"answer-file": "domanda1.txt",
+					"answer-file": "domanda{ordinal}.txt",
 					"title": "CPU e GPU",
 					"points": 10,
 					"difficulty": 1
@@ -32,7 +30,7 @@
 				{
 					"id": "D2",
 					"file": "parts/D2.typ",
-					"answer-file": "domanda2.txt",
+					"answer-file": "domanda{ordinal}.txt",
 					"title": "Caratteri e protocolli",
 					"points": 10,
 					"difficulty": 1
@@ -48,7 +46,7 @@
 				{
 					"id": "E1",
 					"file": "parts/E1.typ",
-					"answer-file": "esercizio1.py",
+					"answer-file": "esercizio{ordinal}.py",
 					"title": "Conta le occorrenze",
 					"points": 25,
 					"difficulty": 1
@@ -56,7 +54,7 @@
 				{
 					"id": "E2",
 					"file": "parts/E2.typ",
-					"answer-file": "esercizio2.py",
+					"answer-file": "esercizio{ordinal}.py",
 					"title": "Il valore è nella lista?",
 					"points": 35,
 					"difficulty": 2
@@ -72,7 +70,7 @@
 				{
 					"id": "S1",
 					"file": "parts/S1.typ",
-					"answer-file": "snippet1.txt",
+					"answer-file": "snippet{ordinal}.txt",
 					"title": "Primo frammento",
 					"points": 15,
 					"difficulty": 2
@@ -80,8 +78,8 @@
 				{
 					"id": "S3",
 					"file": "parts/S3.typ",
-					"answer-file": "snippet3.txt",
-					"title": "Terzo frammento",
+					"answer-file": "snippet{ordinal}.txt",
+					"title": "Secondo frammento",
 					"points": 15,
 					"difficulty": 2
 				}
