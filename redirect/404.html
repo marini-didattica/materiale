@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Materiale spostato — Marini didattica</title>
+    <link
+      rel="canonical"
+      href="https://materiale.didattica.mattia-marini.com/"
+    />
+    <script>
+      (() => {
+        const BASE_PATH = "/materiale";
+        const PUBLIC_DESTINATION = "https://materiale.didattica.mattia-marini.com";
+        const ADMIN_DESTINATION = "https://admin.didattica.mattia-marini.com";
+        const path = location.pathname.startsWith(BASE_PATH)
+          ? location.pathname.slice(BASE_PATH.length) || "/"
+          : location.pathname;
+        const isAdmin =
+          /^\/admin(?:\/|$)/.test(path) ||
+          /^\/raw\/private\/MRNMTT03(?:\/|$)/i.test(path);
+        const destination = isAdmin ? ADMIN_DESTINATION : PUBLIC_DESTINATION;
+        location.replace(
+          destination + encodeURI(path) + location.search + location.hash,
+        );
+      })();
+    </script>
+  </head>
+  <body>
+    <p>
+      Questo materiale si è spostato su
+      <a href="https://materiale.didattica.mattia-marini.com/"
+        >materiale.didattica.mattia-marini.com</a
+      >.
+    </p>
+  </body>
+</html>
