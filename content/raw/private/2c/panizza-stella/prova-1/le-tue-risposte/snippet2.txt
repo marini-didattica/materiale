@@ -1,0 +1,2 @@
+Il codice cerca se nella lista ci sono numeri negativi, se c'è almeno un numero minore di zero l'output sarà True.
+L'output è: True

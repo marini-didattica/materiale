@@ -1,0 +1,3 @@
+il programma legge la lista al contraio:
+se un elemento è pari viene stampato, ed il programma procede a leggere i numeri da destra a sinistra
+l'output saranno tutti i numeri pari, in questo caso [10,-4,0,8]

@@ -1,0 +1,4 @@
+finchè a è maggiore di zero a assumerà il valore di a-b, 
+e questo qui sarà il nuovo valore del quoziente
+alla fine viene stampato il valore aggiornato del quoziente -1
+in questo caso l'output è 3

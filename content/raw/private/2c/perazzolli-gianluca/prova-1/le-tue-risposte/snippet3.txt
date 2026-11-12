@@ -1,0 +1,3 @@
+I valori di a e b vengono scambiati.
+output dell esercizio:
+8 3

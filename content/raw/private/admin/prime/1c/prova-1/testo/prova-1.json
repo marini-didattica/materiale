@@ -24,7 +24,7 @@
 					"file": "parts/D1.typ",
 					"answer-file": "domanda{ordinal}.txt",
 					"title": "CPU e GPU",
-					"points": 10,
+					"points": 7,
 					"difficulty": 1
 				},
 				{
@@ -32,7 +32,15 @@
 					"file": "parts/D2.typ",
 					"answer-file": "domanda{ordinal}.txt",
 					"title": "Caratteri e protocolli",
-					"points": 10,
+					"points": 7,
+					"difficulty": 1
+				},
+				{
+					"id": "D3",
+					"file": "parts/D3.typ",
+					"answer-file": "domanda{ordinal}.txt",
+					"title": "Assembly",
+					"points": 6,
 					"difficulty": 1
 				}
 			]

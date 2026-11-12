@@ -1,0 +1,2 @@
+Calcola la divisione di a e b.
+L'output è 3.

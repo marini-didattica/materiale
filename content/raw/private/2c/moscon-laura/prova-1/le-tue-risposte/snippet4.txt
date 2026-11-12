@@ -1,0 +1,2 @@
+Eleva all'esponente b il numero a.
+L'output è 81

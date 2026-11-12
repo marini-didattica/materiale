@@ -1,0 +1,4 @@
+per ogni elemento della lista, se è minore di 0
+la variabile iniziale sarà aggiornata da False a True.
+Se questo elemento è negativo verrà stampato True
+in questo caso l'output è True

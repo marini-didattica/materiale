@@ -1,0 +1,9 @@
+ad a viene tolto b finchè
+ a è uguale o maggiore di
+  0 alla fine viene 
+  scritto quante volte 
+  è stato possibile 
+  togliere b ad a prima 
+  che a diventasse 
+  negativo
+  output=3

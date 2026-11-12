@@ -1,0 +1,9 @@
+l=lista di numeri
+indice=lunghezza della lista -1
+finche l'indice è maggiore uguale a 0 ripeti quest'azione:
+se l'elemento della lista è pari stampalo
+alla fine di un ciclo, diminuisci l'indiced di 1(serve per rendere il ciclo finito)
+8
+0
+-4
+10

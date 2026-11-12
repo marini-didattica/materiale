@@ -1,0 +1,2 @@
+scorre la lista determinando se il valore è negativo 
+output=True

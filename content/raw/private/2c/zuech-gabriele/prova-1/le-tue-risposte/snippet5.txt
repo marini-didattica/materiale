@@ -1,0 +1,7 @@
+alla fine del codice a è uguale a -3, perché nel ciclo prima valeva 2, il che è maggiore di 0, facendogli fare un altro ciclo alla quale si toglie ancora 5.
+in sintesi il codice da la divisione senza resto di b rispetto ad a (a//b). alla fine si toglie 1 al quoziente perché altrimenti si conterebbe anche il momento 
+in cui a va sotto zero
+il programma toglie tutti i multipli di b fino a che a non diventa negativo o zero.
+
+output:
+3

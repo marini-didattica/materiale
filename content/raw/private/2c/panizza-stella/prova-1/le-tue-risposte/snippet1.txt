@@ -1,0 +1,2 @@
+Il codice cerca i numeri che divisi per due fanno 0, parte dall'ultimo elemento della lista fino al primo.
+L'output è: 10, -4, 0, 8.

@@ -1,0 +1,7 @@
+Il codice stampa tutti i numeri pari della lista (compreso 0).
+il ciclo while esamina tutti gli elementi in ordine decrescente e stampa solo quelli che divisi per due danno resto 0.
+in questo caso l'output è:
+8
+0
+-4
+10

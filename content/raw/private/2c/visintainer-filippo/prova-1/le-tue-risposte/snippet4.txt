@@ -1,0 +1,7 @@
+variabile a=3
+variabile b=4
+variabile risultato=1
+ripeti il ciclo 4 volte
+ridsultato= risultato*3
+stampa risultato
+12

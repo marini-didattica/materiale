@@ -23,12 +23,12 @@
 		},
 		"E5": {
 			"answer-file": "esercizio5.py",
-			"score": 1.0,
+			"score": 0,
 			"comment": "Il file è incompleto: l'`if` non ha né condizione né corpo, quindi il programma non parte. L'idea di costruire la lista invertita è giusta, ma va completata."
 		},
 		"S1": {
 			"answer-file": "snippet1.txt",
-			"score": 2.0,
+			"score": 1,
 			"comment": "La spiegazione è confusa e l'output è vuoto. Il programma stampa gli elementi pari partendo dal fondo: `10`, `-4`, `0`, `8`."
 		},
 		"S2": {

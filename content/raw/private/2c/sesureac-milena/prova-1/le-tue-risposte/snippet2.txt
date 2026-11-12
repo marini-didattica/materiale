@@ -1,0 +1,3 @@
+stampa solo gli elementi della lista che hanno il - (minori di 0)
+
+output: -1

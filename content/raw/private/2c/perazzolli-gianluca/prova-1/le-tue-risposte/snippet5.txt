@@ -1,0 +1,4 @@
+Viene calcolato il quoziente di a/b.
+Alla fine del ciclo a vale -3 perchè 5 non è un divisore di 17.
+output dell'esrcizio:
+3

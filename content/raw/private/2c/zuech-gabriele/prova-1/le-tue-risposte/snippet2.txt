@@ -1,0 +1,4 @@
+questo codice indica all'utente la presenza o meno di numeri negativi all'interno di una lista
+
+output:
+True

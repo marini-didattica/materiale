@@ -1,0 +1,5 @@
+viene scritto se la 
+lista è tutta negativa 
+o se è mista fra numeri 
+positivi e negativi.
+output=False

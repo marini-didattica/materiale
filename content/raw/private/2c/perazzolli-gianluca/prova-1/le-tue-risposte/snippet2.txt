@@ -1,0 +1,4 @@
+Si ha una lista di numeri.
+Si scorre la lista per controllare che almeno un elemento della lista sia negativo.
+output dell'esercizio:
+True

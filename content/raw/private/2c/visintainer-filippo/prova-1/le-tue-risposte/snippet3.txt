@@ -1,0 +1,8 @@
+a=3
+b=8
+la variabile t è uguale a a e a=3
+a che è = a t e = a 3
+a è = a b che è = a 8
+b è = a t quindi a 3
+8
+3

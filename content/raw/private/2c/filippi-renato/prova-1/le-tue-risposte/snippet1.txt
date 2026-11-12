@@ -1,0 +1,3 @@
+Il programma fa un ciclo while finchè 'i', che è uguale al numero di cifre nella lista 'l'-1, è maggiore uguale a 0.
+Il ciclo while controlla se i numeri presenti nella lista 'l' sono pari partendo a controllare dal fondo e stampa il numero pari.
+sia vera o falsa la condizione il programma abbassa di 1 i ad ogni controllo 

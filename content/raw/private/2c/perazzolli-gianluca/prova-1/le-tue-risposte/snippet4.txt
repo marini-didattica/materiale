@@ -1,0 +1,3 @@
+Viene calcolta la potenza di a elevato al valore di b.
+output dell'esercizio:
+81

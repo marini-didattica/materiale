@@ -1,0 +1,2 @@
+Il programma esegue uno scambio di valori tra 'a' e 'b' utilizzando 't' come variabile con per scambio
+il risultato sarà che i valori di a e b si invertiranno

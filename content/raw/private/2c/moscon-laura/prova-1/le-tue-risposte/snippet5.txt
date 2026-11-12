@@ -1,0 +1,8 @@
+Calcola la divisione a/b. Alla fine del ciclo
+a è un numero negativo perché il ciclo
+funziona solo quando a rimane positivo
+o uguale a zero. Dato che per calcolare la
+divisione viene sottratto b ad a, può
+succedere.
+(in questo caso a diventa -3)
+L'output è 3

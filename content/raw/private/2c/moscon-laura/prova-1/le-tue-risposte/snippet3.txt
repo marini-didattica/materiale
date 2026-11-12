@@ -1,0 +1,2 @@
+Il valore di a si scambia col valore di b.
+L'output è 8 3

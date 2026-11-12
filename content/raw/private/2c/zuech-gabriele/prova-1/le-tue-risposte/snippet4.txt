@@ -1,0 +1,4 @@
+questo codice serve a generare una potenza con base a all'esponente b (in questo caso 3^4)
+
+output:
+81

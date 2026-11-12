@@ -1,0 +1,7 @@
+vengono scritti tutti i 
+numeri pari della lista
+partendo dall'ultimo.
+output=10
+       -4
+       0 
+       8

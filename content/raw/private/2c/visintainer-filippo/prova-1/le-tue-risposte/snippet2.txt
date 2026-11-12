@@ -1,0 +1,6 @@
+l=lista di numeri
+la variabile b è falsa
+ripeti il ciclo per la lunghezza della lista
+se l'elemento preso è negativo la variabile b doivemta true
+stampa la variabile b
+True

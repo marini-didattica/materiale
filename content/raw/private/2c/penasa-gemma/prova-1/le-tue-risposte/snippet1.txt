@@ -1,0 +1,3 @@
+scorre una lista al contrario con un ciclo while e ciò significa che non sa la quantità per certo, e se quel numero meno uno è divisibile per due 
+allora lo riporta altrimenti no.
+output=
