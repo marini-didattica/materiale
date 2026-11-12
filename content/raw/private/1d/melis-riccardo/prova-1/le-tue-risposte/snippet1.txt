@@ -1,0 +1,11 @@
+Fa la somma di tutti i numeri dispari della lista
+
+l = [4, 7, 2, 9, 5]
+n = len(l)
+s = 0
+i = 0
+while i < n:      inizia un ciclo
+if l[i] % 2 == 1: mette la condizione
+s = s + l[i]      se la condizione è vera s fa la somma 
+i = i + 1         cicla la lista
+print(s)          stampa s

@@ -1,0 +1,2 @@
+Il primo frammento calcola se ogni elemento è intero (%2==1) e stampa la somma di tutti gli interi
+risultato=27

@@ -1,0 +1,5 @@
+La memoria centrale (RAM) è la memomria veloce  e temporanea del computer,
+che usa come appoggio per lavorare ed elaborare le informazioni ed eseguire istruzione.
+Quando il computer viene spento, la RAM si svuota.
+La memoria di massa (il disco rigido) è invece la memoria permanente del computer, e viene quindi utilizzta per salvare file come foto o video.
+La memeoria di massa non si svuota anche a computer spento. 

@@ -1,0 +1,4 @@
+domanda1
+
+Le RAM sono, come la memoria di massa, una memoria del computer però le RAM sono la memoria temporanea che usa il tuo pc mentre sta andando; mentre la memoria di massa è la memoria che rimane salvata sempre anche quando è spento il pc.
+Quindi la differenza tari due è proprio quella della memoria che una la tiene sempre (SSD) e l'altra solo temporaneamente (RAM).

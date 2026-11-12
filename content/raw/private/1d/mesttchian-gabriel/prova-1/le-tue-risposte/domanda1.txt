@@ -1,0 +1,3 @@
+La memoria RAM è la memoria a breve termine, cioè che lavora solamente a schermo acceso e quando si spegne il PC la RAM si svuota. La memoria di massa è la memoraia a lungo termine, cioè che salva ad esempio i file nel desktop, lavora sempre sia a PC acceso che spento. 
+La RAM viene utilizzata spesso quando si usa ad esempio un browser, quando ad esempio copi qualcosa, questo rimarrà copiato finchè il PC è acceso.
+La memoria di massa viene utilizzata, appunto, per salvare file, immagini, video a lungo termine, rimangono sempre lì.

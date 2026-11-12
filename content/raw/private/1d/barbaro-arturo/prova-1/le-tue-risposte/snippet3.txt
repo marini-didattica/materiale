@@ -1,0 +1,1 @@
+stampa il risultato di b per risultato 4 volte. Output= 3 3 3 3

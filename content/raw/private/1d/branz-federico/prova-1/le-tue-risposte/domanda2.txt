@@ -1,0 +1,1 @@
+Il bit è un unico numero 0 (spento) o 1 (acceso), invece il byte è un insieme di 8 bit. Il computer usa il sistema binario, perchè rispetto a quello decimale ci possono essere più "combinazioni" per quindi formare i caratteri con un byte si possono rappresentare 64 valori diversi

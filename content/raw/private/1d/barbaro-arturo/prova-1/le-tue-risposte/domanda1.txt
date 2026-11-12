@@ -1,0 +1,1 @@
+La differenza tra la RAM e memoria di massa è che la RAM ricorda le cose non salvate, quando il computer viene spento tutti i dati vengono persi. La memoria di massa contiene i dati o file salvati, quando si spegne il computer non vengono persi i dati.

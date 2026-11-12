@@ -1,0 +1,3 @@
+Il frammento di codice stampa la somma dei numeri dispari contenuti nella lista.
+
+Output: 21

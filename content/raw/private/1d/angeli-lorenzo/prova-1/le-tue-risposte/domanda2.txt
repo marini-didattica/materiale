@@ -1,0 +1,3 @@
+Un bit è un numero che può essere uno 0 o un 1, numeri che possono essere capiti dal processore, un byte sono 8 bit e servono usando strumenti come la tabella ASCII per attribuire un significato all'insieme di 0 e 1 (tipo 01001100)
+Si usa il sistema binario perché è quello che capisce il computer ed è più comodo
+Si possono rappresentare tutti i valori presenti all'interno della tastiera

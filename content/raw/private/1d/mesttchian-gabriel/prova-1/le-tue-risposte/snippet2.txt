@@ -1,0 +1,6 @@
+Questo codice stampa i numeri di questa lista al contrario
+Output:
+1
+8
+5
+2

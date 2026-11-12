@@ -1,0 +1,3 @@
+Questo programma da come risultato 81.
+Nel ciclo viene moltiplicato il numero 3 (a) alla variabile risultato che parte da 1 ma ogni volta viene moltiplicata per 3 quindi diventa 3 , 9, 27, 81, per tante volte finchè i che parte da 0 arriva a b che è 4.
+Quindi è come fare 3 elevato alla quarta perchè 3 viene moltiplicato per se sesso per 4 volte.

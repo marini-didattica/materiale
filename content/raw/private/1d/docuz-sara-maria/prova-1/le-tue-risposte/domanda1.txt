@@ -1,0 +1,8 @@
+LA MEMORIA CENTRALE(RAM):
+Esegue una serie di comandi tutti in ordine.
+
+LA MEMORIA DI MASSA:
+Conserva file e dati.
+
+LA DIFFERENZA TRA LORO:
+La RAM esegue i comandi, però non li salva come li salva la memoria di massa.Infatti essa riesce a conservare dati e file.

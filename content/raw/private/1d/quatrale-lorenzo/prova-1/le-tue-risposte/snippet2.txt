@@ -1,0 +1,6 @@
+Il codice stampa tutti gli elementi della lista al contrario.
+
+Output: 1
+        8
+        5
+        2

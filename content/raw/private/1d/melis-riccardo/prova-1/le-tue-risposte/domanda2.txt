@@ -1,0 +1,5 @@
+Il computer tutte le informazioni le memorizza in forma binaria in sequenze di bit(0 e 1).
+8 bit formano un byte e ogni informazione il computer la transcodifica in codice macchina in base 2.
+Ogni carattere è rappresentato da una sequenza di 8 bit(1 byte) e ciascuna differente sequenza di bit rappresenta un diverso carattere.
+Un numero in codice macchina invece e rappresentato da sequenze da 32 o 64 bit in base all'architettura del computer
+Il rapporto tra la codifica in bit e i caratteri è rappresentata in una tabella di codifica(ASCII o Unicode/UTF 8)

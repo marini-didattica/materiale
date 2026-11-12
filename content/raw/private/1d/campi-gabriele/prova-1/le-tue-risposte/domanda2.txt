@@ -1,0 +1,5 @@
+domanda2
+
+I bit sono una sequenza di o 1 o 0, i byte sono un insieme di 8 bit.
+Nel computer si usa il sistema binario perché se i bit possono rappresentare solo 1 o 0 con una determinata sequenza di 0 e 1 si possono comunque formare caratteri e numeri.
+con un byte si possono rappresentare ben 2 all'ottava valori diversi.

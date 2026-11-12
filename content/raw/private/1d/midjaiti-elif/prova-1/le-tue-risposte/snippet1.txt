@@ -1,0 +1,1 @@
+Devo sommare i numeri che ho nella lista, stampare gli elementi da destra a sinistra (1, 8, 5, 2) e devo calcolare 3 per 4 perchè il ciclo si deve ripetere finchè i e minore ad a.

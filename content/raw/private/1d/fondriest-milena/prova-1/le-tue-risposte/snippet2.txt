@@ -1,0 +1,1 @@
+quetso codice stampa la lista al contrario quindi nel output verrebbe scritto 5,9,2,7,4

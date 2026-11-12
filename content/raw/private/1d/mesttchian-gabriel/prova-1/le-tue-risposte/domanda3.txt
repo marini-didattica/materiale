@@ -1,0 +1,1 @@
+Un compilatore e un interprete traducono le istruzioni di un computer passo dopo passo

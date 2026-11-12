@@ -1,0 +1,3 @@
+Questo comando da come risultato 21. 
+Durante il ciclo si fa un controllo per vedere se il resto della divisione tra quel numero e 2 è 1, se così viene sommato quel numero della lista a s e a i viene aggiunto 1 per fare il controllo del numero seguente della lista. 
+Il risultato è quindi dato dalla somma dei numeri dispari della lista.

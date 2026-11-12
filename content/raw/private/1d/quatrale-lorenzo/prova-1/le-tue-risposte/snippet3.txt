@@ -1,0 +1,6 @@
+Il codice calcola il prodotto tra la variabile 'risultato' e la variabile 'a' finché 'i' è minore di 'b'
+
+output: 3
+        3
+        3
+        3

@@ -1,0 +1,10 @@
+snipped3
+
+Questo codice stampa la potenza di A in base al valore di B
+
+Dopo aver dato un valore a ogni variabile, il codice dice che finché I è minore di B il risultato viene moltiplicato per A (in questo caso 3).
+I=I+1 aumenta la variabile I.
+Alla fine del ciclo si stampa RISULTATO
+
+OUTPUT
+81

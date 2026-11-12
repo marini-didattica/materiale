@@ -1,0 +1,1 @@
+In questo snippet risultato deve moltiplicare a 4 volte, perchè i(1) deve arrivare a b(4) il chè darà 81

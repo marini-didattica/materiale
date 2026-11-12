@@ -1,0 +1,2 @@
+Un'interprete è quello che traduce il linguaggio che noi utiliziamo in quello che il computer riesce a capire.
+Un compilatore 

@@ -1,0 +1,2 @@
+La differenza principale tra RAM e hard disk è lo scopo che hanno, perchè la RAM è la memoria di lavoro, cioè salva tutti i file temporanei che quando spegni il compiuter si cancellano automaticamente.
+l'hard disk invece è la memoria fissa di un compiuter, è più lenta ma salva al suo interno file che un volta spento il compiuter rimangono. 

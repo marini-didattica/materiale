@@ -1,0 +1,12 @@
+a = 3                                           #la variabile a = 3
+b = 4                                           #la variabile b = 4
+risultato = 1                                   #la variabile risultato = 1
+i = 0                                           #la variabile i = 0
+while i < b:                                    #ripetere tutto sotto il while finche i < b
+    risultato = risultato * a                   #il risultato = a risultato per la variabile a
+    i = i + 1                                   #la i = a i+1
+print(risultato)                                #stampa il risultato
+
+
+
+#il esercizio vuole moltiplicare il risultato per a 4 volte ed il esercizio stampera 81

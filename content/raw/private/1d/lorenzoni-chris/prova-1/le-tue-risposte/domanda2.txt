@@ -1,0 +1,3 @@
+I bit possono essere solo 0 o 1, che significano ripettivamente spento ed acceso.
+Un byte invece è l'insieme di otto bit, con un byte si possono rappresentare 2 all'ottava, cioè 256 di combinazioni.
+Il compiuter utilizza il sistema binario perchè cosi si possono creare molte più compinazioni e perhè gli è più facile da leggere.

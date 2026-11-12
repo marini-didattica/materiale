@@ -1,0 +1,2 @@
+I bit e i byte sono le unità fondamentali del codice, 1 byte sono 8 bit.
+Il codice binario è la base di tutto, formato da 1 e 0

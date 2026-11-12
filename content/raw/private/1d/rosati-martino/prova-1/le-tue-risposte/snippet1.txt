@@ -1,0 +1,1 @@
+Nello snippet s darà 2 perchè quando trova un valore che diviso 2 dà 1, ossia(solo 2), stamperà 2 

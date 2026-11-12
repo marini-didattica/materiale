@@ -1,0 +1,11 @@
+BIT:                                                                
+
+
+
+
+BYTE:
+
+
+
+Perché il computer usa il sistema binario?
+Il computer usa un sistema binario a differenza del sistema decimale perché con il sistema binario è possibile avere più combinazioni e soprattutto ordine al comuter in modo da riuscire a eseguire i comandi più facilmente.In byte si possono rappresentare moltissimi valori diversi.

@@ -1,0 +1,2 @@
+#il ram e una memoria a breve termine, si svuota appena il computer viene spento pero e molto veloce, 
+invece il disco rigido e una memoria a lungo termine che rimane li anche se il compter viene spento pero e piu lenta rispetto ala ram
