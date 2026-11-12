@@ -1,0 +1,2 @@
+Siamo passati dal codice macchina, dove noi umani scrivevamo 0 e 1 "manualmente" però per noi era difficile, al linguaggio assembly ce è lo scrivere ADD per far intendere al processore il comando "aggiungi" ma per noi era comunque difficile e serviva un programma chiamato assembler per trasformare ADD in "aggiungi", a python che è un evoluzione sempre più verso l'inglese. 
+Un compilatore e un interprete scrivono in linguaggio assembly.

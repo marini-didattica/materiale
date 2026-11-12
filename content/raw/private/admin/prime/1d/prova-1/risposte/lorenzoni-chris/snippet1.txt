@@ -1,0 +1,2 @@
+Questo codice calcola la somma di tutti i numeri dispari nella lista.
+Output = 21

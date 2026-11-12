@@ -1,0 +1,2 @@
+il sistema binario è il metodo in cui in un computer vengono raprsentati i numeri e le lettere
+ che sono 1-0 vengono posizionati in vari ordini tutti diversi tra loro.

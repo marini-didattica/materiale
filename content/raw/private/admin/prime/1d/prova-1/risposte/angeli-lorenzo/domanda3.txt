@@ -1,0 +1,1 @@
+Un compilatore scrive la serie di 0 e 1 mentre l'interprete gli traduce in caratteri

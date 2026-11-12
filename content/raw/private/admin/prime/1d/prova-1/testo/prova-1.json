@@ -4,6 +4,7 @@
 	"sets": ["default", "bes"],
 	"preamble-file": "parts/preamble.typ",
 	"max-points": 110,
+	"laude-threshold": 100,
 	"metadata": {
 		"class": "1D",
 		"title": "Verifica di informatica",

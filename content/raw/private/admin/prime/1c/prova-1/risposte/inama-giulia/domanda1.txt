@@ -1,0 +1,2 @@
+la cpu è il processore, esegue i calcoli, le istruzioni e decide che cosa fare in base alle informazioni che riceve. 
+la gpu è un processore specializzato nei calcoli grafici, usato per creare disegni o animazioni. Viene utilizzata dall'intelligenza artificiale o nei videogiochi.

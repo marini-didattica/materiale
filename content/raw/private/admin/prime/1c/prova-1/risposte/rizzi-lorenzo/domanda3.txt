@@ -1,0 +1,1 @@
+Assembly è il linguaggio utilizzato per confrontarsi con un comoputer, ha infatti l'incarico di tradurre il codice di programmi e sistemi in codice binario, in modo che il processore sia in grado di eseguirlo.

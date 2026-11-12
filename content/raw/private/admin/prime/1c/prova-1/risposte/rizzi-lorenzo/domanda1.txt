@@ -1,0 +1,4 @@
+La differenza principale tra CPU e GPU è il loro compito. 
+La CPU (o processore) è una parte del compter che svolge gli ordini che il codice gli indica di fare, è incaricata di eseguire programmi e sistemi. 
+La GPU (o scheda grafica) è una parte altrettanto importante del compter, infatti svolge i calcoli necessari a mostrare le immagini e i "disegni" sul nostro schermo. 
+Le due lavorano in modo differente, la CPU esegue gli ordini in codice binario, la GPU invece, svolge gli ordini in 

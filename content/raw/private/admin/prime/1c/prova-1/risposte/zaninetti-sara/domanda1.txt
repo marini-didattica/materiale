@@ -1,0 +1,1 @@
+Il CPU è il procssore, amntre il GPU è la memoria a breve termine che si cancella una volta spento il computer.

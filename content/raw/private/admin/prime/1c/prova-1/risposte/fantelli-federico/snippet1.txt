@@ -1,0 +1,6 @@
+il programma controlla i numeri della lista 1 alla volta se il numero è maggiore di 0, lo stampa. Poi passa al numero dopo
+output:
+3
+7 
+5
+12

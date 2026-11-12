@@ -1,0 +1,1 @@
+questo snippet stamperà la lista al contrario, perchè ''i = len(l) - 1'' indica che la variabile parte dall'ultimo numero e ''i = i - 1'' e ''print(l[i])''faranno si che vada al contrario

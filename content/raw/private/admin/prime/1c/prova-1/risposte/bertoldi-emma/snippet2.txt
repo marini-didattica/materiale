@@ -1,0 +1,13 @@
+Questo programma stampa 1x3x3x3x3 perchè se il
+risultato è sempre risultato x a che, nel primo ciclo
+è uguale a 1x3 quindi il risultato è uguale a 3.
+Questo avviene solo se i<b quindi 0<4.
+Poi si aumenta i quindi i=1 e si ricomincia il giro che 
+tradotto in numeri é:
+while 1<4:
+    3=3x3 #=9
+    1=1+1 #=2
+Questo viene ripetuto fini a che i<b quindi i può essere 
+0,1,2,3.
+Quando i=4 si esce dal ciclo while e si stampa il 
+riusltato che è 81.

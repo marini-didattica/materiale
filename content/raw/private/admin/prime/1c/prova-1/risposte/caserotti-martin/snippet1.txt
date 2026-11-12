@@ -1,0 +1,1 @@
+questo esercizio scorre/setaccia un lista numero/elemento uno per uno.

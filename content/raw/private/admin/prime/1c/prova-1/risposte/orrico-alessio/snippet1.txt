@@ -1,0 +1,1 @@
+In pratica il codice ci farà arrivare a stampare tutti i valori maggiori di 0 tramite il blocco che ci permette di far leggere tutti numeri all'interno della lista e di metterli a confronto con 0 e se successivamente sono maggiori allora verranno stampati nell'out put e poi l'azione si ripeterà fino ad aver controllato tutti i numeri presenti nella lista.

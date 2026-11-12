@@ -1,0 +1,1 @@
+questo frammento di codice fa una potenza fra le variabili

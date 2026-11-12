@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 7,
+			"comment": "Ottimo."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 6,
+			"comment": "Bene bit e byte, ma non hai risposto a quanti valori rappresenta un byte: sono 256. La frase 'tutti i valori presenti nella tastiera' non è precisa."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 2,
+			"comment": "Un po' vago ma ok; il compilatore converte codice in 0 ed 1, l'interprete legge le istruzioni e le esegue, senza convertirle"
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 15,
+			"comment": "Perfetto: sommi solo i valori non negativi e il codice funziona anche con lista vuota e numeri negativi."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 3,
+			"comment": "Controlli solo `l[0]` e incrementi `y` una volta: con un negativo in seconda posizione il programma stampa comunque `True`. Serve un ciclo su tutta la lista."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 15,
+			"comment": "`len[l]` non è valido (serve `len(l)`) e il codice non scorre la lista: probabilmente volevi mettere l'`if/else` dentro al while; in quel caso sarebbe stato giusto. Occhio però al caso della lista vuota, che va gestito a parte. Potresti usare una singola variabile indice (o `z` o `y`)"
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 10,
+			"comment": "Corretto: somma dei dispari e output `21`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Corretto: output `1 8 5 2` e spiegazione del ciclo al contrario."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 10,
+			"comment": "Corretto: il programma calcola 3^4 = 81."
+		}
+	}
+}

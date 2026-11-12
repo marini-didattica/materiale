@@ -1,0 +1,3 @@
+Vengono create due variabili a e b. Viene dato un valore a risultato di 1. Quindi il risultato sarà 1*3=3. Infine verrà stampato il risultato.
+
+ 

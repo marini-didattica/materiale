@@ -1,0 +1,2 @@
+Un bit è un valore solo e unico mentre byte sono 8 valori, si usa il sistema binario perchè è più facile dato che abbiamo 0 (spento) e 1 (acceso) ad esempio.
+Con un byte si possono rappresentare 8 valori.

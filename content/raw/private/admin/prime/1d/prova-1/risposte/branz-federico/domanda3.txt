@@ -1,0 +1,1 @@
+Il compilatore serve per trascrivere al computer la sequenza di 0 e 1 in base a che cosa immettiamo in esso. Invece l'interprete per far capire al computer ciò che il compilatore scrive.

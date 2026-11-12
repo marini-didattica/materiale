@@ -1,0 +1,1 @@
+Il linguaggio assembly e il linguaggio di base di un computer che qualsiasi programma riesce a comprendere senza alcuna difficoltà.

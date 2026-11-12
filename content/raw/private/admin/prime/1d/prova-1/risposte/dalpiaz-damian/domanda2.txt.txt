@@ -1,0 +1,1 @@
+2.il bit è formato da una sequenza di 0 e 1 mentre il byte è formato dai caratteri decimali il computer usa il sistema binario perché è più veloce e riesce dare un valore a tutte le diverse sequenze  

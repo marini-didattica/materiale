@@ -1,0 +1,2 @@
+La tabella ASCII e una tabella che a ogni sequenza di ottto bit (un beyt) atrribuisce un valore o una lettera.
+è necessario stabilire delle convenzioni perchè altrimenti una sequenza di otto bit potrebbe rappresentare qualsiasi cosa, in base a come noi vogliamo interpretarla, quindi sarebbe impossibile capirsi.

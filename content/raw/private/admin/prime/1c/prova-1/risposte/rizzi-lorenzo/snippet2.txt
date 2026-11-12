@@ -1,0 +1,4 @@
+Il frammento di codice, moltiplica la variabile risultato (1) con la variabile a (3)tante volte quante lo dice b (4).
+L'output di python sarà:
+81
+

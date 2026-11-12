@@ -1,0 +1,1 @@
+stampare tutti i numeri della lista maggiori di 0

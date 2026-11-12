@@ -1,0 +1,2 @@
+questo snippet va a moltiplicare a per b volte infatti 3 alla 4 fa 81
+che è l' output

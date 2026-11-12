@@ -1,0 +1,2 @@
+questo snippet cerca nella lista un numero minore di 0
+e l' output sarà 2

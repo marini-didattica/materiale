@@ -45,5 +45,5 @@
       "Valentinelli Aurora,",
     ),
   ),
-  // absent: ("Pupez Matei",),
+  absent: ("Pellegrini Benedetta",),
 )

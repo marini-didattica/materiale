@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 5,
+			"comment": "Hai descritto il disco e la RAM, ma non hai detto che la RAM è volatile: i dati nella RAM si perdono allo spegnimento. La memoria di massa è permanente. Di fatto mi aspettavo 3 cose: ram è volatile, veloce e meno capiente rispetto alla memoria di massa."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 9,
+			"comment": "Ottimo! Brava che hai spiegato nel dettaglio come funziona la codifica in base 2"
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 3,
+			"comment": "Va bene, anche se un po' vaga (il che è comprensibile dato che ci abbiamo dedicato relativamente poco a questa parte). Occhio che nè compilatore nè interprete scrivono linguaggio assembly: il primo converte un programma in un linguaggio ad alto livello in codice macchina, il secondo si limita a leggere ed eseguire le istruzioni del programma senza tradurle in codice macchina."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 15,
+			"comment": "Corretto e idiomatico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 20,
+			"comment": "Corretto e idiomatico."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 25,
+			"comment": "Corretto e idiomatico."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 10,
+			"comment": "Corretto: somma dei dispari e output `21`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Corretto: output e spiegazione."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 10,
+			"comment": "Corretto: output `81` e spiegazione."
+		}
+	}
+}

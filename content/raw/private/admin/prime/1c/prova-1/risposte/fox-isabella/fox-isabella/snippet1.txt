@@ -1,0 +1,3 @@
+Output = - 1 
+         - 5
+questo codice scorre una lista di numeri e quando legge un numero minore di 0 lo stampa.

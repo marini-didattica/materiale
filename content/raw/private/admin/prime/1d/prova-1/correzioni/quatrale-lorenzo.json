@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 6,
+			"comment": "Corretto: RAM veloce e temporanea, memoria di massa permanente. Bene l'accenno all'uso come appoggio."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 9,
+			"comment": "Ottimo!!"
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 3,
+			"comment": "L'interprete è descritto correttamente; del compilatore hai scritto solo 'Un compilatore' e non hai completato."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 10,
+			"comment": "Il ciclo va fuori lista (`i <= len(l)`) e `if i >= 0` controlla l'indice, non l'elemento: stai contando gli indici, non sommando i valori. Output `7` invece di `16`."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 0,
+			"comment": "Il ciclo non controlla gli elementi, `print(true)` usa un nome non definito e `if len(l) = 0` è un errore di sintassi. Il programma non parte."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 0,
+			"comment": "Il ciclo incrementa solo `i` e non calcola né massimo né minimo: manca la parte principale."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 10,
+			"comment": "Corretto: somma dei dispari e output `21`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Corretto: output e spiegazione."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 4,
+			"comment": "Hai capito che si moltiplica, ma l'output è un unico `81`, non `3 3 3 3`."
+		}
+	}
+}

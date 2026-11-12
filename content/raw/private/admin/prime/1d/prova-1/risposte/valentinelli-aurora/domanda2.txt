@@ -1,0 +1,4 @@
+Un bit è una casella contenente 0 o 1.
+Un byte è un insieme di 8 bit.
+Il computer utilizza il sistema binario e trasforma le nostrelettere o numeri in codice binario. Per noi nel numero 237 il 3 vale 30, per un computer il numero 1011 vale 11 perchè è dato da 1*1+1*2+0*4+1*8 che appunto fa 11.
+Con un byte si possono rappresentare 128 valori diversi.

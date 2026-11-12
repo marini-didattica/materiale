@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 15,
+			"comment": "Corretto: sommi i valori positivi e gestisci lista vuota e negativi. Il `while True` con `break` funziona, ma occhio che, come ti dicevo in classe, quando gli esercizi diventeranno più complessi rischi di perderti con i `break` e di non capire più il flusso del programma. Meglio usare un ciclo con condizione."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 17,
+			"comment": "La logica è corretta; con `l = []` però `trovato` non viene mai assegnata e il programma va in `NameError`. Inizializza `trovato = False` prima del ciclo."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 12,
+			"comment": "Il programma stampa massimo e minimo per la lista data, ma confronta con la somma parziale (`b`), non con il massimo/minimo corrente: con altre liste sbaglia. Inoltre l'output non è nel formato richiesto e con `l = []` va in `NameError`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt.txt",
+			"score": 8,
+			"comment": "Hai scritto che somma 'tutti gli interi': in realtà somma solo i dispari, ma penso che tu ti sia confuso nella fretta. L'output è `21`, non `27`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt.txt",
+			"score": 10,
+			"comment": "Corretto: output e spiegazione."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt.txt",
+			"score": 10,
+			"comment": "Corretto: potenza con esponente positivo o zero e output `81`."
+		}
+	}
+}

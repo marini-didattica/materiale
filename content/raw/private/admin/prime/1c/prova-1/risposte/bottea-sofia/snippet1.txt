@@ -1,0 +1,1 @@
+In questo codice vengono stampati i numeri contenuti nella lista che sono maggiore di 0. Quindi stamapa 3,7 e dodici perchè gli alri sono o uguali a zero o minori di 0.

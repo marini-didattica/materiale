@@ -1,0 +1,2 @@
+COMPILATORE:
+Un compilatore compila, appunto dal nome, i file trascrivendoli mentre un interprete penso che controlla tutto il sistema a modo che sia tutto corretto.

@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 6,
+			"comment": "Corretto: RAM a breve termine e volatile, memoria di massa a lungo termine. Manca un accenno a velocità e capacità."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 9,
+			"comment": "Ottimo! Sei stato l'unico a citarmi la questione dei due stati elettrici."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 3,
+			"comment": "Hai detto che entrambi traducono 'passo dopo passo': è la caratteristica dell'interprete. Il compilatore traduce l'intero programma."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 15,
+			"comment": "Corretto e idiomatico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 5,
+			"comment": "Il ciclo incrementa `i` solo se `l[i] > 0`: con uno zero o un negativo va in loop infinito. In un certo senso si può dire che il programma funzioni, dato che viene stampato `True` solo se si hanno solo numeri positivi, dato che in caso contrario si va in loop infinito. Non era questo che chiedeva la consegna però..."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 23,
+			"comment": "Quasi perfetto. Con la lista vuota inizializzi massimo e minimo a `l[0]`, che è però fuori range"
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 10,
+			"comment": "Perfetto."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Perfetto."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 10,
+			"comment": "Perfetto. Avresti potuto scrivere più semplicemente `il codice esegue a^b`"
+		}
+	}
+}

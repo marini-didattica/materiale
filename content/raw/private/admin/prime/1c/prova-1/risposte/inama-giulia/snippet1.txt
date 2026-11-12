@@ -1,0 +1,4 @@
+Il programma stampa tutti i numeri positivi maggiori di 0 contenuti nella lista, uno per ogni riga.
+Output: 3
+        7
+        12

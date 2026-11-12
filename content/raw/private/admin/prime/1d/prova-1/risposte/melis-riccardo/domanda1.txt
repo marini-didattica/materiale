@@ -1,0 +1,10 @@
+La principale differenza tra la memoriacentrale(RAM) e la memoria di massa
+ (disco SSD o hard disk) è che la 
+ memori centrale è veloce e volatile, 
+ contiene dati e programmi in 
+ esecuzione temporaneamente(si svuota 
+ quando il computer si spegne), mentre 
+ al memoria di massa contiene quello 
+ che viene salvato(per esempio tutti i 
+ file che salviamo) in modo permanente
+(anche quando il computer si spegne)

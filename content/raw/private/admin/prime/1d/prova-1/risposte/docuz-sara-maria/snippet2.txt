@@ -1,0 +1,1 @@
+Si parte d auna lista di numeri. Sappiamo che la variabile i è la lista -1. Successivamente viene eseguito il comando che fa scorrere una lista elemento per elemento. Infine verrà stampato la lista contenente anche la variabile i.

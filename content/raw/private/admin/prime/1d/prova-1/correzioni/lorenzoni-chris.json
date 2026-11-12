@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 7,
+			"comment": "Corretto: RAM memoria di lavoro volatile, hard disk più lento e permanente."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 8,
+			"comment": "Corretto: bit 0/1, byte di 8 bit e 256 valori. Il perché del binario è un po' vago: l'hardware ha due stati stabili."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 2,
+			"comment": "La risposta è un po' confusa. Il compilatore traduce tutto il programma, l'interprete lo esegue istruzione per istruzione."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 0,
+			"comment": "`1 = 1` è un errore di sintassi e `while 1 == l` confronta un intero con una lista. Il programma non parte."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 0,
+			"comment": "`if l >= 0` confronta una lista con un intero: `TypeError`. Serve scorrere gli elementi."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 1,
+			"comment": "Il programma conta gli elementi e stampa `len(l)`: non cerca né massimo né minimo."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 10,
+			"comment": "Corretto: somma dei dispari e output `21`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Corretto: output e spiegazione."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		}
+	}
+}

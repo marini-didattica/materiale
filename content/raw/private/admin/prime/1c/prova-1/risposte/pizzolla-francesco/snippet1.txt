@@ -1,0 +1,1 @@
+questo frammento controlla se il numero è maggiore di 0 se è ositivo lo stampa,passa al numero successivo alla fine ella lista

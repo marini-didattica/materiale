@@ -1,0 +1,232 @@
+{
+  "name": "1D · Prova 1 · copie sospette",
+  "test-folder": "..",
+  "elements": {
+    "nodes": [
+      {
+        "data": {
+          "id": "angeli-lorenzo",
+          "seat": "fila 1, banco 1"
+        },
+        "style": {
+          "label": "Angeli\nLorenzo"
+        }
+      },
+      {
+        "data": {
+          "id": "barbaro-arturo",
+          "seat": "fila 1, banco 2"
+        },
+        "style": {
+          "label": "Barbaro\nArturo"
+        }
+      },
+      {
+        "data": {
+          "id": "bertolini-florian",
+          "seat": "fila 1, banco 3"
+        },
+        "style": {
+          "label": "Bertolini\nFlorian"
+        }
+      },
+      {
+        "data": {
+          "id": "branz-federico",
+          "seat": "fila 1, banco 4"
+        },
+        "style": {
+          "label": "Branz\nFederico"
+        }
+      },
+      {
+        "data": {
+          "id": "campi-gabriele",
+          "seat": "fila 1, banco 6"
+        },
+        "style": {
+          "label": "Campi\nGabriele"
+        }
+      },
+      {
+        "data": {
+          "id": "dalpiaz-damian",
+          "seat": "fila 1, banco 7"
+        },
+        "style": {
+          "label": "Dalpiaz\nDamian"
+        }
+      },
+      {
+        "data": {
+          "id": "docuz-sara-maria",
+          "seat": "fila 2, banco 1"
+        },
+        "style": {
+          "label": "Docuz\nSara Maria"
+        }
+      },
+      {
+        "data": {
+          "id": "fondriest-milena",
+          "seat": "fila 2, banco 2"
+        },
+        "style": {
+          "label": "Fondriest\nMilena"
+        }
+      },
+      {
+        "data": {
+          "id": "laccona-alessandro-massimo",
+          "seat": "fila 2, banco 3"
+        },
+        "style": {
+          "label": "Laccona\nAlessandro Massimo"
+        }
+      },
+      {
+        "data": {
+          "id": "lorenzoni-chris",
+          "seat": "fila 2, banco 4"
+        },
+        "style": {
+          "label": "Lorenzoni\nChris"
+        }
+      },
+      {
+        "data": {
+          "id": "malanotti-stefano",
+          "seat": "fila 2, banco 6",
+          "confidence": 0.35,
+          "exercise-notes": {
+            "E1": "Usa `while True` con `break`, `+=` e una f-string (`print(f\"{b}\")`): nessun altro studente della classe usa queste costruzioni, non necessarie per la consegna.",
+            "E3": "Soluzione molto diversa da tutte le altre: `while True`, contatori ausiliari (`b`, `h`, `d`, `e`) e f-string; contiene righe inutili (`b+=c; b-=c`) e stampa messaggi discorsivi invece dei due valori richiesti."
+          }
+        },
+        "style": {
+          "label": "Malanotti\nStefano"
+        }
+      },
+      {
+        "data": {
+          "id": "melis-riccardo",
+          "seat": "fila 2, banco 7"
+        },
+        "style": {
+          "label": "Melis\nRiccardo"
+        }
+      },
+      {
+        "data": {
+          "id": "mesttchian-gabriel",
+          "seat": "fila 3, banco 1"
+        },
+        "style": {
+          "label": "Mesttchian\nGabriel"
+        }
+      },
+      {
+        "data": {
+          "id": "midjaiti-elif",
+          "seat": "fila 3, banco 2"
+        },
+        "style": {
+          "label": "Midjaiti\nElif"
+        }
+      },
+      {
+        "data": {
+          "id": "pupez-matei",
+          "seat": "fila 3, banco 4"
+        },
+        "style": {
+          "label": "Pupez\nMatei"
+        }
+      },
+      {
+        "data": {
+          "id": "quatrale-lorenzo",
+          "seat": "fila 3, banco 6"
+        },
+        "style": {
+          "label": "Quatrale\nLorenzo"
+        }
+      },
+      {
+        "data": {
+          "id": "rosati-martino",
+          "seat": "fila 3, banco 7"
+        },
+        "style": {
+          "label": "Rosati\nMartino"
+        }
+      },
+      {
+        "data": {
+          "id": "valentinelli-aurora",
+          "seat": "fila 4, banco 1"
+        },
+        "style": {
+          "label": "Valentinelli\nAurora"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "data": {
+          "id": "docuz-sara-maria--quatrale-lorenzo--e1",
+          "source": "docuz-sara-maria",
+          "target": "quatrale-lorenzo",
+          "confidence": 0.62,
+          "exercises": [
+            "E1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "campi-gabriele--melis-riccardo--e2",
+          "source": "campi-gabriele",
+          "target": "melis-riccardo",
+          "confidence": 0.6,
+          "exercises": [
+            "E2"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "laccona-alessandro-massimo--lorenzoni-chris--e2",
+          "source": "laccona-alessandro-massimo",
+          "target": "lorenzoni-chris",
+          "confidence": 0.43,
+          "exercises": [
+            "E2"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "dalpiaz-damian--rosati-martino--s1",
+          "source": "dalpiaz-damian",
+          "target": "rosati-martino",
+          "confidence": 0.4,
+          "exercises": [
+            "S1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "barbaro-arturo--quatrale-lorenzo--s3",
+          "source": "barbaro-arturo",
+          "target": "quatrale-lorenzo",
+          "confidence": 0.38,
+          "exercises": [
+            "S3"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+Assembly mette istruzioni insieme e le manda alla CPU per svolgerle piu velocemente.

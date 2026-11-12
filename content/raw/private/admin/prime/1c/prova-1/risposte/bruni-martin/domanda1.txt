@@ -1,0 +1,2 @@
+La CPU esegue i calcoli uno alla volta ed esegue tutte le istruzioni del computer. 
+Mentre la GPU è un processore grafico, che puo svolgere piu calcoli allo stesso tempo, specializzato nel render delle immagini e viene usato per videogiochi e per intelligienza artificiale.

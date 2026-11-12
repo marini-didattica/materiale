@@ -1,0 +1,3 @@
+La CPU anche detto processore si occupa di eseguire i calcoli assegnati dall'istruction set, che è una serie di istruzioni che forniamo al processore così che possa eseguire i calcoli.
+La GPU anche detta scheda video invece, si occupa di rappresentare ciò che facciamo al computer sottoforma di immagini.
+La CPU è più adatta a svolgere calcoli ed eseguire le istruzioni, invece la GPU potrebbere tornare più utile ad esempio per videogiochi o video, in sostanza tutto ciò che è basato sulla rappresentazione di qualcosa.

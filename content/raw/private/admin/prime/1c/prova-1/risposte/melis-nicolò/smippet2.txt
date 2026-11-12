@@ -1,0 +1,4 @@
+L'obbiettoivo del codice è quello di stampare il risultato in quantità,
+una volta che b sarà maggiore di i.
+Il risultato verrà molitpilcato per a ogni volta ch non si verifica,
+e i non sarà minore di b dopo 4 giri, e, quindi il codice stamperà, la quantità di risultato ovvero 81.

@@ -1,0 +1,1 @@
+La differenza è che la memoria centrale perde tutto appena spegni il PC, mentre la memoria di massa salva i file e non li perde.

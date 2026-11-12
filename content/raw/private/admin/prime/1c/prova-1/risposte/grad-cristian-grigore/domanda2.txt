@@ -1,0 +1,4 @@
+La tabella ASCII è una convenzione codivisa che fa si che piu computer operino nello stesso modo. Assegna a una serie di numeri binari un carattere
+ pero Puo elaborare  solo 128 caratteri
+E importante stabilire delle tabelle di convenzione perchè cosi tutti i computer operano nello stesso modo e comunicano nello stesso modo
+cosi il compurer se riceve messaggi da un altro computer e hanno la stessa tabella di convenzione non deve tradurre quel messaggio in un altro metodo di convenzione

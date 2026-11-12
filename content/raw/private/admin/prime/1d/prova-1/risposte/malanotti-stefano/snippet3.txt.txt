@@ -1,0 +1,2 @@
+Il terzo frammento stampa il risultato d8i una potenza di cui a è la base e b è l'esponente (solo positivo o 0)
+risultato=81 

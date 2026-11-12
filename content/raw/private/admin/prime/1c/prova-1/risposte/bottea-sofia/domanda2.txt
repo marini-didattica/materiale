@@ -1,0 +1,1 @@
+Nella tabella delle ASCII vengono utilizzati i byte per identificare i numeri, parole o altri caratteri. Per trovare uno di questi si usano le variabili dandogli un nome o una lettera che aiuti a trovare più facilmente e velocemente ciò che serve.

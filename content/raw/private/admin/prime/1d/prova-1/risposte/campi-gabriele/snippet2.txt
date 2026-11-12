@@ -1,0 +1,13 @@
+snipped2
+
+questo codice serve per stampare e leggere una lista al contrario.
+
+Inizia con I che assume la lunghezza della lista -1 perché la lunghezza parte da 1 mentre l'indice da 0 quindi si deve fare -1
+Poi si dice a I che finchè è maggiore o uguale a 0 deve stampare la variabile all'interno dell'array in base a dove si trova I.
+Poi si fa I=I-1 per far scorrere l'array all'contrario.
+
+OUTPUT
+1
+8
+5
+2

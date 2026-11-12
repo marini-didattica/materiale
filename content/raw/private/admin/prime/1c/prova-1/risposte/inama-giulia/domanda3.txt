@@ -1,0 +1,3 @@
+Il linguaggio assembly è il linguaggio con cui noi diamo istruzioni al computer utilizzando nomi leggibili come ad esempio mov.
+le nostre istruzioni vengono poi tradotte in numeri da un programma assembler.
+il linguaggio assembly ci serve per dare istruzioni al computer, è legato al codice macchina perchè nel codice macchina noi scriviamo le istruzioni a mano.

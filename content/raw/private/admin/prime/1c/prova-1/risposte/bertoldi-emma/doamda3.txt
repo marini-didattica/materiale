@@ -1,0 +1,2 @@
+Il linguaggio assembly del programma assembler trasforma 
+i caratteri in numeri e viceversa.

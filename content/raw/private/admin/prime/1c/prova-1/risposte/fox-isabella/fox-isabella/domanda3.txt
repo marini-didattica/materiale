@@ -1,0 +1,2 @@
+il linguaggio assemply è un programma chiamato assembler che trasforma le parole, che equivalgono a delle istruzioni, in codice binario.
+Il codice macchina invece è quando scriviamo questi codici a mano senza l'aiuto di questo programma

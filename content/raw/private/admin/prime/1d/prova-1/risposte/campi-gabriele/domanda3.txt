@@ -1,0 +1,3 @@
+domanda3
+
+un interprete riceve un istruzione e la legge, poi la capisce ma non riesce a eseguirla quindi manda, quello che dovrebbe fare l'interprete, al compilatore che la esegue.

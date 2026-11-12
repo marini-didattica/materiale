@@ -1,0 +1,2 @@
+2.C'è una lista e i è ogni numero della lista meno 1 e i è i meno 1
+output 0,3,6

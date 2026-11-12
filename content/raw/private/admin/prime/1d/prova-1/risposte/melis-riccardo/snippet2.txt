@@ -1,0 +1,7 @@
+stampa la lista al contrario
+
+l = [2, 5, 8, 1] 
+i = len(l) - 1
+while i >= 0:    inizia il ciclo
+print(l[i])      stampa il valore di i
+i = i - 1        cicla la lista

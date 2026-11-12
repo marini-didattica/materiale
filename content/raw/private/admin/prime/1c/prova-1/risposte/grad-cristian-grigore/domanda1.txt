@@ -1,0 +1,6 @@
+La GPU e la CPU sono tutti e due dei processori pero lavorano su ambiti diversi. 
+La CPU è il cervello del compurer perchè esegue tutti gli ordini dati dell'esterno come calcolare qualcosa oppure ripetere, saltare e tante altre cose 
+Invece la GPU e il processore grafico che elabora immagini e video 
+la CPU lavora usando il codice binario per fare calcoli oppure per eseguire qualcosa grazie all'istructiuon set che consiste in tutti i comandi 
+che un processore puo eseguire
+la GPU lavora usando sempre codici binari per rappresentare le immagini

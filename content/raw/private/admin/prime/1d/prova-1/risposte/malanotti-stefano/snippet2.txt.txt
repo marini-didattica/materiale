@@ -1,0 +1,2 @@
+Il secondo frammento scorre la lista al contrario e stampa tutta la lista al contrario
+risultato=1,8,5,2

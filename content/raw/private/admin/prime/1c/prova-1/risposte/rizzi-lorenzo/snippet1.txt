@@ -1,0 +1,5 @@
+Il frammento di codice cerca tutti i numeri maggiori di 0 (o positivi) e li stampa.
+L'output di python sarà: 
+3
+7
+12

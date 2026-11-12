@@ -1,0 +1,1 @@
+La tebella ASCII è una grande tabella che stabilisce un codice binario ad ogni carattere, cosicchè il computer lo comprenda e mostri proprio quel carattere. Nel mondo dei computer è importante stabilire dei protocolli validi per tutti i computer perchè altrimenti sarebbe estremamente complicato il dialgo tra computer.

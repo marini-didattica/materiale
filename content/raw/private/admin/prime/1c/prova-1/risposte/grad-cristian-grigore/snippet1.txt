@@ -1,0 +1,2 @@
+Il primo frammento di codice stampa tutti gli elementi della lista tranne quelli uguali o inferioni a 0 
+In questo caso data la lista  [3, -1, 0, 7, -5, 12] stampera 3,7,12 

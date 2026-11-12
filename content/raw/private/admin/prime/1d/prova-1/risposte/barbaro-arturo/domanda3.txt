@@ -1,0 +1,1 @@
+Un interprete legge i comandi scritti dal programmatore e li traduce in codice macchina, un compilatore da lo spazio di memoria al programma.

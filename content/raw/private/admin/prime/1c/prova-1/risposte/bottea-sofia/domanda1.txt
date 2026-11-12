@@ -1,0 +1,1 @@
+La CPU è il processore che fa i calcoli dalle informazioni che gli diamo. Mentre la GPU è il processore specializzato che fa i calcoli grafici per ottenere immagini,ecc. La GPU viene utilizzata per i videogiochi o per l'intelligenza artificiale.

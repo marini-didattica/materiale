@@ -1,0 +1,2 @@
+Questo esercizio calcola le potenze di tre con esponente minore di 4 (non compreso) infine stampa solo l'ultima potenza calcolata
+L'output finale sarà di 81.

@@ -1,0 +1,1 @@
+La tabella ASCII è una tabella che contiene da 0 a 127 caratteri; è necssario stabilire dei protocolli così che i diversi computer capiscano la stessa cosa (come GIF per immagini, MP3 per audio e Wi-Fi per le trasmissioni di informazioni tra computer).

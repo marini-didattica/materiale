@@ -1,0 +1,3 @@
+il programma moltiplica il numero 1 per 3 per quattro volte. Alla fine stampa il risultato che è 81.
+output:
+81

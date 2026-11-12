@@ -1,0 +1,8 @@
+Output = 3
+         9
+         27
+questo codice stampa il prodotto della moltiplicazione tra a e risultato fino a quando i < b.
+appena i diventa maggiore o uguale a b il codice si ferma 
+         
+
+

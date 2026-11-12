@@ -1,0 +1,2 @@
+La CPU esegue le istruzioni in modo generale una dopo l'altra e è adatta a eseguire le operazioni diverse e difficili.
+La GPU inece esegue molti calcoli contemporaneamente, è molto comoda per i calcoli ripetitivi.

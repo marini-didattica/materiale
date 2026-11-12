@@ -1,0 +1,2 @@
+Questo programmma scorre gli elemnti di una lista e stampa il conteggio dei numeri interni alla lista maggiore si 0.
+Alla fine l'out put sarà di 3

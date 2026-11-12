@@ -1,0 +1,2 @@
+Output: 81
+La a viene moltiplicata per risultato tante volte quanto la b 

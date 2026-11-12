@@ -1,0 +1,3 @@
+questo codice moltiplica la variabile risultato per la variabile a "b" volte. Ovvero sta facendo la potenza di "a" con esponente "b".
+
+output = 81

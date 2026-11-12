@@ -1,0 +1,2 @@
+Il frammento di codice eleva il numero a alla b volte
+In questo caso se a=3 e b=4 elevera 3 alla quarta dando come output 81

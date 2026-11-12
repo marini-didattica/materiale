@@ -1,0 +1,1 @@
+Il codice assembly è una proggrammazione che serve per trasformare il codice "normale" in codice binario

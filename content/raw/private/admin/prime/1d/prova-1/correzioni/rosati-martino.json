@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 6,
+			"comment": "Corretto: RAM veloce e temporanea, memoria di massa più lenta e permanente. Manca la differenza di capacità e velocità."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 5,
+			"comment": "Hai definito bit e byte, ma non hai spiegato perché si usa il binario né quanti valori rappresenta un byte (256)."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		},
+		"E1": {
+			"answer-file": "esercizio_1.py",
+			"score": 0,
+			"comment": "`while i >= 0` non termina mai e `i = i + 1` è fuori dal ciclo: stampa `0` all'infinito."
+		},
+		"E2": {
+			"answer-file": "esercizio_2.py",
+			"score": 6,
+			"comment": "Stampi un valore per ogni elemento e il ciclo `while i >= 0` non termina: dopo quattro iterazioni va in `IndexError`. Manca un risultato unico."
+		},
+		"E3": {
+			"answer-file": "esercizio_3.py",
+			"score": 0,
+			"comment": "`while i<n=0` è un errore di sintassi e il corpo è incompleto: il programma non parte."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 1,
+			"comment": "La risposta è sbagliata: il programma somma i dispari e stampa `21`, non `2`. Probabilmente hai confuso l'operatore modulo (`%`) con quello della divisione (`/`)"
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 8,
+			"comment": "La spiegazione è corretta, ma manca l'output `1 8 5 2`."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 10,
+			"comment": "Corretto."
+		}
+	}
+}

@@ -1,0 +1,2 @@
+Un compilatore è un programma che trasforma il linguaggio scritto in sigle come CPP e molte altre, un esempio di compilatore è assemblity.
+Un'interprete invece è il programma che trasforma i comandi in parole che diamo al compiuter in informazioni per esso, un esempio è assembler. 

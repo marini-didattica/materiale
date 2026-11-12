@@ -1,0 +1,1 @@
+Si parte da una lista di numeri, abbiamo due variabili di valore 0 (s, i), successivamente viene eseguito il codice che indica i numeri pari all'interno della lista. Infine verrà stampato il valore della variabile s.

@@ -1,0 +1,2 @@
+1 C'è una lista di numeri e vogliono trovare un numero della lista che diviso per 2 dia 1
+output 2

@@ -1,0 +1,2 @@
+Un disco SSD è la memoria del computer che mantiene i file anche quando il computer è spento. 
+La RAM è la memoria dove vengono copiati i file che stanno nel disco. E' la memoria che mantiene i file mentre li usi.

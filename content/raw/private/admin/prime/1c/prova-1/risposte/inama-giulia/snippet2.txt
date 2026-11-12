@@ -1,0 +1,2 @@
+Il programma stampa il valore di 3 elevato alla 4.  
+Output: 81

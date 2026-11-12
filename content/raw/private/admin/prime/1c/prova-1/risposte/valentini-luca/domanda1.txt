@@ -1,0 +1,3 @@
+CPU= è il cervello del computer, è il robot che segue le istruzione date, viene usata per eseguire i calcoli complessi del computer e per farlo "funzionare"
+
+GPU= è la schedA GRAFICA, ovvero lo "schermo dove vengono svolti i calcoli semplici dati dalla RAM è l'interfaccia grazie alla quale noi interagiamo

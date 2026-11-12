@@ -1,0 +1,1 @@
+3.L'interprete è una persona che leggendo un testo o qualcosa deduce il messaggio scritto mentre il compilatore scrive il testo.

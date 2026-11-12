@@ -1,0 +1,6 @@
+Il CPU e il GPU sono entrambi delle componeti pricipali del computer, il CPU è il processore  e il GPU è la scheda video.
+
+Il processore è il cervello del computer, esegue calcoli ed istruzioni. 
+
+Il GPU è la scheda video, è usata per rapppresentare dati grafici e immagini. 
+Gli ambiti piu adatti alla scheda video sono l'intelligenza artificiale e i viedo giochi.

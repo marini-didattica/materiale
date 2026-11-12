@@ -1,0 +1,8 @@
+l = [2, 5, 8, 1]            #qui dice la lista
+i = len(l) - 1              #qui dice che la i e la lunghezza della lista meno 1
+while i >= 0:               #qui dice di ripetere tutte le azioni sotto il while se i e maggiore o uguale a 0
+    print(l[i])             #qui dice di stampare il indice i 
+    i = i - 1               #qui dice che la i vale i meno 1
+
+
+    #il codice da la lista ma al contrario ovvero 1 8 5 2

@@ -1,0 +1,6 @@
+questo codice cicla tra i valori di una lista uno ad uno e se riconosce che il valore è maggiore di 0 lo stampa.
+
+output =
+3
+7
+12

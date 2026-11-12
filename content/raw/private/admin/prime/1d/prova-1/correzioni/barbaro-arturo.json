@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 5,
+			"comment": "Corretto: RAM temporanea/volatile, memoria di massa permanente. Potevi aggiungere che la RAM è più veloce e la memoria di massa più capiente."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 8,
+			"comment": "Corretto: bit 0/1, byte di 8 bit e 256 valori. Manca il perché il computer usa il binario, cioè i due stati elettrici."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 2,
+			"comment": "L'interprete è descritto in modo accettabile, ma il compilatore non 'dà spazio di memoria': traduce l'intero programma in codice macchina."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 15,
+			"comment": "Corretto e idiomatico"
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 15,
+			"comment": "Se avessi messo il `break` nell' `if` allora sarebbe stato giusto; così com'è tuttavia ti interrompi sempre alla prima iterazione del ciclo, controllando di fatto solo il primo elemento. Occhio anche al fatto che la condizione dell' `if` è ridondante (basta controllare `l[i]<0`)"
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 15,
+			"comment": "Il ciclo incrementa `i` solo dentro gli `if`: se un elemento non aggiorna né massimo né minimo, `i` resta fermo e il ciclo non termina. Anche il controllo finale sulla lista vuota è sbagliato."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 2,
+			"comment": "L'output è sbagliato: la somma dei dispari è `21`, non `29`; inoltre il programma non somma tutti gli elementi (4+7+2+9+5 = 27) e ignora la condizione `% 2 == 1`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Corretto."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 1,
+			"comment": "La risposta è sbagliata: il programma calcola 3^4 = 81, non stampa `3 3 3 3`."
+		}
+	}
+}

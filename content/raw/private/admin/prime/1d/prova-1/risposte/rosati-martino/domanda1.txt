@@ -1,0 +1,2 @@
+La RAM è la memoria veloce e temporanea che si svuota quando il pc viene spento.
+La memoria di massa (disco rigido) è un'altro tipo di memoria più lenta, che memorizza i file e i dati più importanti, funziona anche quando il computer è spento.

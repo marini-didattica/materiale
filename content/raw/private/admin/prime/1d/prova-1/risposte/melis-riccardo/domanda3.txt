@@ -1,0 +1,1 @@
+Un compilatore o interprete in un computer(assembler) prendono le istruzioni che gli hai dato, le risolve(controlla che non ci siano errori), le trascrive in codice macchina in modo che il processore le capisca e le esegua, e poi dopo che sono state eseguite da codice macchina le transcodifica in linguaggio umano.

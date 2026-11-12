@@ -1,0 +1,2 @@
+La CPU è il processore del nostro computer ovvero il cervello che esegue calcoli in maniera sequenziale e ordina anche agli altri componenti il ruolo da svolgere.
+La GPU invece, è la scheda video ovvero il componente che lavora per sviluppare immagini o video tramite i pixel del monitor infatti lavora in stretta connessione con questo.

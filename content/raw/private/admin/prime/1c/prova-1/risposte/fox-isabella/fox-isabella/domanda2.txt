@@ -1,0 +1,2 @@
+La tabella ASCII è uno strumento che viene utilizzato per rappresentare i caratteri in codice binario, in modo da essere chiari sia per noi che per il computer.
+I protocolli sono importanti perché sono delle regole che tutti devono rispettare, per rendere le condivisioni tra computer più chiare possibile. Evitano il rischio che due computer non si capiscano a vicenda.

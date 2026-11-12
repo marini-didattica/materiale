@@ -1,0 +1,1 @@
+un compilatore traduce tutto insieme in una volta e l interprete traduce riga per riga

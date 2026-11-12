@@ -1,0 +1,5 @@
+La tabella ASCII è una convenzione di caratteri che 
+trasforma quello che scriviamo in numeri prestabiliti
+così tutti possiamo capirli.
+E' necessario stabilire delle convenzioni condivise così
+il computer capisce cos'è.

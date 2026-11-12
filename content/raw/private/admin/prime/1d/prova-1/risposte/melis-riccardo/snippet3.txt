@@ -1,0 +1,10 @@
+stampa le potenze di 4 fino a 4 alla 3
+
+a = 3
+b = 4
+risultato = 1
+i = 0
+while i < b:                  inizia un ciclo                   
+risultato = risultato * a     moltiplica risultato per a aumentando il suo valore
+i = i + 1                     cicla la lista 
+print(risultato)              stampa io valore finale di risultato

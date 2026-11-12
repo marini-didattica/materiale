@@ -1,0 +1,3 @@
+La tabella ASCII è una serie di numeri da 1 a 127 in cui ogni numero corrisponde ad un "impulso" formaro da 0 e 1.
+es 32= 0010000
+è necessario usare dei canoni precisi e uguali in tutti i computer in modo da farli "comunicare" tra loro senza passaggi interni.

@@ -1,0 +1,2 @@
+Il linguaggio assembly è una semplificazione di una serie di zeri ed uni, quindi invece di scrivere a mano tutta la serie, la semplifichi e la rendi più intuitiva trasformando la serie di zeri ed uni in 3 caratteri.
+Quando scrivi a mano una seire di zeri ed uni si dice codice macchina, il linguaggio assembly va a togliere questo problema rendendo tutto più semplice e veloce.

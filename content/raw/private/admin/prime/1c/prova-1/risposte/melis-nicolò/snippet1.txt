@@ -1,0 +1,4 @@
+Il codice dimostra la quantità di numeri negativi all'interno
+della  lista (l).
+Tuttavia stamperà i numeri maggiori della variabile a,
+che ad ogni volta aumenterà di 1

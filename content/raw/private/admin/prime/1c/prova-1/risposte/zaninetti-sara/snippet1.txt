@@ -1,0 +1,1 @@
+Scribve i numeri in quella lista maggiiori di 0 ( cioè 3, 7, 27). Lo 0 non è compreso perchè non c'è scritto l[i] <= 0.

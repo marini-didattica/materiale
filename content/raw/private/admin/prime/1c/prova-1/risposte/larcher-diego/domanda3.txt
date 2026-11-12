@@ -1,0 +1,3 @@
+Il linguaggio Assembly è il "traduttore" del codice binario ma al contrario dell' ASCII
+può tradurre anche numeri decimali e parole per trasformarle in codice binario e 
+poi ritrasformarle in parole su un' altro dipositivo

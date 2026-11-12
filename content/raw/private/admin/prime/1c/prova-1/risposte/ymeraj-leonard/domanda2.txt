@@ -1,0 +1,3 @@
+La tabella ASCII è una convenzione internazionale ed è una tabella che può mostrare 127 caratteri diversi con la rispettiva serie di zeri ed uni
+E' necessario stabilire dei protocolli per rendere tutti i computer più uniformi, ciò ci semplifica molto il lavoro.
+Ad esempio per lo scambio di informazioni tra computer si utilizza il Wi-Fi o l'HTTP.

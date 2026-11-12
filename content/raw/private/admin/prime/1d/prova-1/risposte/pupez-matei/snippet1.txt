@@ -1,0 +1,9 @@
+l = [4, 7, 2, 9, 5]             #indica la lista di elementi
+n = len(l)                      #dice che n e la lunghezza della lista
+s = 0                           #la variabile s è 0
+i = 0                           #la variabile i è 0
+while i < n:                    #dice di ripetere tutto quello sotto il while finche i è minore di n
+    if l[i] % 2 == 1:           #se l'elemento i della lista quindi in questo momento 4 dividendolo per 2 da resto 1
+        s = s + l[i]            #qui dice che se da resto 1 bisogna aggiungere alla variabile s l'elemento del indice i
+    i = i + 1                   #qui dice che alla fine bisogna fare la i piu 1
+print(s)                        #qui di stampare s

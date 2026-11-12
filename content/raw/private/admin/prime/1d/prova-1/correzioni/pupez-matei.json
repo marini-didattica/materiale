@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 6,
+			"comment": "Corretto: RAM veloce e temporanea, disco più lento e permanente. Manca cenno a capienza"
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 7,
+			"comment": "Il bit non è 'un carattere fra 0 e 1': è un singolo valore 0 o 1. Byte e 256 sono corretti. Il vero motivo per cui si usa il sistema binario è che si possono facilmente rappresentare due stato con la corrente elettrica (acceso e spento)"
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 7,
+			"comment": "Stampi ogni valore non negativo invece della loro somma: manca l'accumulatore. Con la lista data l'output è `5 8 0 3` invece di `16`."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 8,
+			"comment": "Stampi `True`/`False` per ogni elemento invece di un solo risultato; inoltre con un negativo `x` non viene incrementato e il ciclo non termina."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 20,
+			"comment": "L'output per la lista data è giusto, ma il minimo va confrontato con `minimo`, non con `massimo`: con `[10, 1, 20, 2]` il programma sbaglia. Inoltre il messaggio è `lista vuota!` minuscolo."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 4,
+			"comment": "Descrivi riga per riga, ma non dici che il programma somma i dispari né riporti l'output `21`; l'esempio su `4 % 2` è sbagliato (fa 0)."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Occhio che il codice non `da` la lista, ma la stampa."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 8,
+			"comment": "Ok. Molto più semplicemente potevi dirmi che il codice esegue `a^b`"
+		}
+	}
+}

@@ -1,0 +1,1 @@
+Stampa 81 cioè il risulato di 3*27 (incrementa il risulato per le volte indicate da "risultato * a)

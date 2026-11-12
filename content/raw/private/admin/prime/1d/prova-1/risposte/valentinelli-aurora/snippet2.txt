@@ -1,0 +1,3 @@
+Questo programma da come risultato 1 8 5 2 ovvero la lista al contrario.
+I è uguale al numero di componenti della lista - 1.
+Nel ciclo viene stampato i per poi togliergli sempre 1. Questo comporta che prima si stampa l'ultimo numero, poi il penultimo, poi il terzultimo e ifine il quartultimo o primo.

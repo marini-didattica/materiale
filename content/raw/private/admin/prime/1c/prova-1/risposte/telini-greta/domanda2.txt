@@ -1,0 +1,7 @@
+La tabella ASCII è una tabella che serve per "decriptare" i nomi in codici (composti unicamente da 0 e 1).
+
+Per passare le informazioni da un computer (perchhe senno sarebbe troppo complicato) all'altro ci sono delle convenzioni 
+per esempio
+per suoni: MP3
+per documenti: PDF
+per reti: wi_fi

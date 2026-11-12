@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 5,
+			"comment": "Corretto: RAM veloce e volatile, memoria di massa permanente. Manca la differenza di capacità e velocità."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 6,
+			"comment": "Un po' confuso il motivo per cui il computer utilizza il sistema binario, ma credo di intuire i concetti a cui stai facendo riferimento."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 3,
+			"comment": "Va bene dai; dovresti specificare che un compilatore traduce il codice in 0 ed 1, mentre l'interprete \"legge\" direttamente il codice"
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 1,
+			"comment": "Manca `i = i + 1` (ciclo infinito) e `somma = somma` non aggiunge nulla; inoltre controlli `% 2` invece del segno."
+		},
+		"E2": {
+			"answer-file": "esecizio2.py",
+			"score": 0,
+			"comment": "`while l <= len(i)` confronta una lista con un intero e `len(i)` dà errore; inoltre stampi `true`/`false`. Il programma non parte."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 0,
+			"comment": "Hai solo inizializzato `i = 0`: manca tutto il calcolo."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 10,
+			"comment": "Corretto: somma dei dispari e output `21`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Va bene, occhio però che hai sbagliato e hai riportato l'output che otteresti stampando la lista dell'esercizio precedente."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 6,
+			"comment": "Hai scritto 'elevato alla terza', ma l'esponente è 4; manca l'output (81)."
+		}
+	}
+}

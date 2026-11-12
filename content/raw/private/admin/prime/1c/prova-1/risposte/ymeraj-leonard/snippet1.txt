@@ -1,0 +1,4 @@
+In questo caso stiamo cercando di ricavare i numeri positivi (zero escluso), quindi l'output dovrebbe essere:
+3
+7
+12

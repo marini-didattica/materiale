@@ -1,0 +1,1 @@
+la CPU è il cervello del computer ed esegue gli ordini, invece la GPU o scheda video , serve per creare immagini e video. La CPU lavora usando il codice binario per eseguire i calcoli , invece la GPU lavora usando il codice binario per fargenerare immagini e video, nella programmazione è più adtatta la CPU

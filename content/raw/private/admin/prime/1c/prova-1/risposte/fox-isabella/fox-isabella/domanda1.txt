@@ -1,0 +1,3 @@
+CPU è il processore, il "cervello" del computer. Elabora i calcoli e le istruzioni aiutandosi con la RAM (memoria di lavoro)
+Il processore esegue calcoli tramite parole che hanno uno specifico significato e un codice che le rappresenta in codice binario. In questo modo è più semplice da capire 
+GPU è la scheda video, elabora i dati tramite immagini, grafici  animazioni. Vieni usata principalmente dai videogiochi e dall'intelligenza artificiale.

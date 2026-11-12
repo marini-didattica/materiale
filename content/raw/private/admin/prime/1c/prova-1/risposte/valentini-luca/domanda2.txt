@@ -1,0 +1,8 @@
+Carattere= un carattere corrisponde ad un byte, ovvero 8 bit
+            sono una sequenza di uni e zeri che corrispondono ad un carattere
+
+Protocolli= un protocollo serve per riuscire a dare una form aalle varie componenti, ad esempio:
+            per i caratteri scritti si usa ASCII
+            per connettere i compuetr si usa il wifi
+            per delle prersentazioni si usa il PDF
+            per le immagini si usa il PNG

@@ -1,0 +1,7 @@
+CPU e GPU sono due delle parti fondamentali di un computer,
+ma non sono la stessa cosa:
+
+La CPU è la funzione che permette di effettuare calcoli,
+rapidi
+
+La GPU, invece è la memoria più lenta e a lungo termine;

@@ -1,0 +1,5 @@
+Questo codice elenca tutti i numeri nella lista a partire dall'ultimo fino ad arrivare al primo.
+Output = 1
+         8
+         5
+         2

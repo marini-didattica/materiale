@@ -1,0 +1,1 @@
+un byt e u insieme di 1 e 0 e 8 byt formano un byte. il byte è une delle unita di misura piu utilizzate pe indicare la memoria.con un byte si possono rappresentare 256 codici diversi.il computer utilizza il sistema binario perchè per il computer igni 0 o 1 è un multiplo di 2 quindi assegna un valora ad ogni 0 e 1 

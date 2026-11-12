@@ -1,0 +1,12 @@
+l = [2, 5, 8, 1]
+i = len(l) - 1
+while i >= 0:
+    print(l[i])
+    i = i - 1
+
+1
+8
+5
+2
+
+questo comando inverte l'ordine presente nella lista perché prende la len(l) e prendendo l'ultimo elemento lo stampa poi usando prendendo la variabile con la len(l) ne sottrae uno e stampa il secondo elemento e così via fino ad arrivare a 0

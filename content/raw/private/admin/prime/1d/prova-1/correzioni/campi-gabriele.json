@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 6,
+			"comment": "Corretto: RAM temporanea, memoria di massa permanente. Manca un accenno a velocità e capacità."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 8,
+			"comment": "Corretto: bit, byte di 8 bit e 2^8 valori. Il motivo per cui si usa il codice binario è un po' generico; mi sarei aspettato un riferimento agli stati elettrici della tensione"
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 2,
+			"comment": "Hai invertito i ruoli: l'interprete non 'manda al compilatore' ciò che deve eseguire. Il compilatore traduce l'intero programma; l'interprete lo esegue istruzione per istruzione, senza compilare."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 15,
+			"comment": "Corretto e idiomatico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 20,
+			"comment": "Corretto: scorri la lista, usi un flag e gestisci lista vuota e negativi. Nota che il in realtà il primo `if` è inutile, ma non pregiudica la correttezza del programma."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 25,
+			"comment": "Corretto: inizializzi con il primo elemento, gestisci lista vuota e numeri negativi e non usi `max`/`min`. Occhio però che la soluzione è estremamente contorta! Il controllo per `lista_vuota` all'interno del ciclo ti complica la vita all'inverosimile!"
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 2,
+			"comment": "Hai letto `pari` invece di `dispari`: il programma somma solo gli elementi con `% 2 == 1`, cioè 7, 9 e 5, e stampa `21`, non `6`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Corretto: output e spiegazione."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 10,
+			"comment": "Corretto: output `81` e spiegazione."
+		}
+	}
+}

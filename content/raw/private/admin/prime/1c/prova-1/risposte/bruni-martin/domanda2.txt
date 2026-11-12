@@ -1,0 +1,2 @@
+la tabela ASCII è la tabella che assegna un valore numerioco ad un carattere.
+è necessario stabilire dei protocolli per lo scambio di informazione perchè se i computer usassero tutti dei protocolli diversi nessun computer potrebbe decodificare l'informazione ricevuta da un'altro.

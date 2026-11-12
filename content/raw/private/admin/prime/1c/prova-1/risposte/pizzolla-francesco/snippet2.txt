@@ -1,0 +1,1 @@
+a è la base b èè l esponente risultato parte da 1 il ciclo moltiplica il risultato per 3 per 4 volte alla fine stampa il risultato

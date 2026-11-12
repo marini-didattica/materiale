@@ -1,0 +1,7 @@
+la differenza principale tra CPU e GPU è :
+
+1: la CPU è il "cervello" del computer ovvero il componenete 
+che esegue gli ordini e gli compie infatti può svolgere miliardi 
+di calcoli al secondo e non ha niente a che fare con la GPU (anche chiamata scheda video)
+ che è il componenete specializzato nella grafica del computer ed è
+ spesso usata nell' AI e nei videogiochi

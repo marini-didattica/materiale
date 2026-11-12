@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt.txt",
+			"score": 7,
+			"comment": "Breve ma intenso. Hai espresso con poche parole le differenze fondamentali"
+		},
+		"D2": {
+			"answer-file": "domanda2.txt.txt",
+			"score": 3,
+			"comment": "Molto confusa... il bit non è una sequenza ma un singolo 0/1; il byte non è 'formato dai caratteri decimali'. Manca il numero di valori (256)."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt.txt",
+			"score": 0,
+			"comment": "La risposta non parla di programmi: compilatore e interprete non sono persone che scrivono o leggono testi."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py.py",
+			"score": 4,
+			"comment": "Il codice è incompleto e non eseguibile: il corpo di `if x < 0:` è vuoto e manca la somma."
+		},
+		"E2": {
+			"answer-file": "esrcizio2.py.py",
+			"score": 2,
+			"comment": "`l` viene sostituita da `0` e `l(i)` non è valido: il programma va in errore. Manca completamente il ciclo."
+		},
+		"E3": {
+			"answer-file": "esrcizio3.py.py",
+			"score": 0,
+			"comment": "Non hai risposto."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt.txt",
+			"score": 2,
+			"comment": "La descrizione è sbagliata: il programma somma i dispari, non cerca un numero che diviso per 2 dia 1 (penso intendessi il cui resto della divisione è 1); l'output è `21`, non `2`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt.txt",
+			"score": 1,
+			"comment": "La risposta è sbagliata: il programma stampa `1 8 5 2`, non `0,3,6`."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		}
+	}
+}

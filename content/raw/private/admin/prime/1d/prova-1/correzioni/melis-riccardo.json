@@ -1,0 +1,50 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 7,
+			"comment": "Ottimo: RAM veloce e volatile, memoria di massa permanente; hai citato dati e programmi in esecuzione."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 9,
+			"comment": "Ottimo: bit, byte, codifica dei caratteri e tabella ASCII/Unicode. Manca solo il numero esplicito 256, ma il ragionamento è completo."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 4,
+			"comment": "La prima parte va bene: il compilatore di fatto non fa altro che convertire il codice in un linguaggio di programmazione in codice macchina (zeri ed uni). L'ultima parte invece non è corretta: le istruzioni una volta eseguite non vengono transcodificate in linguaggio umano. L'interprete, a differenza del compilatore, non traduce le istruzioni in linguaggio macchina, ma le esegue direttamente"
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 15,
+			"comment": "Corretto e idiomatico. L'`elif lista == []` è inutile perché il ciclo non parte con lista vuota, ma non dà problemi."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 20,
+			"comment": "Corretto: scorri la lista, usi un flag e gestisci lista vuota e negativi. Output booleano corretto."
+		},
+		"E3": {
+			"answer-file": "esercizio3.py",
+			"score": 23,
+			"comment": "Corretto per liste non vuote; con `l = []` stampi `0` invece di `Lista vuota!`. La consegna chiede il messaggio, anche se l'esempio del testo riporta `0`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 8,
+			"comment": "La spiegazione è corretta (somma dei dispari), ma non riporti l'output `21`."
+		},
+		"S2": {
+			"answer-file": "snippet2.txt",
+			"score": 8,
+			"comment": "Occhio che `print(l[i])` stampa l'elemento, non il valore di `i`; manca l'output."
+		},
+		"S3": {
+			"answer-file": "snippet3.txt",
+			"score": 5,
+			"comment": "Hai confuso la potenza: il programma calcola 3^4, non 'le potenze di 4 fino a 4 alla 3';. Manca l'output `81`."
+		}
+	}
+}

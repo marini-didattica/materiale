@@ -1,0 +1,8 @@
+IL bit rappresenta il singolo stato degli interruttori e dei circuiti di un computer.
+Può essere rappresentato dall'1, che indica il passaggio di corrente, o dallo zero, che indica che non c'è tensione elettrica
+Una seguenza di otto bit forma un byte, che viene utilizzato come unità di misura fondamentale della memoria.
+Infatti più un file, una foto o un film è pesante, quindi complesso, più bit/byte verranno usati dal computer per elaborarlo, e quindi verrà utilizzata più memoria.
+Per rappresentare i nubmeri il computer non usa il sistema decimale, dato che riconosce e lavora con due simboli.
+Siamo noi a dire cosa vuol dire cosa. In questo caso i numeri vengono codificati in base 2:
+In una sequenza di zeri ed uni la cifra più a destra vale 1, mentre quelle a destra valgono potenze di due, come 4,8,16,32 ecc.
+Con un byte dunque si possono rappresentare 256 combinazioni diverse

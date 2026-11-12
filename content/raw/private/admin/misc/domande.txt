@@ -1,5 +1,6 @@
 
-1. Questione copiature
+1. Questione copiature:
+	- Interrogazione di conferma solo nei casi sospetti?
 
 2. Questioni pratiche:
 	- Politica di istituto riguardo uso A.I.
@@ -8,9 +9,11 @@
 
 3. Questione ore in più:
 	- Posso sforare? Olimpiadi, sportelli
-
 	- Come gestire la partecipazione a CDC, dipartimenti, collegi docenti, ecc. senza sforare le ore?
 	- Conferma che ore funzionali possono essere fatte con studenti
 
 4. Questione sito che ho creato:
 	- Il sito è in sola lettura, studenti NON hanno modo di caricare informazioni, ma esistono aree riservate in cui distribuisco correzioni e materiali personalizzati. L'accesso è effettuato tramite codice univoco. Questo modus operandi è consensito
+
+
+comunica su isi rel dell'uso del sito mio

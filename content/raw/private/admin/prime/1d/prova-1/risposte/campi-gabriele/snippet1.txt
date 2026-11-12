@@ -1,0 +1,11 @@
+snipped1
+
+questo codice serve per trovare e sommare gli elementi pari all'interno di una lista.
+
+All'inizio la variabile N vale 5 perché la lunghezza della lista è di 5 (anche se secondo l'indice è 4 perché è 0,1,2,3,4 quindi 5 variabili) dopo S è il tuo risultato e I è l'indice che scorre l'array.
+If dice che se la variabile della posizione dove si trova I è pari, S è uguale a se stessa più il numero in cui si trova l'indice.
+Dopo c'è I = I + 1 che serve per scorrere l'array.
+Alla fine c'è print che stampa il valore che si è salvato, finito il ciclo, all'interno di S.
+
+OUTPUT
+6

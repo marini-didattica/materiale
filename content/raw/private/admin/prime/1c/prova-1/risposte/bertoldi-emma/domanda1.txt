@@ -1,0 +1,5 @@
+Il CPU è il processore cioè il "cervello" del computer
+è quello che esegue passp per passo quello che noi 
+scriviamo fa calcoli ed è fatto di silicio.
+Il GPU è il processore specializzato nei calcoli grafici
+e fa immagini,videogiochi e nell'intelligenza artificiale.

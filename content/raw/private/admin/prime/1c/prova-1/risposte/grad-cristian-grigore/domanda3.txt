@@ -1,0 +1,3 @@
+Il linguaggio assembly è un linguaggio dove un'azione che deve eseguire il processore viene trasformata in parole leggibili  
+perchè cosi è piu facile programmare. Al posto di scrivere tutte le azioni in codice binario, quindi codice macchina, si puo programmare direttamente 
+usando il linguaggio assembly   

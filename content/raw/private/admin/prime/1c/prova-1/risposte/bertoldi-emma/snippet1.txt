@@ -1,0 +1,2 @@
+Questo programma stampa tutti i numeri maggiori di 0 
+contenuti nella lista quindi 3,7,12.

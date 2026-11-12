@@ -1,0 +1,1 @@
+Il codice in pratica ci stamperà la variabile risultato in primis confronta la variabile i con la variabile b e se i è minore di b, successivamente moltiplica la variabile risultato per il valore di a e poi aggiungerà 1 a i e ripetere l'azione fino a quando i sarà maggiore di b e allora uscirà dal ciclo.
