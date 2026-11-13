@@ -1,3 +1,3 @@
 #import "/typst-components/src/exam.typ": render-exam
 
-#render-exam(path("prova-1-1d.json"), "default")
+#render-exam(path("1-prova-1b.json"), "bes")

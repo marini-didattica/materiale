@@ -1,7 +1,7 @@
 {
 	"$schema": "../../../misc/manifest.schema.json",
 	"version": 1,
-	"test": "esercitazione-1-prime",
+	"test": "1-esercitazione-1",
 	"date": "20 ottobre 2026",
 	"title": "Correzione — Simulazione 1"
 }
