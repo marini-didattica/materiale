@@ -1,0 +1,274 @@
+{
+  "name": "1C · Prova 1 · copie sospette",
+  "test-folder": "..",
+  "elements": {
+    "nodes": [
+      {
+        "data": {
+          "id": "bertoldi-emma",
+          "seat": "fila 1, banco 1"
+        },
+        "style": {
+          "label": "Bertoldi\nEmma"
+        }
+      },
+      {
+        "data": {
+          "id": "bottea-sofia",
+          "seat": "fila 1, banco 2",
+          "confidence": 0.5,
+          "exercise-notes": {
+            "E2": "Usa un ciclo `while ... else`, costrutto che nessun altro studente impiega e non trattato in classe. Senza `break`, l'`else` viene eseguito anche quando `a` è presente: il programma stampa `False` anche se il valore c'è."
+          }
+        },
+        "style": {
+          "label": "Bottea\nSofia"
+        }
+      },
+      {
+        "data": {
+          "id": "bruni-martin",
+          "seat": "fila 1, banco 3"
+        },
+        "style": {
+          "label": "Bruni\nMartin"
+        }
+      },
+      {
+        "data": {
+          "id": "caserotti-martin",
+          "seat": "fila 1, banco 4"
+        },
+        "style": {
+          "label": "Caserotti\nMartin"
+        }
+      },
+      {
+        "data": {
+          "id": "fantelli-federico",
+          "seat": "fila 1, banco 6",
+          "confidence": 0.35,
+          "exercise-notes": {
+            "E2": "Usa un ciclo `for numero in l`, l'unico della classe; tutte le altre risposte e le soluzioni della prova usano `while`. Se `for` non è stato spiegato, verifica la provenienza."
+          }
+        },
+        "style": {
+          "label": "Fantelli\nFederico"
+        }
+      },
+      {
+        "data": {
+          "id": "ferrari-thomas",
+          "seat": "fila 1, banco 7"
+        },
+        "style": {
+          "label": "Ferrari\nThomas"
+        }
+      },
+      {
+        "data": {
+          "id": "fox-isabella",
+          "seat": "fila 2, banco 1"
+        },
+        "style": {
+          "label": "Fox\nIsabella"
+        }
+      },
+      {
+        "data": {
+          "id": "grad-cristian-grigore",
+          "seat": "fila 2, banco 2"
+        },
+        "style": {
+          "label": "Grad\nCristian Grigore"
+        }
+      },
+      {
+        "data": {
+          "id": "inama-giulia",
+          "seat": "fila 2, banco 3"
+        },
+        "style": {
+          "label": "Inama\nGiulia"
+        }
+      },
+      {
+        "data": {
+          "id": "larcher-diego",
+          "seat": "fila 2, banco 4"
+        },
+        "style": {
+          "label": "Larcher\nDiego"
+        }
+      },
+      {
+        "data": {
+          "id": "melis-nicolò",
+          "seat": "fila 2, banco 6",
+          "confidence": 0.45,
+          "exercise-notes": {
+            "D3": "Ha incollato la stessa risposta della D2 (tabella ASCII) invece di rispondere su assembly: le due risposte sono identiche parola per parola."
+          }
+        },
+        "style": {
+          "label": "Melis\nNicolò"
+        }
+      },
+      {
+        "data": {
+          "id": "orrico-alessio",
+          "seat": "fila 2, banco 7"
+        },
+        "style": {
+          "label": "Orrico\nAlessio"
+        }
+      },
+      {
+        "data": {
+          "id": "pizzolla-francesco",
+          "seat": "fila 3, banco 1"
+        },
+        "style": {
+          "label": "Pizzolla\nFrancesco"
+        }
+      },
+      {
+        "data": {
+          "id": "rizzi-lorenzo",
+          "seat": "fila 3, banco 2"
+        },
+        "style": {
+          "label": "Rizzi\nLorenzo"
+        }
+      },
+      {
+        "data": {
+          "id": "telini-greta",
+          "seat": "fila 3, banco 3"
+        },
+        "style": {
+          "label": "Telini\nGreta"
+        }
+      },
+      {
+        "data": {
+          "id": "valentini-luca",
+          "seat": "fila 3, banco 4"
+        },
+        "style": {
+          "label": "Valentini\nLuca"
+        }
+      },
+      {
+        "data": {
+          "id": "ymeraj-leonard",
+          "seat": "fila 3, banco 6"
+        },
+        "style": {
+          "label": "Ymeraj\nLeonard"
+        }
+      },
+      {
+        "data": {
+          "id": "zaninetti-sara",
+          "seat": "fila 3, banco 7"
+        },
+        "style": {
+          "label": "Zaninetti\nSara"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "data": {
+          "id": "larcher-diego--melis-nicolò--d2",
+          "source": "larcher-diego",
+          "target": "melis-nicolò",
+          "confidence": 0.92,
+          "exercises": [
+            "D2"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "grad-cristian-grigore--inama-giulia--e1",
+          "source": "grad-cristian-grigore",
+          "target": "inama-giulia",
+          "confidence": 0.78,
+          "exercises": [
+            "E1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "valentini-luca--zaninetti-sara--e1",
+          "source": "valentini-luca",
+          "target": "zaninetti-sara",
+          "confidence": 0.75,
+          "exercises": [
+            "E1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "bottea-sofia--inama-giulia--d1",
+          "source": "bottea-sofia",
+          "target": "inama-giulia",
+          "confidence": 0.65,
+          "exercises": [
+            "D1",
+            "E1",
+            "S1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "inama-giulia--orrico-alessio--e2",
+          "source": "inama-giulia",
+          "target": "orrico-alessio",
+          "confidence": 0.65,
+          "exercises": [
+            "E2"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "bottea-sofia--grad-cristian-grigore--e1",
+          "source": "bottea-sofia",
+          "target": "grad-cristian-grigore",
+          "confidence": 0.6,
+          "exercises": [
+            "E1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "bertoldi-emma--inama-giulia--s1",
+          "source": "bertoldi-emma",
+          "target": "inama-giulia",
+          "confidence": 0.55,
+          "exercises": [
+            "S1"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "grad-cristian-grigore--pizzolla-francesco--d2",
+          "source": "grad-cristian-grigore",
+          "target": "pizzolla-francesco",
+          "confidence": 0.4,
+          "exercises": [
+            "D2"
+          ]
+        }
+      }
+    ]
+  }
+}
