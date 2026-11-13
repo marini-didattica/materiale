@@ -1,5 +1,6 @@
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
+import type { Students } from '../../src/types';
 
 const TEST_NAME = /^[A-Za-z0-9][A-Za-z0-9_-]*$/;
 const DEFAULT_TESTS_ROOT = '../../../tests';
@@ -305,6 +306,7 @@ function resolveInsideRoot(
 
 export async function validateExams(
   contentDir: string,
+  students: Students,
 ): Promise<ExamValidation> {
   const errors: string[] = [];
   const rootDir = path.dirname(contentDir);
@@ -390,6 +392,12 @@ export async function validateExams(
       if (typeof manifest.date !== 'string' || manifest.date.length === 0) {
         errors.push(`${label}: manca "date".`);
       }
+
+      if (manifest.publish !== undefined && typeof manifest.publish !== 'boolean') {
+        errors.push(`${label}: "publish" deve essere un booleano.`);
+      }
+
+      const publish = manifest.publish === true;
 
       let testsRoot: string | null = null;
       let defaultTestPath: string | null = null;
@@ -478,6 +486,14 @@ export async function validateExams(
         }
 
         const correctionLabel = toPosix(correctionPath);
+        const studentSlug = path.parse(correctionEntry.name).name;
+
+        if (publish && !(`${classEntry.name}/${studentSlug}` in students)) {
+          errors.push(
+            `${correctionLabel}: "publish" è true ma lo studente "${studentSlug}" ` +
+              `non è presente in content/students.json come "${classEntry.name}/${studentSlug}".`,
+          );
+        }
         let effectiveTestPath = defaultTestPath;
         const override = correction.test;
 

@@ -48,6 +48,11 @@ Pages use Astro's `ClientRouter`, so client scripts run once: re-bind them on
 - Local `deploy.toml` files may contain only `[ignore]` and
   `[[typst.override]]`; `default_action`, `underscore_action` and `format` belong
   in `content/deploy.toml`.
+- Exam cohorts live under `content/raw/private/admin/corrections/<class>/<exam>/`.
+  Their manifest controls the correction PDFs: `publish: true` makes the build
+  generate `correzione.pdf` in each present student's private folder; it
+  defaults to `false`. Student folders no longer contain `correzione.typ`
+  stubs.
 - Typst override actions are `compile`, `publish` and `ignore`. An override
   matching no file, or two sources producing the same output, fails the build.
 - Never change an existing access code: links already distributed depend on it.

@@ -52,11 +52,16 @@ Pubblico
     -> /public/prime/                                  (browser)
 
 Riservato
-  content/raw/private/1d/angeli-lorenzo/simulazione-1/correzione.typ
-    -> /raw/private/ABCD2345/simulazione-1/correzione.pdf
+  content/raw/private/1d/angeli-lorenzo/simulazione-1/le-tue-risposte/esercizio1.py
+    -> /raw/private/ABCD2345/simulazione-1/le-tue-risposte/esercizio1.py
     -> /private/ABCD2345/simulazione-1/                (browser)
     -> /private/ABCD2345/                              (pagina di benvenuto)
 ```
+
+Le correzioni non hanno più uno stub `.typ` nella cartella dello studente: il
+build genera `correzione.pdf` dalle coorti in
+`content/raw/private/admin/corrections/<classe>/<prova>/` che hanno
+`"publish": true` nel manifest.
 
 La pagina di accesso con il codice resta nel sito principale:
 [Area riservata](https://didattica.mattia-marini.com/area-riservata/). Il
@@ -156,12 +161,16 @@ Ogni file `.typ` nelle cartelle pubblicate viene compilato in un PDF con lo
 stesso nome e nella stessa posizione:
 
 ```text
-content/raw/private/1d/angeli-lorenzo/simulazione-1/correzione.typ
-  -> static/raw/private/ABCD2345/simulazione-1/correzione.pdf
+content/raw/public/prime/programma.typ
+  -> static/raw/public/prime/programma.pdf
 ```
 
 Se un PDF con lo stesso nome esiste già nel repository, la versione compilata lo
-sostituisce. I sorgenti `.typ` compilati non vengono pubblicati.
+sostituisce. I sorgenti `.typ` compilati non vengono pubblicati. Le correzioni
+degli studenti sono l'eccezione: non hanno un sorgente `.typ` nella cartella
+privata, vengono generate dal build da
+`content/raw/private/admin/corrections/<classe>/<prova>/` quando il manifest ha
+`"publish": true`.
 
 Per pubblicare un sorgente `.typ` senza compilarlo, anteponi `_` al nome:
 `_esempio.typ` diventa `esempio.typ` nel sito. Il prefisso viene rimosso solo

@@ -36,6 +36,10 @@
       "pattern": "^(?!.*\\\\)(.*)$"
     },
     "date": { "type": "string", "minLength": 1 },
+    "publish": {
+      "description": "Generate and publish the correction PDFs for this cohort during the build. Defaults to false.",
+      "type": "boolean"
+    },
     "title": { "type": "string", "minLength": 1 },
     "subtitle": { "type": "string" },
     "import-answers": { "type": "boolean" }

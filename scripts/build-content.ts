@@ -6,7 +6,8 @@ import {
   loadDeployConfig,
   scopesForDir,
 } from './lib/deploy-config';
-import { publishTree, walkFiles } from './lib/content-publisher';
+import { compileTypst, publishTree, walkFiles } from './lib/content-publisher';
+import { publishCorrections } from './lib/corrections';
 import { validateExams } from './lib/exams';
 import { studentOwnerSlug } from '../src/lib/students';
 import type { Students } from '../src/types';
@@ -230,7 +231,7 @@ export async function buildContent(
   const students = await readStudents(studentsPath);
   await validateStudents(students, privateSourceDir);
 
-  const exams = await validateExams(contentDir);
+  const exams = await validateExams(contentDir, students);
   console.log(
     `[exams] ${exams.tests} prove, ${exams.manifests} manifest, ` +
       `${exams.corrections} correzioni verificate.`,
@@ -277,6 +278,21 @@ export async function buildContent(
         `-> static/raw/private/${student.slug} ` +
         `(${result.copied} copiati, ${result.compiled} PDF compilati, ` +
         `${result.published} sorgenti .typ pubblicati, ${result.ignored} ignorati)`,
+    );
+  }
+
+  const corrections = await publishCorrections({
+    contentDir,
+    rootDir,
+    stagedPrivateDir,
+    students,
+    compile: options.compile ?? compileTypst,
+  });
+
+  if (corrections.cohorts > 0) {
+    console.log(
+      `[content] correzioni: ${corrections.compiled} PDF generati ` +
+        `da ${corrections.cohorts} coorti con publish = true.`,
     );
   }
 

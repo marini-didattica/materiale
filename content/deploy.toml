@@ -32,7 +32,10 @@ format = "pdf"
 #   "**/*.tex"
 #   "**/__pycache__/"
 #   "public/prime/esercitazione-1/soluzione/"
-patterns = []
+# I vecchi stub di correzione nelle cartelle degli studenti non sono più
+# necessari: il build genera i PDF da admin/corrections/. L'ignore evita che
+# uno stub rimasto in un working tree venga compilato due volte.
+patterns = ["**/correzione.typ"]
 
 # Override Typst, valutati in ordine: vince l'ultima regola che corrisponde.
 # Esempio:

@@ -37,8 +37,8 @@ content/raw/private/admin/
 ```
 
 Il nome `<prova>` è univoco in `admin/tests/`. Per le prove che cambiano da
-classe a classe si usa un nome che le distingue, ad esempio `prova-1-1c` e
-`prova-1-1d`. Un nome come `prova-1` può essere usato da più classi solo se la
+classe a classe si usa un nome che le distingue, ad esempio `1-prova-1a` e
+`1-prova-1b`. Un nome come `prova-1` può essere usato da più classi solo se la
 prova è davvero la stessa.
 
 == Prove condivise e sostituzioni
@@ -48,9 +48,9 @@ più manifest. Non esiste più una cartella `shared/`: la condivisione è solo u
 nome usato da più classi.
 
 ```text
-admin/tests/esercitazione-1-prime/      # testo e soluzioni, una sola copia
-admin/corrections/1c/esercitazione-1/   # manifest: test = "esercitazione-1-prime"
-admin/corrections/1d/esercitazione-1/   # manifest: test = "esercitazione-1-prime"
+admin/tests/1-esercitazione-1/      # testo e soluzioni, una sola copia
+admin/corrections/1c/esercitazione-1/   # manifest: test = "1-esercitazione-1"
+admin/corrections/1d/esercitazione-1/   # manifest: test = "1-esercitazione-1"
 ```
 
 Una prova è indirizzata dal suo nome, non dal percorso della classe. Questo
@@ -148,8 +148,9 @@ Ogni cartella di classe contiene un `manifest.json` accanto a `correzioni/` e
 {
   "$schema": "../../../misc/manifest.schema.json",
   "version": 1,
-  "test": "prova-1-1c",
+  "test": "1-prova-1a",
   "date": "12 novembre 2026",
+  "publish": true,
   "title": "Correzione — Simulazione 1"
 }
 ```
@@ -161,6 +162,13 @@ indicare un percorso diverso se la struttura cambia. `answer-folder` è
 facoltativo e vale `risposte`. `date` è il default per le correzioni; `title`,
 `subtitle` e `import-answers` sono facoltativi e possono essere sovrascritti da
 una singola correzione.
+
+`publish` vale `false` per impostazione predefinita. Con `"publish": true` il
+build genera `correzione.pdf` nella cartella privata di ogni studente presente
+nella coorte e lo pubblica sul sito; gli studenti assenti vengono saltati. La
+correzione non ha quindi bisogno di un file `.typ` nella cartella dello
+studente: il percorso del descrittore viene ricavato da
+`admin/corrections/<classe>/<prova>/correzioni/<studente>.json`.
 
 Per compatibilità resta accettato anche il vecchio campo `test-json` con un
 percorso esplicito, ma i nuovi manifest devono usare `test`.
@@ -208,7 +216,7 @@ Uno studente che ha svolto la prova di un'altra sezione aggiunge `test`:
 
 ```json
 {
-  "test": "prova-1-1d",
+  "test": "1-prova-1b",
   "set": "default",
   "exercises": {
     "D1": { "answer-file": "domanda1.txt", "score": 7, "comment": "Corretta." }
@@ -223,16 +231,16 @@ conversione in voto vengono dalla prova effettiva.
 Ogni studente della classe deve avere un file, anche quando è assente: le
 statistiche usano il roster per elencare tutti gli studenti.
 
-Per pubblicare le risposte e lo stub della correzione nelle cartelle private
-degli studenti:
+Per copiare le risposte nelle cartelle private degli studenti:
 
 ```sh
 wm exam deploy <corrections/classe/prova> --force
 ```
 
-Lo stub `correzione.typ` punta direttamente al descrittore in
-`admin/corrections/.../correzioni/`; non viene più copiato `correzione.json`.
-Senza `--force` i file di risposta già presenti non vengono sovrascritti.
+Il comando copia solo le risposte; non crea più stub `correzione.typ`. I PDF
+delle correzioni vengono generati dal build per le coorti con
+`"publish": true`. Senza `--force` i file di risposta già presenti non vengono
+sovrascritti.
 
 == Statistiche
 
@@ -364,6 +372,7 @@ action = "ignore"
 - [ ] Il nome della prova è univoco in `admin/tests/`.
 - [ ] `tests/<prova>/testo/<prova>.json` e `tests/<prova>/testo/<prova>.typ` (o `<prova>-<set>.typ`) esistono.
 - [ ] `corrections/<classe>/<prova>/manifest.json` esiste e `test` / `answer-folder` risolvono.
+- [ ] Se le correzioni vanno pubblicate, il manifest ha `"publish": true` e ogni studente presente è in `content/students.json`.
 - [ ] `sets` nel descrittore corrisponde ai documenti `<prova>-<set>.typ`.
 - [ ] Ogni esercizio ha `id`, `file`, `title`, `points` e `difficulty`.
 - [ ] Ogni esercizio ha un file `soluzione/<EX_ID>.<ext>`.

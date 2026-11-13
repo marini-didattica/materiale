@@ -84,4 +84,124 @@ action = "ignore"
       await exists(at(root, 'static/raw/private/ABCD1234/secret.txt')),
     ).toBe(false);
   });
+
+  test('publishes correction PDFs for cohorts with publish: true', async () => {
+    const sources: string[] = [];
+    const destinations: string[] = [];
+    const recordingCompile: CompileFn = async (source, destination) => {
+      sources.push(source);
+      destinations.push(destination);
+      await mkdir(path.dirname(destination), { recursive: true });
+      await writeFile(destination, 'correction', 'utf8');
+    };
+
+    const root = await makeRoot({
+      'content/students.json': JSON.stringify({
+        '1c/studente-prova': {
+          slug: 'ABCD1234',
+          'owner-first-names': ['Ada'],
+          'owner-last-names': ['Prova'],
+        },
+        admin: {
+          slug: 'MRNMTT03',
+          'owner-first-names': ['Mattia'],
+          'owner-last-names': ['Marini'],
+          staff: true,
+        },
+      }),
+      'content/deploy.toml': `
+[ignore]
+patterns = []
+`,
+      'content/raw/public/prime/lezione.typ': '= lezione',
+      'content/raw/private/1c/studente-prova/prova-1/le-tue-risposte/domanda1.txt': 'risposta',
+      'content/raw/private/admin/tests/1-prova-1a/testo/1-prova-1a.json': JSON.stringify({
+        version: 1,
+        sets: ['default'],
+        categories: [
+          {
+            id: 'D',
+            tag: 'Domanda',
+            title: 'Teoria',
+            exercises: [
+              { id: 'D1', file: 'parts/D1.typ', title: 'Q1', points: 10, difficulty: 1 },
+            ],
+          },
+        ],
+      }),
+      'content/raw/private/admin/tests/1-prova-1a/testo/1-prova-1a.typ': '= prova',
+      'content/raw/private/admin/tests/1-prova-1a/testo/parts/D1.typ': '= D1',
+      'content/raw/private/admin/tests/1-prova-1a/soluzione/D1.txt': 'risposta',
+      'content/raw/private/admin/corrections/1c/prova-1/manifest.json': JSON.stringify({
+        version: 1,
+        test: '1-prova-1a',
+        date: '12 novembre 2026',
+        publish: true,
+      }),
+      'content/raw/private/admin/corrections/1c/prova-1/correzioni/studente-prova.json':
+        JSON.stringify({ set: 'default', exercises: { D1: null } }),
+    });
+
+    await buildContent(root, { compile: recordingCompile });
+
+    const correctionPdf = 'static/raw/private/ABCD1234/prova-1/correzione.pdf';
+    expect(await exists(at(root, correctionPdf))).toBe(true);
+    expect(destinations).toContain(at(root, correctionPdf));
+    expect(sources.some((source) => source.includes('.correzioni-src'))).toBe(true);
+    expect(await exists(at(root, 'static/raw/.correzioni-src'))).toBe(false);
+  });
+
+  test('does not publish corrections when publish is omitted', async () => {
+    const root = await makeRoot({
+      'content/students.json': JSON.stringify({
+        '1c/studente-prova': {
+          slug: 'ABCD1234',
+          'owner-first-names': ['Ada'],
+          'owner-last-names': ['Prova'],
+        },
+        admin: {
+          slug: 'MRNMTT03',
+          'owner-first-names': ['Mattia'],
+          'owner-last-names': ['Marini'],
+          staff: true,
+        },
+      }),
+      'content/deploy.toml': `
+[ignore]
+patterns = []
+`,
+      'content/raw/public/prime/lezione.typ': '= lezione',
+      'content/raw/private/1c/studente-prova/prova-1/le-tue-risposte/domanda1.txt': 'risposta',
+      'content/raw/private/admin/tests/1-prova-1a/testo/1-prova-1a.json': JSON.stringify({
+        version: 1,
+        sets: ['default'],
+        categories: [
+          {
+            id: 'D',
+            tag: 'Domanda',
+            title: 'Teoria',
+            exercises: [
+              { id: 'D1', file: 'parts/D1.typ', title: 'Q1', points: 10, difficulty: 1 },
+            ],
+          },
+        ],
+      }),
+      'content/raw/private/admin/tests/1-prova-1a/testo/1-prova-1a.typ': '= prova',
+      'content/raw/private/admin/tests/1-prova-1a/testo/parts/D1.typ': '= D1',
+      'content/raw/private/admin/tests/1-prova-1a/soluzione/D1.txt': 'risposta',
+      'content/raw/private/admin/corrections/1c/prova-1/manifest.json': JSON.stringify({
+        version: 1,
+        test: '1-prova-1a',
+        date: '12 novembre 2026',
+      }),
+      'content/raw/private/admin/corrections/1c/prova-1/correzioni/studente-prova.json':
+        JSON.stringify({ set: 'default', exercises: { D1: null } }),
+    });
+
+    await buildContent(root, { compile: fakeCompile });
+
+    expect(
+      await exists(at(root, 'static/raw/private/ABCD1234/prova-1/correzione.pdf')),
+    ).toBe(false);
+  });
 });
