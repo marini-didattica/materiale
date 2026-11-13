@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 4,
+			"comment": "Ruoli e ambito GPU corretti, ma non spieghi le due modalità di esecuzione: la CPU lavora in sequenza, la GPU in parallelo."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 4,
+			"comment": "L'idea di codifica e di convenzioni condivise c'è, ma ASCII non «decripta» i nomi: associa ogni carattere a un numero (0–127). Gli esempi MP3/PDF/Wi-Fi sono pertinenti ai protocolli."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 2,
+			"comment": "La risposta è troppo generica: assembly è la rappresentazione simbolica del codice macchina, non un semplice «trasformare il codice normale in binario»."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 0,
+			"comment": "`i = 4` e `while i == len(voti)` non sono mai veri (4 ≠ 5), quindi il ciclo non parte e non viene stampato nulla. Inoltre incrementi `conteggio` senza confrontare gli elementi."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 0,
+			"comment": "`l(i)` non è una chiamata valida (serve `l[i]`), quindi il programma va in errore; `i = 2` è un indice fisso e non c'è un ciclo."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 5,
+			"comment": "Confondi il numero di elementi con il loro valore: il programma stampa i numeri `3`, `7`, `12`, non il loro conteggio `3`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "L'output `81` è giusto, ma il programma non calcola tutte le potenze di 3: moltiplica `risultato` per `a` esattamente `b` volte, cioè calcola 3^4."
+		}
+	}
+}

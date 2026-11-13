@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 5,
+			"comment": "Bene il ruolo della GPU e l'esecuzione «passo per passo» della CPU, ma manca il punto centrale: la GPU esegue molti calcoli semplici in parallelo, mentre la CPU ne esegue pochi in sequenza. Aggiungi anche un ambito adatto alla CPU."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 4,
+			"comment": "La tabella ASCII e l'idea di convenzione condivisa ci sono, ma manca il collegamento carattere↔byte (0–127) e il motivo per cui serve una convenzione: una sequenza di bit da sola è ambigua."
+		},
+		"D3": {
+			"answer-file": "doamda3.txt",
+			"score": 1,
+			"comment": "Attenzione: l'assembler non trasforma «caratteri in numeri e viceversa», quello è il ruolo di una codifica come ASCII. Assembly è la rappresentazione simbolica del codice macchina, con sigle come `MOV` e `ADD`."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 20,
+			"comment": "Il conteggio è corretto e generalizza, ma il blocco `if lista[i]==0: print(\"0\")` stampa un valore in più quando la lista contiene uno zero, mentre la consegna chiede un solo numero. Toglilo."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 35,
+			"comment": "Corretto: usi un flag, esci con `break` e con lista vuota stampi `False`. Il controllo `if lista[i]==0` è inutile ma non altera il risultato."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 15,
+			"comment": "Corretto: individui i valori positivi e riporti l'output `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 15,
+			"comment": "Corretto: descrivi il ciclo di moltiplicazioni e arrivi a `81` (3^4)."
+		}
+	}
+}

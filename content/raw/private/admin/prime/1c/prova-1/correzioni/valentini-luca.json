@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 2,
+			"comment": "La GPU non è lo schermo né un'interfaccia: è il processore grafico. La CPU è descritta in modo accettabile, ma manca la distinzione tra esecuzione sequenziale e parallela."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 4,
+			"comment": "Definisci carattere e byte e dai esempi di protocolli, ma non spieghi che cos'è la tabella ASCII né perché una convenzione condivisa è necessaria."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 1,
+			"comment": "La risposta non spiega che cos'è assembly: non è «assemblare i codici», ma la rappresentazione simbolica del codice macchina tradotta dall'assembler."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 25,
+			"comment": "Perfetto: conteggio corretto, lista vuota gestita e output unico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 27,
+			"comment": "La logica è corretta, ma stampi `lista rispettata`/`lista non rispettata` invece di `True`/`False`, come richiede la consegna. Sostituisci i due `print`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 10,
+			"comment": "La spiegazione è corretta, ma manca l'output `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 8,
+			"comment": "Hai capito che si calcola una potenza, ma non riporti l'output `81` né spieghi che l'esponente è `b`."
+		}
+	}
+}

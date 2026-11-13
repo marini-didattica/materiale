@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 5,
+			"comment": "Bene la CPU sequenziale e la GPU legata ai pixel, ma non dici che la GPU esegue molti calcoli in parallelo. Manca un ambito esplicito per la CPU."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 6,
+			"comment": "Corretto: descrivi la tabella 0–127, il codice e il carattere, e spieghi perché servono convenzioni condivise. Manca solo il perché una sequenza di bit è ambigua senza tabella."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 1,
+			"comment": "La risposta è sbagliata: assembly non è il linguaggio base compreso da qualsiasi programma; è la rappresentazione simbolica del codice macchina e richiede l'assembler."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 25,
+			"comment": "Perfetto: conteggio corretto e output unico, anche con lista vuota."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 35,
+			"comment": "Corretto: scorri la lista, usi un flag e interrompi con `break`; con lista vuota stampi `False`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 12,
+			"comment": "La spiegazione è corretta, ma non riporti l'output: `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 10,
+			"comment": "Descrivi il ciclo correttamente, ma non riporti il risultato finale `81`."
+		}
+	}
+}

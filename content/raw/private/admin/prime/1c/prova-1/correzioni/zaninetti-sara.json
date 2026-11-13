@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 1,
+			"comment": "La GPU non è la memoria a breve termine: quella è la RAM. La GPU è il processore grafico; manca completamente la distinzione tra CPU sequenziale e GPU parallela."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 5,
+			"comment": "Corretto l'intervallo 0–127 e il motivo dei protocolli, con esempi pertinenti. Manca il legame tra carattere e byte e il perché della codifica binaria."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		},
+		"E1": {
+			"answer-file": "esercizo1.py",
+			"score": 25,
+			"comment": "Perfetto: conteggio corretto e output unico. Il file si chiama `esercizo1.py` (refuso), ma il contenuto è giusto."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 0,
+			"comment": "Il file è vuoto: non hai risposto."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 9,
+			"comment": "La spiegazione del filtro è giusta, ma l'output è sbagliato: l'ultimo valore è `12`, non `27`; l'output corretto è `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 8,
+			"comment": "L'output `81` è corretto, ma la spiegazione è confusa: il ciclo moltiplica `risultato` per `a` quattro volte, non «incrementa» e non calcola `3*27`."
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 1,
+			"comment": "La GPU non è una memoria: è il processore grafico. La CPU esegue calcoli in sequenza e la GPU molti calcoli in parallelo; manca del tutto questa distinzione."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 3,
+			"comment": "La risposta è troppo scarna e non parla di protocolli: ASCII è una tabella che associa caratteri e codici numerici (0–127), non solo «127 lettere»."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 0,
+			"comment": "Hai ripetuto la risposta della domanda 2: non hai risposto su assembly."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 0,
+			"comment": "`len(a)` dà errore perché `a` è un intero, non una lista; inoltre non c'è alcun conteggio. Il programma non parte."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 0,
+			"comment": "`while (len(l)) == a` è falso (4 ≠ 7), quindi il corpo non viene mai eseguito e non stampi nulla; `len(l) = ...` è anche un errore di sintassi."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 1,
+			"comment": "La risposta è confusa e invertita: il programma stampa i numeri positivi (`3`, `7`, `12`), non i negativi né i valori maggiori di `a`."
+		},
+		"S3": {
+			"answer-file": "smippet2.txt",
+			"score": 8,
+			"comment": "Hai capito che c'è una moltiplicazione ripetuta e arrivi a `81`, ma la spiegazione è molto confusa: il ciclo moltiplica `risultato` per `a` esattamente `b` volte."
+		}
+	}
+}

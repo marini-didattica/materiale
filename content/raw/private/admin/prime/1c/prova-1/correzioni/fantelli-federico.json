@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 6,
+			"comment": "Bene: contrapponi l'esecuzione una dopo l'altra della CPU ai molti calcoli contemporanei della GPU. Mancano esempi di ambiti adatti alle due unità."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 0,
+			"comment": "La risposta si ferma a «La tabella ASCII»: non hai scritto nulla."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 0,
+			"comment": "La frase «il linguaggio assembly è» è incompleta: non hai risposto."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 25,
+			"comment": "Corretto e idiomatico: conti le uguaglianze e stampi solo il totale, anche con lista vuota."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 35,
+			"comment": "Corretto: usi un ciclo `for` e un flag, e con lista vuota stampi `False`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 11,
+			"comment": "La spiegazione è corretta, ma nell'output hai aggiunto `5`: nella lista c'è `-5`, che è negativo, e l'output esatto è `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 15,
+			"comment": "Corretto: descrivi le quattro moltiplicazioni e riporti `81`."
+		}
+	}
+}

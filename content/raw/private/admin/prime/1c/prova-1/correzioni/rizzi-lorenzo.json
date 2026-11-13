@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 4,
+			"comment": "I ruoli sono corretti, ma la frase finale si interrompe e non spieghi la differenza tra esecuzione sequenziale e parallela."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 5,
+			"comment": "Bene il legame carattere→codice binario e il motivo dei protocolli. Manca la precisazione su byte e intervallo 0–127."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 3,
+			"comment": "L'idea di traduzione verso il codice binario c'è, ma confondi assembly e assembler e non spieghi la corrispondenza con il codice macchina."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 25,
+			"comment": "Perfetto: conteggio corretto, lista vuota gestita e output unico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 6,
+			"comment": "La condizione `l[r] <= a` è sbagliata: verifica che un elemento sia minore o uguale ad `a`, non che sia uguale. Inoltre `r <= len(l)` esce dalla lista e provoca `IndexError`. Serve `r < len(l)` e `l[r] == a`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 15,
+			"comment": "Corretto: spieghi il filtro e riporti `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 15,
+			"comment": "Corretto: descrivi la moltiplicazione ripetuta e riporti `81`."
+		}
+	}
+}

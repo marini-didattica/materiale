@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 4,
+			"comment": "Descrivi i due ruoli, ma non le due modalità di esecuzione: la CPU esegue poche istruzioni in sequenza, la GPU moltissimi calcoli semplici in parallelo. Manca anche un ambito adatto alla CPU."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 2,
+			"comment": "La prima frase confonde ASCII con l'uso dei byte e la seconda parla di «variabili» e nomi, che non c'entra. Non hai spiegato perché servono protocolli condivisi."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 18,
+			"comment": "Il ciclo e il conteggio sono giusti, ma confronti con `4` invece che con `a`: il programma funziona solo per `a = 4`, non per qualsiasi valore come richiesto."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 12,
+			"comment": "La struttura è quella giusta, ma non c'è `break`: dopo aver trovato `a` stampi `True` e poi, alla fine del `while`, stampi anche `False`. Il `else` agganciato al `while` scatta sempre, anche quando `a` c'è."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 15,
+			"comment": "Corretto: spieghi che vengono stampati solo i positivi e riporti `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 9,
+			"comment": "L'output `81` è giusto, ma non spieghi il ciclo: a ogni giro `risultato` viene moltiplicato per `a` (3) e si esegue `b` (4) volte, quindi calcola 3^4."
+		}
+	}
+}

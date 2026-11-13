@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 4,
+			"comment": "Ruoli e ambito GPU corretti, ma non spieghi le due modalità di esecuzione: la CPU esegue poche istruzioni in sequenza, la GPU molti calcoli in parallelo."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 6,
+			"comment": "Molto bene: colleghi ASCII a byte e caratteri e spieghi l'ambiguità di una sequenza di bit senza convenzione. Manca solo il numero esplicito dei valori (256)."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 5,
+			"comment": "Corretto: nomi leggibili come `mov`, traduzione dell'assembler e legame con il codice macchina. La frase finale sul codice macchina scritto «a mano» è un po' confusa."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 25,
+			"comment": "Perfetto: conti le occorrenze e stampi solo il totale, anche con lista vuota."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 28,
+			"comment": "La logica è giusta, ma hai scritto `trovato == True` invece di `trovato = True`: è un confronto, non un'assegnazione, quindi quando `a` c'è stampi comunque `False`. Correggi l'operatore."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 15,
+			"comment": "Corretto: spieghi il filtro e riporti `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 15,
+			"comment": "Corretto: riconosci 3^4 e riporti `81`."
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 5,
+			"comment": "Ruoli e ambiti sono chiari, ma manca il confronto tra esecuzione sequenziale (CPU) e parallela (GPU)."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 6,
+			"comment": "Corretto: convenzione condivisa, codifica dei caratteri e limite di 128 caratteri. Manca solo il collegamento esplicito ai byte e al perché una sequenza di bit è ambigua senza convenzione."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 4,
+			"comment": "Bene l'idea di sostituire il codice binario con parole leggibili. Manca il ruolo dell'assembler e la corrispondenza quasi uno-a-uno con il codice macchina."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 25,
+			"comment": "Perfetto: conteggio corretto, lista vuota gestita e output unico."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 35,
+			"comment": "Corretto: scorri tutta la lista e stampi un solo booleano. Hai cambiato `a` in `12`, ma il programma funziona per qualsiasi valore."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 15,
+			"comment": "Corretto: spieghi il filtro sui positivi e riporti `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 14,
+			"comment": "Corretto: riconosci la potenza e riporti `81`. «eleva a alla b volte» è impreciso: il ciclo moltiplica `b` volte, quindi calcola `a^b`."
+		}
+	}
+}

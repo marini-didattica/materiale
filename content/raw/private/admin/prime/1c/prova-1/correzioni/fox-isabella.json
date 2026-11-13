@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 4,
+			"comment": "Descrivi bene i ruoli e l'ambito della GPU, ma manca la differenza tra esecuzione sequenziale della CPU e parallela della GPU."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 6,
+			"comment": "Corretto: spieghi la codifica dei caratteri in binario e perché servono regole condivise. Potevi citare esplicitamente la tabella a 0–127."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 3,
+			"comment": "Attenzione: l'assembler è il programma che traduce; il linguaggio assembly è la rappresentazione simbolica del codice macchina. La distinzione finale tra assembly e codice macchina è imprecisa."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 25,
+			"comment": "Corretto: conti le uguaglianze, scorri tutta la lista e stampi solo il totale."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 3,
+			"comment": "Il programma va in errore: nel ramo `elif` usi `b` senza averla definita (`NameError`) e la condizione `l[i] < 7 or l[i] > 7` è sempre vera. Inoltre non stampi `False` quando `a` non c'è."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 1,
+			"comment": "La risposta è invertita: il programma stampa i numeri maggiori di zero, non quelli minori. L'output è `3`, `7`, `12`, non `-1` e `-5`."
+		},
+		"S3": {
+			"answer-file": "snipper2.txt",
+			"score": 6,
+			"comment": "Hai capito che c'è un ciclo di moltiplicazioni, ma l'output è un unico `81`, non `3`, `9`, `27`: il programma stampa solo il risultato finale."
+		}
+	}
+}

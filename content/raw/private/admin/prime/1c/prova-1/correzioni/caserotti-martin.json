@@ -1,0 +1,32 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": null,
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 4,
+			"comment": "L'idea di una tabella di numeri collegati a sequenze di 0 e 1 c'è, ma ASCII non è un elenco di «impulsi»: associa a ogni carattere un codice numerico (0–127), e l'esempio `32 = 0010000` è sbagliato (32 = `0100000`). La parte sui protocolli è corretta ma generica."
+		},
+		"D3": null,
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 2,
+			"comment": "`len[l]` e `len(l)[a]` non sono validi: `len` è una funzione e va scritta `len(l)`. Inoltre `a` viene usato come indice e `conta` non viene mai incrementato: il programma non conta le occorrenze."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 0,
+			"comment": "`if a == len(l)` confronta il valore cercato con la lunghezza della lista (7 e 4): la condizione è falsa e il programma non stampa nulla. Manca il ciclo."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 4,
+			"comment": "La descrizione è troppo vaga: non dici che vengono stampati solo i numeri maggiori di zero né riporti l'output `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 0,
+			"comment": "Non hai risposto."
+		}
+	}
+}

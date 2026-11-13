@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 4,
+			"comment": "Ruoli e ambiti sono chiari, ma manca la differenza tra esecuzione sequenziale e parallela."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 6,
+			"comment": "Corretto: 127 caratteri con la loro sequenza binaria e motivo dei protocolli, con esempi. Manca solo il riferimento ai byte."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 4,
+			"comment": "Bene l'idea di sostituire le sequenze di zeri e uno con simboli leggibili. Manca l'assembler e la corrispondenza quasi uno-a-uno con il codice macchina."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 6,
+			"comment": "La struttura del ciclo e il confronto sono giusti, ma `nuova_lista` è una lista e `nuova_lista + 1` provoca `TypeError`: usa un contatore intero, ad esempio `conta = 0`."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 8,
+			"comment": "Il flag è invertito: quando trovi `a` assegni `False`, altrimenti `True`. Il risultato dipende solo dall'ultimo elemento: con `[3, 5, 7]` e `a = 7` stampi `False`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 15,
+			"comment": "Corretto: riporti i positivi `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 3,
+			"comment": "La risposta è sbagliata: il programma calcola `a^b` (3^4 = 81), non `a*b` (12). Manca l'output corretto."
+		}
+	}
+}

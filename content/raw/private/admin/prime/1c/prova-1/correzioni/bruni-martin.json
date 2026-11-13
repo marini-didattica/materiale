@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 6,
+			"comment": "Bene: cogli la sequenza della CPU e il parallelismo della GPU. Manca un esempio di ambito adatto alla CPU (sistema operativo, gestione file, calcoli generici)."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 5,
+			"comment": "Corretto il legame carattere→numero e il motivo dei protocolli. Potevi precisare che ASCII usa 7 bit (0–127) e che i byte sono sequenze di 8 bit."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 2,
+			"comment": "L'idea di «mettere insieme le istruzioni» è confusa: assembly è la versione simbolica del codice macchina, tradotta dall'assembler, quasi un'istruzione assembly per ogni istruzione macchina. Non è un programma che «manda» istruzioni alla CPU."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 25,
+			"comment": "Perfetto: scorri la lista, conti le uguaglianze e stampi solo il totale; funziona anche con lista vuota."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 35,
+			"comment": "Corretto: gestisci la lista vuota, usi un flag e interrompi con `break` appena trovi `a`."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 15,
+			"comment": "Corretto: spieghi il filtro sui positivi e riporti l'output `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 15,
+			"comment": "Corretto: riconosci la potenza `a^b` e riporti `81`."
+		}
+	}
+}

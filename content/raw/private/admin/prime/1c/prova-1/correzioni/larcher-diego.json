@@ -1,0 +1,40 @@
+{
+	"set": "default",
+	"exercises": {
+		"D1": {
+			"answer-file": "domanda1.txt",
+			"score": 4,
+			"comment": "I ruoli sono corretti, ma manca la differenza tra esecuzione sequenziale e parallela; dire che la CPU «non ha niente a che fare con la GPU» è impreciso, lavorano insieme."
+		},
+		"D2": {
+			"answer-file": "domanda2.txt",
+			"score": 3,
+			"comment": "Descrivi ASCII come conversione binario→lettere, ma non spieghi cosa sia una tabella di codifica né perché servono protocolli condivisi."
+		},
+		"D3": {
+			"answer-file": "domanda3.txt",
+			"score": 2,
+			"comment": "La risposta confonde assembly, ASCII e conversione di numeri: assembly è la rappresentazione simbolica del codice macchina, tradotta dall'assembler."
+		},
+		"E1": {
+			"answer-file": "esercizio1.py",
+			"score": 10,
+			"comment": "Il confronto `l[i] % a == 0` conta i multipli di `a`, non le occorrenze: con `[8]` e `a=4` otterresti 1 anche se `4` non c'è. Con la lista data il risultato coincide per caso."
+		},
+		"E2": {
+			"answer-file": "esercizio2.py",
+			"score": 8,
+			"comment": "Il ciclo non termina mai: `i = i + 1` è fuori dal `while`, quindi `i` resta 0. Inoltre stampi `l[i]` (un elemento) invece di `True`/`False` e la condizione finale `l[i] >= 1` non ha senso."
+		},
+		"S1": {
+			"answer-file": "snippet1.txt",
+			"score": 1,
+			"comment": "La risposta è invertita: il programma cerca i numeri maggiori di zero, non minori, e stampa `3`, `7`, `12`."
+		},
+		"S3": {
+			"answer-file": "snippet2.txt",
+			"score": 15,
+			"comment": "Corretto: spieghi la moltiplicazione ripetuta e riporti `81`."
+		}
+	}
+}
