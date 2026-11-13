@@ -1,0 +1,115 @@
+{
+	"$schema": "../../../misc/exam.schema.json",
+	"version": 1,
+	"sets": ["default"],
+	"preamble-file": "parts/preamble.typ",
+	"max-points": 110,
+	"grade-min": 3,
+	"grade-max": 10,
+	"laude-threshold": 100,
+	"metadata": {
+		"class": "SECONDA",
+		"title": "Verifica di informatica",
+		"subtitle": "Simulazione 1 — Produzione e lettura di codice con liste in Python",
+		"duration": 90,
+		"author": "Marini Mattia"
+	},
+	"categories": [
+		{
+			"id": "E",
+			"tag": "Esercizio",
+			"title": "Produzione del codice",
+			"intro": "parts/section-E.typ",
+			"exercises": [
+				{
+					"id": "E1",
+					"file": "parts/E1.typ",
+					"answer-file": "esercizio1.py",
+					"title": "Posizioni alternate",
+					"points": 12,
+					"difficulty": 1
+				},
+				{
+					"id": "E2",
+					"file": "parts/E2.typ",
+					"answer-file": "esercizio2.py",
+					"title": "Inversione in place",
+					"points": 16,
+					"difficulty": 2
+				},
+				{
+					"id": "E3",
+					"file": "parts/E3.typ",
+					"answer-file": "esercizio3.py",
+					"title": "Palindroma",
+					"points": 16,
+					"difficulty": 2
+				},
+				{
+					"id": "E4",
+					"file": "parts/E4.typ",
+					"answer-file": "esercizio4.py",
+					"title": "Secondo più grande",
+					"points": 18,
+					"difficulty": 3
+				},
+				{
+					"id": "E5",
+					"file": "parts/E5.typ",
+					"answer-file": "esercizio5.py",
+					"title": "Rimuovi i negativi",
+					"points": 18,
+					"difficulty": 3
+				}
+			]
+		},
+		{
+			"id": "S",
+			"tag": "Snippet",
+			"title": "Lettura del codice",
+			"intro": "parts/section-S.typ",
+			"exercises": [
+				{
+					"id": "S1",
+					"file": "parts/S1.typ",
+					"answer-file": "snippet1.txt",
+					"title": "Primo frammento",
+					"points": 6,
+					"difficulty": 2
+				},
+				{
+					"id": "S2",
+					"file": "parts/S2.typ",
+					"answer-file": "snippet2.txt",
+					"title": "Secondo frammento",
+					"points": 6,
+					"difficulty": 2
+				},
+				{
+					"id": "S3",
+					"file": "parts/S3.typ",
+					"answer-file": "snippet3.txt",
+					"title": "Terzo frammento",
+					"points": 6,
+					"difficulty": 3
+				},
+				{
+					"id": "S4",
+					"file": "parts/S4.typ",
+					"answer-file": "snippet4.txt",
+					"title": "Quarto frammento",
+					"points": 6,
+					"difficulty": 3
+				},
+				{
+					"id": "S5",
+					"file": "parts/S5.typ",
+					"answer-file": "snippet5.txt",
+					"title": "Quinto frammento",
+					"points": 6,
+					"difficulty": 3
+				}
+			]
+		}
+	]
+}

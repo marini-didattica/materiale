@@ -1,0 +1,115 @@
+{
+	"$schema": "../../../misc/exam.schema.json",
+	"version": 1,
+	"sets": ["default"],
+	"preamble-file": "parts/preamble.typ",
+	"max-points": 110,
+	"grade-min": 3,
+	"grade-max": 10,
+	"laude-threshold": 100,
+	"metadata": {
+		"class": "PRIMA",
+		"title": "Verifica di informatica",
+		"subtitle": "Simulazione 1 — Teoria, scrittura e lettura di codice base in Python",
+		"duration": 80,
+		"author": "Marini Mattia"
+	},
+	"categories": [
+		{
+			"id": "D",
+			"tag": "Domanda",
+			"title": "Teoria",
+			"intro": "parts/section-D.typ",
+			"exercises": [
+				{
+					"id": "D1",
+					"file": "parts/D1.typ",
+					"answer-file": "domanda1.txt",
+					"title": "Le componenti di un computer",
+					"points": 7,
+					"difficulty": 1
+				},
+				{
+					"id": "D2",
+					"file": "parts/D2.typ",
+					"answer-file": "domanda2.txt",
+					"title": "Numeri, caratteri e parole",
+					"points": 8,
+					"difficulty": 2
+				},
+				{
+					"id": "D3",
+					"file": "parts/D3.typ",
+					"answer-file": "domanda3.txt",
+					"title": "Istruzioni e instruction set",
+					"points": 5,
+					"difficulty": 2
+				}
+			]
+		},
+		{
+			"id": "E",
+			"tag": "Esercizio",
+			"title": "Scrittura del codice",
+			"intro": "parts/section-E.typ",
+			"exercises": [
+				{
+					"id": "E1",
+					"file": "parts/E1.typ",
+					"answer-file": "esercizio1.py",
+					"title": "Conta i numeri pari",
+					"points": 10,
+					"difficulty": 1
+				},
+				{
+					"id": "E2",
+					"file": "parts/E2.typ",
+					"answer-file": "esercizio2.py",
+					"title": "La somma da 0 a n",
+					"points": 20,
+					"difficulty": 2
+				},
+				{
+					"id": "E3",
+					"file": "parts/E3.typ",
+					"answer-file": "esercizio3.py",
+					"title": "Tutti dentro l'intervallo",
+					"points": 30,
+					"difficulty": 3
+				}
+			]
+		},
+		{
+			"id": "S",
+			"tag": "Snippet",
+			"title": "Lettura del codice",
+			"intro": "parts/section-S.typ",
+			"exercises": [
+				{
+					"id": "S1",
+					"file": "parts/S1.typ",
+					"answer-file": "snippet1.txt",
+					"title": "Primo frammento",
+					"points": 10,
+					"difficulty": 2
+				},
+				{
+					"id": "S2",
+					"file": "parts/S2.typ",
+					"answer-file": "snippet2.txt",
+					"title": "Secondo frammento",
+					"points": 10,
+					"difficulty": 2
+				},
+				{
+					"id": "S3",
+					"file": "parts/S3.typ",
+					"answer-file": "snippet3.txt",
+					"title": "Terzo frammento",
+					"points": 10,
+					"difficulty": 2
+				}
+			]
+		}
+	]
+}

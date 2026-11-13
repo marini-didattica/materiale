@@ -19,6 +19,12 @@
       "required": ["set", "exercises"],
       "properties": {
         "absent": { "const": false },
+        "test": {
+          "description": "Optional test override for a student who sat another section's test.",
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+        },
         "set": { "type": "string", "minLength": 1 },
         "import-answers": { "type": "boolean" },
         "date": { "type": "string" },

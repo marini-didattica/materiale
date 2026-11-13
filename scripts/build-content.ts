@@ -7,6 +7,7 @@ import {
   scopesForDir,
 } from './lib/deploy-config';
 import { publishTree, walkFiles } from './lib/content-publisher';
+import { validateExams } from './lib/exams';
 import { studentOwnerSlug } from '../src/lib/students';
 import type { Students } from '../src/types';
 
@@ -228,6 +229,13 @@ export async function buildContent(
 
   const students = await readStudents(studentsPath);
   await validateStudents(students, privateSourceDir);
+
+  const exams = await validateExams(contentDir);
+  console.log(
+    `[exams] ${exams.tests} prove, ${exams.manifests} manifest, ` +
+      `${exams.corrections} correzioni verificate.`,
+  );
+
   await validateNoUnlistedFiles(students, config, privateSourceDir);
 
   await rm(stagedRawDir, { recursive: true, force: true });

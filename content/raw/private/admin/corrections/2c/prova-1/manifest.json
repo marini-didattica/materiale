@@ -1,0 +1,6 @@
+{
+	"$schema": "../../../misc/manifest.schema.json",
+	"version": 1,
+	"test": "prova-1-2c",
+	"date": "29 ottobre 2026"
+}

@@ -1,7 +1,0 @@
-{
-	"$schema": "../../../misc/manifest.schema.json",
-	"version": 1,
-	"test-json": "testo/prova-1.json",
-	"answer-folder": "risposte",
-	"date": "9 novembre 2026"
-}

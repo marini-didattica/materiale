@@ -4,11 +4,28 @@
   "title": "Exam manifest",
   "type": "object",
   "additionalProperties": false,
-  "required": ["version", "test-json", "date"],
+  "required": ["version", "date"],
+  "anyOf": [
+    { "required": ["test"] },
+    { "required": ["test-json"] }
+  ],
   "properties": {
     "$schema": { "type": "string" },
     "version": { "const": 1 },
+    "test": {
+      "description": "Conventional test name under the tests root: <name>/testo/<name>.json.",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+    },
     "test-json": {
+      "description": "Legacy explicit path to the exam descriptor. Prefer \"test\".",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!.*\\\\)(.*)$"
+    },
+    "tests-root": {
+      "description": "Folder holding the conventional test folders. Default: ../../../tests.",
       "type": "string",
       "minLength": 1,
       "pattern": "^(?!.*\\\\)(.*)$"

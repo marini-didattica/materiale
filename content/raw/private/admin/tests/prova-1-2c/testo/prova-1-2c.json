@@ -1,0 +1,126 @@
+{
+	"$schema": "../../../misc/exam.schema.json",
+	"version": 1,
+	"sets": ["a", "b"],
+	"preamble-file": "parts/preamble.typ",
+
+	"max-points": 110,
+	"laude-threshold": 100,
+
+	"metadata": {
+		"class": "SECONDA",
+		"title": "Verifica di informatica",
+		"subtitle": "Introduzione a Python",
+		"duration": 90,
+		"author": "Marini Mattia"
+	},
+
+	"categories": [
+		{
+			"id": "E",
+			"tag": "Esercizio",
+			"title": "Scrittura del codice",
+			"intro": "parts/section-E.typ",
+			"exercises": [
+				{
+					"id": "E1",
+					"file": "parts/E1.typ",
+					"answer-file": "esercizio{ordinal}.py",
+					"sets": ["a", "b"],
+					"title": "Media degli elementi",
+					"points": { "a": 12, "b": 16 },
+					"difficulty": 2
+				},
+				{
+					"id": "E2",
+					"file": "parts/E2.typ",
+					"answer-file": "esercizio{ordinal}.py",
+					"sets": ["a", "b"],
+					"title": "Tutti dentro l'intervallo",
+					"points": { "a": 16, "b": 23 },
+					"difficulty": 3
+				},
+				{
+					"id": "E3",
+					"file": "parts/E3.typ",
+					"answer-file": "esercizio{ordinal}.py",
+					"sets": ["a"],
+					"title": "La lista è ordinata?",
+					"points": 12,
+					"difficulty": 2
+				},
+				{
+					"id": "E4",
+					"file": "parts/E4.typ",
+					"answer-file": "esercizio{ordinal}.py",
+					"sets": ["a", "b"],
+					"title": "L'elemento è nella lista?",
+					"points": { "a": 12, "b": 16 },
+					"difficulty": 1
+				},
+				{
+					"id": "E5",
+					"file": "parts/E5.typ",
+					"answer-file": "esercizio{ordinal}.py",
+					"sets": ["a", "b"],
+					"title": "La lista è palindroma?",
+					"points": { "a": 18, "b": 25 },
+					"difficulty": 2
+				}
+			]
+		},
+		{
+			"id": "S",
+			"tag": "Snippet",
+			"title": "Lettura del codice",
+			"intro": "parts/section-S.typ",
+			"exercises": [
+				{
+					"id": "S1",
+					"file": "parts/S1.typ",
+					"answer-file": "snippet{ordinal}.txt",
+					"sets": ["a", "b"],
+					"title": "Snippet 1",
+					"points": { "a": 8, "b": 10 },
+					"difficulty": 1
+				},
+				{
+					"id": "S2",
+					"file": "parts/S2.typ",
+					"answer-file": "snippet{ordinal}.txt",
+					"sets": ["a", "b"],
+					"title": "Snippet 2",
+					"points": { "a": 8, "b": 10 },
+					"difficulty": 1
+				},
+				{
+					"id": "S3",
+					"file": "parts/S3.typ",
+					"answer-file": "snippet{ordinal}.txt",
+					"sets": ["a", "b"],
+					"title": "Snippet 3",
+					"points": { "a": 8, "b": 10 },
+					"difficulty": 1
+				},
+				{
+					"id": "S4",
+					"file": "parts/S4.typ",
+					"answer-file": "snippet{ordinal}.txt",
+					"sets": ["a"],
+					"title": "Snippet 4",
+					"points": { "a": 8, "b": 10 },
+					"difficulty": 2
+				},
+				{
+					"id": "S5",
+					"file": "parts/S5.typ",
+					"answer-file": "snippet{ordinal}.txt",
+					"sets": ["a"],
+					"title": "Snippet 5",
+					"points": { "a": 8, "b": 10 },
+					"difficulty": 3
+				}
+			]
+		}
+	]
+}
